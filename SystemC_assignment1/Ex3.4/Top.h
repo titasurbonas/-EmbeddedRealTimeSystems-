@@ -5,6 +5,7 @@
 #include "Sink.h"
 
 SC_MODULE(Top) {
+	
 	Source source;
 	Sink sink;
 	
@@ -14,6 +15,7 @@ SC_MODULE(Top) {
 	sc_fifo<sc_uint<ERROR_BITS>> error;
 	sc_fifo<sc_uint<MAX_CHANNEL>> channel;
 	sc_clock clk;
+	sc_trace_file *tf;
 
 	SC_CTOR(Top) : source("Source"), sink("Sink"), ready("ready"), valid("valid")
 	{
@@ -30,6 +32,19 @@ SC_MODULE(Top) {
 		sink.error(error);
 		sink.channel(channel);
 		sink.clk(clk);
+
+		tf = sc_create_vcd_trace_file("WaveForm");
+		tf->set_time_unit(1, SC_NS);
+		sc_trace(tf, ready, "ready");
+		sc_trace(tf, valid, "valid");
+		sc_trace(tf, data, "data");
+		sc_trace(tf, error, "error");
+		sc_trace(tf, channel, "channel");
+		sc_trace(tf, clk, "clock");
 	};
+	~Top()
+	{
+		sc_close_vcd_trace_file(tf);
+	}
 };
 #endif // !TOP_H

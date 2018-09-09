@@ -1,3 +1,1 @@
-﻿  Sink.cpp
-  Unknown compiler version - please run the configure tests and report the results
-  Ex3.4.vcxproj -> C:\Users\titas\source\repos\SystemC_assignment1\Debug\Ex3.4.exe
+﻿LINK : fatal error LNK1168: cannot open C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\SystemC_assignment1\Debug\Ex3.4.exe for writing
