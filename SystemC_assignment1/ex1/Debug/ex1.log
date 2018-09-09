@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\titas\desktop\assignment_1\3.1\main.cpp(2): fatal error C1083: Cannot open precompiled header file: 'Debug\ex1.pch': No such file or directory
+  module_single.cpp
+c:\users\titas\desktop\assignment_1\3.1\module_single.cpp(2): fatal error C1083: Cannot open precompiled header file: 'Debug\ex1.pch': No such file or directory
+  Generating Code...
