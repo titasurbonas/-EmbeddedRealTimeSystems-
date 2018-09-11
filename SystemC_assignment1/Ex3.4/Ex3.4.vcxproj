@@ -158,7 +158,9 @@
   <ItemGroup>
     <ClCompile Include="Ex3.4.cpp" />
     <ClCompile Include="Sink.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Source.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">&gt; output.txt %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />

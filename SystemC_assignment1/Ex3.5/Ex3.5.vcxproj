@@ -152,9 +152,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adapter.cpp" />
+    <ClCompile Include="Config.cpp" />
     <ClCompile Include="Ex3.5.cpp" />
+    <ClCompile Include="Master.cpp" />
+    <ClCompile Include="Sink.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Adapter.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Master.h" />
+    <ClInclude Include="Sink.h" />
     <ClInclude Include="Top.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

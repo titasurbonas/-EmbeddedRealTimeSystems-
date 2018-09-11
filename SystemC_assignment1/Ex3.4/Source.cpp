@@ -6,8 +6,7 @@ void Source::SendData(void) {
 		packet.push({ 5,1,0 });
 		packet.push({ 4,0,1 });
 	}
-	
-	if (!packet.empty())
+	else if (!packet.empty())
 	{
 		 valid = true;
 		 data.write(packet.front().data_bits);
