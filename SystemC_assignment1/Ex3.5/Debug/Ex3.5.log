@@ -1,3 +1,10 @@
-﻿  Ex3.5.cpp
+﻿  Adapter.cpp
   Unknown compiler version - please run the configure tests and report the results
+  Config.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  Master.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  Sink.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  Generating Code...
   Ex3.5.vcxproj -> C:\Users\olafu\Source\Repos\-EmbeddedRealTimeSystems-\SystemC_assignment1\Debug\Ex3.5.exe
