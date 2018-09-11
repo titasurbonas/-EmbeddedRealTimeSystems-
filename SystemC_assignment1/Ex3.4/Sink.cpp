@@ -21,17 +21,17 @@ void Sink::Receive_data(void) {
 }
 void Sink::Print() {
 	//TODO Print value to file outputChannel
-	std::cout << packet.front().data_bits << std::endl;
+	//std::cout << packet.front().data_bits << std::endl;
 	packet.pop();
 }
 void Sink::ReadyToReceive(void){
 	static int readytorecive = 10;
 	if (readytorecive-- == 0 )
 	{
-		readytorecive = 10;
+		readytorecive = 5;
 		ready = true;
 	}
-	else if (readytorecive == 5)
+	else if (readytorecive == 2)
 	{
 		ready = false;
 	}

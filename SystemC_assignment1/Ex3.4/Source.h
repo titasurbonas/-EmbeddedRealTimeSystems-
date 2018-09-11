@@ -13,9 +13,9 @@ SC_MODULE(Source) {
 
 	sc_in<bool> ready;
 	sc_out<bool> valid;
-	sc_fifo_out<sc_uint<DATA_BITS>> data;
-	sc_fifo_out<sc_uint<ERROR_BITS>> error;
-	sc_fifo_out<sc_uint<MAX_CHANNEL>> channel;
+	sc_out<sc_uint<DATA_BITS>> data;
+	sc_out<sc_uint<ERROR_BITS>> error;
+	sc_out<sc_uint<MAX_CHANNEL>> channel;
 	sc_in<bool> clk;
 	
 	std::queue<data_frame_t> packet;

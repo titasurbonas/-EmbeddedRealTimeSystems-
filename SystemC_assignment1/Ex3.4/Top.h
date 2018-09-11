@@ -11,13 +11,13 @@ SC_MODULE(Top) {
 	
 	sc_signal<bool> ready;
 	sc_signal<bool> valid;
-	sc_fifo<sc_uint<DATA_BITS>> data;
-	sc_fifo<sc_uint<ERROR_BITS>> error;
-	sc_fifo<sc_uint<MAX_CHANNEL>> channel;
+	sc_signal<sc_uint<DATA_BITS>> data;
+	sc_signal<sc_uint<ERROR_BITS>> error;
+	sc_signal<sc_uint<MAX_CHANNEL>> channel;
 	sc_clock clk;
 	sc_trace_file *tf;
 
-	SC_CTOR(Top) : source("Source"), sink("Sink"), ready("ready"), valid("valid")
+	SC_CTOR(Top) : source("Source"), sink("Sink"), ready("ready"), valid("valid"), clk("clock", 10, SC_NS)
 	{
 		source.ready(ready);
 		source.valid(valid);
@@ -35,12 +35,14 @@ SC_MODULE(Top) {
 
 		tf = sc_create_vcd_trace_file("WaveForm");
 		tf->set_time_unit(1, SC_NS);
+		sc_trace(tf, clk, "clock");
 		sc_trace(tf, ready, "ready");
 		sc_trace(tf, valid, "valid");
-		sc_trace(tf, data, "data");
-		sc_trace(tf, error, "error");
 		sc_trace(tf, channel, "channel");
-		sc_trace(tf, clk, "clock");
+		sc_trace(tf, error, "error");
+		sc_trace(tf, data, "data");
+
+		
 	};
 	~Top()
 	{

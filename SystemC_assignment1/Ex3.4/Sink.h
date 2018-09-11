@@ -16,9 +16,9 @@ SC_MODULE(Sink) {
 
 	sc_out<bool> ready;
 	sc_in<bool> valid;
-	sc_fifo_in<sc_uint<DATA_BITS>> data;
-	sc_fifo_in<sc_uint<ERROR_BITS>> error;
-	sc_fifo_in<sc_uint<MAX_CHANNEL>> channel;
+	sc_in<sc_uint<DATA_BITS>> data;
+	sc_in<sc_uint<ERROR_BITS>> error;
+	sc_in<sc_uint<MAX_CHANNEL>> channel;
 	sc_in<bool> clk;
 	std::queue<data_frame_t> packet;
 	void Receive_data(void);
