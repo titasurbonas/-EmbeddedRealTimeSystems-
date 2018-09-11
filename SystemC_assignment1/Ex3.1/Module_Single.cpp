@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "module_single.h"
 
 void ModuleSingle::method(void)
