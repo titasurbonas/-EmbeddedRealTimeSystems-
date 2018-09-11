@@ -21,7 +21,15 @@ void Sink::Receive_data(void) {
 }
 void Sink::Print() {
 	//TODO Print value to file outputChannel
-	std::cout << packet.front().data_bits << std::endl;
+	
+	output << sc_time_stamp();
+	output << " Mesage: " << packet.front().channel;
+	output << packet.front().channel;
+	output << " ";
+	output << packet.front().data_bits;
+	output << " ";
+	output << packet.front().error_bits;
+	output << std::endl;
 	packet.pop();
 }
 void Sink::ReadyToReceive(void){
