@@ -2,7 +2,7 @@
 
 void ModuleSingle::method(void)
 {
-	std::cout << "Method ran!?!? " << ++counter << std::endl;
+	output << "My Counter: " << ++counter << std::endl;
 }
 
 void ModuleSingle::thread(void)
