@@ -3,7 +3,7 @@
 
 void ModuleDouble::method_a(void)
 {
-	std::cout << "Got event from " << sender << " at: " << sc_time_stamp() << std::endl;
+	output << "Got event from " << sender << " at: " << sc_time_stamp() << std::endl;
 	if (sender == 'B')  // Waiting for B.
 	{
 		next_trigger(notify_a);

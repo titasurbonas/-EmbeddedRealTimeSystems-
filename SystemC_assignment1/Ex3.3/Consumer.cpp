@@ -1,24 +1,24 @@
 #include "Consumer.h"
 
 std::string Consumer::HeaderToString(TCP_Header *header) {
-	std::string output = "";
-	std::cout <<(int)header->SourcePort << std::endl;
-	std::cout <<(int)header->DestinationPort << std::endl;;
-	std::cout <<(int)header->SequenceNuber << std::endl;;
-	std::cout <<(int)header->Acknowledge << std::endl;;
-	std::cout <<(int)header->StatusBits << std::endl;;
-	std::cout <<(int)header->WindowsSize << std::endl;;
-	std::cout <<(int)header->Checksum << std::endl;;
-	std::cout <<(int)header->UrgentPointer << std::endl;;
+	std::string string = "";
+	output << "			Header: ";
+	output <<(int)header->SourcePort << " ";
+	output <<(int)header->DestinationPort << " ";
+	output <<(int)header->SequenceNuber << " ";
+	output <<(int)header->Acknowledge << " ";
+	output <<(int)header->StatusBits << " ";
+	output <<(int)header->WindowsSize << " ";
+	output <<(int)header->Checksum << " ";
+	output <<(int)header->UrgentPointer ;
 	   	  
-	return output ;
+	return string;
 }
 void Consumer::Consume(void) {
 	while (true)
 	{
 		TCP_Header header = input.read();
-		std::cout << "Recived header:" << sc_time_stamp() << std::endl;
-		HeaderToString(&header);
-		std::cout << std::endl;
+		output << "Recived header:" << sc_time_stamp() ;
+		output << HeaderToString(&header) << std::endl;
 	}
 }
