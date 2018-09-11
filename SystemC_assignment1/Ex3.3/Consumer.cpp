@@ -16,10 +16,9 @@ std::string Consumer::HeaderToString(TCP_Header *header) {
 void Consumer::Consume(void) {
 	while (true)
 	{
-		TCP_Header *header = (TCP_Header *)input.read();
+		TCP_Header header = input.read();
 		std::cout << "Recived header:" << sc_time_stamp() << std::endl;
-		HeaderToString(header);
+		HeaderToString(&header);
 		std::cout << std::endl;
-		delete header;
 	}
 }
