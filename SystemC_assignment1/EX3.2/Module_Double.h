@@ -3,7 +3,7 @@
 #include <systemc.h>
 
 SC_MODULE(ModuleDouble) {
-	SC_CTOR(ModuleDouble) : current_state(true)
+	SC_CTOR(ModuleDouble) : current_state(true), output("Output.txt")
 	{
 		SC_METHOD(method_a);
 		SC_THREAD(thread_a);
@@ -15,6 +15,8 @@ SC_MODULE(ModuleDouble) {
 	}
 
 	sc_event notify_a, notify_b, a_ack, b_ack;
+
+	ofstream output;
 
 	char sender; // 'A' waiting for A, 'B' waiting for 'B'
 

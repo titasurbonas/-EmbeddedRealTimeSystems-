@@ -17,8 +17,8 @@ typedef struct {
 	char Data[DATA_SIZE];
 }TCP_Header;
 
-typedef sc_fifo_in<void *> Fifo_ptr_in;
-typedef sc_fifo_out<void *> Fifo_ptr_out;
-typedef sc_fifo<void *> Fifo_ptr;
+typedef sc_fifo_in<TCP_Header> Fifo_ptr_in;
+typedef sc_fifo_out<TCP_Header> Fifo_ptr_out;
+typedef sc_fifo<TCP_Header> Fifo_ptr;
 
 #endif

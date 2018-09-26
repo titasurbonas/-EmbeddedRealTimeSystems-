@@ -1,12 +1,12 @@
 #include "Source.h"
 
 void Source::SendData(void) {
-	if (ready.read() && !valid.read())// and not sending 
+	if (ready.read() && !valid.read() && !packet.empty())// and not sending 
 	{
 		packet.push({ 5,1,0 });
 		packet.push({ 4,0,1 });
 	}
-	else if (!packet.empty())
+	else if (ready.read() && !packet.empty())
 	{
 		 valid = true;
 		 data.write(packet.front().data_bits);

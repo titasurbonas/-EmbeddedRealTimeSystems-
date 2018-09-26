@@ -7,7 +7,7 @@
 
 
 SC_MODULE(Sink) {
-	SC_CTOR(Sink) {
+	SC_CTOR(Sink) :output("output.txt") {
 		SC_METHOD(Receive_data);
 		sensitive << clk.pos();
 		SC_METHOD(ReadyToReceive);
@@ -24,6 +24,8 @@ SC_MODULE(Sink) {
 	void Receive_data(void);
 	void Print();
 	void ReadyToReceive(void);
+
+	ofstream output;
 };
 
 

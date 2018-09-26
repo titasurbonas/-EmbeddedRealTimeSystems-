@@ -3,7 +3,7 @@
 #include <systemc.h>
 
 SC_MODULE(ModuleSingle) {
-	SC_CTOR(ModuleSingle)
+	SC_CTOR(ModuleSingle): output("Output.txt")
 	{
 		counter = 0;
 		SC_METHOD(method);
@@ -15,6 +15,8 @@ SC_MODULE(ModuleSingle) {
 
 	sc_uint<4> counter;
 
+	ofstream output;
+	
 	void method(void);
 	void thread(void);
 };
