@@ -1,0 +1,1352 @@
+Running Make libs in ps7_cortexa9_0/libsrc/led_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling led_ip...
+led_ip_selftest.c: In function 'LED_IP_Reg_SelfTest':
+led_ip_selftest.c:52:55: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( LED_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+led_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling bram
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpio
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+14:23:17 **** Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23428	   1184	   8240	  32852	   8054	lab4.elf
+Finished building: lab4.elf.size
+ 
+14:23:27 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:23:58 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:10:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23364	   1184	   8240	  32788	   8014	lab4.elf
+Finished building: lab4.elf.size
+ 
+14:24:15 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:25:17 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23428	   1184	   8240	  32852	   8054	lab4.elf
+Finished building: lab4.elf.size
+ 
+14:28:48 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:29:54 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:32:54 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:34:49 **** Clean-only build of configuration Debug for project lab4 ****
+make clean 
+rm -rf  ./src/lab4.o  ./src/lab4.d  lab4.elf.size  lab4.elf
+ 
+14:34:49 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23428	   1184	   8240	  32852	   8054	lab4.elf
+Finished building: lab4.elf.size
+ 
+14:35:00 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:35:52 **** Clean-only build of configuration Debug for project lab4 ****
+make clean 
+rm -rf  ./src/lab4.o  ./src/lab4.d  lab4.elf.size  lab4.elf
+ 
+14:35:53 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23428	   1184	   8240	  32852	   8054	lab4.elf
+Finished building: lab4.elf.size
+ 
+14:36:00 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:37:02 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:39:28 **** Clean-only build of configuration Debug for project lab4 ****
+make clean 
+rm -rf  ./src/lab4.o  ./src/lab4.d  lab4.elf.size  lab4.elf
+ 
+14:39:28 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23428	   1184	   8248	  32860	   805c	lab4.elf
+Finished building: lab4.elf.size
+ 
+14:41:30 **** Clean-only build of configuration Debug for project lab4 ****
+make clean 
+rm -rf  ./src/lab4.o  ./src/lab4.d  lab4.elf.size  lab4.elf
+ 
+14:41:31 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23428	   1184	   8240	  32852	   8054	lab4.elf
+Finished building: lab4.elf.size
+ 
+14:48:59 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:49:53 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:51:18 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:22:49 **** Clean-only build of configuration Debug for project lab4 ****
+make clean 
+rm -rf  ./src/lab4.o  ./src/lab4.d  lab4.elf.size  lab4.elf
+ 
+15:22:50 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23428	   1184	   8248	  32860	   805c	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:23:20 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:27:14 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:36:4: error: expected ';' before 'for'
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+    for (i=0; i<9999999; i++);
+    ^~~
+../src/lab4.c:11:9: warning: unused variable 'input' [-Wunused-variable]
+    char input = 0;
+         ^~~~~
+../src/lab4.c:10:22: warning: unused variable 'dip_check' [-Wunused-variable]
+    int i, psb_check, dip_check;
+                      ^~~~~~~~~
+../src/lab4.c:10:11: warning: unused variable 'psb_check' [-Wunused-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:10:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+make: *** [src/lab4.o] Error 1
+15:27:22 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:11:9: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+    char input = 0;
+         ^~~~~
+../src/lab4.c:10:22: warning: unused variable 'dip_check' [-Wunused-variable]
+    int i, psb_check, dip_check;
+                      ^~~~~~~~~
+../src/lab4.c:10:11: warning: unused variable 'psb_check' [-Wunused-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23248	   1184	   8248	  32680	   7fa8	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:29:36 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23364	   1184	   8248	  32796	   801c	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:31:06 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23492	   1184	   8248	  32924	   809c	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:31:14 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:34:22 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:10:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23376	   1184	   8248	  32808	   8028	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:35:29 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:16:4: error: expected ';' before 'XGpio_Initialize'
+    XGpio_Initialize(&dip, XPAR_GPIO_1_DEVICE_ID); // Modify this
+    ^~~~~~~~~~~~~~~~
+../src/lab4.c:38:5: warning: 'return' with no value, in function returning non-void
+     return;
+     ^~~~~~
+../src/lab4.c:7:5: note: declared here
+ int main (void) 
+     ^~~~
+../src/lab4.c:10:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+make: *** [src/lab4.o] Error 1
+15:35:36 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:16:4: error: expected ';' before 'XGpio_Initialize'
+    XGpio_Initialize(&dip, XPAR_GPIO_1_DEVICE_ID); // Modify this
+    ^~~~~~~~~~~~~~~~
+../src/lab4.c:10:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+make: *** [src/lab4.o] Error 1
+15:35:42 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:10:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23508	   1184	   8248	  32940	   80ac	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:37:07 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:15:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23508	   1184	   8248	  32940	   80ac	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:37:18 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:17:10: warning: unused variable 'cur_state' [-Wunused-variable]
+    STATE cur_state = INPUT;
+          ^~~~~~~~~
+../src/lab4.c:15:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23508	   1184	   8248	  32940	   80ac	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:37:52 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:31:12: error: expected expression before 'STATE'
+     switch(STATE) {
+            ^~~~~
+../src/lab4.c:17:10: warning: unused variable 'cur_state' [-Wunused-variable]
+    STATE cur_state = INPUT;
+          ^~~~~~~~~
+../src/lab4.c:15:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:15:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+make: *** [src/lab4.o] Error 1
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+15:39:19 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:31:12: error: expected expression before 'STATE'
+     switch(STATE) {
+            ^~~~~
+../src/lab4.c:17:10: warning: variable 'cur_state' set but not used [-Wunused-but-set-variable]
+    STATE cur_state = INPUT;
+          ^~~~~~~~~
+../src/lab4.c:15:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:15:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+make: *** [src/lab4.o] Error 1
+15:39:34 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:15:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:15:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23508	   1184	   8248	  32940	   80ac	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:40:45 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c:5:10: fatal error: XScuTimer.h: No such file or directory
+ #include "XScuTimer.h"
+          ^~~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+compilation terminated.
+make: *** [src/lab4.o] Error 1
+15:51:32 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:17:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:17:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23508	   1184	   8248	  32940	   80ac	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:53:45 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:23:2: error: unknown type name 'XCuTimer'; did you mean 'XScuTimer'?
+  XCuTimer *TimerInstancePtr = &Timer;
+  ^~~~~~~~
+  XScuTimer
+../src/lab4.c:23:31: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  XCuTimer *TimerInstancePtr = &Timer;
+                               ^
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+../src/lab4.c:23:12: warning: unused variable 'TimerInstancePtr' [-Wunused-variable]
+  XCuTimer *TimerInstancePtr = &Timer;
+            ^~~~~~~~~~~~~~~~
+../src/lab4.c:22:20: warning: unused variable 'ConfigPtr' [-Wunused-variable]
+  XScuTimer_Config *ConfigPtr;
+                    ^~~~~~~~~
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+make: *** [src/lab4.o] Error 1
+15:54:01 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:23:13: warning: unused variable 'TimerInstancePtr' [-Wunused-variable]
+  XScuTimer *TimerInstancePtr = &Timer;
+             ^~~~~~~~~~~~~~~~
+../src/lab4.c:22:20: warning: unused variable 'ConfigPtr' [-Wunused-variable]
+  XScuTimer_Config *ConfigPtr;
+                    ^~~~~~~~~
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23508	   1184	   8248	  32940	   80ac	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:55:15 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:23:13: warning: unused variable 'TimerInstancePtr' [-Wunused-variable]
+  XScuTimer *TimerInstancePtr = &Timer;
+             ^~~~~~~~~~~~~~~~
+../src/lab4.c:22:20: warning: unused variable 'ConfigPtr' [-Wunused-variable]
+  XScuTimer_Config *ConfigPtr = XScuTimer_LookupConfig(XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+                    ^~~~~~~~~
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23572	   1192	   8248	  33012	   80f4	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:57:24 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:24:2: error: 'Status' undeclared (first use in this function); did you mean 'XStatus'?
+  Status = XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+  ^~~~~~
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+  XStatus
+../src/lab4.c:24:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+make: *** [src/lab4.o] Error 1
+15:57:42 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:24:6: warning: unused variable 'Status' [-Wunused-variable]
+  s32 Status = XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+      ^~~~~~
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24288	   1192	   8248	  33728	   83c0	lab4.elf
+Finished building: lab4.elf.size
+ 
+15:59:12 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24372	   1192	   8248	  33812	   8414	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:00:01 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24372	   1192	   8248	  33812	   8414	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:00:34 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24372	   1192	   8248	  33812	   8414	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:01:17 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24500	   1192	   8248	  33940	   8494	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:01:40 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24500	   1192	   8248	  33940	   8494	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:01:57 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:33: warning: unused variable 'counter' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+                                 ^~~~~~~
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24500	   1192	   8248	  33940	   8494	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:02:02 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:33: warning: variable 'counter' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+                                 ^~~~~~~
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24500	   1192	   8248	  33940	   8494	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:02:46 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:03:17 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+../src/lab4.c: At top level:
+../src/lab4.c:76:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/lab4.o] Error 1
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+16:03:32 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+../src/lab4.c: At top level:
+../src/lab4.c:77:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+make: *** [src/lab4.o] Error 1
+16:03:41 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:03:44 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:04:35 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:04:38 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:11: warning: variable 'psb_check' set but not used [-Wunused-but-set-variable]
+    int i, psb_check, dip_check, counter;
+           ^~~~~~~~~
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, psb_check, dip_check, counter;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:05:02 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:48:5: error: 'psb_check' undeclared (first use in this function); did you mean 'dip_check'?
+     psb_check = XGpio_DiscreteRead(&push, 1);
+     ^~~~~~~~~
+     dip_check
+../src/lab4.c:48:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, dip_check, counter;
+        ^
+src/subdir.mk:21: recipe for target 'src/lab4.o' failed
+make: *** [src/lab4.o] Error 1
+16:05:08 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:19:8: warning: unused variable 'i' [-Wunused-variable]
+    int i, dip_check, counter;
+        ^
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:05:17 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:05:58 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:07:15 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:08:59 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:09:50 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:12:36 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../../lab4_bsp/ps7_cortexa9_0/include/xscutimer.h:117:0,
+                 from ../src/lab4.c:5:
+../src/lab4.c: In function 'main':
+../../lab4_bsp/ps7_cortexa9_0/include/xscutimer_hw.h:276:38: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+  Xil_Out32((BaseAddr) + (RegOffset), (Data))
+                                      ^
+../../lab4_bsp/ps7_cortexa9_0/include/xscutimer.h:206:2: note: in expansion of macro 'XScuTimer_WriteReg'
+  XScuTimer_WriteReg((InstancePtr)->Config.BaseAddr,  \
+  ^~~~~~~~~~~~~~~~~~
+../src/lab4.c:30:4: note: in expansion of macro 'XScuTimer_LoadTimer'
+    XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND);
+    ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:12:41 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:13:37 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../../lab4_bsp/ps7_cortexa9_0/include/xscutimer.h:117:0,
+                 from ../src/lab4.c:5:
+../src/lab4.c: In function 'main':
+../../lab4_bsp/ps7_cortexa9_0/include/xscutimer_hw.h:276:38: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+  Xil_Out32((BaseAddr) + (RegOffset), (Data))
+                                      ^
+../../lab4_bsp/ps7_cortexa9_0/include/xscutimer.h:206:2: note: in expansion of macro 'XScuTimer_WriteReg'
+  XScuTimer_WriteReg((InstancePtr)->Config.BaseAddr,  \
+  ^~~~~~~~~~~~~~~~~~
+../src/lab4.c:30:4: note: in expansion of macro 'XScuTimer_LoadTimer'
+    XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND);
+    ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:13:44 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:14:21 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24564	   1192	   8248	  34004	   84d4	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:16:34 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24628	   1192	   8248	  34068	   8514	lab4.elf
+Finished building: lab4.elf.size
+ 
+16:17:05 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:17:24 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

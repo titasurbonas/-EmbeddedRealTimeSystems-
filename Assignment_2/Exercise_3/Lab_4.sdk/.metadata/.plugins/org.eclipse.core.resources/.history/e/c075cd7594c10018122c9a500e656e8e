@@ -1,0 +1,65 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "led_ip.h"
+
+#include <xscutimer.h>
+
+//====================================================
+
+#define ONE_SECOND 325000000
+typedef enum {
+	INPUT = 0,
+	TIMER = 1
+} STATE;
+
+int main (void) 
+{
+	XScuTimer Timer;
+   XGpio dip, push;
+   int i, psb_check, dip_check;
+   char input = 0;
+   STATE cur_state = INPUT;
+	XScuTimer_Config *ConfigPtr = XScuTimer_LookupConfig(XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+	XScuTimer *TimerInstancePtr = &Timer;
+	s32 Status = XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Timer init failed.\n");
+		return XST_FAILURE;
+	}
+   xil_printf("-- Start of the Program --\r\n");
+   xil_printf("Enter choice: 1 (SW->Leds), 2 (Timer->Leds), 3 (Matrix), 4 (Exit) ");
+ 
+   XGpio_Initialize(&dip, XPAR_GPIO_1_DEVICE_ID); // Modify this
+   XGpio_SetDataDirection(&dip, 1, 0xffffffff);
+	
+   XGpio_Initialize(&push, XPAR_GPIO_0_DEVICE_ID); // Modify this
+   XGpio_SetDataDirection(&push, 1, 0xffffffff);
+	
+
+   while (1)
+   {
+	   switch(cur_state) {
+	   case INPUT:
+		  psb_check = XGpio_DiscreteRead(&push, 1);
+		  dip_check = XGpio_DiscreteRead(&dip, 1);
+
+		  input = inbyte();
+		  switch (input) {
+		  case '1':
+			  LED_IP_mWriteReg(XPAR_LED_IP_0_S_AXI_BASEADDR,0,dip_check);
+			  break;
+		  case '2':
+			  cur_state = TIMER;
+			  break;
+		  case '3':
+			  break;
+		  case '4':
+			  return 0;
+		  }
+	   break;
+	   case TIMER:
+
+		   break;
+	  }
+   }
+}

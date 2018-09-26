@@ -1,0 +1,86 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Sep 16 16:23:20 2018
+| Host         : ubuntu running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file led_ip_v1_0_control_sets_placed.rpt
+| Design       : led_ip_v1_0
+| Device       : xc7z010
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    14 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            2 |
+|     10 |            1 |
+|    16+ |           17 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              10 |            3 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             328 |           33 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+---------------------------------------------+--------------------------------------------+------------------+----------------+
+|      Clock Signal     |                Enable Signal                |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
++-----------------------+---------------------------------------------+--------------------------------------------+------------------+----------------+
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/axi_awready0         | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |              4 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/axi_arready0         | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |              4 |
+|  s_axi_aclk_IBUF_BUFG |                                             | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                3 |             10 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/p_1_in[7]            | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                2 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg3[7]_i_1_n_0  | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg3[15]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg2[7]_i_1_n_0  | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg2[23]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                2 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg2[15]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                3 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg1[31]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg1[23]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg3[31]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg3[23]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg2[31]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg1[7]_i_1_n_0  | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg1[15]_i_1_n_0 | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/p_1_in[31]           | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/p_1_in[23]           | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                2 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/p_1_in[15]           | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |                1 |             16 |
+|  s_axi_aclk_IBUF_BUFG | led_ip_v1_0_S_AXI_inst/slv_reg_rden         | led_ip_v1_0_S_AXI_inst/axi_awready_i_1_n_0 |               10 |             64 |
++-----------------------+---------------------------------------------+--------------------------------------------+------------------+----------------+
+
+
