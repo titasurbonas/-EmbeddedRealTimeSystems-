@@ -29,7 +29,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths /home/olafur/Documents/Embedded_systems/lectures/Lab_3/custom_ip [current_project]
+set_property ip_repo_paths {
+  /home/olafur/Documents/Embedded_systems/lectures/Lab_3/custom_ip
+  /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/IP/ip_repo
+} [current_project]
 set_property ip_output_repo /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
@@ -40,17 +43,15 @@ set_property used_in_implementation false [get_files -all /home/olafur/Documents
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_1/system_rst_ps7_0_100M_1_board.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_1/system_rst_ps7_0_100M_1.xdc]
-set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_1/system_rst_ps7_0_100M_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_0/system_axi_bram_ctrl_0_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_auto_pc_3/system_auto_pc_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_auto_pc_3/system_auto_pc_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/ip/system_auto_pc_4/system_auto_pc_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.srcs/sources_1/bd/system/system_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

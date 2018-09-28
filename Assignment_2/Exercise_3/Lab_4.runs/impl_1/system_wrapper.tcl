@@ -71,7 +71,10 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.cache/wt [current_project]
   set_property parent.project_path /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.xpr [current_project]
-  set_property ip_repo_paths /home/olafur/Documents/Embedded_systems/lectures/Lab_3/custom_ip [current_project]
+  set_property ip_repo_paths {
+  /home/olafur/Documents/Embedded_systems/lectures/Lab_3/custom_ip
+  /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/IP/ip_repo
+} [current_project]
   set_property ip_output_repo /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

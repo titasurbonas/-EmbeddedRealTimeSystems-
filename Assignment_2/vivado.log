@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Sep 28 12:41:48 2018
+# Process ID: 96503
+# Current directory: /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2
+# Command line: vivado
+# Log file: /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/vivado.log
+# Journal file: /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olafur/Documents/Embedded_systems/lectures/Lab_3/custom_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/IP/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 6157.633 ; gain = 138.637 ; free physical = 2518 ; free virtual = 5130
+update_compile_order -fileset sources_1

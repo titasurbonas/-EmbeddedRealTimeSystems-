@@ -7,12 +7,15 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
+../src/Matrix.c \
 ../src/lab4.c 
 
 OBJS += \
+./src/Matrix.o \
 ./src/lab4.o 
 
 C_DEPS += \
+./src/Matrix.d \
 ./src/lab4.d 
 
 

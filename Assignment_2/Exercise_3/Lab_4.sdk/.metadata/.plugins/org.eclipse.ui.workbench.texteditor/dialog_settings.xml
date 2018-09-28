@@ -8,17 +8,23 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="matrix"/>
+			<item value="GPIO"/>
+			<item value="ip"/>
+			<item value="my"/>
+			<item value="MATRIX"/>
+			<item value="clock"/>
+			<item value="clk"/>
 			<item value="BUTTONS"/>
-			<item value="XPAR_S"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="334" key="DIALOG_WIDTH"/>
+		<item value="354" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="462" key="DIALOG_HEIGHT"/>
-		<item value="770" key="DIALOG_X_ORIGIN"/>
-		<item value="252" key="DIALOG_Y_ORIGIN"/>
+		<item value="538" key="DIALOG_HEIGHT"/>
+		<item value="1092" key="DIALOG_X_ORIGIN"/>
+		<item value="160" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

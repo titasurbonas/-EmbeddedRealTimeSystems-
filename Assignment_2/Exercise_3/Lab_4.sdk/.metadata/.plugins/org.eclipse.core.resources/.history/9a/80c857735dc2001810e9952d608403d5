@@ -1,0 +1,34 @@
+/*
+ * Matrix.h
+ *
+ *  Created on: Sep 27, 2018
+ *      Author: root
+ */
+
+#ifndef MATRIX_H_
+#define MATRIX_H_
+
+#include <xil_types.h>
+#include <xil_mem.h>
+#include <xil_printf.h>
+
+
+#define MSIZE 4
+
+
+//typedef unsigned char matrix[MSIZE][MSIZE];
+union {
+	unsigned char comp[MSIZE];
+	unsigned int vect;
+} vectorType;
+
+typedef union vectorType matrix[MSIZE];
+
+void setInputMatrices(matrix A, matrix B);
+void displayMatrix(matrix input);
+void multiMatrixSoft(matrix A, matrix B, matrix P);
+void multiMatrixHard(matrix A, matrix B, matrix P);
+
+
+
+#endif /* MATRIX_H_ */

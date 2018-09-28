@@ -1,0 +1,32 @@
+/*
+ * Matrix.c
+ *
+ *  Created on: Sep 27, 2018
+ *      Author: Ólafur Dagur Skúlason
+ */
+
+#include "../inc/Matrix.h"
+
+vectorType aInst, bInst, pInst;
+
+void setInputMatrices(VectorArray A, VectorArray B)
+{
+	memcpy(&aInst, &A, sizeof(aInst));
+	memcpy(&bInst, &B, sizeof(bInst));
+}
+
+void displayMatrix(VectorArray input)
+{
+
+}
+
+
+void multiMatrixSoft(VectorArray A, VectorArray B, VectorArray P)
+{
+
+}
+
+void multiMatrixHard(VectorArray A, VectorArray B, VectorArray P)
+{
+
+}

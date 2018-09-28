@@ -17,8 +17,23 @@
 -makelib xcelium_lib/xpm \
   "/opt/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
+-makelib xcelium_lib/axi_infrastructure_v1_1_0 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/smartconnect_v1_0 -sv \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/5bb9/hdl/sc_util_v1_0_vl_rfs.sv" \
+-endlib
+-makelib xcelium_lib/axi_protocol_checker_v2_0_3 -sv \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/03a9/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" \
+-endlib
+-makelib xcelium_lib/axi_vip_v1_1_3 -sv \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/b9a8/hdl/axi_vip_v1_1_vl_rfs.sv" \
+-endlib
+-makelib xcelium_lib/processing_system7_vip_v1_0_5 -sv \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/70fd/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
+-endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_sim_netlist.vhdl" \
+  "../../../bd/system/ip/system_processing_system7_0_0/sim/system_processing_system7_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
   "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
@@ -41,17 +56,66 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/system/ip/system_rst_ps7_0_100M_1/sim/system_rst_ps7_0_100M_1.vhd" \
   "../../../bd/system/ip/system_axi_gpio_0_1/sim/system_axi_gpio_0_1.vhd" \
-  "../../../bd/system/ip/system_xbar_0/system_xbar_0_sim_netlist.vhdl" \
+-endlib
+-makelib xcelium_lib/generic_baseblocks_v2_1_0 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_register_slice_v2_1_17 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/fifo_generator_v13_2_2 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/7aff/simulation/fifo_generator_vlog_beh.v" \
+-endlib
+-makelib xcelium_lib/fifo_generator_v13_2_2 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/7aff/hdl/fifo_generator_v13_2_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/fifo_generator_v13_2_2 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/7aff/hdl/fifo_generator_v13_2_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_data_fifo_v2_1_16 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/247d/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_crossbar_v2_1_18 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/system/ip/system_xbar_0/sim/system_xbar_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
   "../../../bd/system/sim/system.vhd" \
-  "../../../bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0_sim_netlist.vhdl" \
-  "../../../bd/system/ip/system_axi_bram_ctrl_0_bram_0/system_axi_bram_ctrl_0_bram_0_sim_netlist.vhdl" \
+-endlib
+-makelib xcelium_lib/blk_mem_gen_v8_3_6 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/2751/simulation/blk_mem_gen_v8_3.v" \
+-endlib
+-makelib xcelium_lib/axi_bram_ctrl_v4_0_14 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/system/ip/system_axi_bram_ctrl_0_0/sim/system_axi_bram_ctrl_0_0.vhd" \
+-endlib
+-makelib xcelium_lib/blk_mem_gen_v8_4_1 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/67d8/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/system/ip/system_axi_bram_ctrl_0_bram_0/sim/system_axi_bram_ctrl_0_bram_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
   "../../../bd/system/ipshared/eea9/hdl/led_ip_v1_0_S_AXI.vhd" \
   "../../../bd/system/ipshared/eea9/hdl/led_ip_v1_0.vhd" \
   "../../../bd/system/ip/system_led_ip_0_0/sim/system_led_ip_0_0.vhd" \
-  "../../../bd/system/ip/system_auto_pc_2/system_auto_pc_2_sim_netlist.vhdl" \
-  "../../../bd/system/ip/system_auto_pc_1/system_auto_pc_1_sim_netlist.vhdl" \
-  "../../../bd/system/ip/system_auto_pc_0/system_auto_pc_0_sim_netlist.vhdl" \
-  "../../../bd/system/ip/system_auto_pc_3/system_auto_pc_3_sim_netlist.vhdl" \
+  "../../../bd/system/ipshared/62ff/hdl/matrix_ip_v1_0.vhd" \
+  "../../../bd/system/ipshared/62ff/hdl/matrix_ip_v1_0_S_AXI.vhd" \
+  "../../../bd/system/ip/system_matrix_ip_0_1/sim/system_matrix_ip_0_1.vhd" \
+-endlib
+-makelib xcelium_lib/axi_protocol_converter_v2_1_17 \
+  "../../../../Lab_4.srcs/sources_1/bd/system/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/system/ip/system_auto_pc_3/sim/system_auto_pc_3.v" \
+  "../../../bd/system/ip/system_auto_pc_2/sim/system_auto_pc_2.v" \
+  "../../../bd/system/ip/system_auto_pc_1/sim/system_auto_pc_1.v" \
+  "../../../bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v" \
+  "../../../bd/system/ip/system_auto_pc_4/sim/system_auto_pc_4.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v
