@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Fri Sep 28 12:57:12 2018
+| Date             : Sun Sep 30 15:26:49 2018
 | Host             : ubuntu running 64-bit Ubuntu 16.04.5 LTS
 | Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
 | Design           : system_wrapper
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 1.653        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.537        |
+| Dynamic (W)              | 1.536        |
 | Device Static (W)        | 0.117        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 65.9         |
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.010 |        3 |       --- |             --- |
-| Slice Logic             |     0.005 |     4921 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     1812 |     17600 |           10.30 |
-|   Register              |    <0.001 |     2189 |     35200 |            6.22 |
-|   CARRY4                |    <0.001 |       48 |      4400 |            1.09 |
+| Slice Logic             |     0.005 |     5092 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     1963 |     17600 |           11.15 |
+|   Register              |    <0.001 |     2161 |     35200 |            6.14 |
+|   CARRY4                |    <0.001 |       78 |      4400 |            1.77 |
 |   LUT as Shift Register |    <0.001 |      158 |      6000 |            2.63 |
-|   Others                |     0.000 |      334 |       --- |             --- |
-| Signals                 |     0.006 |     3724 |       --- |             --- |
+|   Others                |     0.000 |      335 |       --- |             --- |
+| Signals                 |     0.006 |     3858 |       --- |             --- |
 | Block RAM               |     0.002 |        2 |        60 |            3.33 |
 | I/O                     |    <0.001 |       12 |       100 |           12.00 |
 | PS7                     |     1.515 |        1 |       --- |             --- |
@@ -150,8 +150,8 @@ Table of Contents
 +-----------------------------------------------------------------------------+-----------+
 | Name                                                                        | Power (W) |
 +-----------------------------------------------------------------------------+-----------+
-| system_wrapper                                                              |     1.537 |
-|   system_i                                                                  |     1.537 |
+| system_wrapper                                                              |     1.536 |
+|   system_i                                                                  |     1.536 |
 |     axi_bram_ctrl_0                                                         |     0.002 |
 |       U0                                                                    |     0.002 |
 |         gext_inst.abcv4_0_ext_inst                                          |     0.002 |
@@ -182,8 +182,9 @@ Table of Contents
 |     led_ip_0                                                                |    <0.001 |
 |       U0                                                                    |    <0.001 |
 |         led_ip_v1_0_S_AXI_inst                                              |    <0.001 |
-|     matrix_ip                                                               |    <0.001 |
+|     matrix_ip_0                                                             |    <0.001 |
 |       U0                                                                    |    <0.001 |
+|         matrix_ip_v1_0_S00_AXI_inst                                         |    <0.001 |
 |     processing_system7_0                                                    |     1.515 |
 |       inst                                                                  |     1.515 |
 |     ps7_0_axi_periph                                                        |     0.014 |

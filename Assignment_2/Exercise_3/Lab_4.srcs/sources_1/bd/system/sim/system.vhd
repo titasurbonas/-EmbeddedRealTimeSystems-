@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
---Date        : Fri Sep 28 12:47:29 2018
+--Date        : Sun Sep 30 15:20:56 2018
 --Host        : ubuntu running 64-bit Ubuntu 16.04.5 LTS
 --Command     : generate_target system.bd
 --Design      : system
@@ -3193,7 +3193,7 @@ entity system is
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=14,numNonXlnxBlks=2,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=9,da_bram_cntlr_cnt=1,da_ps7_cnt=1,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=14,numNonXlnxBlks=1,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=9,da_bram_cntlr_cnt=1,da_ps7_cnt=1,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -3412,31 +3412,31 @@ architecture STRUCTURE of system is
     s_axi_aresetn : in STD_LOGIC
   );
   end component system_led_ip_0_0;
-  component system_matrix_ip_0_1 is
+  component system_matrix_ip_0_0 is
   port (
-    S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_AWPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_AWVALID : in STD_LOGIC;
-    S_AXI_AWREADY : out STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_WSTRB : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_WVALID : in STD_LOGIC;
-    S_AXI_WREADY : out STD_LOGIC;
-    S_AXI_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_BVALID : out STD_LOGIC;
-    S_AXI_BREADY : in STD_LOGIC;
-    S_AXI_ARADDR : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_ARPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_ARVALID : in STD_LOGIC;
-    S_AXI_ARREADY : out STD_LOGIC;
-    S_AXI_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_RVALID : out STD_LOGIC;
-    S_AXI_RREADY : in STD_LOGIC;
-    S_AXI_ACLK : in STD_LOGIC;
-    S_AXI_ARESETN : in STD_LOGIC
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
   );
-  end component system_matrix_ip_0_1;
+  end component system_matrix_ip_0_0;
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3761,29 +3761,29 @@ led_ip_0: component system_led_ip_0_0
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M02_AXI_WVALID
     );
-matrix_ip: component system_matrix_ip_0_1
+matrix_ip_0: component system_matrix_ip_0_0
      port map (
-      S_AXI_ACLK => processing_system7_0_FCLK_CLK0,
-      S_AXI_ARADDR(3 downto 0) => ps7_0_axi_periph_M04_AXI_ARADDR(3 downto 0),
-      S_AXI_ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
-      S_AXI_ARPROT(2 downto 0) => ps7_0_axi_periph_M04_AXI_ARPROT(2 downto 0),
-      S_AXI_ARREADY => ps7_0_axi_periph_M04_AXI_ARREADY,
-      S_AXI_ARVALID => ps7_0_axi_periph_M04_AXI_ARVALID,
-      S_AXI_AWADDR(3 downto 0) => ps7_0_axi_periph_M04_AXI_AWADDR(3 downto 0),
-      S_AXI_AWPROT(2 downto 0) => ps7_0_axi_periph_M04_AXI_AWPROT(2 downto 0),
-      S_AXI_AWREADY => ps7_0_axi_periph_M04_AXI_AWREADY,
-      S_AXI_AWVALID => ps7_0_axi_periph_M04_AXI_AWVALID,
-      S_AXI_BREADY => ps7_0_axi_periph_M04_AXI_BREADY,
-      S_AXI_BRESP(1 downto 0) => ps7_0_axi_periph_M04_AXI_BRESP(1 downto 0),
-      S_AXI_BVALID => ps7_0_axi_periph_M04_AXI_BVALID,
-      S_AXI_RDATA(31 downto 0) => ps7_0_axi_periph_M04_AXI_RDATA(31 downto 0),
-      S_AXI_RREADY => ps7_0_axi_periph_M04_AXI_RREADY,
-      S_AXI_RRESP(1 downto 0) => ps7_0_axi_periph_M04_AXI_RRESP(1 downto 0),
-      S_AXI_RVALID => ps7_0_axi_periph_M04_AXI_RVALID,
-      S_AXI_WDATA(31 downto 0) => ps7_0_axi_periph_M04_AXI_WDATA(31 downto 0),
-      S_AXI_WREADY => ps7_0_axi_periph_M04_AXI_WREADY,
-      S_AXI_WSTRB(3 downto 0) => ps7_0_axi_periph_M04_AXI_WSTRB(3 downto 0),
-      S_AXI_WVALID => ps7_0_axi_periph_M04_AXI_WVALID
+      s00_axi_aclk => processing_system7_0_FCLK_CLK0,
+      s00_axi_araddr(3 downto 0) => ps7_0_axi_periph_M04_AXI_ARADDR(3 downto 0),
+      s00_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
+      s00_axi_arprot(2 downto 0) => ps7_0_axi_periph_M04_AXI_ARPROT(2 downto 0),
+      s00_axi_arready => ps7_0_axi_periph_M04_AXI_ARREADY,
+      s00_axi_arvalid => ps7_0_axi_periph_M04_AXI_ARVALID,
+      s00_axi_awaddr(3 downto 0) => ps7_0_axi_periph_M04_AXI_AWADDR(3 downto 0),
+      s00_axi_awprot(2 downto 0) => ps7_0_axi_periph_M04_AXI_AWPROT(2 downto 0),
+      s00_axi_awready => ps7_0_axi_periph_M04_AXI_AWREADY,
+      s00_axi_awvalid => ps7_0_axi_periph_M04_AXI_AWVALID,
+      s00_axi_bready => ps7_0_axi_periph_M04_AXI_BREADY,
+      s00_axi_bresp(1 downto 0) => ps7_0_axi_periph_M04_AXI_BRESP(1 downto 0),
+      s00_axi_bvalid => ps7_0_axi_periph_M04_AXI_BVALID,
+      s00_axi_rdata(31 downto 0) => ps7_0_axi_periph_M04_AXI_RDATA(31 downto 0),
+      s00_axi_rready => ps7_0_axi_periph_M04_AXI_RREADY,
+      s00_axi_rresp(1 downto 0) => ps7_0_axi_periph_M04_AXI_RRESP(1 downto 0),
+      s00_axi_rvalid => ps7_0_axi_periph_M04_AXI_RVALID,
+      s00_axi_wdata(31 downto 0) => ps7_0_axi_periph_M04_AXI_WDATA(31 downto 0),
+      s00_axi_wready => ps7_0_axi_periph_M04_AXI_WREADY,
+      s00_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M04_AXI_WSTRB(3 downto 0),
+      s00_axi_wvalid => ps7_0_axi_periph_M04_AXI_WVALID
     );
 processing_system7_0: component system_processing_system7_0_0
      port map (

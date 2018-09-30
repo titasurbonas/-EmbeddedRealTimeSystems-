@@ -27,7 +27,6 @@
 #define PLATFORM_ZYNQ
  
 /* Definitions for sleep timer configuration */
-#define XSLEEP_TIMER_IS_DEFAULT_TIMER
  
  
 /******************************************************************/
@@ -276,10 +275,10 @@
 /* Definitions for driver MATRIX_IP */
 #define XPAR_MATRIX_IP_NUM_INSTANCES 1
 
-/* Definitions for peripheral MATRIX_IP */
-#define XPAR_MATRIX_IP_DEVICE_ID 0
-#define XPAR_MATRIX_IP_S_AXI_BASEADDR 0x43C10000
-#define XPAR_MATRIX_IP_S_AXI_HIGHADDR 0x43C1FFFF
+/* Definitions for peripheral MATRIX_IP_0 */
+#define XPAR_MATRIX_IP_0_DEVICE_ID 0
+#define XPAR_MATRIX_IP_0_S00_AXI_BASEADDR 0x43C10000
+#define XPAR_MATRIX_IP_0_S00_AXI_HIGHADDR 0x43C1FFFF
 
 
 /******************************************************************/

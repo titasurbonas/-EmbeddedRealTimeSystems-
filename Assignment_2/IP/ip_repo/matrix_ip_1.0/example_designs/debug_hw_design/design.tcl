@@ -8,16 +8,73 @@ proc create_ipi_design { offsetfile design_name } {
 	create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz sys_clk_0
 	create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset sys_reset_0
 
-	#Constraints will be provided manually while pin planning.
+	#check if current_board is set, if true - figure out required clocks.
+	set is_board_clock_found 0
+	set is_board_reset_found 0
+	set external_reset_port ""
+	set external_clock_port ""
+
+	if { [current_board_part -quiet] != "" } {
+
+		#check if any reset interface exists in board.
+		set board_reset [lindex [get_board_part_interfaces -filter { BUSDEF_NAME == reset_rtl && MODE == slave }] 0 ]
+		if { $board_reset ne "" } {
+			set is_board_reset_found 1
+			apply_board_connection -board_interface $board_reset -ip_intf sys_clk_0/reset -diagram [current_bd_design]
+			apply_board_connection -board_interface $board_reset -ip_intf sys_reset_0/ext_reset -diagram [current_bd_design]
+			set external_rst [get_bd_ports -quiet -of_objects [get_bd_nets -quiet -of_objects [get_bd_pins -quiet sys_clk_0/reset]]]
+			if { $external_rst ne "" } {
+				set external_reset_port [get_property NAME $external_rst]
+			}
+		} else {
+			send_msg "ptgen 51-200" WARNING "No reset interface found in current_board, Users may need to specify the location constraints manually."
+		}
+
+		# check for differential clock, exclude any special clocks which has TYPE property.
+		set board_clock_busifs ""
+		foreach busif [get_board_part_interfaces -filter "BUSDEF_NAME == diff_clock_rtl"] {
+			set type [get_property PARAM.TYPE $busif]
+			if { $type == "" } {
+				set board_clock_busifs $busif
+				break
+			}
+		}
+		if { $board_clock_busifs ne "" } {
+			apply_board_connection -board_interface $board_clock_busifs -ip_intf sys_clk_0/CLK_IN1_D -diagram [current_bd_design]
+			set is_board_clock_found 1
+		} else {
+			# check for single ended clock
+			set board_sclock_busifs [lindex [get_board_part_interfaces -filter "BUSDEF_NAME == clock_rtl"] 0 ]
+			if { $board_sclock_busifs ne "" } {
+			    apply_board_connection -board_interface $board_sclock_busifs -ip_intf sys_clk_0/clock_CLK_IN1 -diagram [current_bd_design]
+				set external_clk [get_bd_ports -quiet -of_objects [get_bd_nets -quiet -of_objects [get_bd_pins -quiet sys_clk_0/clk_in1]]]
+				if { $external_clk ne "" } {
+					set external_clock_port [get_property NAME $external_clk]
+				}
+				set is_board_clock_found 1
+			} else {
+				send_msg "ptgen 51-200" WARNING "No clock interface found in current_board, Users may need to specify the location constraints manually."
+			}
+		}
+
+	} else {
+		send_msg "ptgen 51-201" WARNING "No board selected in current_project. Users may need to specify the location constraints manually."
+	}
+
+	#if there is no corresponding board interface found, assume constraints will be provided manually while pin planning.
+	if { $is_board_reset_found == 0 } {
 		create_bd_port -dir I -type rst reset_rtl
 		set_property CONFIG.POLARITY [get_property CONFIG.POLARITY [get_bd_pins sys_clk_0/reset]] [get_bd_ports reset_rtl]
 		connect_bd_net [get_bd_pins sys_reset_0/ext_reset_in] [get_bd_ports reset_rtl]
 		connect_bd_net [get_bd_ports reset_rtl] [get_bd_pins sys_clk_0/reset]
 		set external_reset_port reset_rtl
+	}
+	if { $is_board_clock_found == 0 } {
 		create_bd_port -dir I -type clk clock_rtl
 		connect_bd_net [get_bd_pins sys_clk_0/clk_in1] [get_bd_ports clock_rtl]
 		set external_clock_port clock_rtl
-	
+	}
+
 	#Avoid IPI DRC, make clock port synchronous to reset
 	if { $external_clock_port ne "" && $external_reset_port ne "" } {
 		set_property CONFIG.ASSOCIATED_RESET $external_reset_port [get_bd_ports $external_clock_port]
@@ -28,7 +85,7 @@ proc create_ipi_design { offsetfile design_name } {
 	connect_bd_net [get_bd_pins sys_clk_0/locked] [get_bd_pins sys_reset_0/dcm_locked]
 
 	# Create instance: matrix_ip_0, and set properties
-	set matrix_ip_0 [ create_bd_cell -type ip -vlnv user.org:user:matrix_ip:1.0 matrix_ip_0 ]
+	set matrix_ip_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:matrix_ip:1.0 matrix_ip_0 ]
 
 	# Create instance: jtag_axi_0, and set properties
 	set jtag_axi_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:jtag_axi jtag_axi_0 ]
@@ -50,9 +107,9 @@ proc create_ipi_design { offsetfile design_name } {
 	connect_bd_net [get_bd_pins axi_peri_interconnect/M00_ARESETN] [get_bd_pins sys_reset_0/peripheral_aresetn]
 
 	# Connect all clock & reset of matrix_ip_0 slave interfaces..
-	connect_bd_intf_net [get_bd_intf_pins axi_peri_interconnect/M00_AXI] [get_bd_intf_pins matrix_ip_0/S_AXI]
-	connect_bd_net [get_bd_pins matrix_ip_0/s_axi_aclk] [get_bd_pins sys_clk_0/clk_out1]
-	connect_bd_net [get_bd_pins matrix_ip_0/s_axi_aresetn] [get_bd_pins sys_reset_0/peripheral_aresetn]
+	connect_bd_intf_net [get_bd_intf_pins axi_peri_interconnect/M00_AXI] [get_bd_intf_pins matrix_ip_0/S00_AXI]
+	connect_bd_net [get_bd_pins matrix_ip_0/s00_axi_aclk] [get_bd_pins sys_clk_0/clk_out1]
+	connect_bd_net [get_bd_pins matrix_ip_0/s00_axi_aresetn] [get_bd_pins sys_reset_0/peripheral_aresetn]
 
 
 	# Auto assign address
@@ -65,14 +122,14 @@ proc create_ipi_design { offsetfile design_name } {
 	set fp [open $offset_file "w"]
 	puts $fp "# Configuration address parameters"
 
-	set offset [get_property OFFSET [get_bd_addr_segs /jtag_axi_0/Data/SEG_matrix_ip_0_S_AXI_* ]]
-	puts $fp "set s_axi_addr ${offset}"
+	set offset [get_property OFFSET [get_bd_addr_segs /jtag_axi_0/Data/SEG_matrix_ip_0_S00_AXI_* ]]
+	puts $fp "set s00_axi_addr ${offset}"
 
 	close $fp
 }
 
 # Set IP Repository and Update IP Catalogue 
-set ip_path [file dirname [file normalize [get_property XML_FILE_NAME [ipx::get_cores user.org:user:matrix_ip:1.0]]]]
+set ip_path [file dirname [file normalize [get_property XML_FILE_NAME [ipx::get_cores xilinx.com:user:matrix_ip:1.0]]]]
 set hw_test_file ${ip_path}/example_designs/debug_hw_design/matrix_ip_v1_0_hw_test.tcl
 
 set repo_paths [get_property ip_repo_paths [current_fileset]] 
