@@ -13,7 +13,7 @@ int main (void)
 {
 	XGpio dip, push;
 	XScuTimer Timer;
-	int dip_check, counter;
+	int dip_check, counter, timespan;
 	char input = 0;
 	matrix a, b, p;
 	XTime start,finish;
@@ -72,10 +72,18 @@ int main (void)
 			multiMatrixSoft(a, b, p);
 			XTime_GetTime(&finish);
 			displayMatrix(p);
-			int x = (finish-start)*2;
-			xil_printf("\nRuntime of matrix multiplication: %i \n\r", x);
-			// print finish - start.
+			timespan = (finish-start)*2;
+			xil_printf("\nRuntime of matrix multiplication: %i \n\r", timespan);
 
+			break;
+		case '5':
+			setInputMatrices(a,b);
+			XTime_GetTime(&start);
+			multiMatrixHard(a,b,p);
+			XTime_GetTime(&finish);
+			displayMatrix(p);
+			timespan = (finish-start)*2;
+			xil_printf("\nRuntime of matrix multiplication: %i \n\r", timespan);
 			break;
 		case '4':
 			return 0;

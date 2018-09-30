@@ -7852,3 +7852,1109 @@ arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
   25544	   1192	   8296	  35032	   88d8	lab4.elf
 Finished building: lab4.elf.size
  
+13:05:38 **** Auto Build of project lab4_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/led_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+Running Make libs in ps7_cortexa9_0/libsrc/led_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling led_ip...
+led_ip_selftest.c: In function 'LED_IP_Reg_SelfTest':
+led_ip_selftest.c:52:55: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( LED_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+led_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling bram
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpio
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+13:05:46 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+Finished building: ../src/Matrix.c
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25544	   1192	   8296	  35032	   88d8	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:06:33 **** Build of project standalone_bsp_3 ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/led_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/matrix_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/matrix_ip_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/led_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling led_ip...
+led_ip_selftest.c: In function 'LED_IP_Reg_SelfTest':
+led_ip_selftest.c:52:55: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( LED_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+led_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/matrix_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/matrix_ip_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling matrix_ip...
+matrix_ip_selftest.c: In function 'MATRIX_IP_Reg_SelfTest':
+matrix_ip_selftest.c:52:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( MATRIX_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                          ^~
+matrix_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling bram
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpio
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ttcps
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+13:07:10 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:08:28 **** Clean-only build of configuration Debug for project lab4 ****
+make clean 
+rm -rf  ./src/Matrix.o ./src/lab4.o  ./src/Matrix.d ./src/lab4.d  lab4.elf.size  lab4.elf
+ 
+13:08:28 **** Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+Finished building: ../src/Matrix.c
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25544	   1192	   8296	  35032	   88d8	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:10:03 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:10:37 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:11:22 **** Auto Build of project lab4_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/led_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+Running Make libs in ps7_cortexa9_0/libsrc/led_ip_v1_0/src
+make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling led_ip...
+led_ip_selftest.c: In function 'LED_IP_Reg_SelfTest':
+led_ip_selftest.c:52:55: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( LED_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+led_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src
+make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling bram
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpio
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+13:11:32 **** Clean-only build of configuration Debug for project lab4 ****
+make clean 
+rm -rf  ./src/Matrix.o ./src/lab4.o  ./src/Matrix.d ./src/lab4.d  lab4.elf.size  lab4.elf
+ 
+13:11:32 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+Finished building: ../src/Matrix.c
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25544	   1192	   8296	  35032	   88d8	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:11:39 **** Clean-only build of configuration Debug for project lab4 ****
+make clean 
+rm -rf  ./src/Matrix.o ./src/lab4.o  ./src/Matrix.d ./src/lab4.d  lab4.elf.size  lab4.elf
+ 
+13:11:40 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+Finished building: ../src/Matrix.c
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25544	   1192	   8296	  35032	   88d8	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:14:26 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/lab4.c: In function 'main':
+../src/lab4.c:82:46: error: 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'LED_IP_S_AXI_SLV_REG0_OFFSET'?
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              LED_IP_S_AXI_SLV_REG0_OFFSET
+../src/lab4.c:82:46: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab4.c:82:79: error: 'A' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                               ^
+../src/lab4.c:82:81: error: 'row' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                                 ^~~
+../src/lab4.c:83:46: error: 'MATRIX_IP_S_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET'?
+src/subdir.mk:24: recipe for target 'src/lab4.o' failed
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              MATRIX_IP_S_AXI_SLV_REG0_OFFSET
+../src/lab4.c:83:79: error: 'B' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                               ^
+../src/lab4.c:83:81: error: 'col' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                                 ^~~
+make: *** [src/lab4.o] Error 1
+13:14:40 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/lab4.c: In function 'main':
+../src/lab4.c:82:46: error: 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'LED_IP_S_AXI_SLV_REG0_OFFSET'?
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              LED_IP_S_AXI_SLV_REG0_OFFSET
+../src/lab4.c:82:46: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab4.c:82:81: error: 'row' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                                                                 ^~~
+../src/lab4.c:83:46: error: 'MATRIX_IP_S_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET'?
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              MATRIX_IP_S_AXI_SLV_REG0_OFFSET
+../src/lab4.c:83:81: error: 'col' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                                                                 ^~~
+make: *** [src/lab4.o] Error 1
+src/subdir.mk:24: recipe for target 'src/lab4.o' failed
+13:14:55 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/lab4.c: In function 'main':
+../src/lab4.c:82:46: error: 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'LED_IP_S_AXI_SLV_REG0_OFFSET'?
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              LED_IP_S_AXI_SLV_REG0_OFFSET
+../src/lab4.c:82:46: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab4.c:82:81: error: 'row' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                                                                 ^~~
+../src/lab4.c:83:46: error: 'MATRIX_IP_S_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET'?
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              MATRIX_IP_S_AXI_SLV_REG0_OFFSET
+../src/lab4.c:83:81: error: 'col' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                                                                 ^~~
+make: *** [src/lab4.o] Error 1
+src/subdir.mk:24: recipe for target 'src/lab4.o' failed
+13:14:59 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/lab4.c: In function 'main':
+../src/lab4.c:83:46: error: 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'LED_IP_S_AXI_SLV_REG0_OFFSET'?
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              LED_IP_S_AXI_SLV_REG0_OFFSET
+../src/lab4.c:83:46: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab4.c:83:81: error: 'row' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                                                                 ^~~
+../src/lab4.c:84:46: error: 'MATRIX_IP_S_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET'?
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              MATRIX_IP_S_AXI_SLV_REG0_OFFSET
+../src/lab4.c:84:81: error: 'col' undeclared (first use in this function)
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                                                                 ^~~
+make: *** [src/lab4.o] Error 1
+src/subdir.mk:24: recipe for target 'src/lab4.o' failed
+13:15:11 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25544	   1192	   8296	  35032	   88d8	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:16:12 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/lab4.c: In function 'main':
+../src/lab4.c:85:8: error: redefinition of 'x'
+    int x = (finish-start)*2;
+        ^
+../src/lab4.c:75:8: note: previous definition of 'x' was here
+    int x = (finish-start)*2;
+        ^
+make: *** [src/lab4.o] Error 1
+src/subdir.mk:24: recipe for target 'src/lab4.o' failed
+13:16:40 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+src/subdir.mk:24: recipe for target 'src/lab4.o' failed
+         ^~~~~~~
+../src/lab4.c: In function 'main':
+../src/lab4.c:75:4: error: 'timespan' undeclared (first use in this function)
+    timespan = (finish-start)*2;
+    ^~~~~~~~
+../src/lab4.c:75:4: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/lab4.o] Error 1
+13:16:47 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25672	   1192	   8296	  35160	   8958	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:16:56 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:57:2: warning: implicit declaration of function 'Xil_Out32' [-Wimplicit-function-declaration]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+  ^~~~~~~~~
+../src/Matrix.c:57:44: error: 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Matrix.c:57:44: note: each undeclared identifier is reported only once for each function it appears in
+../src/Matrix.c:57:77: error: 'a' undeclared (first use in this function)
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                                                             ^
+../src/Matrix.c:57:79: error: 'row' undeclared (first use in this function)
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, a[row].vect);
+                                                                               ^~~
+../src/Matrix.c:58:44: error: 'MATRIX_IP_S_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET'?
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                            MATRIX_IP_S_AXI_SLV_REG0_OFFSET
+../src/Matrix.c:58:77: error: 'b' undeclared (first use in this function)
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                                                             ^
+../src/Matrix.c:58:79: error: 'col' undeclared (first use in this function)
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, b[col].vect);
+                                                                               ^~~
+src/subdir.mk:24: recipe for target 'src/Matrix.o' failed
+make: *** [src/Matrix.o] Error 1
+13:17:19 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:58:2: warning: implicit declaration of function 'Xil_Out32' [-Wimplicit-function-declaration]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+  ^~~~~~~~~
+../src/Matrix.c:58:44: error: 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Matrix.c:58:44: note: each undeclared identifier is reported only once for each function it appears in
+../src/Matrix.c:58:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                              ^
+../src/Matrix.c:59:44: error: 'MATRIX_IP_S_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET'?
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                            MATRIX_IP_S_AXI_SLV_REG0_OFFSET
+../src/Matrix.c:59:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                              ^
+src/subdir.mk:24: recipe for target 'src/Matrix.o' failed
+make: *** [src/Matrix.o] Error 1
+13:17:33 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:59:2: warning: implicit declaration of function 'Xil_Out32' [-Wimplicit-function-declaration]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+  ^~~~~~~~~
+../src/Matrix.c:59:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                              ^
+../src/Matrix.c:60:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                              ^
+Finished building: ../src/Matrix.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/Matrix.o: In function `multiMatrixHard':
+/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.sdk/lab4/Debug/../src/Matrix.c:59: undefined reference to `Xil_Out32'
+/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment_2/Exercise_3/Lab_4.sdk/lab4/Debug/../src/Matrix.c:60: undefined reference to `Xil_Out32'
+collect2: error: ld returned 1 exit status
+makefile:39: recipe for target 'lab4.elf' failed
+make: *** [lab4.elf] Error 1
+13:18:00 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:60:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                              ^
+../src/Matrix.c:61:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                              ^
+Finished building: ../src/Matrix.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25800	   1192	   8296	  35288	   89d8	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:18:05 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:59:2: warning: implicit declaration of function 'Xil_Out32' [-Wimplicit-function-declaration]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+  ^~~~~~~~~
+../src/Matrix.c:59:44: error: 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Matrix.c:59:44: note: each undeclared identifier is reported only once for each function it appears in
+../src/Matrix.c:59:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                              ^
+../src/Matrix.c:60:44: error: 'MATRIX_IP_S_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'MATRIX_IP_S_AXI_SLV_REG0_OFFSET'?
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                            MATRIX_IP_S_AXI_SLV_REG0_OFFSET
+../src/Matrix.c:60:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                              ^
+make: *** [src/Matrix.o] Error 1
+src/subdir.mk:24: recipe for target 'src/Matrix.o' failed
+13:18:08 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:59:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                              ^
+../src/Matrix.c:60:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+  Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                              ^
+Finished building: ../src/Matrix.c
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25800	   1192	   8296	  35288	   89d8	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:19:54 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:63:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                                ^
+../src/Matrix.c:64:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                                ^
+../src/Matrix.c:65:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET)
+     ^
+../src/Matrix.c:65:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET)
+               ^
+../src/Matrix.c:66:3: error: expected ';' before '}' token
+   }
+   ^
+make: *** [src/Matrix.o] Error 1
+src/subdir.mk:24: recipe for target 'src/Matrix.o' failed
+13:20:00 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:63:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                                ^
+../src/Matrix.c:64:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                                ^
+../src/Matrix.c:65:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+     ^
+../src/Matrix.c:65:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+               ^
+Finished building: ../src/Matrix.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25928	   1192	   8296	  35416	   8a58	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:20:20 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:63:79: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                               ^
+../src/Matrix.c:64:79: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                               ^
+../src/Matrix.c:65:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+     ^
+../src/Matrix.c:65:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+               ^
+Finished building: ../src/Matrix.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25928	   1192	   8296	  35416	   8a58	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:20:34 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:63:79: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                               ^
+../src/Matrix.c:64:79: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                               ^
+../src/Matrix.c:65:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+     ^
+../src/Matrix.c:65:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+               ^
+Finished building: ../src/Matrix.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25928	   1192	   8296	  35416	   8a58	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:21:11 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:63:79: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                               ^
+../src/Matrix.c:64:79: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                               ^
+../src/Matrix.c:65:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+     ^
+../src/Matrix.c:65:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+               ^
+Finished building: ../src/Matrix.c
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25928	   1192	   8296	  35416	   8a58	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:21:22 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:23:51 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:24:39 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+In file included from ../src/lab4.c:6:0:
+../../standalone_bsp_3/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25992	   1192	   8296	  35480	   8a98	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:24:52 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:63:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                                ^
+../src/Matrix.c:64:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                                ^
+../src/Matrix.c:65:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+     ^
+../src/Matrix.c:65:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In8(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+               ^
+Finished building: ../src/Matrix.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25928	   1192	   8296	  35416	   8a58	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:25:04 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:63:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                                ^
+../src/Matrix.c:64:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                                ^
+../src/Matrix.c:65:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+     ^
+../src/Matrix.c:65:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+               ^
+Finished building: ../src/Matrix.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25928	   1192	   8296	  35416	   8a58	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:25:20 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:29:23 **** Auto Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Matrix.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Matrix.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_3/ps7_cortexa9_0/include -MMD -MP -MF"src/Matrix.d" -MT"src/Matrix.o" -o "src/Matrix.o" "../src/Matrix.c"
+../src/Matrix.c: In function 'multiMatrixHard':
+../src/Matrix.c:63:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+                                                                                ^
+../src/Matrix.c:64:80: warning: array subscript has type 'char' [-Wchar-subscripts]
+    Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+                                                                                ^
+../src/Matrix.c:65:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+     ^
+../src/Matrix.c:65:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+    P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+               ^
+Finished building: ../src/Matrix.c
+ 
+Building target: lab4.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/Matrix.o ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lab4.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25992	   1192	   8296	  35480	   8a98	lab4.elf
+Finished building: lab4.elf.size
+ 
+13:29:54 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:31:45 **** Incremental Build of configuration Debug for project lab4 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

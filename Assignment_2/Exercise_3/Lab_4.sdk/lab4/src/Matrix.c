@@ -6,6 +6,7 @@
  */
 
 #include "../inc/Matrix.h"
+
 matrix aInst, bInst, pInst;
 
 void setInputMatrices(matrix A, matrix B)
@@ -54,5 +55,14 @@ void multiMatrixSoft(matrix A, matrix B, matrix P)
 
 void multiMatrixHard(matrix A, matrix B, matrix P)
 {
-
+	char row = 0, col = 0;
+	for (; row < MSIZE; row++)
+	{
+		for(col=0;col < MSIZE; col++)
+		{
+			Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG0_OFFSET, A[row].vect);
+			Xil_Out32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG1_OFFSET, B[col].vect);
+			P[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_S_AXI_BASEADDR + MATRIX_IP_S_AXI_SLV_REG2_OFFSET);
+		}
+	}
 }

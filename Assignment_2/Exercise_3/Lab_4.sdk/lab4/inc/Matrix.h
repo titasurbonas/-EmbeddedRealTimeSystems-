@@ -11,15 +11,16 @@
 #include <xil_types.h>
 #include <xil_mem.h>
 #include <xil_printf.h>
-
+#include <matrix_ip.h>
+#include <xil_io.h>
 
 #define MSIZE 4
 
 
 //typedef unsigned char matrix[MSIZE][MSIZE];
 typedef union {
-	unsigned char comp[MSIZE];
-	unsigned int vect;
+	u8 comp[MSIZE];
+	u32 vect;
 } vectorType;
 
 typedef vectorType matrix[MSIZE];
