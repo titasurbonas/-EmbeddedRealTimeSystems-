@@ -1,0 +1,352 @@
+
+*** Running vivado
+    with args -log matrixmul.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrixmul.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source matrixmul.tcl -notrace
+Command: synth_design -top matrixmul -part xc7z010clg400-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16441 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1261.945 ; gain = 81.875 ; free physical = 270 ; free virtual = 3293
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'matrixmul' [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:33]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:59]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:62]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:66]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:73]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:81]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:85]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:89]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'matrixmul_mac_mulbkb' declared at '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul_mac_mulbkb.vhd:45' bound to instance 'matrixmul_mac_mulbkb_U1' of component 'matrixmul_mac_mulbkb' [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'matrixmul_mac_mulbkb' [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul_mac_mulbkb.vhd:60]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'matrixmul_mac_mulbkb_DSP48_0' declared at '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul_mac_mulbkb.vhd:12' bound to instance 'matrixmul_mac_mulbkb_DSP48_0_U' of component 'matrixmul_mac_mulbkb_DSP48_0' [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul_mac_mulbkb.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'matrixmul_mac_mulbkb_DSP48_0' [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul_mac_mulbkb.vhd:24]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'matrixmul_mac_mulbkb_DSP48_0' (1#1) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul_mac_mulbkb.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'matrixmul_mac_mulbkb' (2#1) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul_mac_mulbkb.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'matrixmul' (3#1) [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:33]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1306.570 ; gain = 126.500 ; free physical = 285 ; free virtual = 3308
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1306.570 ; gain = 126.500 ; free physical = 284 ; free virtual = 3307
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1306.570 ; gain = 126.500 ; free physical = 284 ; free virtual = 3307
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.xdc]
+Finished Parsing XDC File [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1624.188 ; gain = 1.000 ; free physical = 200 ; free virtual = 3223
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1624.188 ; gain = 444.117 ; free physical = 278 ; free virtual = 3301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1624.188 ; gain = 444.117 ; free physical = 278 ; free virtual = 3301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1624.188 ; gain = 444.117 ; free physical = 280 ; free virtual = 3303
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond2_fu_124_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond1_fu_158_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond_fu_184_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1624.188 ; gain = 444.117 ; free physical = 270 ; free virtual = 3294
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   4 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 3     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module matrixmul 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   4 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 3     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_s_reg_260_reg' and it is trimmed from '5' to '4' bits. [/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/matrixmul.vhd:247]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 1624.188 ; gain = 444.117 ; free physical = 259 ; free virtual = 3284
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|matrixmul_mac_mulbkb_DSP48_0 | C+A*B       | 8      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:49 . Memory (MB): peak = 1631.188 ; gain = 451.117 ; free physical = 121 ; free virtual = 3120
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:49 . Memory (MB): peak = 1642.203 ; gain = 462.133 ; free physical = 134 ; free virtual = 3117
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.219 ; gain = 471.148 ; free physical = 132 ; free virtual = 3114
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.219 ; gain = 471.148 ; free physical = 132 ; free virtual = 3114
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.219 ; gain = 471.148 ; free physical = 132 ; free virtual = 3114
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.219 ; gain = 471.148 ; free physical = 132 ; free virtual = 3114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.219 ; gain = 471.148 ; free physical = 132 ; free virtual = 3114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.219 ; gain = 471.148 ; free physical = 132 ; free virtual = 3114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.219 ; gain = 471.148 ; free physical = 132 ; free virtual = 3114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |DSP48E1_1 |     1|
+|2     |LUT2      |     7|
+|3     |LUT3      |    10|
+|4     |LUT4      |    10|
+|5     |LUT5      |     6|
+|6     |LUT6      |     7|
+|7     |FDRE      |    27|
+|8     |FDSE      |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+-----------------------------+------+
+|      |Instance                           |Module                       |Cells |
++------+-----------------------------------+-----------------------------+------+
+|1     |top                                |                             |    69|
+|2     |  matrixmul_mac_mulbkb_U1          |matrixmul_mac_mulbkb         |     3|
+|3     |    matrixmul_mac_mulbkb_DSP48_0_U |matrixmul_mac_mulbkb_DSP48_0 |     3|
++------+-----------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.219 ; gain = 471.148 ; free physical = 132 ; free virtual = 3114
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 1651.219 ; gain = 153.531 ; free physical = 200 ; free virtual = 3182
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1651.227 ; gain = 471.148 ; free physical = 204 ; free virtual = 3186
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:52 . Memory (MB): peak = 1651.227 ; gain = 471.281 ; free physical = 201 ; free virtual = 3183
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/matrix_mul3/solution1/impl/vhdl/project.runs/synth_1/matrixmul.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file matrixmul_utilization_synth.rpt -pb matrixmul_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1675.230 ; gain = 0.000 ; free physical = 202 ; free virtual = 3184
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  2 17:28:10 2018...

@@ -1,0 +1,70 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Oct  2 17:30:25 2018
+| Host         : ubuntu running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_control_sets -verbose -file matrixmul_control_sets_placed.rpt
+| Design       : matrixmul
+| Device       : xc7z010
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     4 |
+| Unused register locations in slices containing registers |     8 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |            1 |
+|     12 |            2 |
+|    16+ |            1 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              12 |            2 |
+| Yes          | No                    | No                     |              20 |            3 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------+------------------+------------------+----------------+
+| Clock Signal | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------+---------------+------------------+------------------+----------------+
+|  ap_clk      | j_reg_890     |                  |                1 |              8 |
+|  ap_clk      |               | ap_rst           |                2 |             12 |
+|  ap_clk      | k_reg_1130    |                  |                2 |             12 |
+|  ap_clk      |               |                  |                3 |             24 |
++--------------+---------------+------------------+------------------+----------------+
+
+

@@ -1,0 +1,9 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx/Vivado/2018.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling matrixmul_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_matrixmul.cpp
+   Compiling matrixmul.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+ERROR: [COSIM-330] Aborting co-simulation: top function 'matrixmul' is not invoked in the test bench.
