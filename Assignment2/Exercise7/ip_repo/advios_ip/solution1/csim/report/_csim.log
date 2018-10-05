@@ -1,0 +1,21 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../src/advios_testbench.cpp in debug mode
+   Compiling ../../../../src/advios.cpp in debug mode
+   Generating csim.exe
+
+Info: (I703) tracing timescale unit set: 1 ms (waveForm.vcd)
+Leds are now: 0
+Leds are now: 1
+Leds are now: 2
+Leds are now: 3
+Leds are now: 4
+Leds are now: 5
+Leds are now: 6
+Leds are now: 7
+Leds are now: 8
+Leds are now: 9
+Leds are now: 5
+Leds are now: 1
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

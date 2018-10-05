@@ -1,0 +1,32 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'root' on host 'ubuntu' (Linux_x86_64 version 4.15.0-33-generic) on Fri Oct 05 21:41:55 CEST 2018
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7/ip_repo'
+INFO: [HLS 200-10] Opening project '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7/ip_repo/advios_ip'.
+INFO: [HLS 200-10] Adding design file 'src/advios.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'inc/advios.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'src/advios_testbench.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7/ip_repo/advios_ip/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [HLS 200-10] Analyzing design file 'src/advios.cpp' ... 
+WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&clk' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&reset' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&ctrl' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&inSwitch' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&outLeds' is deprecated. Please use the interface directive to specify the AXI interface.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:47 ; elapsed = 00:01:13 . Memory (MB): peak = 367.316 ; gain = 0.125 ; free physical = 671 ; free virtual = 1911
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:47 ; elapsed = 00:01:13 . Memory (MB): peak = 367.316 ; gain = 0.125 ; free physical = 671 ; free virtual = 1911
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:48 ; elapsed = 00:01:14 . Memory (MB): peak = 367.523 ; gain = 0.332 ; free physical = 662 ; free virtual = 1903
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:48 ; elapsed = 00:01:15 . Memory (MB): peak = 367.523 ; gain = 0.332 ; free physical = 657 ; free virtual = 1898
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:49 ; elapsed = 00:01:15 . Memory (MB): peak = 495.191 ; gain = 128.000 ; free physical = 633 ; free virtual = 1875
+WARNING: [XFORM 203-561] 'Loop-1' (src/advios.cpp:30:7) in function 'Advios::toggle_leds' is an infinite loop.
+WARNING: [XFORM 203-561] 'Loop-1' (src/advios.cpp:12:7) in function 'Advios::time' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:49 ; elapsed = 00:01:15 . Memory (MB): peak = 495.191 ; gain = 128.000 ; free physical = 615 ; free virtual = 1857
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [SCA 200-201] Elaborating SystemC module 'Advios'.
+Abnormal program termination (11)
+Please check '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7/ip_repo/hs_err_pid112259.log' for details

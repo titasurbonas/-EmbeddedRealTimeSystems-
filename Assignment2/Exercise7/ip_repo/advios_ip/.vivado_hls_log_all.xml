@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (src/advios.cpp:12:7) in function 'Advios::time' is an infinite loop." projectName="advios_ip" solutionName="solution1" date="2018-10-05T21:43:10.542+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (src/advios.cpp:30:7) in function 'Advios::toggle_leds' is an infinite loop." projectName="advios_ip" solutionName="solution1" date="2018-10-05T21:43:10.287+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&amp;outLeds' is deprecated. Please use the interface directive to specify the AXI interface." projectName="advios_ip" solutionName="solution1" date="2018-10-05T21:43:08.652+0200" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
