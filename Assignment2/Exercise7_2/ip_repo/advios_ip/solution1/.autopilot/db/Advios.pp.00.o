@@ -1,0 +1,2985 @@
+	.file	"Advios.cpp"
+	.section	.text.startup,"ax",@progbits
+	.align	16, 0x90
+	.type	__cxx_global_var_init,@function
+__cxx_global_var_init:                  # @__cxx_global_var_init
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp2:
+	.cfi_def_cfa_offset 16
+.Ltmp3:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp4:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	leaq	_ZStL8__ioinit, %rdi
+	callq	_ZNSt8ios_base4InitC1Ev
+	leaq	_ZNSt8ios_base4InitD1Ev, %rdi
+	leaq	_ZStL8__ioinit, %rax
+	leaq	__dso_handle, %rdx
+	movq	%rax, %rsi
+	callq	__cxa_atexit
+	movl	%eax, -4(%rbp)          # 4-byte Spill
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp5:
+	.size	__cxx_global_var_init, .Ltmp5-__cxx_global_var_init
+	.cfi_endproc
+
+	.section	.text._ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi,"axG",@progbits,_ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi,comdat
+	.weak	_ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi
+	.align	16, 0x90
+	.type	_ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi,@function
+_ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi: # @_ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	movq	%rsi, -16(%rsp)
+	movl	%edx, -20(%rsp)
+	ret
+.Ltmp6:
+	.size	_ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi, .Ltmp6-_ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi
+	.cfi_endproc
+
+	.section	.text.startup,"ax",@progbits
+	.align	16, 0x90
+	.type	__cxx_global_var_init1,@function
+__cxx_global_var_init1:                 # @__cxx_global_var_init1
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp9:
+	.cfi_def_cfa_offset 16
+.Ltmp10:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp11:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	leaq	_ZN7sc_coreL17api_version_checkE, %rax
+	xorl	%esi, %esi
+	movl	$_ZN7sc_coreL17api_version_checkE, %edi
+	movq	%rax, -8(%rbp)          # 8-byte Spill
+	callq	_ZN7sc_core20sc_api_version_2_3_1IXadL_ZNS_34SC_DISABLE_VIRTUAL_BIND_UNDEFINED_EEEEC1ENS_16sc_writer_policyE
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp12:
+	.size	__cxx_global_var_init1, .Ltmp12-__cxx_global_var_init1
+	.cfi_endproc
+
+	.text
+	.globl	_ZN6Advios14modulate_clockEv
+	.align	16, 0x90
+	.type	_ZN6Advios14modulate_clockEv,@function
+_ZN6Advios14modulate_clockEv:           # @_ZN6Advios14modulate_clockEv
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin3:
+	.cfi_lsda 3, .Lexception3
+# BB#0:
+	pushq	%rbp
+.Ltmp18:
+	.cfi_def_cfa_offset 16
+.Ltmp19:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp20:
+	.cfi_def_cfa_register %rbp
+	subq	$128, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	cmpb	$0, _ZGVZN6Advios14modulate_clockEvE13clock_counter
+	movq	%rdi, -64(%rbp)         # 8-byte Spill
+	jne	.LBB3_4
+# BB#1:
+	leaq	_ZGVZN6Advios14modulate_clockEvE13clock_counter, %rdi
+	callq	__cxa_guard_acquire
+	cmpl	$0, %eax
+	je	.LBB3_4
+# BB#2:
+.Ltmp13:
+	xorl	%esi, %esi
+	movl	$_ZZN6Advios14modulate_clockEvE13clock_counter, %edi
+	callq	_ZN5sc_dt7sc_uintILi26EEC1Ei
+.Ltmp14:
+	jmp	.LBB3_3
+.LBB3_3:
+	leaq	_ZN5sc_dt7sc_uintILi26EED1Ev, %rax
+	leaq	_ZZN6Advios14modulate_clockEvE13clock_counter, %rcx
+	leaq	__dso_handle, %rdx
+	movq	%rax, %rdi
+	movq	%rcx, %rsi
+	callq	__cxa_atexit
+	leaq	_ZGVZN6Advios14modulate_clockEvE13clock_counter, %rdi
+	movl	%eax, -68(%rbp)         # 4-byte Spill
+	callq	__cxa_guard_release
+.LBB3_4:
+	jmp	.LBB3_5
+.LBB3_5:
+	jmp	.LBB3_6
+.LBB3_6:                                # =>This Inner Loop Header: Depth=1
+	movq	-64(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZN7sc_core9sc_module4waitEv
+	leaq	-48(%rbp), %rdi
+	leaq	_ZZN6Advios14modulate_clockEvE13clock_counter, %rsi
+	movl	$0, %edx
+	callq	_ZN5sc_dt7sc_uintILi26EEppEi
+	leaq	-48(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi26EED1Ev
+# BB#7:                                 #   in Loop: Header=BB3_6 Depth=1
+	leaq	_ZZN6Advios14modulate_clockEvE13clock_counter, %rdi
+	callq	_ZNK5sc_dt12sc_uint_basecvyEv
+	cmpq	$50000000, %rax         # imm = 0x2FAF080
+	jne	.LBB3_10
+# BB#8:                                 #   in Loop: Header=BB3_6 Depth=1
+	leaq	_ZZN6Advios14modulate_clockEvE13clock_counter, %rdi
+	movl	$0, %esi
+	leaq	-49(%rbp), %rax
+	movq	-64(%rbp), %rcx         # 8-byte Reload
+	addq	$208, %rcx
+	movq	-64(%rbp), %rdx         # 8-byte Reload
+	movq	208(%rdx), %r8
+	movq	112(%r8), %r8
+	addq	$208, %rdx
+	movq	-64(%rbp), %r9          # 8-byte Reload
+	movq	208(%r9), %r10
+	movq	%rdi, -80(%rbp)         # 8-byte Spill
+	movq	%rdx, %rdi
+	movl	%esi, -84(%rbp)         # 4-byte Spill
+	movq	%rax, -96(%rbp)         # 8-byte Spill
+	movq	%rcx, -104(%rbp)        # 8-byte Spill
+	movq	%r8, -112(%rbp)         # 8-byte Spill
+	callq	*56(%r10)
+	movb	(%rax), %r11b
+	xorb	$1, %r11b
+	andb	$1, %r11b
+	movb	%r11b, -49(%rbp)
+	movq	-104(%rbp), %rdi        # 8-byte Reload
+	movq	-96(%rbp), %rsi         # 8-byte Reload
+	movq	-112(%rbp), %rax        # 8-byte Reload
+	callq	*%rax
+	movq	-80(%rbp), %rdi         # 8-byte Reload
+	movl	-84(%rbp), %esi         # 4-byte Reload
+	callq	_ZN5sc_dt7sc_uintILi26EEaSEi
+	movq	%rax, -120(%rbp)        # 8-byte Spill
+	jmp	.LBB3_10
+.LBB3_9:
+.Ltmp15:
+	leaq	_ZGVZN6Advios14modulate_clockEvE13clock_counter, %rdi
+	movl	%edx, %ecx
+	movq	%rax, -16(%rbp)
+	movl	%ecx, -20(%rbp)
+	callq	__cxa_guard_abort
+	jmp	.LBB3_11
+.LBB3_10:                               #   in Loop: Header=BB3_6 Depth=1
+	jmp	.LBB3_6
+.LBB3_11:
+	movq	-16(%rbp), %rdi
+	callq	_Unwind_Resume
+.Ltmp21:
+	.size	_ZN6Advios14modulate_clockEv, .Ltmp21-_ZN6Advios14modulate_clockEv
+	.cfi_endproc
+.Leh_func_end3:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table3:
+.Lexception3:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\234"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	26                      # Call site table length
+.Lset0 = .Ltmp13-.Leh_func_begin3       # >> Call Site 1 <<
+	.long	.Lset0
+.Lset1 = .Ltmp14-.Ltmp13                #   Call between .Ltmp13 and .Ltmp14
+	.long	.Lset1
+.Lset2 = .Ltmp15-.Leh_func_begin3       #     jumps to .Ltmp15
+	.long	.Lset2
+	.byte	0                       #   On action: cleanup
+.Lset3 = .Ltmp14-.Leh_func_begin3       # >> Call Site 2 <<
+	.long	.Lset3
+.Lset4 = .Leh_func_end3-.Ltmp14         #   Call between .Ltmp14 and .Leh_func_end3
+	.long	.Lset4
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.align	4
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EEC1Ei,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EEC1Ei,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EEC1Ei
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EEC1Ei,@function
+_ZN5sc_dt7sc_uintILi26EEC1Ei:           # @_ZN5sc_dt7sc_uintILi26EEC1Ei
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp24:
+	.cfi_def_cfa_offset 16
+.Ltmp25:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp26:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movl	-12(%rbp), %esi
+	callq	_ZN5sc_dt7sc_uintILi26EEC2Ei
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp27:
+	.size	_ZN5sc_dt7sc_uintILi26EEC1Ei, .Ltmp27-_ZN5sc_dt7sc_uintILi26EEC1Ei
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EED1Ev,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EED1Ev,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EED1Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EED1Ev,@function
+_ZN5sc_dt7sc_uintILi26EED1Ev:           # @_ZN5sc_dt7sc_uintILi26EED1Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp30:
+	.cfi_def_cfa_offset 16
+.Ltmp31:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp32:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi26EED2Ev
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp33:
+	.size	_ZN5sc_dt7sc_uintILi26EED1Ev, .Ltmp33-_ZN5sc_dt7sc_uintILi26EED1Ev
+	.cfi_endproc
+
+	.section	.text._ZN7sc_core9sc_module4waitEv,"axG",@progbits,_ZN7sc_core9sc_module4waitEv,comdat
+	.weak	_ZN7sc_core9sc_module4waitEv
+	.align	16, 0x90
+	.type	_ZN7sc_core9sc_module4waitEv,@function
+_ZN7sc_core9sc_module4waitEv:           # @_ZN7sc_core9sc_module4waitEv
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp36:
+	.cfi_def_cfa_offset 16
+.Ltmp37:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp38:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZNK7sc_core9sc_object10simcontextEv
+	movq	%rax, %rdi
+	callq	_ZN7sc_core4waitEPNS_13sc_simcontextE
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp39:
+	.size	_ZN7sc_core9sc_module4waitEv, .Ltmp39-_ZN7sc_core9sc_module4waitEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EEppEi,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EEppEi,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EEppEi
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EEppEi,@function
+_ZN5sc_dt7sc_uintILi26EEppEi:           # @_ZN5sc_dt7sc_uintILi26EEppEi
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin7:
+	.cfi_lsda 3, .Lexception7
+# BB#0:
+	pushq	%rbp
+.Ltmp48:
+	.cfi_def_cfa_offset 16
+.Ltmp49:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp50:
+	.cfi_def_cfa_register %rbp
+	subq	$96, %rsp
+	movq	%rdi, %rax
+	movq	%rsi, -8(%rbp)
+	movl	%edx, -12(%rbp)
+	movq	-8(%rbp), %rsi
+	leaq	-40(%rbp), %rcx
+	xorl	%edx, %edx
+	movq	%rdi, -64(%rbp)         # 8-byte Spill
+	movq	%rcx, %rdi
+	movq	%rax, -72(%rbp)         # 8-byte Spill
+	movq	%rcx, -80(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt12sc_uint_baseppEi
+.Ltmp40:
+	movq	-64(%rbp), %rdi         # 8-byte Reload
+	movq	-80(%rbp), %rsi         # 8-byte Reload
+	callq	_ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE
+.Ltmp41:
+	jmp	.LBB7_1
+.LBB7_1:
+	leaq	-40(%rbp), %rdi
+	callq	_ZN5sc_dt12sc_uint_baseD1Ev
+	addq	$96, %rsp
+	popq	%rbp
+	ret
+.LBB7_2:
+.Ltmp42:
+	movl	%edx, %ecx
+	movq	%rax, -48(%rbp)
+	movl	%ecx, -52(%rbp)
+.Ltmp43:
+	leaq	-40(%rbp), %rdi
+	callq	_ZN5sc_dt12sc_uint_baseD1Ev
+.Ltmp44:
+	jmp	.LBB7_3
+.LBB7_3:
+	jmp	.LBB7_4
+.LBB7_4:
+	movq	-48(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB7_5:
+.Ltmp45:
+	movq	%rax, -88(%rbp)         # 8-byte Spill
+	movq	%rdx, -96(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp51:
+	.size	_ZN5sc_dt7sc_uintILi26EEppEi, .Ltmp51-_ZN5sc_dt7sc_uintILi26EEppEi
+	.cfi_endproc
+.Leh_func_end7:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table7:
+.Lexception7:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.byte	73                      # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	65                      # Call site table length
+.Lset5 = .Leh_func_begin7-.Leh_func_begin7 # >> Call Site 1 <<
+	.long	.Lset5
+.Lset6 = .Ltmp40-.Leh_func_begin7       #   Call between .Leh_func_begin7 and .Ltmp40
+	.long	.Lset6
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset7 = .Ltmp40-.Leh_func_begin7       # >> Call Site 2 <<
+	.long	.Lset7
+.Lset8 = .Ltmp41-.Ltmp40                #   Call between .Ltmp40 and .Ltmp41
+	.long	.Lset8
+.Lset9 = .Ltmp42-.Leh_func_begin7       #     jumps to .Ltmp42
+	.long	.Lset9
+	.byte	0                       #   On action: cleanup
+.Lset10 = .Ltmp41-.Leh_func_begin7      # >> Call Site 3 <<
+	.long	.Lset10
+.Lset11 = .Ltmp43-.Ltmp41               #   Call between .Ltmp41 and .Ltmp43
+	.long	.Lset11
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset12 = .Ltmp43-.Leh_func_begin7      # >> Call Site 4 <<
+	.long	.Lset12
+.Lset13 = .Ltmp44-.Ltmp43               #   Call between .Ltmp43 and .Ltmp44
+	.long	.Lset13
+.Lset14 = .Ltmp45-.Leh_func_begin7      #     jumps to .Ltmp45
+	.long	.Lset14
+	.byte	1                       #   On action: 1
+.Lset15 = .Ltmp44-.Leh_func_begin7      # >> Call Site 5 <<
+	.long	.Lset15
+.Lset16 = .Leh_func_end7-.Ltmp44        #   Call between .Ltmp44 and .Leh_func_end7
+	.long	.Lset16
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZNK5sc_dt12sc_uint_basecvyEv,"axG",@progbits,_ZNK5sc_dt12sc_uint_basecvyEv,comdat
+	.weak	_ZNK5sc_dt12sc_uint_basecvyEv
+	.align	16, 0x90
+	.type	_ZNK5sc_dt12sc_uint_basecvyEv,@function
+_ZNK5sc_dt12sc_uint_basecvyEv:          # @_ZNK5sc_dt12sc_uint_basecvyEv
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	movq	-8(%rsp), %rdi
+	movq	8(%rdi), %rax
+	ret
+.Ltmp52:
+	.size	_ZNK5sc_dt12sc_uint_basecvyEv, .Ltmp52-_ZNK5sc_dt12sc_uint_basecvyEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EEaSEi,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EEaSEi,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EEaSEi
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EEaSEi,@function
+_ZN5sc_dt7sc_uintILi26EEaSEi:           # @_ZN5sc_dt7sc_uintILi26EEaSEi
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp55:
+	.cfi_def_cfa_offset 16
+.Ltmp56:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp57:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movq	%rdi, %rax
+	movl	-12(%rbp), %esi
+	movq	%rdi, -24(%rbp)         # 8-byte Spill
+	movq	%rax, %rdi
+	callq	_ZN5sc_dt12sc_uint_baseaSEi
+	movq	-24(%rbp), %rdi         # 8-byte Reload
+	movq	%rax, -32(%rbp)         # 8-byte Spill
+	movq	%rdi, %rax
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.Ltmp58:
+	.size	_ZN5sc_dt7sc_uintILi26EEaSEi, .Ltmp58-_ZN5sc_dt7sc_uintILi26EEaSEi
+	.cfi_endproc
+
+	.text
+	.globl	_ZN6Advios10LedControlEv
+	.align	16, 0x90
+	.type	_ZN6Advios10LedControlEv,@function
+_ZN6Advios10LedControlEv:               # @_ZN6Advios10LedControlEv
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin10:
+	.cfi_lsda 3, .Lexception10
+# BB#0:
+	pushq	%rbp
+.Ltmp114:
+	.cfi_def_cfa_offset 16
+.Ltmp115:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp116:
+	.cfi_def_cfa_register %rbp
+	subq	$256, %rsp              # imm = 0x100
+	movq	%rdi, -8(%rbp)
+	leaq	-32(%rbp), %rax
+	movq	%rdi, -128(%rbp)        # 8-byte Spill
+	movq	%rax, %rdi
+	callq	_ZN5sc_dt7sc_uintILi4EEC1Ev
+	movq	-128(%rbp), %rax        # 8-byte Reload
+.Ltmp59:
+	leaq	-56(%rbp), %rdi
+	movq	%rax, -136(%rbp)        # 8-byte Spill
+	callq	_ZN5sc_dt7sc_uintILi4EEC1Ev
+.Ltmp60:
+	jmp	.LBB10_1
+.LBB10_1:
+	cmpb	$0, _ZGVZN6Advios10LedControlEvE7counter
+	jne	.LBB10_5
+# BB#2:
+	leaq	_ZGVZN6Advios10LedControlEvE7counter, %rdi
+	callq	__cxa_guard_acquire
+	cmpl	$0, %eax
+	je	.LBB10_5
+# BB#3:
+.Ltmp62:
+	xorl	%esi, %esi
+	movl	$_ZZN6Advios10LedControlEvE7counter, %edi
+	callq	_ZN5sc_dt7sc_uintILi4EEC1Ei
+.Ltmp63:
+	jmp	.LBB10_4
+.LBB10_4:
+	leaq	_ZN5sc_dt7sc_uintILi4EED1Ev, %rax
+	leaq	_ZZN6Advios10LedControlEvE7counter, %rcx
+	leaq	__dso_handle, %rdx
+	movq	%rax, %rdi
+	movq	%rcx, %rsi
+	callq	__cxa_atexit
+	leaq	_ZGVZN6Advios10LedControlEvE7counter, %rdi
+	movl	%eax, -140(%rbp)        # 4-byte Spill
+	callq	__cxa_guard_release
+.LBB10_5:
+	jmp	.LBB10_6
+.LBB10_6:
+	jmp	.LBB10_7
+.LBB10_7:                               # =>This Inner Loop Header: Depth=1
+	jmp	.LBB10_8
+.LBB10_8:                               #   in Loop: Header=BB10_7 Depth=1
+.Ltmp65:
+	movq	-136(%rbp), %rdi        # 8-byte Reload
+	callq	_ZN7sc_core9sc_module4waitEv
+.Ltmp66:
+	jmp	.LBB10_9
+.LBB10_9:                               #   in Loop: Header=BB10_7 Depth=1
+	jmp	.LBB10_10
+.LBB10_10:                              #   in Loop: Header=BB10_7 Depth=1
+	testb	$1, _ZZN6Advios10LedControlEvE10last_clock
+	jne	.LBB10_41
+# BB#11:                                #   in Loop: Header=BB10_7 Depth=1
+	movq	-136(%rbp), %rax        # 8-byte Reload
+	addq	$208, %rax
+	movq	-136(%rbp), %rcx        # 8-byte Reload
+	movq	208(%rcx), %rdx
+	movq	56(%rdx), %rdx
+.Ltmp67:
+	movq	%rax, %rdi
+	callq	*%rdx
+.Ltmp68:
+	movq	%rax, -152(%rbp)        # 8-byte Spill
+	jmp	.LBB10_12
+.LBB10_12:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-152(%rbp), %rax        # 8-byte Reload
+	testb	$1, (%rax)
+	jne	.LBB10_13
+	jmp	.LBB10_41
+.LBB10_13:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-136(%rbp), %rax        # 8-byte Reload
+	addq	$728, %rax              # imm = 0x2D8
+.Ltmp69:
+	movq	%rax, %rdi
+	callq	_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv
+.Ltmp70:
+	movq	%rax, -160(%rbp)        # 8-byte Spill
+	jmp	.LBB10_14
+.LBB10_14:                              #   in Loop: Header=BB10_7 Depth=1
+.Ltmp71:
+	leaq	-32(%rbp), %rdi
+	movq	-160(%rbp), %rsi        # 8-byte Reload
+	callq	_ZN5sc_dt7sc_uintILi4EEaSERKS1_
+.Ltmp72:
+	movq	%rax, -168(%rbp)        # 8-byte Spill
+	jmp	.LBB10_15
+.LBB10_15:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-136(%rbp), %rax        # 8-byte Reload
+	addq	$872, %rax              # imm = 0x368
+.Ltmp73:
+	movq	%rax, %rdi
+	callq	_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv
+.Ltmp74:
+	movq	%rax, -176(%rbp)        # 8-byte Spill
+	jmp	.LBB10_16
+.LBB10_16:                              #   in Loop: Header=BB10_7 Depth=1
+.Ltmp75:
+	leaq	-56(%rbp), %rdi
+	movq	-176(%rbp), %rsi        # 8-byte Reload
+	callq	_ZN5sc_dt7sc_uintILi4EEaSERKS1_
+.Ltmp76:
+	movq	%rax, -184(%rbp)        # 8-byte Spill
+	jmp	.LBB10_17
+.LBB10_17:                              #   in Loop: Header=BB10_7 Depth=1
+	leaq	-32(%rbp), %rdi
+.Ltmp77:
+	callq	_ZNK5sc_dt12sc_uint_basecvyEv
+.Ltmp78:
+	movq	%rax, -192(%rbp)        # 8-byte Spill
+	jmp	.LBB10_18
+.LBB10_18:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-192(%rbp), %rax        # 8-byte Reload
+	cmpq	$0, %rax
+	jne	.LBB10_32
+# BB#19:                                #   in Loop: Header=BB10_7 Depth=1
+	leaq	-56(%rbp), %rdi
+.Ltmp92:
+	callq	_ZNK5sc_dt12sc_uint_basecvyEv
+.Ltmp93:
+	movq	%rax, -200(%rbp)        # 8-byte Spill
+	jmp	.LBB10_20
+.LBB10_20:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-200(%rbp), %rax        # 8-byte Reload
+	cmpq	$8, %rax
+	jne	.LBB10_27
+# BB#21:                                #   in Loop: Header=BB10_7 Depth=1
+.Ltmp100:
+	xorl	%esi, %esi
+	movl	$_ZZN6Advios10LedControlEvE7counter, %edi
+	callq	_ZN5sc_dt7sc_uintILi4EEaSEi
+.Ltmp101:
+	movq	%rax, -208(%rbp)        # 8-byte Spill
+	jmp	.LBB10_22
+.LBB10_22:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-136(%rbp), %rax        # 8-byte Reload
+	addq	$1016, %rax             # imm = 0x3F8
+.Ltmp102:
+	movl	$_ZZN6Advios10LedControlEvE7counter, %esi
+	movq	%rax, %rdi
+	callq	_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_
+.Ltmp103:
+	jmp	.LBB10_23
+.LBB10_23:                              #   in Loop: Header=BB10_7 Depth=1
+	jmp	.LBB10_31
+.LBB10_24:
+.Ltmp61:
+	movl	%edx, %ecx
+	movq	%rax, -64(%rbp)
+	movl	%ecx, -68(%rbp)
+	jmp	.LBB10_45
+.LBB10_25:
+.Ltmp64:
+	leaq	_ZGVZN6Advios10LedControlEvE7counter, %rdi
+	movl	%edx, %ecx
+	movq	%rax, -64(%rbp)
+	movl	%ecx, -68(%rbp)
+	callq	__cxa_guard_abort
+	jmp	.LBB10_43
+.LBB10_26:
+.Ltmp106:
+	movl	%edx, %ecx
+	movq	%rax, -64(%rbp)
+	movl	%ecx, -68(%rbp)
+	jmp	.LBB10_43
+.LBB10_27:                              #   in Loop: Header=BB10_7 Depth=1
+.Ltmp94:
+	leaq	-96(%rbp), %rdi
+	xorl	%edx, %edx
+	movl	$_ZZN6Advios10LedControlEvE7counter, %esi
+	callq	_ZN5sc_dt7sc_uintILi4EEppEi
+.Ltmp95:
+	jmp	.LBB10_28
+.LBB10_28:                              #   in Loop: Header=BB10_7 Depth=1
+.Ltmp96:
+	leaq	-96(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi4EED1Ev
+.Ltmp97:
+	jmp	.LBB10_29
+.LBB10_29:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-136(%rbp), %rax        # 8-byte Reload
+	addq	$1016, %rax             # imm = 0x3F8
+.Ltmp98:
+	movl	$_ZZN6Advios10LedControlEvE7counter, %esi
+	movq	%rax, %rdi
+	callq	_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_
+.Ltmp99:
+	jmp	.LBB10_30
+.LBB10_30:                              #   in Loop: Header=BB10_7 Depth=1
+	jmp	.LBB10_31
+.LBB10_31:                              #   in Loop: Header=BB10_7 Depth=1
+	jmp	.LBB10_40
+.LBB10_32:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-136(%rbp), %rax        # 8-byte Reload
+	addq	$1016, %rax             # imm = 0x3F8
+	leaq	-32(%rbp), %rdi
+.Ltmp79:
+	movq	%rax, -216(%rbp)        # 8-byte Spill
+	callq	_ZNK5sc_dt12sc_uint_basecvyEv
+.Ltmp80:
+	movq	%rax, -224(%rbp)        # 8-byte Spill
+	jmp	.LBB10_33
+.LBB10_33:                              #   in Loop: Header=BB10_7 Depth=1
+	leaq	-56(%rbp), %rdi
+.Ltmp81:
+	callq	_ZNK5sc_dt12sc_uint_basecvyEv
+.Ltmp82:
+	movq	%rax, -232(%rbp)        # 8-byte Spill
+	jmp	.LBB10_34
+.LBB10_34:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-224(%rbp), %rax        # 8-byte Reload
+	movq	-232(%rbp), %rcx        # 8-byte Reload
+	andq	%rcx, %rax
+.Ltmp83:
+	leaq	-120(%rbp), %rdi
+	movq	%rax, %rsi
+	callq	_ZN5sc_dt7sc_uintILi4EEC1Ey
+.Ltmp84:
+	jmp	.LBB10_35
+.LBB10_35:                              #   in Loop: Header=BB10_7 Depth=1
+.Ltmp85:
+	leaq	-120(%rbp), %rsi
+	movq	-216(%rbp), %rdi        # 8-byte Reload
+	callq	_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_
+.Ltmp86:
+	jmp	.LBB10_36
+.LBB10_36:                              #   in Loop: Header=BB10_7 Depth=1
+.Ltmp90:
+	leaq	-120(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi4EED1Ev
+.Ltmp91:
+	jmp	.LBB10_37
+.LBB10_37:                              #   in Loop: Header=BB10_7 Depth=1
+	jmp	.LBB10_40
+.LBB10_38:
+.Ltmp87:
+	movl	%edx, %ecx
+	movq	%rax, -64(%rbp)
+	movl	%ecx, -68(%rbp)
+.Ltmp88:
+	leaq	-120(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi4EED1Ev
+.Ltmp89:
+	jmp	.LBB10_39
+.LBB10_39:
+	jmp	.LBB10_43
+.LBB10_40:                              #   in Loop: Header=BB10_7 Depth=1
+	jmp	.LBB10_41
+.LBB10_41:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-136(%rbp), %rax        # 8-byte Reload
+	addq	$208, %rax
+	movq	-136(%rbp), %rcx        # 8-byte Reload
+	movq	208(%rcx), %rdx
+	movq	56(%rdx), %rdx
+.Ltmp104:
+	movq	%rax, %rdi
+	callq	*%rdx
+.Ltmp105:
+	movq	%rax, -240(%rbp)        # 8-byte Spill
+	jmp	.LBB10_42
+.LBB10_42:                              #   in Loop: Header=BB10_7 Depth=1
+	movq	-240(%rbp), %rax        # 8-byte Reload
+	movb	(%rax), %cl
+	andb	$1, %cl
+	movb	%cl, _ZZN6Advios10LedControlEvE10last_clock
+	jmp	.LBB10_7
+.LBB10_43:
+.Ltmp107:
+	leaq	-56(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi4EED1Ev
+.Ltmp108:
+	jmp	.LBB10_44
+.LBB10_44:
+	jmp	.LBB10_45
+.LBB10_45:
+.Ltmp109:
+	leaq	-32(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi4EED1Ev
+.Ltmp110:
+	jmp	.LBB10_46
+.LBB10_46:
+	jmp	.LBB10_47
+.LBB10_47:
+	movq	-64(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB10_48:
+.Ltmp111:
+	movq	%rax, -248(%rbp)        # 8-byte Spill
+	movq	%rdx, -256(%rbp)        # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp117:
+	.size	_ZN6Advios10LedControlEv, .Ltmp117-_ZN6Advios10LedControlEv
+	.cfi_endproc
+.Leh_func_end10:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table10:
+.Lexception10:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\213\201"             # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.ascii	 "\202\001"             # Call site table length
+.Lset17 = .Leh_func_begin10-.Leh_func_begin10 # >> Call Site 1 <<
+	.long	.Lset17
+.Lset18 = .Ltmp59-.Leh_func_begin10     #   Call between .Leh_func_begin10 and .Ltmp59
+	.long	.Lset18
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset19 = .Ltmp59-.Leh_func_begin10     # >> Call Site 2 <<
+	.long	.Lset19
+.Lset20 = .Ltmp60-.Ltmp59               #   Call between .Ltmp59 and .Ltmp60
+	.long	.Lset20
+.Lset21 = .Ltmp61-.Leh_func_begin10     #     jumps to .Ltmp61
+	.long	.Lset21
+	.byte	0                       #   On action: cleanup
+.Lset22 = .Ltmp62-.Leh_func_begin10     # >> Call Site 3 <<
+	.long	.Lset22
+.Lset23 = .Ltmp63-.Ltmp62               #   Call between .Ltmp62 and .Ltmp63
+	.long	.Lset23
+.Lset24 = .Ltmp64-.Leh_func_begin10     #     jumps to .Ltmp64
+	.long	.Lset24
+	.byte	0                       #   On action: cleanup
+.Lset25 = .Ltmp65-.Leh_func_begin10     # >> Call Site 4 <<
+	.long	.Lset25
+.Lset26 = .Ltmp84-.Ltmp65               #   Call between .Ltmp65 and .Ltmp84
+	.long	.Lset26
+.Lset27 = .Ltmp106-.Leh_func_begin10    #     jumps to .Ltmp106
+	.long	.Lset27
+	.byte	0                       #   On action: cleanup
+.Lset28 = .Ltmp85-.Leh_func_begin10     # >> Call Site 5 <<
+	.long	.Lset28
+.Lset29 = .Ltmp86-.Ltmp85               #   Call between .Ltmp85 and .Ltmp86
+	.long	.Lset29
+.Lset30 = .Ltmp87-.Leh_func_begin10     #     jumps to .Ltmp87
+	.long	.Lset30
+	.byte	0                       #   On action: cleanup
+.Lset31 = .Ltmp90-.Leh_func_begin10     # >> Call Site 6 <<
+	.long	.Lset31
+.Lset32 = .Ltmp91-.Ltmp90               #   Call between .Ltmp90 and .Ltmp91
+	.long	.Lset32
+.Lset33 = .Ltmp106-.Leh_func_begin10    #     jumps to .Ltmp106
+	.long	.Lset33
+	.byte	0                       #   On action: cleanup
+.Lset34 = .Ltmp88-.Leh_func_begin10     # >> Call Site 7 <<
+	.long	.Lset34
+.Lset35 = .Ltmp89-.Ltmp88               #   Call between .Ltmp88 and .Ltmp89
+	.long	.Lset35
+.Lset36 = .Ltmp111-.Leh_func_begin10    #     jumps to .Ltmp111
+	.long	.Lset36
+	.byte	1                       #   On action: 1
+.Lset37 = .Ltmp104-.Leh_func_begin10    # >> Call Site 8 <<
+	.long	.Lset37
+.Lset38 = .Ltmp105-.Ltmp104             #   Call between .Ltmp104 and .Ltmp105
+	.long	.Lset38
+.Lset39 = .Ltmp106-.Leh_func_begin10    #     jumps to .Ltmp106
+	.long	.Lset39
+	.byte	0                       #   On action: cleanup
+.Lset40 = .Ltmp107-.Leh_func_begin10    # >> Call Site 9 <<
+	.long	.Lset40
+.Lset41 = .Ltmp110-.Ltmp107             #   Call between .Ltmp107 and .Ltmp110
+	.long	.Lset41
+.Lset42 = .Ltmp111-.Leh_func_begin10    #     jumps to .Ltmp111
+	.long	.Lset42
+	.byte	1                       #   On action: 1
+.Lset43 = .Ltmp110-.Leh_func_begin10    # >> Call Site 10 <<
+	.long	.Lset43
+.Lset44 = .Leh_func_end10-.Ltmp110      #   Call between .Ltmp110 and .Leh_func_end10
+	.long	.Lset44
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEC1Ev,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEC1Ev,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEC1Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEC1Ev,@function
+_ZN5sc_dt7sc_uintILi4EEC1Ev:            # @_ZN5sc_dt7sc_uintILi4EEC1Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp120:
+	.cfi_def_cfa_offset 16
+.Ltmp121:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp122:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi4EEC2Ev
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp123:
+	.size	_ZN5sc_dt7sc_uintILi4EEC1Ev, .Ltmp123-_ZN5sc_dt7sc_uintILi4EEC1Ev
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEC1Ei,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEC1Ei,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEC1Ei
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEC1Ei,@function
+_ZN5sc_dt7sc_uintILi4EEC1Ei:            # @_ZN5sc_dt7sc_uintILi4EEC1Ei
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp126:
+	.cfi_def_cfa_offset 16
+.Ltmp127:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp128:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movl	-12(%rbp), %esi
+	callq	_ZN5sc_dt7sc_uintILi4EEC2Ei
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp129:
+	.size	_ZN5sc_dt7sc_uintILi4EEC1Ei, .Ltmp129-_ZN5sc_dt7sc_uintILi4EEC1Ei
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EED1Ev,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EED1Ev,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EED1Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EED1Ev,@function
+_ZN5sc_dt7sc_uintILi4EED1Ev:            # @_ZN5sc_dt7sc_uintILi4EED1Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp132:
+	.cfi_def_cfa_offset 16
+.Ltmp133:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp134:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZN5sc_dt7sc_uintILi4EED2Ev
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp135:
+	.size	_ZN5sc_dt7sc_uintILi4EED1Ev, .Ltmp135-_ZN5sc_dt7sc_uintILi4EED1Ev
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEaSERKS1_,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEaSERKS1_,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEaSERKS1_
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEaSERKS1_,@function
+_ZN5sc_dt7sc_uintILi4EEaSERKS1_:        # @_ZN5sc_dt7sc_uintILi4EEaSERKS1_
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	movq	%rsi, -16(%rsp)
+	movq	-8(%rsp), %rsi
+	movq	-16(%rsp), %rdi
+	movq	8(%rdi), %rdi
+	movq	%rdi, 8(%rsi)
+	movq	%rsi, %rax
+	ret
+.Ltmp136:
+	.size	_ZN5sc_dt7sc_uintILi4EEaSERKS1_, .Ltmp136-_ZN5sc_dt7sc_uintILi4EEaSERKS1_
+	.cfi_endproc
+
+	.section	.text._ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv,"axG",@progbits,_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv,comdat
+	.weak	_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv
+	.align	16, 0x90
+	.type	_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv,@function
+_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv: # @_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp139:
+	.cfi_def_cfa_offset 16
+.Ltmp140:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp141:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv
+	movq	(%rax), %rdi
+	movq	%rdi, -16(%rbp)         # 8-byte Spill
+	movq	%rax, %rdi
+	movq	-16(%rbp), %rax         # 8-byte Reload
+	callq	*40(%rax)
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp142:
+	.size	_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv, .Ltmp142-_ZNK7sc_core5sc_inIN5sc_dt7sc_uintILi4EEEE4readEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEaSEi,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEaSEi,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEaSEi
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEaSEi,@function
+_ZN5sc_dt7sc_uintILi4EEaSEi:            # @_ZN5sc_dt7sc_uintILi4EEaSEi
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp145:
+	.cfi_def_cfa_offset 16
+.Ltmp146:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp147:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movq	%rdi, %rax
+	movl	-12(%rbp), %esi
+	movq	%rdi, -24(%rbp)         # 8-byte Spill
+	movq	%rax, %rdi
+	callq	_ZN5sc_dt12sc_uint_baseaSEi
+	movq	-24(%rbp), %rdi         # 8-byte Reload
+	movq	%rax, -32(%rbp)         # 8-byte Spill
+	movq	%rdi, %rax
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.Ltmp148:
+	.size	_ZN5sc_dt7sc_uintILi4EEaSEi, .Ltmp148-_ZN5sc_dt7sc_uintILi4EEaSEi
+	.cfi_endproc
+
+	.section	.text._ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_,"axG",@progbits,_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_,comdat
+	.weak	_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_
+	.align	16, 0x90
+	.type	_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_,@function
+_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_: # @_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp151:
+	.cfi_def_cfa_offset 16
+.Ltmp152:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp153:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rsi
+	movq	%rsi, %rdi
+	callq	_ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv
+	movq	%rax, %rsi
+	addq	$8, %rsi
+	movq	8(%rax), %rax
+	movq	32(%rax), %rax
+	movq	-16(%rbp), %rdi
+	movq	%rdi, -24(%rbp)         # 8-byte Spill
+	movq	%rsi, %rdi
+	movq	-24(%rbp), %rsi         # 8-byte Reload
+	callq	*%rax
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.Ltmp154:
+	.size	_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_, .Ltmp154-_ZN7sc_core8sc_inoutIN5sc_dt7sc_uintILi4EEEE5writeERKS3_
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEppEi,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEppEi,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEppEi
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEppEi,@function
+_ZN5sc_dt7sc_uintILi4EEppEi:            # @_ZN5sc_dt7sc_uintILi4EEppEi
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin18:
+	.cfi_lsda 3, .Lexception18
+# BB#0:
+	pushq	%rbp
+.Ltmp163:
+	.cfi_def_cfa_offset 16
+.Ltmp164:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp165:
+	.cfi_def_cfa_register %rbp
+	subq	$96, %rsp
+	movq	%rdi, %rax
+	movq	%rsi, -8(%rbp)
+	movl	%edx, -12(%rbp)
+	movq	-8(%rbp), %rsi
+	leaq	-40(%rbp), %rcx
+	xorl	%edx, %edx
+	movq	%rdi, -64(%rbp)         # 8-byte Spill
+	movq	%rcx, %rdi
+	movq	%rax, -72(%rbp)         # 8-byte Spill
+	movq	%rcx, -80(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt12sc_uint_baseppEi
+.Ltmp155:
+	movq	-64(%rbp), %rdi         # 8-byte Reload
+	movq	-80(%rbp), %rsi         # 8-byte Reload
+	callq	_ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE
+.Ltmp156:
+	jmp	.LBB18_1
+.LBB18_1:
+	leaq	-40(%rbp), %rdi
+	callq	_ZN5sc_dt12sc_uint_baseD1Ev
+	addq	$96, %rsp
+	popq	%rbp
+	ret
+.LBB18_2:
+.Ltmp157:
+	movl	%edx, %ecx
+	movq	%rax, -48(%rbp)
+	movl	%ecx, -52(%rbp)
+.Ltmp158:
+	leaq	-40(%rbp), %rdi
+	callq	_ZN5sc_dt12sc_uint_baseD1Ev
+.Ltmp159:
+	jmp	.LBB18_3
+.LBB18_3:
+	jmp	.LBB18_4
+.LBB18_4:
+	movq	-48(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB18_5:
+.Ltmp160:
+	movq	%rax, -88(%rbp)         # 8-byte Spill
+	movq	%rdx, -96(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp166:
+	.size	_ZN5sc_dt7sc_uintILi4EEppEi, .Ltmp166-_ZN5sc_dt7sc_uintILi4EEppEi
+	.cfi_endproc
+.Leh_func_end18:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table18:
+.Lexception18:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.byte	73                      # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	65                      # Call site table length
+.Lset45 = .Leh_func_begin18-.Leh_func_begin18 # >> Call Site 1 <<
+	.long	.Lset45
+.Lset46 = .Ltmp155-.Leh_func_begin18    #   Call between .Leh_func_begin18 and .Ltmp155
+	.long	.Lset46
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset47 = .Ltmp155-.Leh_func_begin18    # >> Call Site 2 <<
+	.long	.Lset47
+.Lset48 = .Ltmp156-.Ltmp155             #   Call between .Ltmp155 and .Ltmp156
+	.long	.Lset48
+.Lset49 = .Ltmp157-.Leh_func_begin18    #     jumps to .Ltmp157
+	.long	.Lset49
+	.byte	0                       #   On action: cleanup
+.Lset50 = .Ltmp156-.Leh_func_begin18    # >> Call Site 3 <<
+	.long	.Lset50
+.Lset51 = .Ltmp158-.Ltmp156             #   Call between .Ltmp156 and .Ltmp158
+	.long	.Lset51
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset52 = .Ltmp158-.Leh_func_begin18    # >> Call Site 4 <<
+	.long	.Lset52
+.Lset53 = .Ltmp159-.Ltmp158             #   Call between .Ltmp158 and .Ltmp159
+	.long	.Lset53
+.Lset54 = .Ltmp160-.Leh_func_begin18    #     jumps to .Ltmp160
+	.long	.Lset54
+	.byte	1                       #   On action: 1
+.Lset55 = .Ltmp159-.Leh_func_begin18    # >> Call Site 5 <<
+	.long	.Lset55
+.Lset56 = .Leh_func_end18-.Ltmp159      #   Call between .Ltmp159 and .Leh_func_end18
+	.long	.Lset56
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEC1Ey,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEC1Ey,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEC1Ey
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEC1Ey,@function
+_ZN5sc_dt7sc_uintILi4EEC1Ey:            # @_ZN5sc_dt7sc_uintILi4EEC1Ey
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp169:
+	.cfi_def_cfa_offset 16
+.Ltmp170:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp171:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rdi
+	movq	-16(%rbp), %rsi
+	callq	_ZN5sc_dt7sc_uintILi4EEC2Ey
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp172:
+	.size	_ZN5sc_dt7sc_uintILi4EEC1Ey, .Ltmp172-_ZN5sc_dt7sc_uintILi4EEC1Ey
+	.cfi_endproc
+
+	.section	.text._ZN7sc_core18sc_process_monitorD1Ev,"axG",@progbits,_ZN7sc_core18sc_process_monitorD1Ev,comdat
+	.weak	_ZN7sc_core18sc_process_monitorD1Ev
+	.align	16, 0x90
+	.type	_ZN7sc_core18sc_process_monitorD1Ev,@function
+_ZN7sc_core18sc_process_monitorD1Ev:    # @_ZN7sc_core18sc_process_monitorD1Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp175:
+	.cfi_def_cfa_offset 16
+.Ltmp176:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp177:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZN7sc_core18sc_process_monitorD2Ev
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp178:
+	.size	_ZN7sc_core18sc_process_monitorD1Ev, .Ltmp178-_ZN7sc_core18sc_process_monitorD1Ev
+	.cfi_endproc
+
+	.section	.text._ZN7sc_core18sc_process_monitorD0Ev,"axG",@progbits,_ZN7sc_core18sc_process_monitorD0Ev,comdat
+	.weak	_ZN7sc_core18sc_process_monitorD0Ev
+	.align	16, 0x90
+	.type	_ZN7sc_core18sc_process_monitorD0Ev,@function
+_ZN7sc_core18sc_process_monitorD0Ev:    # @_ZN7sc_core18sc_process_monitorD0Ev
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin21:
+	.cfi_lsda 3, .Lexception21
+# BB#0:
+	pushq	%rbp
+.Ltmp184:
+	.cfi_def_cfa_offset 16
+.Ltmp185:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp186:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rdi, %rax
+.Ltmp179:
+	movq	%rax, -32(%rbp)         # 8-byte Spill
+	callq	_ZN7sc_core18sc_process_monitorD1Ev
+.Ltmp180:
+	jmp	.LBB21_1
+.LBB21_1:
+	movq	-32(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZdlPv
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.LBB21_2:
+.Ltmp181:
+	movl	%edx, %ecx
+	movq	%rax, -16(%rbp)
+	movl	%ecx, -20(%rbp)
+	movq	-32(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZdlPv
+# BB#3:
+	movq	-16(%rbp), %rdi
+	callq	_Unwind_Resume
+.Ltmp187:
+	.size	_ZN7sc_core18sc_process_monitorD0Ev, .Ltmp187-_ZN7sc_core18sc_process_monitorD0Ev
+	.cfi_endproc
+.Leh_func_end21:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table21:
+.Lexception21:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\234"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	26                      # Call site table length
+.Lset57 = .Ltmp179-.Leh_func_begin21    # >> Call Site 1 <<
+	.long	.Lset57
+.Lset58 = .Ltmp180-.Ltmp179             #   Call between .Ltmp179 and .Ltmp180
+	.long	.Lset58
+.Lset59 = .Ltmp181-.Leh_func_begin21    #     jumps to .Ltmp181
+	.long	.Lset59
+	.byte	0                       #   On action: cleanup
+.Lset60 = .Ltmp180-.Leh_func_begin21    # >> Call Site 2 <<
+	.long	.Lset60
+.Lset61 = .Leh_func_end21-.Ltmp180      #   Call between .Ltmp180 and .Leh_func_end21
+	.long	.Lset61
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.align	4
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEC2Ey,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEC2Ey,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEC2Ey
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEC2Ey,@function
+_ZN5sc_dt7sc_uintILi4EEC2Ey:            # @_ZN5sc_dt7sc_uintILi4EEC2Ey
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp190:
+	.cfi_def_cfa_offset 16
+.Ltmp191:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp192:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movl	$4, %edx
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rsi
+	movq	%rsi, %rdi
+	movq	-16(%rbp), %rax
+	movq	%rsi, -24(%rbp)         # 8-byte Spill
+	movq	%rax, %rsi
+	callq	_ZN5sc_dt12sc_uint_baseC2Eyi
+	leaq	_ZTVN5sc_dt7sc_uintILi4EEE, %rax
+	addq	$16, %rax
+	movq	-24(%rbp), %rsi         # 8-byte Reload
+	movq	%rax, (%rsi)
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.Ltmp193:
+	.size	_ZN5sc_dt7sc_uintILi4EEC2Ey, .Ltmp193-_ZN5sc_dt7sc_uintILi4EEC2Ey
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt12sc_uint_baseC2Eyi,"axG",@progbits,_ZN5sc_dt12sc_uint_baseC2Eyi,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseC2Eyi
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseC2Eyi,@function
+_ZN5sc_dt12sc_uint_baseC2Eyi:           # @_ZN5sc_dt12sc_uint_baseC2Eyi
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin23:
+	.cfi_lsda 3, .Lexception23
+# BB#0:
+	pushq	%rbp
+.Ltmp204:
+	.cfi_def_cfa_offset 16
+.Ltmp205:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp206:
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movl	%edx, -20(%rbp)
+	movq	-8(%rbp), %rsi
+	movq	%rsi, %rdi
+	movq	%rsi, -48(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt13sc_value_baseC2Ev
+	movq	-48(%rbp), %rsi         # 8-byte Reload
+	movq	$_ZTVN5sc_dt12sc_uint_baseE+16, (%rsi)
+	movq	-16(%rbp), %rdi
+	movq	%rdi, 8(%rsi)
+	movl	-20(%rbp), %edx
+	movl	%edx, 16(%rsi)
+	movl	$64, %eax
+	subl	%edx, %eax
+	movl	%eax, 20(%rsi)
+.Ltmp194:
+	movq	%rsi, %rdi
+	callq	_ZNK5sc_dt12sc_uint_base12check_lengthEv
+.Ltmp195:
+	jmp	.LBB23_1
+.LBB23_1:
+.Ltmp196:
+	movq	-48(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt12sc_uint_base11extend_signEv
+.Ltmp197:
+	jmp	.LBB23_2
+.LBB23_2:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+.LBB23_3:
+.Ltmp198:
+	movl	%edx, %ecx
+	movq	%rax, -32(%rbp)
+	movl	%ecx, -36(%rbp)
+.Ltmp199:
+	movq	-48(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt13sc_value_baseD2Ev
+.Ltmp200:
+	jmp	.LBB23_4
+.LBB23_4:
+	jmp	.LBB23_5
+.LBB23_5:
+	movq	-32(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB23_6:
+.Ltmp201:
+	movq	%rax, -56(%rbp)         # 8-byte Spill
+	movq	%rdx, -64(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp207:
+	.size	_ZN5sc_dt12sc_uint_baseC2Eyi, .Ltmp207-_ZN5sc_dt12sc_uint_baseC2Eyi
+	.cfi_endproc
+.Leh_func_end23:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table23:
+.Lexception23:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\257\200"             # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	39                      # Call site table length
+.Lset62 = .Ltmp194-.Leh_func_begin23    # >> Call Site 1 <<
+	.long	.Lset62
+.Lset63 = .Ltmp197-.Ltmp194             #   Call between .Ltmp194 and .Ltmp197
+	.long	.Lset63
+.Lset64 = .Ltmp198-.Leh_func_begin23    #     jumps to .Ltmp198
+	.long	.Lset64
+	.byte	0                       #   On action: cleanup
+.Lset65 = .Ltmp199-.Leh_func_begin23    # >> Call Site 2 <<
+	.long	.Lset65
+.Lset66 = .Ltmp200-.Ltmp199             #   Call between .Ltmp199 and .Ltmp200
+	.long	.Lset66
+.Lset67 = .Ltmp201-.Leh_func_begin23    #     jumps to .Ltmp201
+	.long	.Lset67
+	.byte	1                       #   On action: 1
+.Lset68 = .Ltmp200-.Leh_func_begin23    # >> Call Site 3 <<
+	.long	.Lset68
+.Lset69 = .Leh_func_end23-.Ltmp200      #   Call between .Ltmp200 and .Leh_func_end23
+	.long	.Lset69
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev,"axG",@progbits,_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev,comdat
+	.weak	_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev
+	.align	16, 0x90
+	.type	_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev,@function
+_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev: # @_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	movq	-8(%rsp), %rdi
+	movq	8(%rdi), %rax
+	ret
+.Ltmp208:
+	.size	_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev, .Ltmp208-_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev
+	.cfi_endproc
+
+	.section	.text._ZNK5sc_dt12sc_uint_base13concat_lengthEPb,"axG",@progbits,_ZNK5sc_dt12sc_uint_base13concat_lengthEPb,comdat
+	.weak	_ZNK5sc_dt12sc_uint_base13concat_lengthEPb
+	.align	16, 0x90
+	.type	_ZNK5sc_dt12sc_uint_base13concat_lengthEPb,@function
+_ZNK5sc_dt12sc_uint_base13concat_lengthEPb: # @_ZNK5sc_dt12sc_uint_base13concat_lengthEPb
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp211:
+	.cfi_def_cfa_offset 16
+.Ltmp212:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp213:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rdi
+	cmpq	$0, -16(%rbp)
+	movq	%rdi, -24(%rbp)         # 8-byte Spill
+	je	.LBB25_2
+# BB#1:
+	movq	-16(%rbp), %rax
+	movb	$0, (%rax)
+.LBB25_2:
+	movq	-24(%rbp), %rdi         # 8-byte Reload
+	callq	_ZNK5sc_dt12sc_uint_base6lengthEv
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.Ltmp214:
+	.size	_ZNK5sc_dt12sc_uint_base13concat_lengthEPb, .Ltmp214-_ZNK5sc_dt12sc_uint_base13concat_lengthEPb
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EED0Ev,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EED0Ev,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EED0Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EED0Ev,@function
+_ZN5sc_dt7sc_uintILi4EED0Ev:            # @_ZN5sc_dt7sc_uintILi4EED0Ev
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin26:
+	.cfi_lsda 3, .Lexception26
+# BB#0:
+	pushq	%rbp
+.Ltmp220:
+	.cfi_def_cfa_offset 16
+.Ltmp221:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp222:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rdi, %rax
+.Ltmp215:
+	movq	%rax, -32(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt7sc_uintILi4EED1Ev
+.Ltmp216:
+	jmp	.LBB26_1
+.LBB26_1:
+	movq	-32(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZdlPv
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.LBB26_2:
+.Ltmp217:
+	movl	%edx, %ecx
+	movq	%rax, -16(%rbp)
+	movl	%ecx, -20(%rbp)
+	movq	-32(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZdlPv
+# BB#3:
+	movq	-16(%rbp), %rdi
+	callq	_Unwind_Resume
+.Ltmp223:
+	.size	_ZN5sc_dt7sc_uintILi4EED0Ev, .Ltmp223-_ZN5sc_dt7sc_uintILi4EED0Ev
+	.cfi_endproc
+.Leh_func_end26:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table26:
+.Lexception26:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\234"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	26                      # Call site table length
+.Lset70 = .Ltmp215-.Leh_func_begin26    # >> Call Site 1 <<
+	.long	.Lset70
+.Lset71 = .Ltmp216-.Ltmp215             #   Call between .Ltmp215 and .Ltmp216
+	.long	.Lset71
+.Lset72 = .Ltmp217-.Leh_func_begin26    #     jumps to .Ltmp217
+	.long	.Lset72
+	.byte	0                       #   On action: cleanup
+.Lset73 = .Ltmp216-.Leh_func_begin26    # >> Call Site 2 <<
+	.long	.Lset73
+.Lset74 = .Leh_func_end26-.Ltmp216      #   Call between .Ltmp216 and .Leh_func_end26
+	.long	.Lset74
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.align	4
+
+	.section	.text._ZNK5sc_dt12sc_uint_base6lengthEv,"axG",@progbits,_ZNK5sc_dt12sc_uint_base6lengthEv,comdat
+	.weak	_ZNK5sc_dt12sc_uint_base6lengthEv
+	.align	16, 0x90
+	.type	_ZNK5sc_dt12sc_uint_base6lengthEv,@function
+_ZNK5sc_dt12sc_uint_base6lengthEv:      # @_ZNK5sc_dt12sc_uint_base6lengthEv
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	movq	-8(%rsp), %rdi
+	movl	16(%rdi), %eax
+	ret
+.Ltmp224:
+	.size	_ZNK5sc_dt12sc_uint_base6lengthEv, .Ltmp224-_ZNK5sc_dt12sc_uint_base6lengthEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt13sc_value_baseC2Ev,"axG",@progbits,_ZN5sc_dt13sc_value_baseC2Ev,comdat
+	.weak	_ZN5sc_dt13sc_value_baseC2Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt13sc_value_baseC2Ev,@function
+_ZN5sc_dt13sc_value_baseC2Ev:           # @_ZN5sc_dt13sc_value_baseC2Ev
+	.cfi_startproc
+# BB#0:
+	leaq	_ZTVN5sc_dt13sc_value_baseE, %rax
+	addq	$16, %rax
+	movq	%rdi, -8(%rsp)
+	movq	-8(%rsp), %rdi
+	movq	%rax, (%rdi)
+	ret
+.Ltmp225:
+	.size	_ZN5sc_dt13sc_value_baseC2Ev, .Ltmp225-_ZN5sc_dt13sc_value_baseC2Ev
+	.cfi_endproc
+
+	.section	.text._ZNK5sc_dt12sc_uint_base12check_lengthEv,"axG",@progbits,_ZNK5sc_dt12sc_uint_base12check_lengthEv,comdat
+	.weak	_ZNK5sc_dt12sc_uint_base12check_lengthEv
+	.align	16, 0x90
+	.type	_ZNK5sc_dt12sc_uint_base12check_lengthEv,@function
+_ZNK5sc_dt12sc_uint_base12check_lengthEv: # @_ZNK5sc_dt12sc_uint_base12check_lengthEv
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp228:
+	.cfi_def_cfa_offset 16
+.Ltmp229:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp230:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	cmpl	$0, 16(%rdi)
+	movq	%rdi, -16(%rbp)         # 8-byte Spill
+	jle	.LBB29_2
+# BB#1:
+	movq	-16(%rbp), %rax         # 8-byte Reload
+	cmpl	$64, 16(%rax)
+	jle	.LBB29_3
+.LBB29_2:
+	movq	-16(%rbp), %rdi         # 8-byte Reload
+	callq	_ZNK5sc_dt12sc_uint_base14invalid_lengthEv
+.LBB29_3:
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp231:
+	.size	_ZNK5sc_dt12sc_uint_base12check_lengthEv, .Ltmp231-_ZNK5sc_dt12sc_uint_base12check_lengthEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt12sc_uint_base11extend_signEv,"axG",@progbits,_ZN5sc_dt12sc_uint_base11extend_signEv,comdat
+	.weak	_ZN5sc_dt12sc_uint_base11extend_signEv
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_base11extend_signEv,@function
+_ZN5sc_dt12sc_uint_base11extend_signEv: # @_ZN5sc_dt12sc_uint_base11extend_signEv
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	movq	-8(%rsp), %rdi
+	movq	_ZN5sc_dt9UINT_ZEROE, %rax
+	xorq	$-1, %rax
+	movl	20(%rdi), %ecx
+                                        # kill: CL<def> RCX<kill>
+	shrq	%cl, %rax
+	movq	8(%rdi), %rdx
+	andq	%rax, %rdx
+	movq	%rdx, 8(%rdi)
+	ret
+.Ltmp232:
+	.size	_ZN5sc_dt12sc_uint_base11extend_signEv, .Ltmp232-_ZN5sc_dt12sc_uint_base11extend_signEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt13sc_value_baseD2Ev,"axG",@progbits,_ZN5sc_dt13sc_value_baseD2Ev,comdat
+	.weak	_ZN5sc_dt13sc_value_baseD2Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt13sc_value_baseD2Ev,@function
+_ZN5sc_dt13sc_value_baseD2Ev:           # @_ZN5sc_dt13sc_value_baseD2Ev
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	ret
+.Ltmp233:
+	.size	_ZN5sc_dt13sc_value_baseD2Ev, .Ltmp233-_ZN5sc_dt13sc_value_baseD2Ev
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE,@function
+_ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE: # @_ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp236:
+	.cfi_def_cfa_offset 16
+.Ltmp237:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp238:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rdi
+	movq	-16(%rbp), %rsi
+	callq	_ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp239:
+	.size	_ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE, .Ltmp239-_ZN5sc_dt7sc_uintILi4EEC1ERKNS_12sc_uint_baseE
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt12sc_uint_baseppEi,"axG",@progbits,_ZN5sc_dt12sc_uint_baseppEi,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseppEi
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseppEi,@function
+_ZN5sc_dt12sc_uint_baseppEi:            # @_ZN5sc_dt12sc_uint_baseppEi
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin33:
+	.cfi_lsda 3, .Lexception33
+# BB#0:
+	pushq	%rbp
+.Ltmp248:
+	.cfi_def_cfa_offset 16
+.Ltmp249:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp250:
+	.cfi_def_cfa_register %rbp
+	subq	$80, %rsp
+	movq	%rdi, %rax
+	movq	%rsi, -8(%rbp)
+	movl	%edx, -12(%rbp)
+	movq	-8(%rbp), %rsi
+	movb	$0, -13(%rbp)
+	movq	%rdi, -40(%rbp)         # 8-byte Spill
+	movq	%rsi, -48(%rbp)         # 8-byte Spill
+	movq	%rax, -56(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt12sc_uint_baseC1ERKS0_
+	movq	-48(%rbp), %rax         # 8-byte Reload
+	movq	8(%rax), %rsi
+	incq	%rsi
+	movq	%rsi, 8(%rax)
+.Ltmp240:
+	movq	%rax, %rdi
+	callq	_ZN5sc_dt12sc_uint_base11extend_signEv
+.Ltmp241:
+	jmp	.LBB33_1
+.LBB33_1:
+	movb	$1, -13(%rbp)
+	movl	$1, -32(%rbp)
+	testb	$1, -13(%rbp)
+	jne	.LBB33_4
+	jmp	.LBB33_3
+.LBB33_2:
+.Ltmp242:
+	movl	%edx, %ecx
+	movq	%rax, -24(%rbp)
+	movl	%ecx, -28(%rbp)
+.Ltmp243:
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt12sc_uint_baseD1Ev
+.Ltmp244:
+	jmp	.LBB33_5
+.LBB33_3:
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt12sc_uint_baseD1Ev
+.LBB33_4:
+	addq	$80, %rsp
+	popq	%rbp
+	ret
+.LBB33_5:
+	jmp	.LBB33_6
+.LBB33_6:
+	movq	-24(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB33_7:
+.Ltmp245:
+	movq	%rax, -64(%rbp)         # 8-byte Spill
+	movq	%rdx, -72(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp251:
+	.size	_ZN5sc_dt12sc_uint_baseppEi, .Ltmp251-_ZN5sc_dt12sc_uint_baseppEi
+	.cfi_endproc
+.Leh_func_end33:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table33:
+.Lexception33:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\274"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	52                      # Call site table length
+.Lset75 = .Leh_func_begin33-.Leh_func_begin33 # >> Call Site 1 <<
+	.long	.Lset75
+.Lset76 = .Ltmp240-.Leh_func_begin33    #   Call between .Leh_func_begin33 and .Ltmp240
+	.long	.Lset76
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset77 = .Ltmp240-.Leh_func_begin33    # >> Call Site 2 <<
+	.long	.Lset77
+.Lset78 = .Ltmp241-.Ltmp240             #   Call between .Ltmp240 and .Ltmp241
+	.long	.Lset78
+.Lset79 = .Ltmp242-.Leh_func_begin33    #     jumps to .Ltmp242
+	.long	.Lset79
+	.byte	0                       #   On action: cleanup
+.Lset80 = .Ltmp243-.Leh_func_begin33    # >> Call Site 3 <<
+	.long	.Lset80
+.Lset81 = .Ltmp244-.Ltmp243             #   Call between .Ltmp243 and .Ltmp244
+	.long	.Lset81
+.Lset82 = .Ltmp245-.Leh_func_begin33    #     jumps to .Ltmp245
+	.long	.Lset82
+	.byte	1                       #   On action: 1
+.Lset83 = .Ltmp244-.Leh_func_begin33    # >> Call Site 4 <<
+	.long	.Lset83
+.Lset84 = .Leh_func_end33-.Ltmp244      #   Call between .Ltmp244 and .Leh_func_end33
+	.long	.Lset84
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZN5sc_dt12sc_uint_baseD1Ev,"axG",@progbits,_ZN5sc_dt12sc_uint_baseD1Ev,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseD1Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseD1Ev,@function
+_ZN5sc_dt12sc_uint_baseD1Ev:            # @_ZN5sc_dt12sc_uint_baseD1Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp254:
+	.cfi_def_cfa_offset 16
+.Ltmp255:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp256:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZN5sc_dt12sc_uint_baseD2Ev
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp257:
+	.size	_ZN5sc_dt12sc_uint_baseD1Ev, .Ltmp257-_ZN5sc_dt12sc_uint_baseD1Ev
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt12sc_uint_baseD2Ev,"axG",@progbits,_ZN5sc_dt12sc_uint_baseD2Ev,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseD2Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseD2Ev,@function
+_ZN5sc_dt12sc_uint_baseD2Ev:            # @_ZN5sc_dt12sc_uint_baseD2Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp260:
+	.cfi_def_cfa_offset 16
+.Ltmp261:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp262:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZN5sc_dt13sc_value_baseD2Ev
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp263:
+	.size	_ZN5sc_dt12sc_uint_baseD2Ev, .Ltmp263-_ZN5sc_dt12sc_uint_baseD2Ev
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt12sc_uint_baseC1ERKS0_,"axG",@progbits,_ZN5sc_dt12sc_uint_baseC1ERKS0_,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseC1ERKS0_
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseC1ERKS0_,@function
+_ZN5sc_dt12sc_uint_baseC1ERKS0_:        # @_ZN5sc_dt12sc_uint_baseC1ERKS0_
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp266:
+	.cfi_def_cfa_offset 16
+.Ltmp267:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp268:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rdi
+	movq	-16(%rbp), %rsi
+	callq	_ZN5sc_dt12sc_uint_baseC2ERKS0_
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp269:
+	.size	_ZN5sc_dt12sc_uint_baseC1ERKS0_, .Ltmp269-_ZN5sc_dt12sc_uint_baseC1ERKS0_
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt12sc_uint_baseC2ERKS0_,"axG",@progbits,_ZN5sc_dt12sc_uint_baseC2ERKS0_,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseC2ERKS0_
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseC2ERKS0_,@function
+_ZN5sc_dt12sc_uint_baseC2ERKS0_:        # @_ZN5sc_dt12sc_uint_baseC2ERKS0_
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp272:
+	.cfi_def_cfa_offset 16
+.Ltmp273:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp274:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rsi
+	movq	%rsi, %rdi
+	movq	-16(%rbp), %rax
+	movq	%rsi, -24(%rbp)         # 8-byte Spill
+	movq	%rax, %rsi
+	callq	_ZN5sc_dt13sc_value_baseC2ERKS0_
+	leaq	_ZTVN5sc_dt12sc_uint_baseE, %rax
+	addq	$16, %rax
+	movq	-24(%rbp), %rsi         # 8-byte Reload
+	movq	%rax, (%rsi)
+	movq	-16(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, 8(%rsi)
+	movq	-16(%rbp), %rax
+	movl	16(%rax), %ecx
+	movl	%ecx, 16(%rsi)
+	movq	-16(%rbp), %rax
+	movl	20(%rax), %ecx
+	movl	%ecx, 20(%rsi)
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.Ltmp275:
+	.size	_ZN5sc_dt12sc_uint_baseC2ERKS0_, .Ltmp275-_ZN5sc_dt12sc_uint_baseC2ERKS0_
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt13sc_value_baseC2ERKS0_,"axG",@progbits,_ZN5sc_dt13sc_value_baseC2ERKS0_,comdat
+	.weak	_ZN5sc_dt13sc_value_baseC2ERKS0_
+	.align	16, 0x90
+	.type	_ZN5sc_dt13sc_value_baseC2ERKS0_,@function
+_ZN5sc_dt13sc_value_baseC2ERKS0_:       # @_ZN5sc_dt13sc_value_baseC2ERKS0_
+	.cfi_startproc
+# BB#0:
+	leaq	_ZTVN5sc_dt13sc_value_baseE, %rax
+	addq	$16, %rax
+	movq	%rdi, -8(%rsp)
+	movq	%rsi, -16(%rsp)
+	movq	-8(%rsp), %rsi
+	movq	%rax, (%rsi)
+	ret
+.Ltmp276:
+	.size	_ZN5sc_dt13sc_value_baseC2ERKS0_, .Ltmp276-_ZN5sc_dt13sc_value_baseC2ERKS0_
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE,@function
+_ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE: # @_ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin39:
+	.cfi_lsda 3, .Lexception39
+# BB#0:
+	pushq	%rbp
+.Ltmp285:
+	.cfi_def_cfa_offset 16
+.Ltmp286:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp287:
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rsi
+	movl	$4, %eax
+	movq	%rsi, %rdi
+	movq	%rsi, -40(%rbp)         # 8-byte Spill
+	movl	%eax, %esi
+	callq	_ZN5sc_dt12sc_uint_baseC2Ei
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	movq	$_ZTVN5sc_dt7sc_uintILi4EEE+16, (%rdi)
+	movq	-16(%rbp), %rsi
+.Ltmp277:
+	callq	_ZN5sc_dt12sc_uint_baseaSERKS0_
+.Ltmp278:
+	movq	%rax, -48(%rbp)         # 8-byte Spill
+	jmp	.LBB39_1
+.LBB39_1:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+.LBB39_2:
+.Ltmp279:
+	movl	%edx, %ecx
+	movq	%rax, -24(%rbp)
+	movl	%ecx, -28(%rbp)
+.Ltmp280:
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt12sc_uint_baseD2Ev
+.Ltmp281:
+	jmp	.LBB39_3
+.LBB39_3:
+	jmp	.LBB39_4
+.LBB39_4:
+	movq	-24(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB39_5:
+.Ltmp282:
+	movq	%rax, -56(%rbp)         # 8-byte Spill
+	movq	%rdx, -64(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp288:
+	.size	_ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE, .Ltmp288-_ZN5sc_dt7sc_uintILi4EEC2ERKNS_12sc_uint_baseE
+	.cfi_endproc
+.Leh_func_end39:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table39:
+.Lexception39:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\274"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	52                      # Call site table length
+.Lset85 = .Leh_func_begin39-.Leh_func_begin39 # >> Call Site 1 <<
+	.long	.Lset85
+.Lset86 = .Ltmp277-.Leh_func_begin39    #   Call between .Leh_func_begin39 and .Ltmp277
+	.long	.Lset86
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset87 = .Ltmp277-.Leh_func_begin39    # >> Call Site 2 <<
+	.long	.Lset87
+.Lset88 = .Ltmp278-.Ltmp277             #   Call between .Ltmp277 and .Ltmp278
+	.long	.Lset88
+.Lset89 = .Ltmp279-.Leh_func_begin39    #     jumps to .Ltmp279
+	.long	.Lset89
+	.byte	0                       #   On action: cleanup
+.Lset90 = .Ltmp280-.Leh_func_begin39    # >> Call Site 3 <<
+	.long	.Lset90
+.Lset91 = .Ltmp281-.Ltmp280             #   Call between .Ltmp280 and .Ltmp281
+	.long	.Lset91
+.Lset92 = .Ltmp282-.Leh_func_begin39    #     jumps to .Ltmp282
+	.long	.Lset92
+	.byte	1                       #   On action: 1
+.Lset93 = .Ltmp281-.Leh_func_begin39    # >> Call Site 4 <<
+	.long	.Lset93
+.Lset94 = .Leh_func_end39-.Ltmp281      #   Call between .Ltmp281 and .Leh_func_end39
+	.long	.Lset94
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZN5sc_dt12sc_uint_baseC2Ei,"axG",@progbits,_ZN5sc_dt12sc_uint_baseC2Ei,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseC2Ei
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseC2Ei,@function
+_ZN5sc_dt12sc_uint_baseC2Ei:            # @_ZN5sc_dt12sc_uint_baseC2Ei
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin40:
+	.cfi_lsda 3, .Lexception40
+# BB#0:
+	pushq	%rbp
+.Ltmp297:
+	.cfi_def_cfa_offset 16
+.Ltmp298:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp299:
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movq	%rdi, -40(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt13sc_value_baseC2Ev
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	movq	$_ZTVN5sc_dt12sc_uint_baseE+16, (%rdi)
+	movq	$0, 8(%rdi)
+	movl	-12(%rbp), %esi
+	movl	%esi, 16(%rdi)
+	movl	$64, %eax
+	subl	%esi, %eax
+	movl	%eax, 20(%rdi)
+.Ltmp289:
+	callq	_ZNK5sc_dt12sc_uint_base12check_lengthEv
+.Ltmp290:
+	jmp	.LBB40_1
+.LBB40_1:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+.LBB40_2:
+.Ltmp291:
+	movl	%edx, %ecx
+	movq	%rax, -24(%rbp)
+	movl	%ecx, -28(%rbp)
+.Ltmp292:
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt13sc_value_baseD2Ev
+.Ltmp293:
+	jmp	.LBB40_3
+.LBB40_3:
+	jmp	.LBB40_4
+.LBB40_4:
+	movq	-24(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB40_5:
+.Ltmp294:
+	movq	%rax, -48(%rbp)         # 8-byte Spill
+	movq	%rdx, -56(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp300:
+	.size	_ZN5sc_dt12sc_uint_baseC2Ei, .Ltmp300-_ZN5sc_dt12sc_uint_baseC2Ei
+	.cfi_endproc
+.Leh_func_end40:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table40:
+.Lexception40:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\257\200"             # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	39                      # Call site table length
+.Lset95 = .Ltmp289-.Leh_func_begin40    # >> Call Site 1 <<
+	.long	.Lset95
+.Lset96 = .Ltmp290-.Ltmp289             #   Call between .Ltmp289 and .Ltmp290
+	.long	.Lset96
+.Lset97 = .Ltmp291-.Leh_func_begin40    #     jumps to .Ltmp291
+	.long	.Lset97
+	.byte	0                       #   On action: cleanup
+.Lset98 = .Ltmp292-.Leh_func_begin40    # >> Call Site 2 <<
+	.long	.Lset98
+.Lset99 = .Ltmp293-.Ltmp292             #   Call between .Ltmp292 and .Ltmp293
+	.long	.Lset99
+.Lset100 = .Ltmp294-.Leh_func_begin40   #     jumps to .Ltmp294
+	.long	.Lset100
+	.byte	1                       #   On action: 1
+.Lset101 = .Ltmp293-.Leh_func_begin40   # >> Call Site 3 <<
+	.long	.Lset101
+.Lset102 = .Leh_func_end40-.Ltmp293     #   Call between .Ltmp293 and .Leh_func_end40
+	.long	.Lset102
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZN5sc_dt12sc_uint_baseaSERKS0_,"axG",@progbits,_ZN5sc_dt12sc_uint_baseaSERKS0_,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseaSERKS0_
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseaSERKS0_,@function
+_ZN5sc_dt12sc_uint_baseaSERKS0_:        # @_ZN5sc_dt12sc_uint_baseaSERKS0_
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp303:
+	.cfi_def_cfa_offset 16
+.Ltmp304:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp305:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rsi
+	movq	-16(%rbp), %rdi
+	movq	8(%rdi), %rdi
+	movq	%rdi, 8(%rsi)
+	movq	%rsi, %rdi
+	movq	%rsi, -24(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt12sc_uint_base11extend_signEv
+	movq	-24(%rbp), %rax         # 8-byte Reload
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.Ltmp306:
+	.size	_ZN5sc_dt12sc_uint_baseaSERKS0_, .Ltmp306-_ZN5sc_dt12sc_uint_baseaSERKS0_
+	.cfi_endproc
+
+	.section	.text._ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv,"axG",@progbits,_ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv,comdat
+	.weak	_ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv
+	.align	16, 0x90
+	.type	_ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv,@function
+_ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv: # @_ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp309:
+	.cfi_def_cfa_offset 16
+.Ltmp310:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp311:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	cmpq	$0, 96(%rdi)
+	movq	%rdi, -16(%rbp)         # 8-byte Spill
+	jne	.LBB42_2
+# BB#1:
+	leaq	_ZN7sc_core13SC_ID_GET_IF_E, %rsi
+	leaq	.L.str, %rdx
+	movq	-16(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZNK7sc_core12sc_port_base12report_errorEPKcS2_
+.LBB42_2:
+	movq	-16(%rbp), %rax         # 8-byte Reload
+	movq	96(%rax), %rax
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp312:
+	.size	_ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv, .Ltmp312-_ZN7sc_core9sc_port_bINS_18sc_signal_inout_ifIN5sc_dt7sc_uintILi4EEEEEEptEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt12sc_uint_baseaSEi,"axG",@progbits,_ZN5sc_dt12sc_uint_baseaSEi,comdat
+	.weak	_ZN5sc_dt12sc_uint_baseaSEi
+	.align	16, 0x90
+	.type	_ZN5sc_dt12sc_uint_baseaSEi,@function
+_ZN5sc_dt12sc_uint_baseaSEi:            # @_ZN5sc_dt12sc_uint_baseaSEi
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp315:
+	.cfi_def_cfa_offset 16
+.Ltmp316:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp317:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movslq	-12(%rbp), %rax
+	movq	%rax, 8(%rdi)
+	movq	%rdi, -24(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt12sc_uint_base11extend_signEv
+	movq	-24(%rbp), %rax         # 8-byte Reload
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.Ltmp318:
+	.size	_ZN5sc_dt12sc_uint_baseaSEi, .Ltmp318-_ZN5sc_dt12sc_uint_baseaSEi
+	.cfi_endproc
+
+	.section	.text._ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv,"axG",@progbits,_ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv,comdat
+	.weak	_ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv
+	.align	16, 0x90
+	.type	_ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv,@function
+_ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv: # @_ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp321:
+	.cfi_def_cfa_offset 16
+.Ltmp322:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp323:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	cmpq	$0, 96(%rdi)
+	movq	%rdi, -16(%rbp)         # 8-byte Spill
+	jne	.LBB44_2
+# BB#1:
+	leaq	_ZN7sc_core13SC_ID_GET_IF_E, %rsi
+	leaq	.L.str, %rdx
+	movq	-16(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZNK7sc_core12sc_port_base12report_errorEPKcS2_
+.LBB44_2:
+	movq	-16(%rbp), %rax         # 8-byte Reload
+	movq	96(%rax), %rax
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp324:
+	.size	_ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv, .Ltmp324-_ZNK7sc_core9sc_port_bINS_15sc_signal_in_ifIN5sc_dt7sc_uintILi4EEEEEEptEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEC2Ei,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEC2Ei,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEC2Ei
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEC2Ei,@function
+_ZN5sc_dt7sc_uintILi4EEC2Ei:            # @_ZN5sc_dt7sc_uintILi4EEC2Ei
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin45:
+	.cfi_lsda 3, .Lexception45
+# BB#0:
+	pushq	%rbp
+.Ltmp333:
+	.cfi_def_cfa_offset 16
+.Ltmp334:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp335:
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movl	$4, %esi
+	movq	%rdi, -40(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt12sc_uint_baseC2Ei
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	movq	$_ZTVN5sc_dt7sc_uintILi4EEE+16, (%rdi)
+	movl	-12(%rbp), %esi
+.Ltmp325:
+	callq	_ZN5sc_dt12sc_uint_baseaSEi
+.Ltmp326:
+	movq	%rax, -48(%rbp)         # 8-byte Spill
+	jmp	.LBB45_1
+.LBB45_1:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+.LBB45_2:
+.Ltmp327:
+	movl	%edx, %ecx
+	movq	%rax, -24(%rbp)
+	movl	%ecx, -28(%rbp)
+.Ltmp328:
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt12sc_uint_baseD2Ev
+.Ltmp329:
+	jmp	.LBB45_3
+.LBB45_3:
+	jmp	.LBB45_4
+.LBB45_4:
+	movq	-24(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB45_5:
+.Ltmp330:
+	movq	%rax, -56(%rbp)         # 8-byte Spill
+	movq	%rdx, -64(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp336:
+	.size	_ZN5sc_dt7sc_uintILi4EEC2Ei, .Ltmp336-_ZN5sc_dt7sc_uintILi4EEC2Ei
+	.cfi_endproc
+.Leh_func_end45:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table45:
+.Lexception45:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\274"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	52                      # Call site table length
+.Lset103 = .Leh_func_begin45-.Leh_func_begin45 # >> Call Site 1 <<
+	.long	.Lset103
+.Lset104 = .Ltmp325-.Leh_func_begin45   #   Call between .Leh_func_begin45 and .Ltmp325
+	.long	.Lset104
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset105 = .Ltmp325-.Leh_func_begin45   # >> Call Site 2 <<
+	.long	.Lset105
+.Lset106 = .Ltmp326-.Ltmp325            #   Call between .Ltmp325 and .Ltmp326
+	.long	.Lset106
+.Lset107 = .Ltmp327-.Leh_func_begin45   #     jumps to .Ltmp327
+	.long	.Lset107
+	.byte	0                       #   On action: cleanup
+.Lset108 = .Ltmp328-.Leh_func_begin45   # >> Call Site 3 <<
+	.long	.Lset108
+.Lset109 = .Ltmp329-.Ltmp328            #   Call between .Ltmp328 and .Ltmp329
+	.long	.Lset109
+.Lset110 = .Ltmp330-.Leh_func_begin45   #     jumps to .Ltmp330
+	.long	.Lset110
+	.byte	1                       #   On action: 1
+.Lset111 = .Ltmp329-.Leh_func_begin45   # >> Call Site 4 <<
+	.long	.Lset111
+.Lset112 = .Leh_func_end45-.Ltmp329     #   Call between .Ltmp329 and .Leh_func_end45
+	.long	.Lset112
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EEC2Ev,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EEC2Ev,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EEC2Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EEC2Ev,@function
+_ZN5sc_dt7sc_uintILi4EEC2Ev:            # @_ZN5sc_dt7sc_uintILi4EEC2Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp339:
+	.cfi_def_cfa_offset 16
+.Ltmp340:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp341:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movl	$4, %esi
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	movq	%rdi, %rax
+	movq	%rdi, -16(%rbp)         # 8-byte Spill
+	movq	%rax, %rdi
+	callq	_ZN5sc_dt12sc_uint_baseC2Ei
+	leaq	_ZTVN5sc_dt7sc_uintILi4EEE, %rax
+	addq	$16, %rax
+	movq	-16(%rbp), %rdi         # 8-byte Reload
+	movq	%rax, (%rdi)
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp342:
+	.size	_ZN5sc_dt7sc_uintILi4EEC2Ev, .Ltmp342-_ZN5sc_dt7sc_uintILi4EEC2Ev
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE,@function
+_ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE: # @_ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp345:
+	.cfi_def_cfa_offset 16
+.Ltmp346:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp347:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rdi
+	movq	-16(%rbp), %rsi
+	callq	_ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp348:
+	.size	_ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE, .Ltmp348-_ZN5sc_dt7sc_uintILi26EEC1ERKNS_12sc_uint_baseE
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE,@function
+_ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE: # @_ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin48:
+	.cfi_lsda 3, .Lexception48
+# BB#0:
+	pushq	%rbp
+.Ltmp357:
+	.cfi_def_cfa_offset 16
+.Ltmp358:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp359:
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rsi
+	movl	$26, %eax
+	movq	%rsi, %rdi
+	movq	%rsi, -40(%rbp)         # 8-byte Spill
+	movl	%eax, %esi
+	callq	_ZN5sc_dt12sc_uint_baseC2Ei
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	movq	$_ZTVN5sc_dt7sc_uintILi26EEE+16, (%rdi)
+	movq	-16(%rbp), %rsi
+.Ltmp349:
+	callq	_ZN5sc_dt12sc_uint_baseaSERKS0_
+.Ltmp350:
+	movq	%rax, -48(%rbp)         # 8-byte Spill
+	jmp	.LBB48_1
+.LBB48_1:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+.LBB48_2:
+.Ltmp351:
+	movl	%edx, %ecx
+	movq	%rax, -24(%rbp)
+	movl	%ecx, -28(%rbp)
+.Ltmp352:
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt12sc_uint_baseD2Ev
+.Ltmp353:
+	jmp	.LBB48_3
+.LBB48_3:
+	jmp	.LBB48_4
+.LBB48_4:
+	movq	-24(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB48_5:
+.Ltmp354:
+	movq	%rax, -56(%rbp)         # 8-byte Spill
+	movq	%rdx, -64(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp360:
+	.size	_ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE, .Ltmp360-_ZN5sc_dt7sc_uintILi26EEC2ERKNS_12sc_uint_baseE
+	.cfi_endproc
+.Leh_func_end48:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table48:
+.Lexception48:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\274"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	52                      # Call site table length
+.Lset113 = .Leh_func_begin48-.Leh_func_begin48 # >> Call Site 1 <<
+	.long	.Lset113
+.Lset114 = .Ltmp349-.Leh_func_begin48   #   Call between .Leh_func_begin48 and .Ltmp349
+	.long	.Lset114
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset115 = .Ltmp349-.Leh_func_begin48   # >> Call Site 2 <<
+	.long	.Lset115
+.Lset116 = .Ltmp350-.Ltmp349            #   Call between .Ltmp349 and .Ltmp350
+	.long	.Lset116
+.Lset117 = .Ltmp351-.Leh_func_begin48   #     jumps to .Ltmp351
+	.long	.Lset117
+	.byte	0                       #   On action: cleanup
+.Lset118 = .Ltmp352-.Leh_func_begin48   # >> Call Site 3 <<
+	.long	.Lset118
+.Lset119 = .Ltmp353-.Ltmp352            #   Call between .Ltmp352 and .Ltmp353
+	.long	.Lset119
+.Lset120 = .Ltmp354-.Leh_func_begin48   #     jumps to .Ltmp354
+	.long	.Lset120
+	.byte	1                       #   On action: 1
+.Lset121 = .Ltmp353-.Leh_func_begin48   # >> Call Site 4 <<
+	.long	.Lset121
+.Lset122 = .Leh_func_end48-.Ltmp353     #   Call between .Ltmp353 and .Leh_func_end48
+	.long	.Lset122
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EED0Ev,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EED0Ev,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EED0Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EED0Ev,@function
+_ZN5sc_dt7sc_uintILi26EED0Ev:           # @_ZN5sc_dt7sc_uintILi26EED0Ev
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin49:
+	.cfi_lsda 3, .Lexception49
+# BB#0:
+	pushq	%rbp
+.Ltmp366:
+	.cfi_def_cfa_offset 16
+.Ltmp367:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp368:
+	.cfi_def_cfa_register %rbp
+	subq	$32, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rdi, %rax
+.Ltmp361:
+	movq	%rax, -32(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt7sc_uintILi26EED1Ev
+.Ltmp362:
+	jmp	.LBB49_1
+.LBB49_1:
+	movq	-32(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZdlPv
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+.LBB49_2:
+.Ltmp363:
+	movl	%edx, %ecx
+	movq	%rax, -16(%rbp)
+	movl	%ecx, -20(%rbp)
+	movq	-32(%rbp), %rax         # 8-byte Reload
+	movq	%rax, %rdi
+	callq	_ZdlPv
+# BB#3:
+	movq	-16(%rbp), %rdi
+	callq	_Unwind_Resume
+.Ltmp369:
+	.size	_ZN5sc_dt7sc_uintILi26EED0Ev, .Ltmp369-_ZN5sc_dt7sc_uintILi26EED0Ev
+	.cfi_endproc
+.Leh_func_end49:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table49:
+.Lexception49:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\234"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	26                      # Call site table length
+.Lset123 = .Ltmp361-.Leh_func_begin49   # >> Call Site 1 <<
+	.long	.Lset123
+.Lset124 = .Ltmp362-.Ltmp361            #   Call between .Ltmp361 and .Ltmp362
+	.long	.Lset124
+.Lset125 = .Ltmp363-.Leh_func_begin49   #     jumps to .Ltmp363
+	.long	.Lset125
+	.byte	0                       #   On action: cleanup
+.Lset126 = .Ltmp362-.Leh_func_begin49   # >> Call Site 2 <<
+	.long	.Lset126
+.Lset127 = .Leh_func_end49-.Ltmp362     #   Call between .Ltmp362 and .Leh_func_end49
+	.long	.Lset127
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.align	4
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EEC2Ei,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EEC2Ei,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EEC2Ei
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EEC2Ei,@function
+_ZN5sc_dt7sc_uintILi26EEC2Ei:           # @_ZN5sc_dt7sc_uintILi26EEC2Ei
+	.cfi_startproc
+	.cfi_personality 3, __gxx_personality_v0
+.Leh_func_begin50:
+	.cfi_lsda 3, .Lexception50
+# BB#0:
+	pushq	%rbp
+.Ltmp378:
+	.cfi_def_cfa_offset 16
+.Ltmp379:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp380:
+	.cfi_def_cfa_register %rbp
+	subq	$64, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movl	$26, %esi
+	movq	%rdi, -40(%rbp)         # 8-byte Spill
+	callq	_ZN5sc_dt12sc_uint_baseC2Ei
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	movq	$_ZTVN5sc_dt7sc_uintILi26EEE+16, (%rdi)
+	movl	-12(%rbp), %esi
+.Ltmp370:
+	callq	_ZN5sc_dt12sc_uint_baseaSEi
+.Ltmp371:
+	movq	%rax, -48(%rbp)         # 8-byte Spill
+	jmp	.LBB50_1
+.LBB50_1:
+	addq	$64, %rsp
+	popq	%rbp
+	ret
+.LBB50_2:
+.Ltmp372:
+	movl	%edx, %ecx
+	movq	%rax, -24(%rbp)
+	movl	%ecx, -28(%rbp)
+.Ltmp373:
+	movq	-40(%rbp), %rdi         # 8-byte Reload
+	callq	_ZN5sc_dt12sc_uint_baseD2Ev
+.Ltmp374:
+	jmp	.LBB50_3
+.LBB50_3:
+	jmp	.LBB50_4
+.LBB50_4:
+	movq	-24(%rbp), %rdi
+	callq	_Unwind_Resume
+.LBB50_5:
+.Ltmp375:
+	movq	%rax, -56(%rbp)         # 8-byte Spill
+	movq	%rdx, -64(%rbp)         # 8-byte Spill
+	callq	_ZSt9terminatev
+.Ltmp381:
+	.size	_ZN5sc_dt7sc_uintILi26EEC2Ei, .Ltmp381-_ZN5sc_dt7sc_uintILi26EEC2Ei
+	.cfi_endproc
+.Leh_func_end50:
+	.section	.gcc_except_table,"a",@progbits
+	.align	4
+GCC_except_table50:
+.Lexception50:
+	.byte	255                     # @LPStart Encoding = omit
+	.byte	3                       # @TType Encoding = udata4
+	.asciz	 "\274"                 # @TType base offset
+	.byte	3                       # Call site Encoding = udata4
+	.byte	52                      # Call site table length
+.Lset128 = .Leh_func_begin50-.Leh_func_begin50 # >> Call Site 1 <<
+	.long	.Lset128
+.Lset129 = .Ltmp370-.Leh_func_begin50   #   Call between .Leh_func_begin50 and .Ltmp370
+	.long	.Lset129
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+.Lset130 = .Ltmp370-.Leh_func_begin50   # >> Call Site 2 <<
+	.long	.Lset130
+.Lset131 = .Ltmp371-.Ltmp370            #   Call between .Ltmp370 and .Ltmp371
+	.long	.Lset131
+.Lset132 = .Ltmp372-.Leh_func_begin50   #     jumps to .Ltmp372
+	.long	.Lset132
+	.byte	0                       #   On action: cleanup
+.Lset133 = .Ltmp373-.Leh_func_begin50   # >> Call Site 3 <<
+	.long	.Lset133
+.Lset134 = .Ltmp374-.Ltmp373            #   Call between .Ltmp373 and .Ltmp374
+	.long	.Lset134
+.Lset135 = .Ltmp375-.Leh_func_begin50   #     jumps to .Ltmp375
+	.long	.Lset135
+	.byte	1                       #   On action: 1
+.Lset136 = .Ltmp374-.Leh_func_begin50   # >> Call Site 4 <<
+	.long	.Lset136
+.Lset137 = .Leh_func_end50-.Ltmp374     #   Call between .Ltmp374 and .Leh_func_end50
+	.long	.Lset137
+	.long	0                       #     has no landing pad
+	.byte	0                       #   On action: cleanup
+	.byte	1                       # >> Action Record 1 <<
+                                        #   Catch TypeInfo 1
+	.byte	0                       #   No further actions
+                                        # >> Catch TypeInfos <<
+	.long	0                       # TypeInfo 1
+	.align	4
+
+	.section	.text._ZN7sc_core18sc_process_monitorD2Ev,"axG",@progbits,_ZN7sc_core18sc_process_monitorD2Ev,comdat
+	.weak	_ZN7sc_core18sc_process_monitorD2Ev
+	.align	16, 0x90
+	.type	_ZN7sc_core18sc_process_monitorD2Ev,@function
+_ZN7sc_core18sc_process_monitorD2Ev:    # @_ZN7sc_core18sc_process_monitorD2Ev
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	ret
+.Ltmp382:
+	.size	_ZN7sc_core18sc_process_monitorD2Ev, .Ltmp382-_ZN7sc_core18sc_process_monitorD2Ev
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi4EED2Ev,"axG",@progbits,_ZN5sc_dt7sc_uintILi4EED2Ev,comdat
+	.weak	_ZN5sc_dt7sc_uintILi4EED2Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi4EED2Ev,@function
+_ZN5sc_dt7sc_uintILi4EED2Ev:            # @_ZN5sc_dt7sc_uintILi4EED2Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp385:
+	.cfi_def_cfa_offset 16
+.Ltmp386:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp387:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZN5sc_dt12sc_uint_baseD2Ev
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp388:
+	.size	_ZN5sc_dt7sc_uintILi4EED2Ev, .Ltmp388-_ZN5sc_dt7sc_uintILi4EED2Ev
+	.cfi_endproc
+
+	.section	.text._ZNK7sc_core9sc_object10simcontextEv,"axG",@progbits,_ZNK7sc_core9sc_object10simcontextEv,comdat
+	.weak	_ZNK7sc_core9sc_object10simcontextEv
+	.align	16, 0x90
+	.type	_ZNK7sc_core9sc_object10simcontextEv,@function
+_ZNK7sc_core9sc_object10simcontextEv:   # @_ZNK7sc_core9sc_object10simcontextEv
+	.cfi_startproc
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	movq	-8(%rsp), %rdi
+	movq	80(%rdi), %rax
+	ret
+.Ltmp389:
+	.size	_ZNK7sc_core9sc_object10simcontextEv, .Ltmp389-_ZNK7sc_core9sc_object10simcontextEv
+	.cfi_endproc
+
+	.section	.text._ZN5sc_dt7sc_uintILi26EED2Ev,"axG",@progbits,_ZN5sc_dt7sc_uintILi26EED2Ev,comdat
+	.weak	_ZN5sc_dt7sc_uintILi26EED2Ev
+	.align	16, 0x90
+	.type	_ZN5sc_dt7sc_uintILi26EED2Ev,@function
+_ZN5sc_dt7sc_uintILi26EED2Ev:           # @_ZN5sc_dt7sc_uintILi26EED2Ev
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp392:
+	.cfi_def_cfa_offset 16
+.Ltmp393:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp394:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rdi
+	callq	_ZN5sc_dt12sc_uint_baseD2Ev
+	addq	$16, %rsp
+	popq	%rbp
+	ret
+.Ltmp395:
+	.size	_ZN5sc_dt7sc_uintILi26EED2Ev, .Ltmp395-_ZN5sc_dt7sc_uintILi26EED2Ev
+	.cfi_endproc
+
+	.section	.text.startup,"ax",@progbits
+	.align	16, 0x90
+	.type	_GLOBAL__I_a,@function
+_GLOBAL__I_a:                           # @_GLOBAL__I_a
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Ltmp398:
+	.cfi_def_cfa_offset 16
+.Ltmp399:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Ltmp400:
+	.cfi_def_cfa_register %rbp
+	callq	__cxx_global_var_init
+	callq	__cxx_global_var_init1
+	popq	%rbp
+	ret
+.Ltmp401:
+	.size	_GLOBAL__I_a, .Ltmp401-_GLOBAL__I_a
+	.cfi_endproc
+
+	.type	_ZStL8__ioinit,@object  # @_ZStL8__ioinit
+	.local	_ZStL8__ioinit
+	.comm	_ZStL8__ioinit,1,1
+	.type	_ZN7sc_coreL26PHASH_DEFAULT_REORDER_FLAGE,@object # @_ZN7sc_coreL26PHASH_DEFAULT_REORDER_FLAGE
+	.section	.rodata,"a",@progbits
+_ZN7sc_coreL26PHASH_DEFAULT_REORDER_FLAGE:
+	.byte	1                       # 0x1
+	.size	_ZN7sc_coreL26PHASH_DEFAULT_REORDER_FLAGE, 1
+
+	.type	_ZN7sc_coreL17api_version_checkE,@object # @_ZN7sc_coreL17api_version_checkE
+	.local	_ZN7sc_coreL17api_version_checkE
+	.comm	_ZN7sc_coreL17api_version_checkE,1,1
+	.type	_ZZN6Advios14modulate_clockEvE13clock_counter,@object # @_ZZN6Advios14modulate_clockEvE13clock_counter
+	.local	_ZZN6Advios14modulate_clockEvE13clock_counter
+	.comm	_ZZN6Advios14modulate_clockEvE13clock_counter,24,8
+	.type	_ZGVZN6Advios14modulate_clockEvE13clock_counter,@object # @_ZGVZN6Advios14modulate_clockEvE13clock_counter
+	.local	_ZGVZN6Advios14modulate_clockEvE13clock_counter
+	.comm	_ZGVZN6Advios14modulate_clockEvE13clock_counter,8,8
+	.type	_ZZN6Advios10LedControlEvE7counter,@object # @_ZZN6Advios10LedControlEvE7counter
+	.local	_ZZN6Advios10LedControlEvE7counter
+	.comm	_ZZN6Advios10LedControlEvE7counter,24,8
+	.type	_ZGVZN6Advios10LedControlEvE7counter,@object # @_ZGVZN6Advios10LedControlEvE7counter
+	.local	_ZGVZN6Advios10LedControlEvE7counter
+	.comm	_ZGVZN6Advios10LedControlEvE7counter,8,8
+	.type	_ZZN6Advios10LedControlEvE10last_clock,@object # @_ZZN6Advios10LedControlEvE10last_clock
+	.local	_ZZN6Advios10LedControlEvE10last_clock
+	.comm	_ZZN6Advios10LedControlEvE10last_clock,1,1
+	.type	_ZTVN7sc_core18sc_process_monitorE,@object # @_ZTVN7sc_core18sc_process_monitorE
+	.section	.rodata._ZTVN7sc_core18sc_process_monitorE,"aG",@progbits,_ZTVN7sc_core18sc_process_monitorE,comdat
+	.weak	_ZTVN7sc_core18sc_process_monitorE
+	.align	16
+_ZTVN7sc_core18sc_process_monitorE:
+	.quad	0
+	.quad	_ZTIN7sc_core18sc_process_monitorE
+	.quad	_ZN7sc_core18sc_process_monitorD1Ev
+	.quad	_ZN7sc_core18sc_process_monitorD0Ev
+	.quad	_ZN7sc_core18sc_process_monitor6signalEPNS_17sc_thread_processEi
+	.size	_ZTVN7sc_core18sc_process_monitorE, 40
+
+	.type	_ZTSN7sc_core18sc_process_monitorE,@object # @_ZTSN7sc_core18sc_process_monitorE
+	.section	.rodata._ZTSN7sc_core18sc_process_monitorE,"aG",@progbits,_ZTSN7sc_core18sc_process_monitorE,comdat
+	.weak	_ZTSN7sc_core18sc_process_monitorE
+	.align	16
+_ZTSN7sc_core18sc_process_monitorE:
+	.asciz	 "N7sc_core18sc_process_monitorE"
+	.size	_ZTSN7sc_core18sc_process_monitorE, 31
+
+	.type	_ZTIN7sc_core18sc_process_monitorE,@object # @_ZTIN7sc_core18sc_process_monitorE
+	.section	.rodata._ZTIN7sc_core18sc_process_monitorE,"aG",@progbits,_ZTIN7sc_core18sc_process_monitorE,comdat
+	.weak	_ZTIN7sc_core18sc_process_monitorE
+	.align	8
+_ZTIN7sc_core18sc_process_monitorE:
+	.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+	.quad	_ZTSN7sc_core18sc_process_monitorE
+	.size	_ZTIN7sc_core18sc_process_monitorE, 16
+
+	.type	_ZTVN5sc_dt7sc_uintILi4EEE,@object # @_ZTVN5sc_dt7sc_uintILi4EEE
+	.section	.rodata._ZTVN5sc_dt7sc_uintILi4EEE,"aG",@progbits,_ZTVN5sc_dt7sc_uintILi4EEE,comdat
+	.weak	_ZTVN5sc_dt7sc_uintILi4EEE
+	.align	16
+_ZTVN5sc_dt7sc_uintILi4EEE:
+	.quad	0
+	.quad	_ZTIN5sc_dt7sc_uintILi4EEE
+	.quad	_ZN5sc_dt13sc_value_base17concat_clear_dataEb
+	.quad	_ZNK5sc_dt12sc_uint_base15concat_get_ctrlEPji
+	.quad	_ZNK5sc_dt12sc_uint_base15concat_get_dataEPji
+	.quad	_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev
+	.quad	_ZNK5sc_dt12sc_uint_base13concat_lengthEPb
+	.quad	_ZN5sc_dt12sc_uint_base10concat_setExi
+	.quad	_ZN5sc_dt12sc_uint_base10concat_setERKNS_9sc_signedEi
+	.quad	_ZN5sc_dt12sc_uint_base10concat_setERKNS_11sc_unsignedEi
+	.quad	_ZN5sc_dt12sc_uint_base10concat_setEyi
+	.quad	_ZN5sc_dt7sc_uintILi4EED1Ev
+	.quad	_ZN5sc_dt7sc_uintILi4EED0Ev
+	.size	_ZTVN5sc_dt7sc_uintILi4EEE, 104
+
+	.type	_ZTSN5sc_dt7sc_uintILi4EEE,@object # @_ZTSN5sc_dt7sc_uintILi4EEE
+	.section	.rodata._ZTSN5sc_dt7sc_uintILi4EEE,"aG",@progbits,_ZTSN5sc_dt7sc_uintILi4EEE,comdat
+	.weak	_ZTSN5sc_dt7sc_uintILi4EEE
+	.align	16
+_ZTSN5sc_dt7sc_uintILi4EEE:
+	.asciz	 "N5sc_dt7sc_uintILi4EEE"
+	.size	_ZTSN5sc_dt7sc_uintILi4EEE, 23
+
+	.type	_ZTIN5sc_dt7sc_uintILi4EEE,@object # @_ZTIN5sc_dt7sc_uintILi4EEE
+	.section	.rodata._ZTIN5sc_dt7sc_uintILi4EEE,"aG",@progbits,_ZTIN5sc_dt7sc_uintILi4EEE,comdat
+	.weak	_ZTIN5sc_dt7sc_uintILi4EEE
+	.align	16
+_ZTIN5sc_dt7sc_uintILi4EEE:
+	.quad	_ZTVN10__cxxabiv120__si_class_type_infoE+16
+	.quad	_ZTSN5sc_dt7sc_uintILi4EEE
+	.quad	_ZTIN5sc_dt12sc_uint_baseE
+	.size	_ZTIN5sc_dt7sc_uintILi4EEE, 24
+
+	.type	.L.str,@object          # @.str
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.L.str:
+	.asciz	 "port is not bound"
+	.size	.L.str, 18
+
+	.type	_ZTVN5sc_dt7sc_uintILi26EEE,@object # @_ZTVN5sc_dt7sc_uintILi26EEE
+	.section	.rodata._ZTVN5sc_dt7sc_uintILi26EEE,"aG",@progbits,_ZTVN5sc_dt7sc_uintILi26EEE,comdat
+	.weak	_ZTVN5sc_dt7sc_uintILi26EEE
+	.align	16
+_ZTVN5sc_dt7sc_uintILi26EEE:
+	.quad	0
+	.quad	_ZTIN5sc_dt7sc_uintILi26EEE
+	.quad	_ZN5sc_dt13sc_value_base17concat_clear_dataEb
+	.quad	_ZNK5sc_dt12sc_uint_base15concat_get_ctrlEPji
+	.quad	_ZNK5sc_dt12sc_uint_base15concat_get_dataEPji
+	.quad	_ZNK5sc_dt12sc_uint_base17concat_get_uint64Ev
+	.quad	_ZNK5sc_dt12sc_uint_base13concat_lengthEPb
+	.quad	_ZN5sc_dt12sc_uint_base10concat_setExi
+	.quad	_ZN5sc_dt12sc_uint_base10concat_setERKNS_9sc_signedEi
+	.quad	_ZN5sc_dt12sc_uint_base10concat_setERKNS_11sc_unsignedEi
+	.quad	_ZN5sc_dt12sc_uint_base10concat_setEyi
+	.quad	_ZN5sc_dt7sc_uintILi26EED1Ev
+	.quad	_ZN5sc_dt7sc_uintILi26EED0Ev
+	.size	_ZTVN5sc_dt7sc_uintILi26EEE, 104
+
+	.type	_ZTSN5sc_dt7sc_uintILi26EEE,@object # @_ZTSN5sc_dt7sc_uintILi26EEE
+	.section	.rodata._ZTSN5sc_dt7sc_uintILi26EEE,"aG",@progbits,_ZTSN5sc_dt7sc_uintILi26EEE,comdat
+	.weak	_ZTSN5sc_dt7sc_uintILi26EEE
+	.align	16
+_ZTSN5sc_dt7sc_uintILi26EEE:
+	.asciz	 "N5sc_dt7sc_uintILi26EEE"
+	.size	_ZTSN5sc_dt7sc_uintILi26EEE, 24
+
+	.type	_ZTIN5sc_dt7sc_uintILi26EEE,@object # @_ZTIN5sc_dt7sc_uintILi26EEE
+	.section	.rodata._ZTIN5sc_dt7sc_uintILi26EEE,"aG",@progbits,_ZTIN5sc_dt7sc_uintILi26EEE,comdat
+	.weak	_ZTIN5sc_dt7sc_uintILi26EEE
+	.align	16
+_ZTIN5sc_dt7sc_uintILi26EEE:
+	.quad	_ZTVN10__cxxabiv120__si_class_type_infoE+16
+	.quad	_ZTSN5sc_dt7sc_uintILi26EEE
+	.quad	_ZTIN5sc_dt12sc_uint_baseE
+	.size	_ZTIN5sc_dt7sc_uintILi26EEE, 24
+
+	.section	.ctors,"aw",@progbits
+	.align	8
+	.quad	_GLOBAL__I_a
+
+	.section	".note.GNU-stack","",@progbits

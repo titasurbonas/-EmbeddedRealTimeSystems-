@@ -1,0 +1,24 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'root' on host 'ubuntu' (Linux_x86_64 version 4.15.0-36-generic) on Sun Oct 07 14:40:00 CEST 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo'
+INFO: [HLS 200-10] Opening project '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip'.
+INFO: [HLS 200-10] Opening solution '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../Advios_testbench.cpp in debug mode
+   Compiling ../../../../Advios.cpp in debug mode
+   Generating csim.exe
+
+Info: (I703) tracing timescale unit set: 5 ns (waveForm.vcd)
+Leds are now: 0
+Leds are now: 1
+Leds are now: 2
+Leds are now: 3
+Counting finished. Starting switch test
+Leds are now: 7
+Leds are now: 3
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

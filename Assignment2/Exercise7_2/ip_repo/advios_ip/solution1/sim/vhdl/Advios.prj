@@ -1,0 +1,7 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "Advios.autotb.vhd"
+vhdl xil_defaultlib "Advios_LedControl.vhd"
+vhdl xil_defaultlib "Advios_modulate_clock.vhd"
+vhdl xil_defaultlib "Advios.vhd"
+

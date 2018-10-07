@@ -1,0 +1,10 @@
+
+Info: (I703) tracing timescale unit set: 1 ps (Advios_LedControl_sc_trace_0.vcd)
+
+Info: (I703) tracing timescale unit set: 1 ps (Advios_modulate_clock_sc_trace_0.vcd)
+
+Info: (I703) tracing timescale unit set: 1 ps (Advios_sc_trace_0.vcd)
+
+Info: (I703) tracing timescale unit set: 5 ns (waveForm.vcd)
+Leds are now: 0
+Leds are now: 15
