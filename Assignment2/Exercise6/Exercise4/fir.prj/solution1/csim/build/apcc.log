@@ -1,0 +1,6 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'root' on host 'ubuntu' (Linux_x86_64 version 4.15.0-33-generic) on Thu Oct 04 10:36:31 CEST 2018
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise6/Exercise4/fir.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_root/233311538642191593687
+INFO: [APCC 202-1] APCC is done.

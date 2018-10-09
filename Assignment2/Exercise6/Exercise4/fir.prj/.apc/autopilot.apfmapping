@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir_coef.dat" path="/home/olafur/Documents/Embedded_systems/Assignment_2/HLS_labs/lab4/fir_coef.dat"/>
+    <originFiles name="fir.h" path="/home/olafur/Documents/Embedded_systems/Assignment_2/HLS_labs/lab4/fir.h"/>
+    <originFiles name="fir.c" path="/home/olafur/Documents/Embedded_systems/Assignment_2/HLS_labs/lab4/fir.c"/>
+  </source>
+  <testbench>
+    <originFiles name="fir_test.c" path="/home/olafur/Documents/Embedded_systems/Assignment_2/HLS_labs/lab4/fir_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
