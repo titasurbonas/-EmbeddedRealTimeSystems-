@@ -18,7 +18,9 @@ void Advios::modulate_clock()
 
 void Advios::LedControl()
 {
-    // Read signals.
+
+#pragma HLS resource core=AXI4LiteS metadata="-bus_bundle slv0" variable=ctrl
+
     sc_uint<NUM_BITS> c, s;
     static sc_uint<NUM_BITS> counter = 0;
     static bool last_clock = false;

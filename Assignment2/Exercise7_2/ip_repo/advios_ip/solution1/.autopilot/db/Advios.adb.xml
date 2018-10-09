@@ -3,7 +3,7 @@
 
 <trans_list>
 
-<trans id="34" from="1" to="2">
+<trans id="35" from="1" to="2">
 <condition id="14">
 <or_exp><and_exp><literal name="Advios_ssdm_threa" val="1"/>
 </and_exp><and_exp><literal name="Advios_ssdm_threa_1" val="1"/>
@@ -25,9 +25,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="12" bw="0" op_0_bw="0" op_1_bw="1">
+<Node id="12" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="0" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk_second), !map !80
+:0  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str14, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str15)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -42,7 +42,7 @@
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !84
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk_second), !map !80
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -57,7 +57,7 @@
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !88
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !84
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -70,9 +70,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="15" bw="0" op_0_bw="0" op_1_bw="4">
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !92
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !88
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -87,7 +87,7 @@
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %switches), !map !96
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !92
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -102,7 +102,7 @@
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %leds), !map !100
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %switches), !map !96
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -115,9 +115,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="18" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="0">
+<Node id="18" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-:6  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %leds), !map !100
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -130,12 +130,12 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="1" op_0_bw="1">
+<Node id="19" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:7  %Advios_ssdm_threa = load i1* @Advios_ssdm_thread_M_modulate_clock, align 1
+:7  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="Advios_ssdm_threa"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -145,25 +145,24 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="20" bw="1" op_0_bw="1">
 <![CDATA[
-:8  br i1 %Advios_ssdm_threa, label %1, label %2
+:8  %Advios_ssdm_threa = load i1* @Advios_ssdm_thread_M_modulate_clock, align 1
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="Advios_ssdm_threa"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="2">
-<or_exp><and_exp><literal name="Advios_ssdm_threa" val="0"/>
-</and_exp></or_exp>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0">
+<Node id="21" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [15 x i8]* @p_str9) nounwind
+:9  br i1 %Advios_ssdm_threa, label %1, label %2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -177,9 +176,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="0" op_3_bw="1" op_4_bw="32">
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str9, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
+:0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [15 x i8]* @p_str8) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -195,7 +194,7 @@
 
 <Node id="24" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="0" op_3_bw="1" op_4_bw="32">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str9, [6 x i8]* @p_str4, i1* %reset, i32 3) nounwind
+:1  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str8, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -209,12 +208,12 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="25" bw="1" op_0_bw="1">
+<Node id="25" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="0" op_3_bw="1" op_4_bw="32">
 <![CDATA[
-:3  %Advios_ssdm_threa_1 = load i1* @Advios_ssdm_thread_M_LedControl, align 1
+:2  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str8, [6 x i8]* @p_str3, i1* %reset, i32 3) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="Advios_ssdm_threa_1"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </operation>
 
 <operation id="16" st_id="1" stage="1" lat="1">
@@ -225,26 +224,25 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="26" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="26" bw="1" op_0_bw="1">
 <![CDATA[
-:4  br i1 %Advios_ssdm_threa_1, label %3, label %4
+:3  %Advios_ssdm_threa_1 = load i1* @Advios_ssdm_thread_M_LedControl, align 1
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="Advios_ssdm_threa_1"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="4">
+<condition id="2">
 <or_exp><and_exp><literal name="Advios_ssdm_threa" val="0"/>
-<literal name="Advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="28" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0">
+<Node id="27" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [11 x i8]* @p_str14) nounwind
+:4  br i1 %Advios_ssdm_threa_1, label %3, label %4
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -259,9 +257,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="29" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="0" op_3_bw="1" op_4_bw="32">
+<Node id="29" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecSensitive([11 x i8]* @p_str14, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
+:0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [11 x i8]* @p_str13) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -278,7 +276,7 @@
 
 <Node id="30" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="0" op_3_bw="1" op_4_bw="32">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecSensitive([11 x i8]* @p_str14, [6 x i8]* @p_str4, i1* %reset, i32 3) nounwind
+:1  call void (...)* @_ssdm_op_SpecSensitive([11 x i8]* @p_str13, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -293,9 +291,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="1">
+<Node id="31" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="0" op_3_bw="1" op_4_bw="32">
 <![CDATA[
-:3  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 3, [5 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
+:2  call void (...)* @_ssdm_op_SpecSensitive([11 x i8]* @p_str13, [6 x i8]* @p_str3, i1* %reset, i32 3) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -312,7 +310,7 @@
 
 <Node id="32" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="1">
 <![CDATA[
-:4  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str3, [6 x i8]* @p_str4, i32 0, i32 0, i1* %reset) nounwind
+:3  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -327,9 +325,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="33" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="4">
+<Node id="33" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="1">
 <![CDATA[
-:5  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str5, [5 x i8]* @p_str6, i32 0, i32 0, i4* %ctrl) nounwind
+:4  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -346,7 +344,7 @@
 
 <Node id="34" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="4">
 <![CDATA[
-:6  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str5, [9 x i8]* @p_str7, i32 0, i32 0, i4* %switches) nounwind
+:5  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -363,7 +361,7 @@
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="4">
 <![CDATA[
-:7  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str5, [5 x i8]* @p_str8, i32 0, i32 0, i4* %leds) nounwind
+:6  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %switches) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -378,9 +376,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="36" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="1">
+<Node id="36" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="4">
 <![CDATA[
-:8  call void (...)* @_ssdm_op_SpecChannel([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str3, [11 x i8]* @p_str13, i32 1, i32 0, i1* %clk_second) nounwind
+:7  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [5 x i8]* @p_str7, i32 0, i32 0, i4* %leds) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -395,26 +393,26 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="37" bw="0">
+<Node id="37" bw="0" op_0_bw="0" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="1">
 <![CDATA[
-:9  ret void
+:8  call void (...)* @_ssdm_op_SpecChannel([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [11 x i8]* @p_str12, i32 1, i32 0, i1* %clk_second) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="27" st_id="1" stage="2" lat="2">
-<core></core>
+<operation id="27" st_id="1" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="6">
+<condition id="4">
 <or_exp><and_exp><literal name="Advios_ssdm_threa" val="0"/>
-<literal name="Advios_ssdm_threa_1" val="1"/>
+<literal name="Advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="39" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="4" op_5_bw="4" op_6_bw="4">
+<Node id="38" bw="0">
 <![CDATA[
-:0  call void @"Advios::LedControl"(i1* %clk_second, i1* %clk, i1* %reset, i4* %ctrl, i4* %switches, i4* %leds)
+:9  ret void
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -423,12 +421,29 @@
 <operation id="28" st_id="1" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
+<condition id="6">
+<or_exp><and_exp><literal name="Advios_ssdm_threa" val="0"/>
+<literal name="Advios_ssdm_threa_1" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="4" op_5_bw="4" op_6_bw="4">
+<![CDATA[
+:0  call void @"Advios::LedControl"(i1* %clk_second, i1* %clk, i1* %reset, i4* %ctrl, i4* %switches, i4* %leds)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="29" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
 <condition id="8">
 <or_exp><and_exp><literal name="Advios_ssdm_threa" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="4" op_5_bw="4" op_6_bw="4">
+<Node id="43" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="4" op_5_bw="4" op_6_bw="4">
 <![CDATA[
 :0  call void @"Advios::modulate_clock"(i1* %clk_second, i1* %clk, i1* %reset, i4* %ctrl, i4* %switches, i4* %leds)
 
@@ -439,7 +454,7 @@
 
 <state id="2" st_id="2">
 
-<operation id="29" st_id="2" stage="1" lat="2">
+<operation id="30" st_id="2" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="9">
@@ -447,7 +462,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="39" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="4" op_5_bw="4" op_6_bw="4">
+<Node id="40" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="4" op_5_bw="4" op_6_bw="4">
 <![CDATA[
 :0  call void @"Advios::LedControl"(i1* %clk_second, i1* %clk, i1* %reset, i4* %ctrl, i4* %switches, i4* %leds)
 
@@ -455,7 +470,7 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="30" st_id="2" stage="1" lat="1">
+<operation id="31" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="9">
@@ -463,7 +478,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="40" bw="0" op_0_bw="0">
+<Node id="41" bw="0" op_0_bw="0">
 <![CDATA[
 :1  br label %UnifiedUnreachableBlock
 
@@ -471,7 +486,7 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="31" st_id="2" stage="1" lat="2">
+<operation id="32" st_id="2" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="10">
@@ -479,25 +494,9 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="4" op_5_bw="4" op_6_bw="4">
+<Node id="43" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="4" op_5_bw="4" op_6_bw="4">
 <![CDATA[
 :0  call void @"Advios::modulate_clock"(i1* %clk_second, i1* %clk, i1* %reset, i4* %ctrl, i4* %switches, i4* %leds)
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="32" st_id="2" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="10">
-<or_exp><and_exp><literal name="Advios_ssdm_threa" val="1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="43" bw="0" op_0_bw="0">
-<![CDATA[
-:1  br label %UnifiedUnreachableBlock
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -506,11 +505,27 @@
 <operation id="33" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
+<condition id="10">
+<or_exp><and_exp><literal name="Advios_ssdm_threa" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %UnifiedUnreachableBlock
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="34" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
 <condition id="13">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="45" bw="0">
+<Node id="46" bw="0">
 <![CDATA[
 UnifiedUnreachableBlock:0  unreachable
 
@@ -522,306 +537,328 @@ UnifiedUnreachableBlock:0  unreachable
 
 
 <ports>
-<port id="38" name="clk_second" dir="2" iftype="0">
+<port id="39" name="clk_second" dir="2" iftype="0">
 <core>NULL</core><StgValue><ssdm name="clk_second"/></StgValue>
 </port>
-<port id="39" name="clk" dir="0" iftype="0">
+<port id="40" name="clk" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="clk"/></StgValue>
 </port>
-<port id="40" name="reset" dir="0" iftype="0">
+<port id="41" name="reset" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="reset"/></StgValue>
 </port>
-<port id="41" name="ctrl" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="ctrl"/></StgValue>
+<port id="42" name="ctrl" dir="0" iftype="0">
+<core>AXI4LiteS</core><StgValue><ssdm name="ctrl"/></StgValue>
 </port>
-<port id="42" name="switches" dir="0" iftype="0">
+<port id="43" name="switches" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="switches"/></StgValue>
 </port>
-<port id="43" name="leds" dir="1" iftype="0">
+<port id="44" name="leds" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="leds"/></StgValue>
 </port>
-<port id="44" name="Advios_ssdm_thread_M_modulate_clock" dir="2" iftype="0">
+<port id="45" name="Advios_ssdm_thread_M_modulate_clock" dir="2" iftype="0">
 <core>NULL</core><StgValue><ssdm name="Advios_ssdm_thread_M_modulate_clock"/></StgValue>
 </port>
-<port id="45" name="clock_counter_V" dir="2" iftype="0">
+<port id="46" name="clock_counter_V" dir="2" iftype="0">
 <core>NULL</core><StgValue><ssdm name="clock_counter_V"/></StgValue>
 </port>
-<port id="46" name="Advios_ssdm_thread_M_LedControl" dir="0" iftype="0">
+<port id="47" name="Advios_ssdm_thread_M_LedControl" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="Advios_ssdm_thread_M_LedControl"/></StgValue>
 </port>
-<port id="47" name="last_clock" dir="2" iftype="0">
+<port id="48" name="last_clock" dir="2" iftype="0">
 <core>NULL</core><StgValue><ssdm name="last_clock"/></StgValue>
 </port>
-<port id="48" name="counter_V" dir="2" iftype="0">
+<port id="49" name="counter_V" dir="2" iftype="0">
 <core>NULL</core><StgValue><ssdm name="counter_V"/></StgValue>
 </port>
 </ports>
 
 
 <dataflows>
-<dataflow id="50" from="_ssdm_op_SpecBitsMap" to="StgValue_3" fromId="49" toId="3">
+<dataflow id="51" from="_ssdm_op_SpecIFCore" to="StgValue_3" fromId="50" toId="3">
 </dataflow>
-<dataflow id="51" from="clk_second" to="StgValue_3" fromId="38" toId="3">
+<dataflow id="52" from="ctrl" to="StgValue_3" fromId="42" toId="3">
 </dataflow>
-<dataflow id="52" from="_ssdm_op_SpecBitsMap" to="StgValue_4" fromId="49" toId="4">
+<dataflow id="54" from="p_str10" to="StgValue_3" fromId="53" toId="3">
 </dataflow>
-<dataflow id="53" from="clk" to="StgValue_4" fromId="39" toId="4">
+<dataflow id="56" from="p_str14" to="StgValue_3" fromId="55" toId="3">
 </dataflow>
-<dataflow id="54" from="_ssdm_op_SpecBitsMap" to="StgValue_5" fromId="49" toId="5">
+<dataflow id="57" from="p_str10" to="StgValue_3" fromId="53" toId="3">
 </dataflow>
-<dataflow id="55" from="reset" to="StgValue_5" fromId="40" toId="5">
+<dataflow id="59" from="StgValue_58" to="StgValue_3" fromId="58" toId="3">
 </dataflow>
-<dataflow id="56" from="_ssdm_op_SpecBitsMap" to="StgValue_6" fromId="49" toId="6">
+<dataflow id="60" from="p_str10" to="StgValue_3" fromId="53" toId="3">
 </dataflow>
-<dataflow id="57" from="ctrl" to="StgValue_6" fromId="41" toId="6">
+<dataflow id="61" from="p_str10" to="StgValue_3" fromId="53" toId="3">
 </dataflow>
-<dataflow id="58" from="_ssdm_op_SpecBitsMap" to="StgValue_7" fromId="49" toId="7">
+<dataflow id="62" from="p_str10" to="StgValue_3" fromId="53" toId="3">
 </dataflow>
-<dataflow id="59" from="switches" to="StgValue_7" fromId="42" toId="7">
+<dataflow id="63" from="p_str10" to="StgValue_3" fromId="53" toId="3">
 </dataflow>
-<dataflow id="60" from="_ssdm_op_SpecBitsMap" to="StgValue_8" fromId="49" toId="8">
+<dataflow id="65" from="p_str15" to="StgValue_3" fromId="64" toId="3">
 </dataflow>
-<dataflow id="61" from="leds" to="StgValue_8" fromId="43" toId="8">
+<dataflow id="67" from="_ssdm_op_SpecBitsMap" to="StgValue_4" fromId="66" toId="4">
 </dataflow>
-<dataflow id="63" from="_ssdm_op_SpecTopModule" to="StgValue_9" fromId="62" toId="9">
+<dataflow id="68" from="clk_second" to="StgValue_4" fromId="39" toId="4">
 </dataflow>
-<dataflow id="65" from="p_str" to="StgValue_9" fromId="64" toId="9">
+<dataflow id="69" from="_ssdm_op_SpecBitsMap" to="StgValue_5" fromId="66" toId="5">
 </dataflow>
-<dataflow id="66" from="p_str" to="StgValue_9" fromId="64" toId="9">
+<dataflow id="70" from="clk" to="StgValue_5" fromId="40" toId="5">
 </dataflow>
-<dataflow id="67" from="Advios_ssdm_thread_M_modulate_clock" to="Advios_ssdm_threa" fromId="44" toId="10">
+<dataflow id="71" from="_ssdm_op_SpecBitsMap" to="StgValue_6" fromId="66" toId="6">
 </dataflow>
-<dataflow id="68" from="Advios_ssdm_threa" to="StgValue_11" fromId="10" toId="11">
+<dataflow id="72" from="reset" to="StgValue_6" fromId="41" toId="6">
 </dataflow>
-<dataflow id="70" from="_ssdm_op_SpecProcessDecl" to="StgValue_12" fromId="69" toId="12">
+<dataflow id="73" from="_ssdm_op_SpecBitsMap" to="StgValue_7" fromId="66" toId="7">
 </dataflow>
-<dataflow id="71" from="p_str" to="StgValue_12" fromId="64" toId="12">
+<dataflow id="74" from="ctrl" to="StgValue_7" fromId="42" toId="7">
 </dataflow>
-<dataflow id="73" from="StgValue_72" to="StgValue_12" fromId="72" toId="12">
+<dataflow id="75" from="_ssdm_op_SpecBitsMap" to="StgValue_8" fromId="66" toId="8">
 </dataflow>
-<dataflow id="75" from="p_str9" to="StgValue_12" fromId="74" toId="12">
+<dataflow id="76" from="switches" to="StgValue_8" fromId="43" toId="8">
 </dataflow>
-<dataflow id="77" from="_ssdm_op_SpecSensitive" to="StgValue_13" fromId="76" toId="13">
+<dataflow id="77" from="_ssdm_op_SpecBitsMap" to="StgValue_9" fromId="66" toId="9">
 </dataflow>
-<dataflow id="78" from="p_str9" to="StgValue_13" fromId="74" toId="13">
+<dataflow id="78" from="leds" to="StgValue_9" fromId="44" toId="9">
 </dataflow>
-<dataflow id="80" from="p_str2" to="StgValue_13" fromId="79" toId="13">
+<dataflow id="80" from="_ssdm_op_SpecTopModule" to="StgValue_10" fromId="79" toId="10">
 </dataflow>
-<dataflow id="81" from="clk" to="StgValue_13" fromId="39" toId="13">
+<dataflow id="82" from="p_str" to="StgValue_10" fromId="81" toId="10">
 </dataflow>
-<dataflow id="83" from="StgValue_82" to="StgValue_13" fromId="82" toId="13">
+<dataflow id="83" from="p_str" to="StgValue_10" fromId="81" toId="10">
 </dataflow>
-<dataflow id="84" from="_ssdm_op_SpecSensitive" to="StgValue_14" fromId="76" toId="14">
+<dataflow id="84" from="Advios_ssdm_thread_M_modulate_clock" to="Advios_ssdm_threa" fromId="45" toId="11">
 </dataflow>
-<dataflow id="85" from="p_str9" to="StgValue_14" fromId="74" toId="14">
+<dataflow id="85" from="Advios_ssdm_threa" to="StgValue_12" fromId="11" toId="12">
 </dataflow>
-<dataflow id="87" from="p_str4" to="StgValue_14" fromId="86" toId="14">
+<dataflow id="87" from="_ssdm_op_SpecProcessDecl" to="StgValue_13" fromId="86" toId="13">
 </dataflow>
-<dataflow id="88" from="reset" to="StgValue_14" fromId="40" toId="14">
+<dataflow id="88" from="p_str" to="StgValue_13" fromId="81" toId="13">
 </dataflow>
-<dataflow id="90" from="StgValue_89" to="StgValue_14" fromId="89" toId="14">
+<dataflow id="90" from="StgValue_89" to="StgValue_13" fromId="89" toId="13">
 </dataflow>
-<dataflow id="91" from="Advios_ssdm_thread_M_LedControl" to="Advios_ssdm_threa_1" fromId="46" toId="15">
+<dataflow id="92" from="p_str8" to="StgValue_13" fromId="91" toId="13">
 </dataflow>
-<dataflow id="92" from="Advios_ssdm_threa_1" to="StgValue_16" fromId="15" toId="16">
+<dataflow id="94" from="_ssdm_op_SpecSensitive" to="StgValue_14" fromId="93" toId="14">
 </dataflow>
-<dataflow id="93" from="_ssdm_op_SpecProcessDecl" to="StgValue_17" fromId="69" toId="17">
+<dataflow id="95" from="p_str8" to="StgValue_14" fromId="91" toId="14">
 </dataflow>
-<dataflow id="94" from="p_str" to="StgValue_17" fromId="64" toId="17">
+<dataflow id="97" from="p_str2" to="StgValue_14" fromId="96" toId="14">
 </dataflow>
-<dataflow id="95" from="StgValue_72" to="StgValue_17" fromId="72" toId="17">
+<dataflow id="98" from="clk" to="StgValue_14" fromId="40" toId="14">
 </dataflow>
-<dataflow id="97" from="p_str14" to="StgValue_17" fromId="96" toId="17">
+<dataflow id="100" from="StgValue_99" to="StgValue_14" fromId="99" toId="14">
 </dataflow>
-<dataflow id="98" from="_ssdm_op_SpecSensitive" to="StgValue_18" fromId="76" toId="18">
+<dataflow id="101" from="_ssdm_op_SpecSensitive" to="StgValue_15" fromId="93" toId="15">
 </dataflow>
-<dataflow id="99" from="p_str14" to="StgValue_18" fromId="96" toId="18">
+<dataflow id="102" from="p_str8" to="StgValue_15" fromId="91" toId="15">
 </dataflow>
-<dataflow id="100" from="p_str2" to="StgValue_18" fromId="79" toId="18">
+<dataflow id="104" from="p_str3" to="StgValue_15" fromId="103" toId="15">
 </dataflow>
-<dataflow id="101" from="clk" to="StgValue_18" fromId="39" toId="18">
+<dataflow id="105" from="reset" to="StgValue_15" fromId="41" toId="15">
 </dataflow>
-<dataflow id="102" from="StgValue_82" to="StgValue_18" fromId="82" toId="18">
+<dataflow id="107" from="StgValue_106" to="StgValue_15" fromId="106" toId="15">
 </dataflow>
-<dataflow id="103" from="_ssdm_op_SpecSensitive" to="StgValue_19" fromId="76" toId="19">
+<dataflow id="108" from="Advios_ssdm_thread_M_LedControl" to="Advios_ssdm_threa_1" fromId="47" toId="16">
 </dataflow>
-<dataflow id="104" from="p_str14" to="StgValue_19" fromId="96" toId="19">
+<dataflow id="109" from="Advios_ssdm_threa_1" to="StgValue_17" fromId="16" toId="17">
 </dataflow>
-<dataflow id="105" from="p_str4" to="StgValue_19" fromId="86" toId="19">
+<dataflow id="110" from="_ssdm_op_SpecProcessDecl" to="StgValue_18" fromId="86" toId="18">
 </dataflow>
-<dataflow id="106" from="reset" to="StgValue_19" fromId="40" toId="19">
+<dataflow id="111" from="p_str" to="StgValue_18" fromId="81" toId="18">
 </dataflow>
-<dataflow id="107" from="StgValue_89" to="StgValue_19" fromId="89" toId="19">
+<dataflow id="112" from="StgValue_89" to="StgValue_18" fromId="89" toId="18">
 </dataflow>
-<dataflow id="109" from="_ssdm_op_SpecPort" to="StgValue_20" fromId="108" toId="20">
+<dataflow id="114" from="p_str13" to="StgValue_18" fromId="113" toId="18">
 </dataflow>
-<dataflow id="110" from="p_str" to="StgValue_20" fromId="64" toId="20">
+<dataflow id="115" from="_ssdm_op_SpecSensitive" to="StgValue_19" fromId="93" toId="19">
 </dataflow>
-<dataflow id="111" from="StgValue_89" to="StgValue_20" fromId="89" toId="20">
+<dataflow id="116" from="p_str13" to="StgValue_19" fromId="113" toId="19">
 </dataflow>
-<dataflow id="113" from="p_str1" to="StgValue_20" fromId="112" toId="20">
+<dataflow id="117" from="p_str2" to="StgValue_19" fromId="96" toId="19">
 </dataflow>
-<dataflow id="114" from="p_str2" to="StgValue_20" fromId="79" toId="20">
+<dataflow id="118" from="clk" to="StgValue_19" fromId="40" toId="19">
 </dataflow>
-<dataflow id="116" from="StgValue_115" to="StgValue_20" fromId="115" toId="20">
+<dataflow id="119" from="StgValue_99" to="StgValue_19" fromId="99" toId="19">
 </dataflow>
-<dataflow id="117" from="StgValue_115" to="StgValue_20" fromId="115" toId="20">
+<dataflow id="120" from="_ssdm_op_SpecSensitive" to="StgValue_20" fromId="93" toId="20">
 </dataflow>
-<dataflow id="118" from="clk" to="StgValue_20" fromId="39" toId="20">
+<dataflow id="121" from="p_str13" to="StgValue_20" fromId="113" toId="20">
 </dataflow>
-<dataflow id="119" from="_ssdm_op_SpecPort" to="StgValue_21" fromId="108" toId="21">
+<dataflow id="122" from="p_str3" to="StgValue_20" fromId="103" toId="20">
 </dataflow>
-<dataflow id="120" from="p_str" to="StgValue_21" fromId="64" toId="21">
+<dataflow id="123" from="reset" to="StgValue_20" fromId="41" toId="20">
 </dataflow>
-<dataflow id="121" from="StgValue_115" to="StgValue_21" fromId="115" toId="21">
+<dataflow id="124" from="StgValue_106" to="StgValue_20" fromId="106" toId="20">
 </dataflow>
-<dataflow id="123" from="p_str3" to="StgValue_21" fromId="122" toId="21">
+<dataflow id="126" from="_ssdm_op_SpecPort" to="StgValue_21" fromId="125" toId="21">
 </dataflow>
-<dataflow id="124" from="p_str4" to="StgValue_21" fromId="86" toId="21">
+<dataflow id="127" from="p_str" to="StgValue_21" fromId="81" toId="21">
 </dataflow>
-<dataflow id="125" from="StgValue_115" to="StgValue_21" fromId="115" toId="21">
+<dataflow id="129" from="StgValue_128" to="StgValue_21" fromId="128" toId="21">
 </dataflow>
-<dataflow id="126" from="StgValue_115" to="StgValue_21" fromId="115" toId="21">
+<dataflow id="131" from="p_str1" to="StgValue_21" fromId="130" toId="21">
 </dataflow>
-<dataflow id="127" from="reset" to="StgValue_21" fromId="40" toId="21">
+<dataflow id="132" from="p_str2" to="StgValue_21" fromId="96" toId="21">
 </dataflow>
-<dataflow id="128" from="_ssdm_op_SpecPort" to="StgValue_22" fromId="108" toId="22">
+<dataflow id="133" from="StgValue_128" to="StgValue_21" fromId="128" toId="21">
 </dataflow>
-<dataflow id="129" from="p_str" to="StgValue_22" fromId="64" toId="22">
+<dataflow id="134" from="StgValue_128" to="StgValue_21" fromId="128" toId="21">
 </dataflow>
-<dataflow id="130" from="StgValue_115" to="StgValue_22" fromId="115" toId="22">
+<dataflow id="135" from="clk" to="StgValue_21" fromId="40" toId="21">
 </dataflow>
-<dataflow id="132" from="p_str5" to="StgValue_22" fromId="131" toId="22">
+<dataflow id="136" from="_ssdm_op_SpecPort" to="StgValue_22" fromId="125" toId="22">
 </dataflow>
-<dataflow id="134" from="p_str6" to="StgValue_22" fromId="133" toId="22">
+<dataflow id="137" from="p_str" to="StgValue_22" fromId="81" toId="22">
 </dataflow>
-<dataflow id="135" from="StgValue_115" to="StgValue_22" fromId="115" toId="22">
+<dataflow id="138" from="StgValue_128" to="StgValue_22" fromId="128" toId="22">
 </dataflow>
-<dataflow id="136" from="StgValue_115" to="StgValue_22" fromId="115" toId="22">
+<dataflow id="139" from="p_str1" to="StgValue_22" fromId="130" toId="22">
 </dataflow>
-<dataflow id="137" from="ctrl" to="StgValue_22" fromId="41" toId="22">
+<dataflow id="140" from="p_str3" to="StgValue_22" fromId="103" toId="22">
 </dataflow>
-<dataflow id="138" from="_ssdm_op_SpecPort" to="StgValue_23" fromId="108" toId="23">
+<dataflow id="141" from="StgValue_128" to="StgValue_22" fromId="128" toId="22">
 </dataflow>
-<dataflow id="139" from="p_str" to="StgValue_23" fromId="64" toId="23">
+<dataflow id="142" from="StgValue_128" to="StgValue_22" fromId="128" toId="22">
 </dataflow>
-<dataflow id="140" from="StgValue_115" to="StgValue_23" fromId="115" toId="23">
+<dataflow id="143" from="reset" to="StgValue_22" fromId="41" toId="22">
 </dataflow>
-<dataflow id="141" from="p_str5" to="StgValue_23" fromId="131" toId="23">
+<dataflow id="144" from="_ssdm_op_SpecPort" to="StgValue_23" fromId="125" toId="23">
 </dataflow>
-<dataflow id="143" from="p_str7" to="StgValue_23" fromId="142" toId="23">
+<dataflow id="145" from="p_str" to="StgValue_23" fromId="81" toId="23">
 </dataflow>
-<dataflow id="144" from="StgValue_115" to="StgValue_23" fromId="115" toId="23">
+<dataflow id="146" from="StgValue_128" to="StgValue_23" fromId="128" toId="23">
 </dataflow>
-<dataflow id="145" from="StgValue_115" to="StgValue_23" fromId="115" toId="23">
+<dataflow id="148" from="p_str4" to="StgValue_23" fromId="147" toId="23">
 </dataflow>
-<dataflow id="146" from="switches" to="StgValue_23" fromId="42" toId="23">
+<dataflow id="150" from="p_str5" to="StgValue_23" fromId="149" toId="23">
 </dataflow>
-<dataflow id="147" from="_ssdm_op_SpecPort" to="StgValue_24" fromId="108" toId="24">
+<dataflow id="151" from="StgValue_128" to="StgValue_23" fromId="128" toId="23">
 </dataflow>
-<dataflow id="148" from="p_str" to="StgValue_24" fromId="64" toId="24">
+<dataflow id="152" from="StgValue_128" to="StgValue_23" fromId="128" toId="23">
 </dataflow>
-<dataflow id="149" from="StgValue_82" to="StgValue_24" fromId="82" toId="24">
+<dataflow id="153" from="ctrl" to="StgValue_23" fromId="42" toId="23">
 </dataflow>
-<dataflow id="150" from="p_str5" to="StgValue_24" fromId="131" toId="24">
+<dataflow id="154" from="_ssdm_op_SpecPort" to="StgValue_24" fromId="125" toId="24">
 </dataflow>
-<dataflow id="152" from="p_str8" to="StgValue_24" fromId="151" toId="24">
+<dataflow id="155" from="p_str" to="StgValue_24" fromId="81" toId="24">
 </dataflow>
-<dataflow id="153" from="StgValue_115" to="StgValue_24" fromId="115" toId="24">
+<dataflow id="156" from="StgValue_128" to="StgValue_24" fromId="128" toId="24">
 </dataflow>
-<dataflow id="154" from="StgValue_115" to="StgValue_24" fromId="115" toId="24">
+<dataflow id="157" from="p_str4" to="StgValue_24" fromId="147" toId="24">
 </dataflow>
-<dataflow id="155" from="leds" to="StgValue_24" fromId="43" toId="24">
+<dataflow id="159" from="p_str6" to="StgValue_24" fromId="158" toId="24">
 </dataflow>
-<dataflow id="157" from="_ssdm_op_SpecChannel" to="StgValue_25" fromId="156" toId="25">
+<dataflow id="160" from="StgValue_128" to="StgValue_24" fromId="128" toId="24">
 </dataflow>
-<dataflow id="158" from="p_str" to="StgValue_25" fromId="64" toId="25">
+<dataflow id="161" from="StgValue_128" to="StgValue_24" fromId="128" toId="24">
 </dataflow>
-<dataflow id="159" from="StgValue_115" to="StgValue_25" fromId="115" toId="25">
+<dataflow id="162" from="switches" to="StgValue_24" fromId="43" toId="24">
 </dataflow>
-<dataflow id="160" from="p_str3" to="StgValue_25" fromId="122" toId="25">
+<dataflow id="163" from="_ssdm_op_SpecPort" to="StgValue_25" fromId="125" toId="25">
 </dataflow>
-<dataflow id="162" from="p_str13" to="StgValue_25" fromId="161" toId="25">
+<dataflow id="164" from="p_str" to="StgValue_25" fromId="81" toId="25">
 </dataflow>
-<dataflow id="163" from="StgValue_82" to="StgValue_25" fromId="82" toId="25">
+<dataflow id="165" from="StgValue_99" to="StgValue_25" fromId="99" toId="25">
 </dataflow>
-<dataflow id="164" from="StgValue_115" to="StgValue_25" fromId="115" toId="25">
+<dataflow id="166" from="p_str4" to="StgValue_25" fromId="147" toId="25">
 </dataflow>
-<dataflow id="165" from="clk_second" to="StgValue_25" fromId="38" toId="25">
+<dataflow id="168" from="p_str7" to="StgValue_25" fromId="167" toId="25">
 </dataflow>
-<dataflow id="167" from="Advios::LedControl" to="StgValue_27" fromId="166" toId="27">
+<dataflow id="169" from="StgValue_128" to="StgValue_25" fromId="128" toId="25">
 </dataflow>
-<dataflow id="168" from="clk_second" to="StgValue_27" fromId="38" toId="27">
+<dataflow id="170" from="StgValue_128" to="StgValue_25" fromId="128" toId="25">
 </dataflow>
-<dataflow id="169" from="clk" to="StgValue_27" fromId="39" toId="27">
+<dataflow id="171" from="leds" to="StgValue_25" fromId="44" toId="25">
 </dataflow>
-<dataflow id="170" from="reset" to="StgValue_27" fromId="40" toId="27">
+<dataflow id="173" from="_ssdm_op_SpecChannel" to="StgValue_26" fromId="172" toId="26">
 </dataflow>
-<dataflow id="171" from="ctrl" to="StgValue_27" fromId="41" toId="27">
+<dataflow id="174" from="p_str" to="StgValue_26" fromId="81" toId="26">
 </dataflow>
-<dataflow id="172" from="switches" to="StgValue_27" fromId="42" toId="27">
+<dataflow id="175" from="StgValue_128" to="StgValue_26" fromId="128" toId="26">
 </dataflow>
-<dataflow id="173" from="leds" to="StgValue_27" fromId="43" toId="27">
+<dataflow id="176" from="p_str1" to="StgValue_26" fromId="130" toId="26">
 </dataflow>
-<dataflow id="174" from="last_clock" to="StgValue_27" fromId="47" toId="27">
+<dataflow id="178" from="p_str12" to="StgValue_26" fromId="177" toId="26">
 </dataflow>
-<dataflow id="175" from="counter_V" to="StgValue_27" fromId="48" toId="27">
+<dataflow id="179" from="StgValue_99" to="StgValue_26" fromId="99" toId="26">
 </dataflow>
-<dataflow id="177" from="Advios::modulate_clock" to="StgValue_28" fromId="176" toId="28">
+<dataflow id="180" from="StgValue_128" to="StgValue_26" fromId="128" toId="26">
 </dataflow>
-<dataflow id="178" from="clk_second" to="StgValue_28" fromId="38" toId="28">
+<dataflow id="181" from="clk_second" to="StgValue_26" fromId="39" toId="26">
 </dataflow>
-<dataflow id="179" from="clk" to="StgValue_28" fromId="39" toId="28">
+<dataflow id="183" from="Advios::LedControl" to="StgValue_28" fromId="182" toId="28">
 </dataflow>
-<dataflow id="180" from="reset" to="StgValue_28" fromId="40" toId="28">
+<dataflow id="184" from="clk_second" to="StgValue_28" fromId="39" toId="28">
 </dataflow>
-<dataflow id="181" from="ctrl" to="StgValue_28" fromId="41" toId="28">
+<dataflow id="185" from="clk" to="StgValue_28" fromId="40" toId="28">
 </dataflow>
-<dataflow id="182" from="switches" to="StgValue_28" fromId="42" toId="28">
+<dataflow id="186" from="reset" to="StgValue_28" fromId="41" toId="28">
 </dataflow>
-<dataflow id="183" from="leds" to="StgValue_28" fromId="43" toId="28">
+<dataflow id="187" from="ctrl" to="StgValue_28" fromId="42" toId="28">
 </dataflow>
-<dataflow id="184" from="clock_counter_V" to="StgValue_28" fromId="45" toId="28">
+<dataflow id="188" from="switches" to="StgValue_28" fromId="43" toId="28">
 </dataflow>
-<dataflow id="185" from="Advios::LedControl" to="StgValue_29" fromId="166" toId="29">
+<dataflow id="189" from="leds" to="StgValue_28" fromId="44" toId="28">
 </dataflow>
-<dataflow id="186" from="clk_second" to="StgValue_29" fromId="38" toId="29">
+<dataflow id="190" from="last_clock" to="StgValue_28" fromId="48" toId="28">
 </dataflow>
-<dataflow id="187" from="clk" to="StgValue_29" fromId="39" toId="29">
+<dataflow id="191" from="counter_V" to="StgValue_28" fromId="49" toId="28">
 </dataflow>
-<dataflow id="188" from="reset" to="StgValue_29" fromId="40" toId="29">
+<dataflow id="193" from="Advios::modulate_clock" to="StgValue_29" fromId="192" toId="29">
 </dataflow>
-<dataflow id="189" from="ctrl" to="StgValue_29" fromId="41" toId="29">
+<dataflow id="194" from="clk_second" to="StgValue_29" fromId="39" toId="29">
 </dataflow>
-<dataflow id="190" from="switches" to="StgValue_29" fromId="42" toId="29">
+<dataflow id="195" from="clk" to="StgValue_29" fromId="40" toId="29">
 </dataflow>
-<dataflow id="191" from="leds" to="StgValue_29" fromId="43" toId="29">
+<dataflow id="196" from="reset" to="StgValue_29" fromId="41" toId="29">
 </dataflow>
-<dataflow id="192" from="last_clock" to="StgValue_29" fromId="47" toId="29">
+<dataflow id="197" from="ctrl" to="StgValue_29" fromId="42" toId="29">
 </dataflow>
-<dataflow id="193" from="counter_V" to="StgValue_29" fromId="48" toId="29">
+<dataflow id="198" from="switches" to="StgValue_29" fromId="43" toId="29">
 </dataflow>
-<dataflow id="194" from="Advios::modulate_clock" to="StgValue_31" fromId="176" toId="31">
+<dataflow id="199" from="leds" to="StgValue_29" fromId="44" toId="29">
 </dataflow>
-<dataflow id="195" from="clk_second" to="StgValue_31" fromId="38" toId="31">
+<dataflow id="200" from="clock_counter_V" to="StgValue_29" fromId="46" toId="29">
 </dataflow>
-<dataflow id="196" from="clk" to="StgValue_31" fromId="39" toId="31">
+<dataflow id="201" from="Advios::LedControl" to="StgValue_30" fromId="182" toId="30">
 </dataflow>
-<dataflow id="197" from="reset" to="StgValue_31" fromId="40" toId="31">
+<dataflow id="202" from="clk_second" to="StgValue_30" fromId="39" toId="30">
 </dataflow>
-<dataflow id="198" from="ctrl" to="StgValue_31" fromId="41" toId="31">
+<dataflow id="203" from="clk" to="StgValue_30" fromId="40" toId="30">
 </dataflow>
-<dataflow id="199" from="switches" to="StgValue_31" fromId="42" toId="31">
+<dataflow id="204" from="reset" to="StgValue_30" fromId="41" toId="30">
 </dataflow>
-<dataflow id="200" from="leds" to="StgValue_31" fromId="43" toId="31">
+<dataflow id="205" from="ctrl" to="StgValue_30" fromId="42" toId="30">
 </dataflow>
-<dataflow id="201" from="clock_counter_V" to="StgValue_31" fromId="45" toId="31">
+<dataflow id="206" from="switches" to="StgValue_30" fromId="43" toId="30">
 </dataflow>
-<dataflow id="202" from="Advios_ssdm_threa" to="StgValue_1" fromId="10" toId="1">
+<dataflow id="207" from="leds" to="StgValue_30" fromId="44" toId="30">
 </dataflow>
-<dataflow id="203" from="Advios_ssdm_threa_1" to="StgValue_1" fromId="15" toId="1">
+<dataflow id="208" from="last_clock" to="StgValue_30" fromId="48" toId="30">
 </dataflow>
-<dataflow id="204" from="Advios_ssdm_threa" to="StgValue_2" fromId="10" toId="2">
+<dataflow id="209" from="counter_V" to="StgValue_30" fromId="49" toId="30">
+</dataflow>
+<dataflow id="210" from="Advios::modulate_clock" to="StgValue_32" fromId="192" toId="32">
+</dataflow>
+<dataflow id="211" from="clk_second" to="StgValue_32" fromId="39" toId="32">
+</dataflow>
+<dataflow id="212" from="clk" to="StgValue_32" fromId="40" toId="32">
+</dataflow>
+<dataflow id="213" from="reset" to="StgValue_32" fromId="41" toId="32">
+</dataflow>
+<dataflow id="214" from="ctrl" to="StgValue_32" fromId="42" toId="32">
+</dataflow>
+<dataflow id="215" from="switches" to="StgValue_32" fromId="43" toId="32">
+</dataflow>
+<dataflow id="216" from="leds" to="StgValue_32" fromId="44" toId="32">
+</dataflow>
+<dataflow id="217" from="clock_counter_V" to="StgValue_32" fromId="46" toId="32">
+</dataflow>
+<dataflow id="218" from="Advios_ssdm_threa" to="StgValue_1" fromId="11" toId="1">
+</dataflow>
+<dataflow id="219" from="Advios_ssdm_threa_1" to="StgValue_1" fromId="16" toId="1">
+</dataflow>
+<dataflow id="220" from="Advios_ssdm_threa" to="StgValue_2" fromId="11" toId="2">
 </dataflow>
 </dataflows>
 

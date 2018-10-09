@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Advios_modulate_clock'" level="0">
-<item name = "Date">Sun Oct  7 14:07:04 2018
+<item name = "Date">Mon Oct  8 19:23:22 2018
 </item>
-<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">advios_ip</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 4.830, 1.25</column>
+<column name="ap_clk">8.00, 5.92, 1.00</column>
 </table>
 </item>
 </section>
@@ -48,7 +48,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 53</column>
+<column name="Expression">-, -, 83, 46</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
@@ -78,8 +78,8 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="clock_counter_V_assi_fu_93_p2">+, 0, 0, 33, 26, 1</column>
-<column name="tmp_1_fu_105_p2">icmp, 0, 0, 18, 26, 26</column>
+<column name="clock_counter_V_assi_fu_97_p2">+, 0, 83, 31, 26, 1</column>
+<column name="tmp_1_fu_109_p2">icmp, 0, 0, 13, 26, 26</column>
 <column name="clk_second_o">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -93,7 +93,7 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="clock_counter_V">26, 0, 26, 0</column>
-<column name="tmp_1_reg_124">1, 0, 1, 0</column>
+<column name="tmp_1_reg_128">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

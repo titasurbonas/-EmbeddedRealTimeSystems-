@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Mon Oct  8 20:59:53 2018
+# Process ID: 18500
+# Current directory: C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7/VivadoTest/project_1/project_1.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7/VivadoTest/project_1/project_1.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7/VivadoTest/project_1/project_1.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

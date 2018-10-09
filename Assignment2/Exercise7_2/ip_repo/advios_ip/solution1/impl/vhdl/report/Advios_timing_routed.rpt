@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sun Oct  7 14:37:54 2018
-| Host         : ubuntu running 64-bit Ubuntu 18.04.1 LTS
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Oct  8 19:29:26 2018
+| Host         : LAPTOP-07F69O5Q running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file ./report/Advios_timing_routed.rpt
 | Design       : Advios
 | Device       : 7z010-clg400
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.024        0.000                      0                  105        0.155        0.000                      0                  105        4.500        0.000                       0                    41  
+      2.950        0.000                      0                  109        0.050        0.000                      0                  109        3.500        0.000                       0                    41  
 
 
 All user specified timing constraints are met.
@@ -137,9 +137,9 @@ All user specified timing constraints are met.
 | -------------
 ------------------------------------------------------------------------------------------------
 
-Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
------  ------------       ----------      --------------
-clk    {0.000 5.000}      10.000          100.000         
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+clk    {0.000 4.000}        8.000           125.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ clk    {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk                 5.024        0.000                      0                  105        0.155        0.000                      0                  105        4.500        0.000                       0                    41  
+clk                 2.950        0.000                      0                  109        0.050        0.000                      0                  109        3.500        0.000                       0                    41  
 
 
 ------------------------------------------------------------------------------------------------
@@ -180,27 +180,27 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  clk
   To Clock:  clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        5.024ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.155ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        2.950ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.050ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             5.024ns  (required time - arrival time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             2.950ns  (required time - arrival time)
+  Source:                 grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        4.969ns  (logic 2.339ns (47.069%)  route 2.630ns (52.931%))
-  Logic Levels:           8  (CARRY4=5 LUT4=1 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.855ns  (logic 2.225ns (45.833%)  route 2.630ns (54.167%))
+  Logic Levels:           7  (CARRY4=4 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.189ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.538ns = ( 9.538 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.727ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -212,47 +212,44 @@ Slack (MET) :             5.024ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y46          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[1]/C
+                         net (fo=40, unset)           1.727     1.727    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y47          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y46          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[1]/Q
-                         net (fo=2, routed)           0.594     2.023    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[1]
-    SLICE_X1Y46          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.656     2.679 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_5/CO[3]
-                         net (fo=1, routed)           0.000     2.679    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_5_n_0
-    SLICE_X1Y47          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     2.793 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_10/CO[3]
-                         net (fo=1, routed)           0.000     2.793    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_10_n_0
-    SLICE_X1Y48          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     2.907 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.907    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_9_n_0
-    SLICE_X1Y49          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     3.021 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_8/CO[3]
-                         net (fo=1, routed)           0.001     3.021    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_8_n_0
-    SLICE_X1Y50          CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334     3.355 f  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_13/O[1]
-                         net (fo=1, routed)           0.816     4.172    grp_Advios_modulate_clock_fu_90/clock_counter_V_assi_fu_93_p2[18]
-    SLICE_X0Y48          LUT6 (Prop_lut6_I5_O)        0.303     4.475 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_6/O
-                         net (fo=1, routed)           0.802     5.277    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_6_n_0
-    SLICE_X0Y47          LUT5 (Prop_lut5_I4_O)        0.124     5.401 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_2/O
-                         net (fo=1, routed)           0.417     5.818    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_2_n_0
-    SLICE_X0Y48          LUT4 (Prop_lut4_I0_O)        0.124     5.942 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_1/O
-                         net (fo=1, routed)           0.000     5.942    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_1_n_0
-    SLICE_X0Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/D
+    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.183 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[2]/Q
+                         net (fo=2, routed)           0.475     2.658    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[2]
+    SLICE_X2Y47          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     3.332 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_13/CO[3]
+                         net (fo=1, routed)           0.000     3.332    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_13_n_0
+    SLICE_X2Y48          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.446 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_5/CO[3]
+                         net (fo=1, routed)           0.000     3.446    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.560 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_12/CO[3]
+                         net (fo=1, routed)           0.001     3.560    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_12_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     3.873 f  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_9/O[3]
+                         net (fo=1, routed)           0.950     4.823    grp_Advios_modulate_clock_fu_98/clock_counter_V_assi_fu_97_p2[16]
+    SLICE_X3Y49          LUT6 (Prop_lut6_I1_O)        0.306     5.129 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_4/O
+                         net (fo=1, routed)           0.405     5.534    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_4_n_0
+    SLICE_X3Y48          LUT5 (Prop_lut5_I0_O)        0.124     5.658 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_2/O
+                         net (fo=1, routed)           0.799     6.458    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_2_n_0
+    SLICE_X3Y50          LUT4 (Prop_lut4_I0_O)        0.124     6.582 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_1/O
+                         net (fo=1, routed)           0.000     6.582    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_1_n_0
+    SLICE_X3Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X0Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X0Y48          FDRE (Setup_fdre_C_D)        0.077    10.966    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.538     9.538    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X3Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/C
+                         clock pessimism              0.000     9.538    
+                         clock uncertainty           -0.035     9.503    
+    SLICE_X3Y50          FDRE (Setup_fdre_C_D)        0.029     9.532    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]
   -------------------------------------------------------------------
-                         required time                         10.966    
-                         arrival time                          -5.942    
+                         required time                          9.532    
+                         arrival time                          -6.582    
   -------------------------------------------------------------------
-                         slack                                  5.024    
+                         slack                                  2.950    
 
 
 
@@ -260,46 +257,46 @@ Slack (MET) :             5.024ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.155ns  (arrival time - required time)
-  Source:                 grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_LedControl_fu_70/counter_V_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 clk_second_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_LedControl_fu_78/last_clock_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.299ns  (logic 0.189ns (63.138%)  route 0.110ns (36.862%))
+  Data Path Delay:        0.415ns  (logic 0.209ns (50.355%)  route 0.206ns (49.645%))
   Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
+  Clock Path Skew:        0.274ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.855ns
+    Source Clock Delay      (SCD):    0.581ns
     Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_LedControl_fu_70/clk
-    SLICE_X5Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
+                         net (fo=40, unset)           0.581     0.581    clk
+    SLICE_X4Y50          FDRE                                         r  clk_second_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y47          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_LedControl_fu_70/counter_V_reg[0]/Q
-                         net (fo=6, routed)           0.110     0.661    grp_Advios_LedControl_fu_70/counter_V_reg__0[0]
-    SLICE_X4Y47          LUT3 (Prop_lut3_I0_O)        0.048     0.709 r  grp_Advios_LedControl_fu_70/counter_V[2]_i_1/O
-                         net (fo=2, routed)           0.000     0.709    grp_Advios_LedControl_fu_70/v_V_1_fu_131_p2[2]
-    SLICE_X4Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[2]/D
+    SLICE_X4Y50          FDRE (Prop_fdre_C_Q)         0.164     0.745 r  clk_second_reg[0]/Q
+                         net (fo=4, routed)           0.206     0.951    grp_Advios_LedControl_fu_78/clk_second
+    SLICE_X3Y47          LUT3 (Prop_lut3_I0_O)        0.045     0.996 r  grp_Advios_LedControl_fu_78/last_clock[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.996    grp_Advios_LedControl_fu_78/last_clock[0]_i_1_n_0
+    SLICE_X3Y47          FDRE                                         r  grp_Advios_LedControl_fu_78/last_clock_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[2]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X4Y47          FDRE (Hold_fdre_C_D)         0.123     0.555    grp_Advios_LedControl_fu_70/counter_V_reg[2]
+                         net (fo=40, unset)           0.855     0.855    grp_Advios_LedControl_fu_78/clk
+    SLICE_X3Y47          FDRE                                         r  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+                         clock pessimism              0.000     0.855    
+    SLICE_X3Y47          FDRE (Hold_fdre_C_D)         0.091     0.946    grp_Advios_LedControl_fu_78/last_clock_reg[0]
   -------------------------------------------------------------------
-                         required time                         -0.555    
-                         arrival time                           0.709    
+                         required time                         -0.946    
+                         arrival time                           0.996    
   -------------------------------------------------------------------
-                         slack                                  0.155    
+                         slack                                  0.050    
 
 
 
@@ -308,14 +305,14 @@ Slack (MET) :             0.155ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         clk
-Waveform(ns):       { 0.000 5.000 }
-Period(ns):         10.000
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
 Sources:            { clk }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location     Pin
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y48  clk_second_reg[0]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y48  clk_second_reg[0]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y48  clk_second_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X4Y50  clk_second_reg[0]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         4.000       3.500      SLICE_X4Y47  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[0]/C
 
 
 

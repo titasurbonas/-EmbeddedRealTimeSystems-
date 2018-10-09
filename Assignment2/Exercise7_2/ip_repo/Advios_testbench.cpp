@@ -1,4 +1,3 @@
-
 #include <systemc.h>
 #include <iostream>
 #ifndef __RTL_SIMULATION__
@@ -18,7 +17,9 @@ SC_MODULE(Top)
 		sensitive << leds;
 		SC_THREAD(run_test);
 	}
-
+	sc_out<bool> reset;
+	sc_out<sc_uint<NUM_BITS> > ctrl, outSwitch;
+	sc_in<sc_uint<NUM_BITS> > leds;
 	void print_leds(void)
 	{
 		std::cout << "Leds are now: " << leds.read() << std::endl;
@@ -38,9 +39,7 @@ SC_MODULE(Top)
 		ctrl.write(0x03);
 	}
 
-	sc_out<bool> reset;
-	sc_out<sc_uint<NUM_BITS>> ctrl, outSwitch;
-	sc_in<sc_uint<NUM_BITS>> leds;
+
 };
 
 
@@ -54,7 +53,7 @@ int main(int argc, char ** argsv)
 	Top bench("Bench");
 
 	sc_signal<bool> reset;
-	sc_signal<sc_uint<NUM_BITS>> ctrl, switches, leds;
+	sc_signal<sc_uint<NUM_BITS> > ctrl, switches, leds;
 	sc_clock clk("clk", sc_time(10, SC_NS));
 
 	device.clk(clk);
@@ -68,7 +67,7 @@ int main(int argc, char ** argsv)
 	bench.outSwitch(switches);
 	bench.leds(leds);
 
-	sc_trace_file *tf;
+	/*sc_trace_file *tf;
 	tf = sc_create_vcd_trace_file("waveForm");
 	tf->set_time_unit(5, SC_NS);
 	sc_trace(tf, clk, "clock");
@@ -76,10 +75,10 @@ int main(int argc, char ** argsv)
 	sc_trace(tf, ctrl, "control");
 	sc_trace(tf, switches, "switches");
 	sc_trace(tf, leds, "LEDS");
-
+*/
 	sc_start(5, SC_SEC);
-
+/*
 	sc_close_vcd_trace_file(tf);
-
+	*/
 	return 0;
 }

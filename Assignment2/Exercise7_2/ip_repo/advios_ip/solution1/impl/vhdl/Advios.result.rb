@@ -10,5 +10,5 @@ $DSP = "0"
 $BRAM ="0"
 $SRL ="0"
 #=== Final timing ===
-$TargetCP = "10.000"
+$TargetCP = "8.000"
 $CP = "NA"

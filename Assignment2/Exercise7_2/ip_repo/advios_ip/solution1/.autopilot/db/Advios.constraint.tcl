@@ -2,13 +2,13 @@ set clock_constraint { \
     name clk \
     module Advios::Advios \
     port ap_clk \
-    period 10 \
-    uncertainty 1.25 \
+    period 8 \
+    uncertainty 1 \
 }
 
 set MultiClock_number 1
 
-set MultiClock_constraint {  clk 10 }
+set MultiClock_constraint {  clk 8 }
 
 set all_path {}
 

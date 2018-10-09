@@ -29,52 +29,52 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/.apc/.src</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/.apc/.tb</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/.apc/.tb</location>
 		</link>
 		<link>
 			<name>.reference/Advios.h</name>
 			<type>1</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/Advios.h</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/Advios.h</location>
 		</link>
 		<link>
-			<name>.reference/sc_logic.h</name>
+			<name>.reference/Advios.xdc</name>
 			<type>1</type>
-			<location>/opt/Xilinx/Vivado/2018.2/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_logic.h</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/impl/vhdl/Advios.xdc</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/.tcls</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/Advios.cpp</name>
 			<type>1</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/Advios.cpp</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/Advios.cpp</location>
 		</link>
 		<link>
 			<name>testbench/Advios_testbench.cpp</name>
 			<type>1</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/Advios_testbench.cpp</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/Advios_testbench.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/solution1.directive</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/directives.tcl</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/script.tcl</location>
+			<location>C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

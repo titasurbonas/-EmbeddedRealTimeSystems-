@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="Advios.cpp" path="/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/Advios.cpp"/>
+    <originFiles name="Advios.cpp" path="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo\Advios.cpp"/>
   </source>
   <testbench>
-    <originFiles name="Advios_testbench.cpp" path="/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/Advios_testbench.cpp"/>
+    <originFiles name="Advios_testbench.cpp" path="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo\Advios_testbench.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

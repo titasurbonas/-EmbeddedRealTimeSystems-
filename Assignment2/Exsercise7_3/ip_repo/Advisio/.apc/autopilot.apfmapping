@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Advios.h" path="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exsercise7_3\ip_repo\Advisio\Advios.h"/>
+    <originFiles name="Advios.cpp" path="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exsercise7_3\ip_repo\Advisio\Advios.cpp"/>
+    <originFiles name="Top.h" path="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exsercise7_3\ip_repo\Advisio\Top.h"/>
+    <originFiles name="Top.cpp" path="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exsercise7_3\ip_repo\Advisio\Top.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="Advios_testbench.cpp" path="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exsercise7_3\ip_repo\Advisio\Advios_testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

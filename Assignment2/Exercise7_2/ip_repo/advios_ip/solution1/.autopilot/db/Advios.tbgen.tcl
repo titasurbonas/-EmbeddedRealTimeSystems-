@@ -1,5 +1,4 @@
 set moduleName Advios
-set isTaskLevelControl 1
 set isCombinational 0
 set isDatapathOnly 0
 set isPipelined 0
@@ -8,7 +7,6 @@ set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
-set isEnableWaveformDebug 1
 set C_modelName {Advios::Advios}
 set C_modelType { void 0 }
 set C_modelArgList {
@@ -43,68 +41,58 @@ set NewPortList {[
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
 		"CDFG" : "Advios",
-		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "4",
+		"Pipeline" : "Dataflow", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
+		"VariableLatency" : "1",
 		"InputProcess" : [],
 		"OutputProcess" : [],
 		"Port" : [
 			{"Name" : "clk_second", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_90", "Port" : "clk_second"},
-					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_70", "Port" : "clk_second"}]},
+					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_98", "Port" : "clk_second"},
+					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_78", "Port" : "clk_second"}]},
 			{"Name" : "clk", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_90", "Port" : "clk"},
-					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_70", "Port" : "clk"}]},
+					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_98", "Port" : "clk"},
+					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_78", "Port" : "clk"}]},
 			{"Name" : "reset", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_90", "Port" : "reset"},
-					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_70", "Port" : "reset"}]},
+					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_98", "Port" : "reset"},
+					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_78", "Port" : "reset"}]},
 			{"Name" : "ctrl", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_90", "Port" : "ctrl"},
-					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_70", "Port" : "ctrl"}]},
+					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_98", "Port" : "ctrl"},
+					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_78", "Port" : "ctrl"}]},
 			{"Name" : "switches", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_90", "Port" : "switches"},
-					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_70", "Port" : "switches"}]},
+					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_98", "Port" : "switches"},
+					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_78", "Port" : "switches"}]},
 			{"Name" : "leds", "Type" : "Vld", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_90", "Port" : "leds"},
-					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_70", "Port" : "leds"}]},
+					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_98", "Port" : "leds"},
+					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_78", "Port" : "leds"}]},
 			{"Name" : "Advios_ssdm_thread_M_modulate_clock", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "clock_counter_V", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_90", "Port" : "clock_counter_V"}]},
+					{"ID" : "2", "SubInstance" : "grp_Advios_modulate_clock_fu_98", "Port" : "clock_counter_V"}]},
 			{"Name" : "Advios_ssdm_thread_M_LedControl", "Type" : "None", "Direction" : "I"},
 			{"Name" : "last_clock", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_70", "Port" : "last_clock"}]},
+					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_78", "Port" : "last_clock"}]},
 			{"Name" : "counter_V", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_70", "Port" : "counter_V"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_Advios_LedControl_fu_70", "Parent" : "0",
+					{"ID" : "1", "SubInstance" : "grp_Advios_LedControl_fu_78", "Port" : "counter_V"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_Advios_LedControl_fu_78", "Parent" : "0",
 		"CDFG" : "Advios_LedControl",
-		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3", "EstimateLatencyMax" : "3",
+		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
+		"VariableLatency" : "1",
 		"Port" : [
 			{"Name" : "clk_second", "Type" : "None", "Direction" : "I"},
 			{"Name" : "clk", "Type" : "None", "Direction" : "I"},
@@ -114,19 +102,14 @@ set RtlHierarchyInfo {[
 			{"Name" : "leds", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "last_clock", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "counter_V", "Type" : "OVld", "Direction" : "IO"}]},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_Advios_modulate_clock_fu_90", "Parent" : "0",
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_Advios_modulate_clock_fu_98", "Parent" : "0",
 		"CDFG" : "Advios_modulate_clock",
-		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3", "EstimateLatencyMax" : "3",
+		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
+		"VariableLatency" : "1",
 		"Port" : [
 			{"Name" : "clk_second", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "clk", "Type" : "None", "Direction" : "I"},

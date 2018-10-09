@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sun Oct  7 14:37:53 2018
-| Host         : ubuntu running 64-bit Ubuntu 18.04.1 LTS
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Oct  8 19:29:21 2018
+| Host         : LAPTOP-07F69O5Q running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file Advios_clock_utilization_routed.rpt
 | Design       : Advios
 | Device       : 7z010-clg400
@@ -74,7 +74,6 @@ Table of Contents
 5. Clock Regions : Global Clock Summary
 ---------------------------------------
 
-All Modules
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+

@@ -1,0 +1,140 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'titas' on host 'laptop-07f69o5q' (Windows NT_amd64 version 6.2) on Tue Oct 09 16:08:19 +0200 2018
+INFO: [HLS 200-10] In directory 'C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exsercise7_3/ip_repo'
+INFO: [HLS 200-10] Opening project 'C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exsercise7_3/ip_repo/Advisio'.
+INFO: [HLS 200-10] Adding design file 'Advisio/Advios.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'Advisio/Advios.h' to the project
+INFO: [HLS 200-10] Adding design file 'Advisio/Top.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'Advisio/Top.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'Advisio/Advios_testbench.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exsercise7_3/ip_repo/Advisio/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'Advisio/Top.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Advisio/Advios.cpp' ... 
+WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&ctrl' is deprecated. Please use the interface directive to specify the AXI interface.
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:01:15 . Memory (MB): peak = 96.688 ; gain = 46.891
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:01:15 . Memory (MB): peak = 96.688 ; gain = 46.891
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:01:16 . Memory (MB): peak = 110.082 ; gain = 60.285
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:01:16 . Memory (MB): peak = 117.957 ; gain = 68.160
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:01:17 . Memory (MB): peak = 148.789 ; gain = 98.992
+WARNING: [XFORM 203-561] 'Loop-1' (Advisio/Advios.cpp:13:20) in function 'Advios::modulate_clock' is an infinite loop.
+WARNING: [XFORM 203-561] 'Loop-1' (Advisio/Advios.cpp:34:8) in function 'Advios::LedControl' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:01:17 . Memory (MB): peak = 172.656 ; gain = 122.859
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [SCA 200-201] Elaborating SystemC module 'Advios'.
+INFO: [SCA 200-201] Performing SystemC synthesis linting.
+INFO: [SCA 200-201] Analyzing ports and processes.
+INFO: [SCA 200-201] Found the clock port of process 'Advios::modulate_clock': 'clk'.
+INFO: [SCA 200-201] Found the reset port of process 'Advios::modulate_clock': 'reset'.
+INFO: [SCA 200-201] Found the clock port of process 'Advios::LedControl': 'clk_sc_in'.
+INFO: [SCA 200-201] Found the reset port of process 'Advios::LedControl': 'reset'.
+WARNING: [SCA 200-202] Port 'outLeds' has no reset.
+INFO: [SCA 200-201] Elaborating SystemC module 'Top'.
+INFO: [SCA 200-201] Analyzing the module hierarchy:
+INFO: [SCA 200-201] Contains sub-module: 'Advios'
+INFO: [SCA 200-201] Performing SystemC synthesis linting.
+INFO: [SCA 200-201] Analyzing ports and processes.
+INFO: [HLS 200-10] Synthesizing SystemC module [ Advios ]
+INFO: [HLS 200-10] Found SystemC process: 'Advios_LedControl' 
+INFO: [HLS 200-10] Synthesizing 'Advios_LedControl' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Advios_LedControl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 76.983 seconds; current allocated memory: 133.382 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.059 seconds; current allocated memory: 133.522 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Advios_LedControl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'counter_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Advios_LedControl'.
+INFO: [HLS 200-111]  Elapsed time: 0.068 seconds; current allocated memory: 133.711 MB.
+WARNING: [HLS 200-40] Errors in preparing webtalk data (ignored): can't read "portList": no such variable.
+INFO: [HLS 200-10] Found SystemC process: 'Advios_modulate_clock' 
+INFO: [HLS 200-10] Synthesizing 'Advios_modulate_clock' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Advios_modulate_clock' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.179 seconds; current allocated memory: 133.910 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 134.012 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Advios_modulate_clock' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Advios_modulate_clock'.
+INFO: [HLS 200-111]  Elapsed time: 0.047 seconds; current allocated memory: 134.103 MB.
+WARNING: [HLS 200-40] Errors in preparing webtalk data (ignored): can't read "portList": no such variable.
+INFO: [HLS 200-10] Synthesizing 'Advios' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Advios' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.137 seconds; current allocated memory: 134.211 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.027 seconds; current allocated memory: 134.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Advios' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Advios/clk' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Advios/clk_sc_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Advios/clk_sc_out' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Advios/reset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Advios/ctrl' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Advios/inSwitch' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Advios/outLeds' to 'ap_vld'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Advios'.
+INFO: [HLS 200-111]  Elapsed time: 0.039 seconds; current allocated memory: 134.425 MB.
+WARNING: [HLS 200-40] Errors in preparing webtalk data (ignored): can't read "portList": no such variable.
+INFO: [HLS 200-10] Synthesizing SystemC module [ Top ]
+INFO: [HLS 200-10] Synthesizing 'Top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.108 seconds; current allocated memory: 134.482 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.027 seconds; current allocated memory: 134.548 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+ERROR: [RTGEN 206-102] Write value to a non-output port: 'Top/random_form1' to 'Top/random'.
+ERROR: [HLS 200-103] Write value to a non-output port.
+Synthesis failed.
+    while executing
+"source C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exsercise7_3/ip_repo/Advisio/solution1/csynth.tcl"
+    invoked from within
+"hls::main C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exsercise7_3/ip_repo/Advisio/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
+INFO: [HLS 200-112] Total elapsed time: 77.776 seconds; peak allocated memory: 134.548 MB.

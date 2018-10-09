@@ -1,13 +1,13 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sun Oct  7 14:37:53 2018
-| Host         : ubuntu running 64-bit Ubuntu 18.04.1 LTS
-| Command      : report_timing_summary -max_paths 10 -file Advios_timing_summary_routed.rpt -pb Advios_timing_summary_routed.pb -rpx Advios_timing_summary_routed.rpx -warn_on_violation
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Oct  8 19:29:21 2018
+| Host         : LAPTOP-07F69O5Q running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Advios_timing_summary_routed.rpt -rpx Advios_timing_summary_routed.rpx
 | Design       : Advios
 | Device       : 7z010-clg400
 | Speed File   : -1  PRODUCTION 1.11 2014-09-11
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 Timing Summary Report
 
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.024        0.000                      0                  105        0.155        0.000                      0                  105        4.500        0.000                       0                    41  
+      2.950        0.000                      0                  109        0.050        0.000                      0                  109        3.500        0.000                       0                    41  
 
 
 All user specified timing constraints are met.
@@ -137,9 +137,9 @@ All user specified timing constraints are met.
 | -------------
 ------------------------------------------------------------------------------------------------
 
-Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
------  ------------       ----------      --------------
-clk    {0.000 5.000}      10.000          100.000         
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+clk    {0.000 4.000}        8.000           125.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ clk    {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk                 5.024        0.000                      0                  105        0.155        0.000                      0                  105        4.500        0.000                       0                    41  
+clk                 2.950        0.000                      0                  109        0.050        0.000                      0                  109        3.500        0.000                       0                    41  
 
 
 ------------------------------------------------------------------------------------------------
@@ -180,27 +180,27 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  clk
   To Clock:  clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        5.024ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.155ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        2.950ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.050ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             5.024ns  (required time - arrival time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             2.950ns  (required time - arrival time)
+  Source:                 grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        4.969ns  (logic 2.339ns (47.069%)  route 2.630ns (52.931%))
-  Logic Levels:           8  (CARRY4=5 LUT4=1 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.855ns  (logic 2.225ns (45.833%)  route 2.630ns (54.167%))
+  Logic Levels:           7  (CARRY4=4 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.189ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.538ns = ( 9.538 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.727ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -212,62 +212,59 @@ Slack (MET) :             5.024ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y46          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[1]/C
+                         net (fo=40, unset)           1.727     1.727    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y47          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y46          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[1]/Q
-                         net (fo=2, routed)           0.594     2.023    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[1]
-    SLICE_X1Y46          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.656     2.679 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_5/CO[3]
-                         net (fo=1, routed)           0.000     2.679    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_5_n_0
-    SLICE_X1Y47          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     2.793 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_10/CO[3]
-                         net (fo=1, routed)           0.000     2.793    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_10_n_0
-    SLICE_X1Y48          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     2.907 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.907    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_9_n_0
-    SLICE_X1Y49          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     3.021 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_8/CO[3]
-                         net (fo=1, routed)           0.001     3.021    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_8_n_0
-    SLICE_X1Y50          CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334     3.355 f  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]_i_13/O[1]
-                         net (fo=1, routed)           0.816     4.172    grp_Advios_modulate_clock_fu_90/clock_counter_V_assi_fu_93_p2[18]
-    SLICE_X0Y48          LUT6 (Prop_lut6_I5_O)        0.303     4.475 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_6/O
-                         net (fo=1, routed)           0.802     5.277    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_6_n_0
-    SLICE_X0Y47          LUT5 (Prop_lut5_I4_O)        0.124     5.401 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_2/O
-                         net (fo=1, routed)           0.417     5.818    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_2_n_0
-    SLICE_X0Y48          LUT4 (Prop_lut4_I0_O)        0.124     5.942 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_1/O
-                         net (fo=1, routed)           0.000     5.942    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_1_n_0
-    SLICE_X0Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/D
+    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.183 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[2]/Q
+                         net (fo=2, routed)           0.475     2.658    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[2]
+    SLICE_X2Y47          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     3.332 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_13/CO[3]
+                         net (fo=1, routed)           0.000     3.332    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_13_n_0
+    SLICE_X2Y48          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.446 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_5/CO[3]
+                         net (fo=1, routed)           0.000     3.446    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.560 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_12/CO[3]
+                         net (fo=1, routed)           0.001     3.560    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_12_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     3.873 f  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]_i_9/O[3]
+                         net (fo=1, routed)           0.950     4.823    grp_Advios_modulate_clock_fu_98/clock_counter_V_assi_fu_97_p2[16]
+    SLICE_X3Y49          LUT6 (Prop_lut6_I1_O)        0.306     5.129 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_4/O
+                         net (fo=1, routed)           0.405     5.534    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_4_n_0
+    SLICE_X3Y48          LUT5 (Prop_lut5_I0_O)        0.124     5.658 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_2/O
+                         net (fo=1, routed)           0.799     6.458    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_2_n_0
+    SLICE_X3Y50          LUT4 (Prop_lut4_I0_O)        0.124     6.582 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_1/O
+                         net (fo=1, routed)           0.000     6.582    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128[0]_i_1_n_0
+    SLICE_X3Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X0Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X0Y48          FDRE (Setup_fdre_C_D)        0.077    10.966    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.538     9.538    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X3Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/C
+                         clock pessimism              0.000     9.538    
+                         clock uncertainty           -0.035     9.503    
+    SLICE_X3Y50          FDRE (Setup_fdre_C_D)        0.029     9.532    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]
   -------------------------------------------------------------------
-                         required time                         10.966    
-                         arrival time                          -5.942    
+                         required time                          9.532    
+                         arrival time                          -6.582    
   -------------------------------------------------------------------
-                         slack                                  5.024    
+                         slack                                  2.950    
 
-Slack (MET) :             6.438ns  (required time - arrival time)
-  Source:                 grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_LedControl_fu_70/counter_V_reg[2]/R
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.412ns  (required time - arrival time)
+  Source:                 grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_LedControl_fu_78/counter_V_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.954ns  (logic 0.704ns (23.832%)  route 2.250ns (76.168%))
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.097ns  (logic 0.766ns (24.735%)  route 2.331ns (75.265%))
   Logic Levels:           2  (LUT4=1 LUT5=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.554ns = ( 9.554 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.732ns
+    Clock Pessimism Removal (CPR):    0.151ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -278,45 +275,45 @@ Slack (MET) :             6.438ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_LedControl_fu_70/clk
-    SLICE_X2Y48          FDRE                                         r  grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
+                         net (fo=40, unset)           1.732     1.732    grp_Advios_LedControl_fu_78/clk
+    SLICE_X4Y47          FDSE                                         r  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y48          FDRE (Prop_fdre_C_Q)         0.456     1.429 f  grp_Advios_LedControl_fu_70/last_clock_reg[0]/Q
-                         net (fo=3, routed)           0.815     2.244    grp_Advios_LedControl_fu_70/last_clock
-    SLICE_X4Y48          LUT4 (Prop_lut4_I2_O)        0.124     2.368 r  grp_Advios_LedControl_fu_70/counter_V[3]_i_2/O
-                         net (fo=5, routed)           0.806     3.174    grp_Advios_LedControl_fu_70/counter_V[3]_i_2_n_0
-    SLICE_X5Y47          LUT5 (Prop_lut5_I0_O)        0.124     3.298 r  grp_Advios_LedControl_fu_70/counter_V[3]_i_1/O
-                         net (fo=4, routed)           0.629     3.927    grp_Advios_LedControl_fu_70/counter_V
-    SLICE_X4Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[2]/R
+    SLICE_X4Y47          FDSE (Prop_fdse_C_Q)         0.518     2.250 r  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/Q
+                         net (fo=2, routed)           0.798     3.048    grp_Advios_LedControl_fu_78/ap_CS_fsm_state2
+    SLICE_X3Y47          LUT4 (Prop_lut4_I1_O)        0.124     3.172 r  grp_Advios_LedControl_fu_78/counter_V[3]_i_2/O
+                         net (fo=5, routed)           0.817     3.989    grp_Advios_LedControl_fu_78/p_4_in
+    SLICE_X2Y46          LUT5 (Prop_lut5_I0_O)        0.124     4.113 r  grp_Advios_LedControl_fu_78/counter_V[3]_i_1/O
+                         net (fo=4, routed)           0.716     4.829    grp_Advios_LedControl_fu_78/counter_V
+    SLICE_X2Y46          FDRE                                         r  grp_Advios_LedControl_fu_78/counter_V_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[2]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X4Y47          FDRE (Setup_fdre_C_R)       -0.524    10.365    grp_Advios_LedControl_fu_70/counter_V_reg[2]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.554     9.554    grp_Advios_LedControl_fu_78/clk
+    SLICE_X2Y46          FDRE                                         r  grp_Advios_LedControl_fu_78/counter_V_reg[0]/C
+                         clock pessimism              0.151     9.705    
+                         clock uncertainty           -0.035     9.670    
+    SLICE_X2Y46          FDRE (Setup_fdre_C_R)       -0.429     9.241    grp_Advios_LedControl_fu_78/counter_V_reg[0]
   -------------------------------------------------------------------
-                         required time                         10.365    
-                         arrival time                          -3.927    
+                         required time                          9.241    
+                         arrival time                          -4.829    
   -------------------------------------------------------------------
-                         slack                                  6.438    
+                         slack                                  4.412    
 
-Slack (MET) :             6.438ns  (required time - arrival time)
-  Source:                 grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_LedControl_fu_70/counter_V_reg[3]/R
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.412ns  (required time - arrival time)
+  Source:                 grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_LedControl_fu_78/counter_V_reg[1]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.954ns  (logic 0.704ns (23.832%)  route 2.250ns (76.168%))
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.097ns  (logic 0.766ns (24.735%)  route 2.331ns (75.265%))
   Logic Levels:           2  (LUT4=1 LUT5=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.554ns = ( 9.554 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.732ns
+    Clock Pessimism Removal (CPR):    0.151ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -327,45 +324,45 @@ Slack (MET) :             6.438ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_LedControl_fu_70/clk
-    SLICE_X2Y48          FDRE                                         r  grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
+                         net (fo=40, unset)           1.732     1.732    grp_Advios_LedControl_fu_78/clk
+    SLICE_X4Y47          FDSE                                         r  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y48          FDRE (Prop_fdre_C_Q)         0.456     1.429 f  grp_Advios_LedControl_fu_70/last_clock_reg[0]/Q
-                         net (fo=3, routed)           0.815     2.244    grp_Advios_LedControl_fu_70/last_clock
-    SLICE_X4Y48          LUT4 (Prop_lut4_I2_O)        0.124     2.368 r  grp_Advios_LedControl_fu_70/counter_V[3]_i_2/O
-                         net (fo=5, routed)           0.806     3.174    grp_Advios_LedControl_fu_70/counter_V[3]_i_2_n_0
-    SLICE_X5Y47          LUT5 (Prop_lut5_I0_O)        0.124     3.298 r  grp_Advios_LedControl_fu_70/counter_V[3]_i_1/O
-                         net (fo=4, routed)           0.629     3.927    grp_Advios_LedControl_fu_70/counter_V
-    SLICE_X4Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[3]/R
+    SLICE_X4Y47          FDSE (Prop_fdse_C_Q)         0.518     2.250 r  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/Q
+                         net (fo=2, routed)           0.798     3.048    grp_Advios_LedControl_fu_78/ap_CS_fsm_state2
+    SLICE_X3Y47          LUT4 (Prop_lut4_I1_O)        0.124     3.172 r  grp_Advios_LedControl_fu_78/counter_V[3]_i_2/O
+                         net (fo=5, routed)           0.817     3.989    grp_Advios_LedControl_fu_78/p_4_in
+    SLICE_X2Y46          LUT5 (Prop_lut5_I0_O)        0.124     4.113 r  grp_Advios_LedControl_fu_78/counter_V[3]_i_1/O
+                         net (fo=4, routed)           0.716     4.829    grp_Advios_LedControl_fu_78/counter_V
+    SLICE_X2Y46          FDRE                                         r  grp_Advios_LedControl_fu_78/counter_V_reg[1]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[3]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X4Y47          FDRE (Setup_fdre_C_R)       -0.524    10.365    grp_Advios_LedControl_fu_70/counter_V_reg[3]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.554     9.554    grp_Advios_LedControl_fu_78/clk
+    SLICE_X2Y46          FDRE                                         r  grp_Advios_LedControl_fu_78/counter_V_reg[1]/C
+                         clock pessimism              0.151     9.705    
+                         clock uncertainty           -0.035     9.670    
+    SLICE_X2Y46          FDRE (Setup_fdre_C_R)       -0.429     9.241    grp_Advios_LedControl_fu_78/counter_V_reg[1]
   -------------------------------------------------------------------
-                         required time                         10.365    
-                         arrival time                          -3.927    
+                         required time                          9.241    
+                         arrival time                          -4.829    
   -------------------------------------------------------------------
-                         slack                                  6.438    
+                         slack                                  4.412    
 
-Slack (MET) :             6.533ns  (required time - arrival time)
-  Source:                 grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_LedControl_fu_70/counter_V_reg[0]/R
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.412ns  (required time - arrival time)
+  Source:                 grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_LedControl_fu_78/counter_V_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.954ns  (logic 0.704ns (23.832%)  route 2.250ns (76.168%))
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.097ns  (logic 0.766ns (24.735%)  route 2.331ns (75.265%))
   Logic Levels:           2  (LUT4=1 LUT5=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.554ns = ( 9.554 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.732ns
+    Clock Pessimism Removal (CPR):    0.151ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -376,45 +373,45 @@ Slack (MET) :             6.533ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_LedControl_fu_70/clk
-    SLICE_X2Y48          FDRE                                         r  grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
+                         net (fo=40, unset)           1.732     1.732    grp_Advios_LedControl_fu_78/clk
+    SLICE_X4Y47          FDSE                                         r  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y48          FDRE (Prop_fdre_C_Q)         0.456     1.429 f  grp_Advios_LedControl_fu_70/last_clock_reg[0]/Q
-                         net (fo=3, routed)           0.815     2.244    grp_Advios_LedControl_fu_70/last_clock
-    SLICE_X4Y48          LUT4 (Prop_lut4_I2_O)        0.124     2.368 r  grp_Advios_LedControl_fu_70/counter_V[3]_i_2/O
-                         net (fo=5, routed)           0.806     3.174    grp_Advios_LedControl_fu_70/counter_V[3]_i_2_n_0
-    SLICE_X5Y47          LUT5 (Prop_lut5_I0_O)        0.124     3.298 r  grp_Advios_LedControl_fu_70/counter_V[3]_i_1/O
-                         net (fo=4, routed)           0.629     3.927    grp_Advios_LedControl_fu_70/counter_V
-    SLICE_X5Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[0]/R
+    SLICE_X4Y47          FDSE (Prop_fdse_C_Q)         0.518     2.250 r  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/Q
+                         net (fo=2, routed)           0.798     3.048    grp_Advios_LedControl_fu_78/ap_CS_fsm_state2
+    SLICE_X3Y47          LUT4 (Prop_lut4_I1_O)        0.124     3.172 r  grp_Advios_LedControl_fu_78/counter_V[3]_i_2/O
+                         net (fo=5, routed)           0.817     3.989    grp_Advios_LedControl_fu_78/p_4_in
+    SLICE_X2Y46          LUT5 (Prop_lut5_I0_O)        0.124     4.113 r  grp_Advios_LedControl_fu_78/counter_V[3]_i_1/O
+                         net (fo=4, routed)           0.716     4.829    grp_Advios_LedControl_fu_78/counter_V
+    SLICE_X2Y46          FDRE                                         r  grp_Advios_LedControl_fu_78/counter_V_reg[2]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    grp_Advios_LedControl_fu_70/clk
-    SLICE_X5Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X5Y47          FDRE (Setup_fdre_C_R)       -0.429    10.460    grp_Advios_LedControl_fu_70/counter_V_reg[0]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.554     9.554    grp_Advios_LedControl_fu_78/clk
+    SLICE_X2Y46          FDRE                                         r  grp_Advios_LedControl_fu_78/counter_V_reg[2]/C
+                         clock pessimism              0.151     9.705    
+                         clock uncertainty           -0.035     9.670    
+    SLICE_X2Y46          FDRE (Setup_fdre_C_R)       -0.429     9.241    grp_Advios_LedControl_fu_78/counter_V_reg[2]
   -------------------------------------------------------------------
-                         required time                         10.460    
-                         arrival time                          -3.927    
+                         required time                          9.241    
+                         arrival time                          -4.829    
   -------------------------------------------------------------------
-                         slack                                  6.533    
+                         slack                                  4.412    
 
-Slack (MET) :             6.533ns  (required time - arrival time)
-  Source:                 grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_LedControl_fu_70/counter_V_reg[1]/R
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.412ns  (required time - arrival time)
+  Source:                 grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_LedControl_fu_78/counter_V_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.954ns  (logic 0.704ns (23.832%)  route 2.250ns (76.168%))
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.097ns  (logic 0.766ns (24.735%)  route 2.331ns (75.265%))
   Logic Levels:           2  (LUT4=1 LUT5=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.554ns = ( 9.554 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.732ns
+    Clock Pessimism Removal (CPR):    0.151ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -425,45 +422,45 @@ Slack (MET) :             6.533ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_LedControl_fu_70/clk
-    SLICE_X2Y48          FDRE                                         r  grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
+                         net (fo=40, unset)           1.732     1.732    grp_Advios_LedControl_fu_78/clk
+    SLICE_X4Y47          FDSE                                         r  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y48          FDRE (Prop_fdre_C_Q)         0.456     1.429 f  grp_Advios_LedControl_fu_70/last_clock_reg[0]/Q
-                         net (fo=3, routed)           0.815     2.244    grp_Advios_LedControl_fu_70/last_clock
-    SLICE_X4Y48          LUT4 (Prop_lut4_I2_O)        0.124     2.368 r  grp_Advios_LedControl_fu_70/counter_V[3]_i_2/O
-                         net (fo=5, routed)           0.806     3.174    grp_Advios_LedControl_fu_70/counter_V[3]_i_2_n_0
-    SLICE_X5Y47          LUT5 (Prop_lut5_I0_O)        0.124     3.298 r  grp_Advios_LedControl_fu_70/counter_V[3]_i_1/O
-                         net (fo=4, routed)           0.629     3.927    grp_Advios_LedControl_fu_70/counter_V
-    SLICE_X5Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[1]/R
+    SLICE_X4Y47          FDSE (Prop_fdse_C_Q)         0.518     2.250 r  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/Q
+                         net (fo=2, routed)           0.798     3.048    grp_Advios_LedControl_fu_78/ap_CS_fsm_state2
+    SLICE_X3Y47          LUT4 (Prop_lut4_I1_O)        0.124     3.172 r  grp_Advios_LedControl_fu_78/counter_V[3]_i_2/O
+                         net (fo=5, routed)           0.817     3.989    grp_Advios_LedControl_fu_78/p_4_in
+    SLICE_X2Y46          LUT5 (Prop_lut5_I0_O)        0.124     4.113 r  grp_Advios_LedControl_fu_78/counter_V[3]_i_1/O
+                         net (fo=4, routed)           0.716     4.829    grp_Advios_LedControl_fu_78/counter_V
+    SLICE_X2Y46          FDRE                                         r  grp_Advios_LedControl_fu_78/counter_V_reg[3]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    grp_Advios_LedControl_fu_70/clk
-    SLICE_X5Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[1]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X5Y47          FDRE (Setup_fdre_C_R)       -0.429    10.460    grp_Advios_LedControl_fu_70/counter_V_reg[1]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.554     9.554    grp_Advios_LedControl_fu_78/clk
+    SLICE_X2Y46          FDRE                                         r  grp_Advios_LedControl_fu_78/counter_V_reg[3]/C
+                         clock pessimism              0.151     9.705    
+                         clock uncertainty           -0.035     9.670    
+    SLICE_X2Y46          FDRE (Setup_fdre_C_R)       -0.429     9.241    grp_Advios_LedControl_fu_78/counter_V_reg[3]
   -------------------------------------------------------------------
-                         required time                         10.460    
-                         arrival time                          -3.927    
+                         required time                          9.241    
+                         arrival time                          -4.829    
   -------------------------------------------------------------------
-                         slack                                  6.533    
+                         slack                                  4.412    
 
-Slack (MET) :             7.254ns  (required time - arrival time)
-  Source:                 grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            leds_reg[0]/CE
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.526ns  (required time - arrival time)
+  Source:                 grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            leds_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.233ns  (logic 0.801ns (35.875%)  route 1.432ns (64.125%))
-  Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.983ns  (logic 0.934ns (31.313%)  route 2.049ns (68.687%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.554ns = ( 9.554 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.732ns
+    Clock Pessimism Removal (CPR):    0.151ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -474,43 +471,45 @@ Slack (MET) :             7.254ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y48          FDSE                                         r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
+                         net (fo=40, unset)           1.732     1.732    grp_Advios_LedControl_fu_78/clk
+    SLICE_X3Y47          FDRE                                         r  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y48          FDSE (Prop_fdse_C_Q)         0.478     1.451 r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/Q
-                         net (fo=2, routed)           0.860     2.311    grp_Advios_LedControl_fu_70/ap_CS_fsm_state2
-    SLICE_X4Y48          LUT3 (Prop_lut3_I2_O)        0.323     2.634 r  grp_Advios_LedControl_fu_70/leds[3]_i_1/O
-                         net (fo=4, routed)           0.572     3.206    grp_Advios_LedControl_fu_70_leds_ap_vld
-    SLICE_X5Y48          FDRE                                         r  leds_reg[0]/CE
+    SLICE_X3Y47          FDRE (Prop_fdre_C_Q)         0.456     2.188 f  grp_Advios_LedControl_fu_78/last_clock_reg[0]/Q
+                         net (fo=3, routed)           0.984     3.172    grp_Advios_LedControl_fu_78/last_clock
+    SLICE_X3Y47          LUT3 (Prop_lut3_I0_O)        0.152     3.324 r  grp_Advios_LedControl_fu_78/leds[3]_i_2/O
+                         net (fo=5, routed)           0.443     3.767    grp_Advios_LedControl_fu_78/grp_Advios_LedControl_fu_78_leds_ap_vld
+    SLICE_X3Y46          LUT6 (Prop_lut6_I5_O)        0.326     4.093 r  grp_Advios_LedControl_fu_78/leds[3]_i_1/O
+                         net (fo=4, routed)           0.622     4.715    grp_Advios_LedControl_fu_78_n_0
+    SLICE_X3Y46          FDRE                                         r  leds_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    clk
-    SLICE_X5Y48          FDRE                                         r  leds_reg[0]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X5Y48          FDRE (Setup_fdre_C_CE)      -0.429    10.460    leds_reg[0]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.554     9.554    clk
+    SLICE_X3Y46          FDRE                                         r  leds_reg[0]/C
+                         clock pessimism              0.151     9.705    
+                         clock uncertainty           -0.035     9.670    
+    SLICE_X3Y46          FDRE (Setup_fdre_C_R)       -0.429     9.241    leds_reg[0]
   -------------------------------------------------------------------
-                         required time                         10.460    
-                         arrival time                          -3.206    
+                         required time                          9.241    
+                         arrival time                          -4.715    
   -------------------------------------------------------------------
-                         slack                                  7.254    
+                         slack                                  4.526    
 
-Slack (MET) :             7.254ns  (required time - arrival time)
-  Source:                 grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            leds_reg[1]/CE
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.526ns  (required time - arrival time)
+  Source:                 grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            leds_reg[1]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.233ns  (logic 0.801ns (35.875%)  route 1.432ns (64.125%))
-  Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.983ns  (logic 0.934ns (31.313%)  route 2.049ns (68.687%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.554ns = ( 9.554 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.732ns
+    Clock Pessimism Removal (CPR):    0.151ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -521,43 +520,45 @@ Slack (MET) :             7.254ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y48          FDSE                                         r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
+                         net (fo=40, unset)           1.732     1.732    grp_Advios_LedControl_fu_78/clk
+    SLICE_X3Y47          FDRE                                         r  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y48          FDSE (Prop_fdse_C_Q)         0.478     1.451 r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/Q
-                         net (fo=2, routed)           0.860     2.311    grp_Advios_LedControl_fu_70/ap_CS_fsm_state2
-    SLICE_X4Y48          LUT3 (Prop_lut3_I2_O)        0.323     2.634 r  grp_Advios_LedControl_fu_70/leds[3]_i_1/O
-                         net (fo=4, routed)           0.572     3.206    grp_Advios_LedControl_fu_70_leds_ap_vld
-    SLICE_X5Y48          FDRE                                         r  leds_reg[1]/CE
+    SLICE_X3Y47          FDRE (Prop_fdre_C_Q)         0.456     2.188 f  grp_Advios_LedControl_fu_78/last_clock_reg[0]/Q
+                         net (fo=3, routed)           0.984     3.172    grp_Advios_LedControl_fu_78/last_clock
+    SLICE_X3Y47          LUT3 (Prop_lut3_I0_O)        0.152     3.324 r  grp_Advios_LedControl_fu_78/leds[3]_i_2/O
+                         net (fo=5, routed)           0.443     3.767    grp_Advios_LedControl_fu_78/grp_Advios_LedControl_fu_78_leds_ap_vld
+    SLICE_X3Y46          LUT6 (Prop_lut6_I5_O)        0.326     4.093 r  grp_Advios_LedControl_fu_78/leds[3]_i_1/O
+                         net (fo=4, routed)           0.622     4.715    grp_Advios_LedControl_fu_78_n_0
+    SLICE_X3Y46          FDRE                                         r  leds_reg[1]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    clk
-    SLICE_X5Y48          FDRE                                         r  leds_reg[1]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X5Y48          FDRE (Setup_fdre_C_CE)      -0.429    10.460    leds_reg[1]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.554     9.554    clk
+    SLICE_X3Y46          FDRE                                         r  leds_reg[1]/C
+                         clock pessimism              0.151     9.705    
+                         clock uncertainty           -0.035     9.670    
+    SLICE_X3Y46          FDRE (Setup_fdre_C_R)       -0.429     9.241    leds_reg[1]
   -------------------------------------------------------------------
-                         required time                         10.460    
-                         arrival time                          -3.206    
+                         required time                          9.241    
+                         arrival time                          -4.715    
   -------------------------------------------------------------------
-                         slack                                  7.254    
+                         slack                                  4.526    
 
-Slack (MET) :             7.254ns  (required time - arrival time)
-  Source:                 grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            leds_reg[2]/CE
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.526ns  (required time - arrival time)
+  Source:                 grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            leds_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.233ns  (logic 0.801ns (35.875%)  route 1.432ns (64.125%))
-  Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.983ns  (logic 0.934ns (31.313%)  route 2.049ns (68.687%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.554ns = ( 9.554 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.732ns
+    Clock Pessimism Removal (CPR):    0.151ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -568,43 +569,45 @@ Slack (MET) :             7.254ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y48          FDSE                                         r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
+                         net (fo=40, unset)           1.732     1.732    grp_Advios_LedControl_fu_78/clk
+    SLICE_X3Y47          FDRE                                         r  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y48          FDSE (Prop_fdse_C_Q)         0.478     1.451 r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/Q
-                         net (fo=2, routed)           0.860     2.311    grp_Advios_LedControl_fu_70/ap_CS_fsm_state2
-    SLICE_X4Y48          LUT3 (Prop_lut3_I2_O)        0.323     2.634 r  grp_Advios_LedControl_fu_70/leds[3]_i_1/O
-                         net (fo=4, routed)           0.572     3.206    grp_Advios_LedControl_fu_70_leds_ap_vld
-    SLICE_X5Y48          FDRE                                         r  leds_reg[2]/CE
+    SLICE_X3Y47          FDRE (Prop_fdre_C_Q)         0.456     2.188 f  grp_Advios_LedControl_fu_78/last_clock_reg[0]/Q
+                         net (fo=3, routed)           0.984     3.172    grp_Advios_LedControl_fu_78/last_clock
+    SLICE_X3Y47          LUT3 (Prop_lut3_I0_O)        0.152     3.324 r  grp_Advios_LedControl_fu_78/leds[3]_i_2/O
+                         net (fo=5, routed)           0.443     3.767    grp_Advios_LedControl_fu_78/grp_Advios_LedControl_fu_78_leds_ap_vld
+    SLICE_X3Y46          LUT6 (Prop_lut6_I5_O)        0.326     4.093 r  grp_Advios_LedControl_fu_78/leds[3]_i_1/O
+                         net (fo=4, routed)           0.622     4.715    grp_Advios_LedControl_fu_78_n_0
+    SLICE_X3Y46          FDRE                                         r  leds_reg[2]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    clk
-    SLICE_X5Y48          FDRE                                         r  leds_reg[2]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X5Y48          FDRE (Setup_fdre_C_CE)      -0.429    10.460    leds_reg[2]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.554     9.554    clk
+    SLICE_X3Y46          FDRE                                         r  leds_reg[2]/C
+                         clock pessimism              0.151     9.705    
+                         clock uncertainty           -0.035     9.670    
+    SLICE_X3Y46          FDRE (Setup_fdre_C_R)       -0.429     9.241    leds_reg[2]
   -------------------------------------------------------------------
-                         required time                         10.460    
-                         arrival time                          -3.206    
+                         required time                          9.241    
+                         arrival time                          -4.715    
   -------------------------------------------------------------------
-                         slack                                  7.254    
+                         slack                                  4.526    
 
-Slack (MET) :             7.254ns  (required time - arrival time)
-  Source:                 grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            leds_reg[3]/CE
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.526ns  (required time - arrival time)
+  Source:                 grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            leds_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.233ns  (logic 0.801ns (35.875%)  route 1.432ns (64.125%))
-  Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
-    Clock Pessimism Removal (CPR):    0.000ns
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.983ns  (logic 0.934ns (31.313%)  route 2.049ns (68.687%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.554ns = ( 9.554 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.732ns
+    Clock Pessimism Removal (CPR):    0.151ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -615,42 +618,44 @@ Slack (MET) :             7.254ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y48          FDSE                                         r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
+                         net (fo=40, unset)           1.732     1.732    grp_Advios_LedControl_fu_78/clk
+    SLICE_X3Y47          FDRE                                         r  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y48          FDSE (Prop_fdse_C_Q)         0.478     1.451 r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/Q
-                         net (fo=2, routed)           0.860     2.311    grp_Advios_LedControl_fu_70/ap_CS_fsm_state2
-    SLICE_X4Y48          LUT3 (Prop_lut3_I2_O)        0.323     2.634 r  grp_Advios_LedControl_fu_70/leds[3]_i_1/O
-                         net (fo=4, routed)           0.572     3.206    grp_Advios_LedControl_fu_70_leds_ap_vld
-    SLICE_X5Y48          FDRE                                         r  leds_reg[3]/CE
+    SLICE_X3Y47          FDRE (Prop_fdre_C_Q)         0.456     2.188 f  grp_Advios_LedControl_fu_78/last_clock_reg[0]/Q
+                         net (fo=3, routed)           0.984     3.172    grp_Advios_LedControl_fu_78/last_clock
+    SLICE_X3Y47          LUT3 (Prop_lut3_I0_O)        0.152     3.324 r  grp_Advios_LedControl_fu_78/leds[3]_i_2/O
+                         net (fo=5, routed)           0.443     3.767    grp_Advios_LedControl_fu_78/grp_Advios_LedControl_fu_78_leds_ap_vld
+    SLICE_X3Y46          LUT6 (Prop_lut6_I5_O)        0.326     4.093 r  grp_Advios_LedControl_fu_78/leds[3]_i_1/O
+                         net (fo=4, routed)           0.622     4.715    grp_Advios_LedControl_fu_78_n_0
+    SLICE_X3Y46          FDRE                                         r  leds_reg[3]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    clk
-    SLICE_X5Y48          FDRE                                         r  leds_reg[3]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X5Y48          FDRE (Setup_fdre_C_CE)      -0.429    10.460    leds_reg[3]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.554     9.554    clk
+    SLICE_X3Y46          FDRE                                         r  leds_reg[3]/C
+                         clock pessimism              0.151     9.705    
+                         clock uncertainty           -0.035     9.670    
+    SLICE_X3Y46          FDRE (Setup_fdre_C_R)       -0.429     9.241    leds_reg[3]
   -------------------------------------------------------------------
-                         required time                         10.460    
-                         arrival time                          -3.206    
+                         required time                          9.241    
+                         arrival time                          -4.715    
   -------------------------------------------------------------------
-                         slack                                  7.254    
+                         slack                                  4.526    
 
-Slack (MET) :             7.273ns  (required time - arrival time)
-  Source:                 grp_Advios_modulate_clock_fu_90/ap_CS_fsm_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[20]/R
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.759ns  (required time - arrival time)
+  Source:                 grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        2.214ns  (logic 0.580ns (26.192%)  route 1.634ns (73.808%))
+  Requirement:            8.000ns  (clk rise@8.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.613ns  (logic 0.580ns (22.199%)  route 2.033ns (77.801%))
   Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.973ns
+  Clock Path Skew:        -0.164ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.551ns = ( 9.551 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.715ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -662,28 +667,28 @@ Slack (MET) :             7.273ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.973     0.973    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X2Y47          FDRE                                         r  grp_Advios_modulate_clock_fu_90/ap_CS_fsm_reg[2]/C
+                         net (fo=40, unset)           1.715     1.715    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X3Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y47          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  grp_Advios_modulate_clock_fu_90/ap_CS_fsm_reg[2]/Q
-                         net (fo=4, routed)           0.663     2.092    grp_Advios_modulate_clock_fu_90/ap_CS_fsm_state3
-    SLICE_X2Y48          LUT2 (Prop_lut2_I0_O)        0.124     2.216 r  grp_Advios_modulate_clock_fu_90/clock_counter_V[0]_i_1/O
-                         net (fo=26, routed)          0.972     3.187    grp_Advios_modulate_clock_fu_90/grp_Advios_modulate_clock_fu_90_clk_second_o_ap_vld
-    SLICE_X3Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[20]/R
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.171 r  grp_Advios_modulate_clock_fu_98/tmp_1_reg_128_reg[0]/Q
+                         net (fo=3, routed)           0.871     3.042    grp_Advios_modulate_clock_fu_98/tmp_1_reg_128
+    SLICE_X3Y50          LUT2 (Prop_lut2_I1_O)        0.124     3.166 r  grp_Advios_modulate_clock_fu_98/clock_counter_V[0]_i_1/O
+                         net (fo=26, routed)          1.162     4.328    grp_Advios_modulate_clock_fu_98/grp_Advios_modulate_clock_fu_98_clk_second_o_ap_vld
+    SLICE_X1Y47          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk rise edge)       10.000    10.000 r  
-                                                      0.000    10.000 r  clk (IN)
-                         net (fo=40, unset)           0.924    10.924    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[20]/C
-                         clock pessimism              0.000    10.924    
-                         clock uncertainty           -0.035    10.889    
-    SLICE_X3Y51          FDRE (Setup_fdre_C_R)       -0.429    10.460    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[20]
+                         (clock clk rise edge)        8.000     8.000 r  
+                                                      0.000     8.000 r  clk (IN)
+                         net (fo=40, unset)           1.551     9.551    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y47          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[0]/C
+                         clock pessimism              0.000     9.551    
+                         clock uncertainty           -0.035     9.516    
+    SLICE_X1Y47          FDRE (Setup_fdre_C_R)       -0.429     9.087    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[0]
   -------------------------------------------------------------------
-                         required time                         10.460    
-                         arrival time                          -3.187    
+                         required time                          9.087    
+                         arrival time                          -4.328    
   -------------------------------------------------------------------
-                         slack                                  7.273    
+                         slack                                  4.759    
 
 
 
@@ -691,420 +696,441 @@ Slack (MET) :             7.273ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.155ns  (arrival time - required time)
-  Source:                 grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_LedControl_fu_70/counter_V_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 clk_second_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_LedControl_fu_78/last_clock_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.299ns  (logic 0.189ns (63.138%)  route 0.110ns (36.862%))
+  Data Path Delay:        0.415ns  (logic 0.209ns (50.355%)  route 0.206ns (49.645%))
   Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
+  Clock Path Skew:        0.274ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.855ns
+    Source Clock Delay      (SCD):    0.581ns
     Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_LedControl_fu_70/clk
-    SLICE_X5Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
+                         net (fo=40, unset)           0.581     0.581    clk
+    SLICE_X4Y50          FDRE                                         r  clk_second_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y47          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_LedControl_fu_70/counter_V_reg[0]/Q
-                         net (fo=6, routed)           0.110     0.661    grp_Advios_LedControl_fu_70/counter_V_reg__0[0]
-    SLICE_X4Y47          LUT3 (Prop_lut3_I0_O)        0.048     0.709 r  grp_Advios_LedControl_fu_70/counter_V[2]_i_1/O
-                         net (fo=2, routed)           0.000     0.709    grp_Advios_LedControl_fu_70/v_V_1_fu_131_p2[2]
-    SLICE_X4Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[2]/D
+    SLICE_X4Y50          FDRE (Prop_fdre_C_Q)         0.164     0.745 r  clk_second_reg[0]/Q
+                         net (fo=4, routed)           0.206     0.951    grp_Advios_LedControl_fu_78/clk_second
+    SLICE_X3Y47          LUT3 (Prop_lut3_I0_O)        0.045     0.996 r  grp_Advios_LedControl_fu_78/last_clock[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.996    grp_Advios_LedControl_fu_78/last_clock[0]_i_1_n_0
+    SLICE_X3Y47          FDRE                                         r  grp_Advios_LedControl_fu_78/last_clock_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y47          FDRE                                         r  grp_Advios_LedControl_fu_70/counter_V_reg[2]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X4Y47          FDRE (Hold_fdre_C_D)         0.123     0.555    grp_Advios_LedControl_fu_70/counter_V_reg[2]
+                         net (fo=40, unset)           0.855     0.855    grp_Advios_LedControl_fu_78/clk
+    SLICE_X3Y47          FDRE                                         r  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+                         clock pessimism              0.000     0.855    
+    SLICE_X3Y47          FDRE (Hold_fdre_C_D)         0.091     0.946    grp_Advios_LedControl_fu_78/last_clock_reg[0]
   -------------------------------------------------------------------
-                         required time                         -0.555    
-                         arrival time                           0.709    
+                         required time                         -0.946    
+                         arrival time                           0.996    
   -------------------------------------------------------------------
-                         slack                                  0.155    
+                         slack                                  0.050    
 
-Slack (MET) :             0.161ns  (arrival time - required time)
-  Source:                 grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/D
-                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.108ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.242ns  (logic 0.164ns (67.739%)  route 0.078ns (32.261%))
+  Data Path Delay:        0.476ns  (logic 0.355ns (74.580%)  route 0.121ns (25.420%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.585ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.585     0.585    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y49          FDRE (Prop_fdre_C_Q)         0.141     0.726 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/Q
+                         net (fo=2, routed)           0.120     0.846    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]
+    SLICE_X1Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.160     1.006 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.007    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1_n_0
+    SLICE_X1Y50          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     1.061 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.061    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1_n_7
+    SLICE_X1Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.848     0.848    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]/C
+                         clock pessimism              0.000     0.848    
+    SLICE_X1Y50          FDRE (Hold_fdre_C_D)         0.105     0.953    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -0.953    
+                         arrival time                           1.061    
+  -------------------------------------------------------------------
+                         slack                                  0.108    
+
+Slack (MET) :             0.119ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.487ns  (logic 0.366ns (75.154%)  route 0.121ns (24.846%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.585ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.585     0.585    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y49          FDRE (Prop_fdre_C_Q)         0.141     0.726 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/Q
+                         net (fo=2, routed)           0.120     0.846    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]
+    SLICE_X1Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.160     1.006 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.007    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1_n_0
+    SLICE_X1Y50          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.065     1.072 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.072    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1_n_5
+    SLICE_X1Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.848     0.848    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[14]/C
+                         clock pessimism              0.000     0.848    
+    SLICE_X1Y50          FDRE (Hold_fdre_C_D)         0.105     0.953    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[14]
+  -------------------------------------------------------------------
+                         required time                         -0.953    
+                         arrival time                           1.072    
+  -------------------------------------------------------------------
+                         slack                                  0.119    
+
+Slack (MET) :             0.144ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.512ns  (logic 0.391ns (76.367%)  route 0.121ns (23.633%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.585ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.585     0.585    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y49          FDRE (Prop_fdre_C_Q)         0.141     0.726 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/Q
+                         net (fo=2, routed)           0.120     0.846    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]
+    SLICE_X1Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.160     1.006 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.007    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1_n_0
+    SLICE_X1Y50          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.090     1.097 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1/O[1]
+                         net (fo=1, routed)           0.000     1.097    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1_n_6
+    SLICE_X1Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.848     0.848    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[13]/C
+                         clock pessimism              0.000     0.848    
+    SLICE_X1Y50          FDRE (Hold_fdre_C_D)         0.105     0.953    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -0.953    
+                         arrival time                           1.097    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+Slack (MET) :             0.144ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.512ns  (logic 0.391ns (76.367%)  route 0.121ns (23.633%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.585ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.585     0.585    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y49          FDRE (Prop_fdre_C_Q)         0.141     0.726 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/Q
+                         net (fo=2, routed)           0.120     0.846    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]
+    SLICE_X1Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.160     1.006 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.007    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1_n_0
+    SLICE_X1Y50          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.090     1.097 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.097    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1_n_4
+    SLICE_X1Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.848     0.848    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[15]/C
+                         clock pessimism              0.000     0.848    
+    SLICE_X1Y50          FDRE (Hold_fdre_C_D)         0.105     0.953    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -0.953    
+                         arrival time                           1.097    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+Slack (MET) :             0.147ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.515ns  (logic 0.394ns (76.505%)  route 0.121ns (23.495%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.585ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.585     0.585    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y49          FDRE (Prop_fdre_C_Q)         0.141     0.726 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/Q
+                         net (fo=2, routed)           0.120     0.846    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]
+    SLICE_X1Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.160     1.006 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.007    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1_n_0
+    SLICE_X1Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     1.046 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.046    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1_n_0
+    SLICE_X1Y51          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     1.100 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.100    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[16]_i_1_n_7
+    SLICE_X1Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.848     0.848    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[16]/C
+                         clock pessimism              0.000     0.848    
+    SLICE_X1Y51          FDRE (Hold_fdre_C_D)         0.105     0.953    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -0.953    
+                         arrival time                           1.100    
+  -------------------------------------------------------------------
+                         slack                                  0.147    
+
+Slack (MET) :             0.149ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            clk_second_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.285ns  (logic 0.186ns (65.209%)  route 0.099ns (34.791%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.850ns
+    Source Clock Delay      (SCD):    0.581ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.581     0.581    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X5Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y50          FDRE (Prop_fdre_C_Q)         0.141     0.722 r  grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[2]/Q
+                         net (fo=4, routed)           0.099     0.821    grp_Advios_modulate_clock_fu_98/ap_CS_fsm_state3
+    SLICE_X4Y50          LUT3 (Prop_lut3_I1_O)        0.045     0.866 r  grp_Advios_modulate_clock_fu_98/clk_second[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.866    grp_Advios_modulate_clock_fu_98_n_0
+    SLICE_X4Y50          FDRE                                         r  clk_second_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.850     0.850    clk
+    SLICE_X4Y50          FDRE                                         r  clk_second_reg[0]/C
+                         clock pessimism             -0.253     0.597    
+    SLICE_X4Y50          FDRE (Hold_fdre_C_D)         0.120     0.717    clk_second_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.717    
+                         arrival time                           0.866    
+  -------------------------------------------------------------------
+                         slack                                  0.149    
+
+Slack (MET) :             0.158ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.526ns  (logic 0.405ns (76.996%)  route 0.121ns (23.004%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.585ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.585     0.585    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y49          FDRE (Prop_fdre_C_Q)         0.141     0.726 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/Q
+                         net (fo=2, routed)           0.120     0.846    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]
+    SLICE_X1Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.160     1.006 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.007    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[8]_i_1_n_0
+    SLICE_X1Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     1.046 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.046    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[12]_i_1_n_0
+    SLICE_X1Y51          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.065     1.111 r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.111    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[16]_i_1_n_5
+    SLICE_X1Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=40, unset)           0.848     0.848    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[18]/C
+                         clock pessimism              0.000     0.848    
+    SLICE_X1Y51          FDRE (Hold_fdre_C_D)         0.105     0.953    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[18]
+  -------------------------------------------------------------------
+                         required time                         -0.953    
+                         arrival time                           1.111    
+  -------------------------------------------------------------------
+                         slack                                  0.158    
+
+Slack (MET) :             0.172ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[10]/CE
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.405ns  (logic 0.141ns (34.800%)  route 0.264ns (65.200%))
   Logic Levels:           0  
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
+  Clock Path Skew:        0.272ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.853ns
+    Source Clock Delay      (SCD):    0.581ns
     Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y48          FDRE                                         r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[2]/C
+                         net (fo=40, unset)           0.581     0.581    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X2Y50          FDSE                                         r  grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y48          FDRE (Prop_fdre_C_Q)         0.164     0.574 r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[2]/Q
-                         net (fo=3, routed)           0.078     0.652    grp_Advios_LedControl_fu_70/ap_CS_fsm_state3
-    SLICE_X4Y48          FDSE                                         r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/D
+    SLICE_X2Y50          FDSE (Prop_fdse_C_Q)         0.141     0.722 r  grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[1]/Q
+                         net (fo=27, routed)          0.264     0.986    grp_Advios_modulate_clock_fu_98/ap_CS_fsm_state2
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[10]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_LedControl_fu_70/clk
-    SLICE_X4Y48          FDSE                                         r  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X4Y48          FDSE (Hold_fdse_C_D)         0.060     0.492    grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]
+                         net (fo=40, unset)           0.853     0.853    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[10]/C
+                         clock pessimism              0.000     0.853    
+    SLICE_X1Y49          FDRE (Hold_fdre_C_CE)       -0.039     0.814    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[10]
   -------------------------------------------------------------------
-                         required time                         -0.492    
-                         arrival time                           0.652    
+                         required time                         -0.814    
+                         arrival time                           0.986    
   -------------------------------------------------------------------
-                         slack                                  0.161    
+                         slack                                  0.172    
 
-Slack (MET) :             0.241ns  (arrival time - required time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[15]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[15]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.172ns  (arrival time - required time)
+  Source:                 grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/CE
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
+  Data Path Delay:        0.405ns  (logic 0.141ns (34.800%)  route 0.264ns (65.200%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.272ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.853ns
+    Source Clock Delay      (SCD):    0.581ns
     Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[15]/C
+                         net (fo=40, unset)           0.581     0.581    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X2Y50          FDSE                                         r  grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y49          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[15]/Q
-                         net (fo=2, routed)           0.118     0.669    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[15]
-    SLICE_X3Y49          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.777 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]_i_1/O[3]
-                         net (fo=1, routed)           0.000     0.777    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]_i_1_n_4
-    SLICE_X3Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[15]/D
+    SLICE_X2Y50          FDSE (Prop_fdse_C_Q)         0.141     0.722 r  grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[1]/Q
+                         net (fo=27, routed)          0.264     0.986    grp_Advios_modulate_clock_fu_98/ap_CS_fsm_state2
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[15]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X3Y49          FDRE (Hold_fdre_C_D)         0.105     0.537    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[15]
+                         net (fo=40, unset)           0.853     0.853    grp_Advios_modulate_clock_fu_98/clk
+    SLICE_X1Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]/C
+                         clock pessimism              0.000     0.853    
+    SLICE_X1Y49          FDRE (Hold_fdre_C_CE)       -0.039     0.814    grp_Advios_modulate_clock_fu_98/clock_counter_V_reg[11]
   -------------------------------------------------------------------
-                         required time                         -0.537    
-                         arrival time                           0.777    
+                         required time                         -0.814    
+                         arrival time                           0.986    
   -------------------------------------------------------------------
-                         slack                                  0.241    
-
-Slack (MET) :             0.241ns  (arrival time - required time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[19]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[19]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[19]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[19]/Q
-                         net (fo=2, routed)           0.118     0.669    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[19]
-    SLICE_X3Y50          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.777 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[16]_i_1/O[3]
-                         net (fo=1, routed)           0.000     0.777    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[16]_i_1_n_4
-    SLICE_X3Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[19]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y50          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[19]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X3Y50          FDRE (Hold_fdre_C_D)         0.105     0.537    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[19]
-  -------------------------------------------------------------------
-                         required time                         -0.537    
-                         arrival time                           0.777    
-  -------------------------------------------------------------------
-                         slack                                  0.241    
-
-Slack (MET) :             0.241ns  (arrival time - required time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[23]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[23]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[23]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y51          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[23]/Q
-                         net (fo=2, routed)           0.118     0.669    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[23]
-    SLICE_X3Y51          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.777 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[20]_i_1/O[3]
-                         net (fo=1, routed)           0.000     0.777    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[20]_i_1_n_4
-    SLICE_X3Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[23]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y51          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[23]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X3Y51          FDRE (Hold_fdre_C_D)         0.105     0.537    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[23]
-  -------------------------------------------------------------------
-                         required time                         -0.537    
-                         arrival time                           0.777    
-  -------------------------------------------------------------------
-                         slack                                  0.241    
-
-Slack (MET) :             0.241ns  (arrival time - required time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[3]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[3]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y46          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y46          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[3]/Q
-                         net (fo=2, routed)           0.118     0.669    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[3]
-    SLICE_X3Y46          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.777 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[0]_i_2/O[3]
-                         net (fo=1, routed)           0.000     0.777    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[0]_i_2_n_4
-    SLICE_X3Y46          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y46          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[3]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X3Y46          FDRE (Hold_fdre_C_D)         0.105     0.537    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[3]
-  -------------------------------------------------------------------
-                         required time                         -0.537    
-                         arrival time                           0.777    
-  -------------------------------------------------------------------
-                         slack                                  0.241    
-
-Slack (MET) :             0.241ns  (arrival time - required time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[7]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[7]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y47          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[7]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y47          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[7]/Q
-                         net (fo=2, routed)           0.118     0.669    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[7]
-    SLICE_X3Y47          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.777 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[4]_i_1/O[3]
-                         net (fo=1, routed)           0.000     0.777    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[4]_i_1_n_4
-    SLICE_X3Y47          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[7]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y47          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[7]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X3Y47          FDRE (Hold_fdre_C_D)         0.105     0.537    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[7]
-  -------------------------------------------------------------------
-                         required time                         -0.537    
-                         arrival time                           0.777    
-  -------------------------------------------------------------------
-                         slack                                  0.241    
-
-Slack (MET) :             0.243ns  (arrival time - required time)
-  Source:                 grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.384ns  (logic 0.209ns (54.393%)  route 0.175ns (45.607%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X0Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X0Y48          FDRE (Prop_fdre_C_Q)         0.164     0.574 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/Q
-                         net (fo=3, routed)           0.175     0.749    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124
-    SLICE_X0Y48          LUT4 (Prop_lut4_I3_O)        0.045     0.794 r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_1/O
-                         net (fo=1, routed)           0.000     0.794    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124[0]_i_1_n_0
-    SLICE_X0Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X0Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X0Y48          FDRE (Hold_fdre_C_D)         0.120     0.552    grp_Advios_modulate_clock_fu_90/tmp_1_reg_124_reg[0]
-  -------------------------------------------------------------------
-                         required time                         -0.552    
-                         arrival time                           0.794    
-  -------------------------------------------------------------------
-                         slack                                  0.243    
-
-Slack (MET) :             0.243ns  (arrival time - required time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[11]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[11]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[11]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y48          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[11]/Q
-                         net (fo=2, routed)           0.120     0.671    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[11]
-    SLICE_X3Y48          CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     0.779 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[8]_i_1/O[3]
-                         net (fo=1, routed)           0.000     0.779    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[8]_i_1_n_4
-    SLICE_X3Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[11]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y48          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[11]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X3Y48          FDRE (Hold_fdre_C_D)         0.105     0.537    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[11]
-  -------------------------------------------------------------------
-                         required time                         -0.537    
-                         arrival time                           0.779    
-  -------------------------------------------------------------------
-                         slack                                  0.243    
-
-Slack (MET) :             0.247ns  (arrival time - required time)
-  Source:                 grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]/D
-                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
-  Data Path Delay:        0.373ns  (logic 0.256ns (68.576%)  route 0.117ns (31.424%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.432ns
-    Source Clock Delay      (SCD):    0.410ns
-    Clock Pessimism Removal (CPR):    -0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.410     0.410    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y49          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]/Q
-                         net (fo=2, routed)           0.117     0.668    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]
-    SLICE_X3Y49          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.115     0.783 r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]_i_1/O[0]
-                         net (fo=1, routed)           0.000     0.783    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]_i_1_n_7
-    SLICE_X3Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk rise edge)        0.000     0.000 r  
-                                                      0.000     0.000 r  clk (IN)
-                         net (fo=40, unset)           0.432     0.432    grp_Advios_modulate_clock_fu_90/clk
-    SLICE_X3Y49          FDRE                                         r  grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]/C
-                         clock pessimism              0.000     0.432    
-    SLICE_X3Y49          FDRE (Hold_fdre_C_D)         0.105     0.537    grp_Advios_modulate_clock_fu_90/clock_counter_V_reg[12]
-  -------------------------------------------------------------------
-                         required time                         -0.537    
-                         arrival time                           0.783    
-  -------------------------------------------------------------------
-                         slack                                  0.247    
+                         slack                                  0.172    
 
 
 
@@ -1113,41 +1139,41 @@ Slack (MET) :             0.247ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         clk
-Waveform(ns):       { 0.000 5.000 }
-Period(ns):         10.000
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
 Sources:            { clk }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location     Pin
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y48  clk_second_reg[0]/C
-Min Period        n/a     FDSE/C   n/a            1.000         10.000      9.000      SLICE_X4Y48  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X4Y48  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[2]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X5Y47  grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X5Y47  grp_Advios_LedControl_fu_70/counter_V_reg[1]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X4Y47  grp_Advios_LedControl_fu_70/counter_V_reg[2]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X4Y47  grp_Advios_LedControl_fu_70/counter_V_reg[3]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y48  grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
-Min Period        n/a     FDSE/C   n/a            1.000         10.000      9.000      SLICE_X1Y48  grp_Advios_modulate_clock_fu_90/ap_CS_fsm_reg[1]/C
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y47  grp_Advios_modulate_clock_fu_90/ap_CS_fsm_reg[2]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y48  clk_second_reg[0]/C
-Low Pulse Width   Fast    FDSE/C   n/a            0.500         5.000       4.500      SLICE_X4Y48  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X4Y48  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[2]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X5Y47  grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X5Y47  grp_Advios_LedControl_fu_70/counter_V_reg[1]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X4Y47  grp_Advios_LedControl_fu_70/counter_V_reg[2]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X4Y47  grp_Advios_LedControl_fu_70/counter_V_reg[3]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y48  grp_Advios_LedControl_fu_70/last_clock_reg[0]/C
-Low Pulse Width   Fast    FDSE/C   n/a            0.500         5.000       4.500      SLICE_X1Y48  grp_Advios_modulate_clock_fu_90/ap_CS_fsm_reg[1]/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y47  grp_Advios_modulate_clock_fu_90/ap_CS_fsm_reg[2]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y48  clk_second_reg[0]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y48  clk_second_reg[0]/C
-High Pulse Width  Slow    FDSE/C   n/a            0.500         5.000       4.500      SLICE_X4Y48  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-High Pulse Width  Fast    FDSE/C   n/a            0.500         5.000       4.500      SLICE_X4Y48  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[1]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X4Y48  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[2]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X4Y48  grp_Advios_LedControl_fu_70/ap_CS_fsm_reg[2]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X5Y47  grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X5Y47  grp_Advios_LedControl_fu_70/counter_V_reg[0]/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X5Y47  grp_Advios_LedControl_fu_70/counter_V_reg[1]/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X5Y47  grp_Advios_LedControl_fu_70/counter_V_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X4Y50  clk_second_reg[0]/C
+Min Period        n/a     FDSE/C   n/a            1.000         8.000       7.000      SLICE_X4Y47  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X3Y48  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X3Y47  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+Min Period        n/a     FDSE/C   n/a            1.000         8.000       7.000      SLICE_X2Y50  grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X5Y50  grp_Advios_modulate_clock_fu_98/ap_CS_fsm_reg[2]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         4.000       3.500      SLICE_X4Y47  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
+Low Pulse Width   Fast    FDSE/C   n/a            0.500         4.000       3.500      SLICE_X4Y47  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[1]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X3Y48  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[2]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X3Y48  grp_Advios_LedControl_fu_78/ap_CS_fsm_reg[2]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[1]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[2]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X3Y47  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X3Y47  grp_Advios_LedControl_fu_78/last_clock_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[2]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X2Y46  grp_Advios_LedControl_fu_78/counter_V_reg[3]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X3Y46  leds_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X3Y46  leds_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X3Y46  leds_reg[2]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X3Y46  leds_reg[3]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X4Y50  clk_second_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X4Y50  clk_second_reg[0]/C
 
 
 

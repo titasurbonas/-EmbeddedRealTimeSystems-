@@ -1,6 +1,6 @@
 
 set TopModule "Advios"
-set ClockPeriod "10.000000"
+set ClockPeriod "8.000000"
 set ClockList {clk}
 set multiClockList {}
 set PortClockMap {reset clk ctrl clk switches clk leds clk}
@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z010:clg400:-1"
 set SourceFiles {sc ../../Advios.cpp c {}}
 set SourceFlags {sc {{}} c {}}
-set DirectiveFile {/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/solution1.directive}
+set DirectiveFile {C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo/advios_ip/solution1/solution1.directive}
 set TBFiles {verilog ../../Advios_testbench.cpp bc ../../Advios_testbench.cpp vhdl ../../Advios_testbench.cpp sc ../../Advios_testbench.cpp cas ../../Advios_testbench.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

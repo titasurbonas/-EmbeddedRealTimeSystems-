@@ -2,8 +2,8 @@ set language "SC"
 set moduleName "Advios"
 set portName0 "clk"
 set isMeta0 0
-set portInterface0 [list "sc_in_clk"]
-set portData0 ""
+set portInterface0 [list "sc_in"]
+set portData0 [list "bool"]
 set isClock0 1
 set isReset0 0
 set portAttribute0 [list $isClock0 $isReset0]

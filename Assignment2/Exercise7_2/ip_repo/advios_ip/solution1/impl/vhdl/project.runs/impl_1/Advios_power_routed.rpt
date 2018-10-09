@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Sun Oct  7 14:37:52 2018
-| Host             : ubuntu running 64-bit Ubuntu 18.04.1 LTS
+| Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date             : Mon Oct  8 19:29:21 2018
+| Host             : LAPTOP-07F69O5Q running 64-bit major release  (build 9200)
 | Command          : report_power -file Advios_power_routed.rpt -pb Advios_power_summary_routed.pb -rpx Advios_power_routed.rpx
 | Design           : Advios
 | Device           : xc7z010clg400-1
@@ -29,21 +29,18 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.090        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
-| Device Static (W)        | 0.090        |
-| Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 84.0         |
-| Junction Temperature (C) | 26.0         |
-| Confidence Level         | Medium       |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
-* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
++--------------------------+--------+
+| Total On-Chip Power (W)  | 0.101  |
+| Dynamic (W)              | 0.001  |
+| Device Static (W)        | 0.100  |
+| Effective TJA (C/W)      | 11.5   |
+| Max Ambient (C)          | 83.8   |
+| Junction Temperature (C) | 26.2   |
+| Confidence Level         | Medium |
+| Setting File             | ---    |
+| Simulation Activity File | ---    |
+| Design Nets Matched      | NA     |
++--------------------------+--------+
 
 
 1.1 On-Chip Components
@@ -53,14 +50,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       87 |       --- |             --- |
+| Slice Logic    |    <0.001 |       88 |       --- |             --- |
 |   LUT as Logic |    <0.001 |       22 |     17600 |            0.13 |
 |   CARRY4       |    <0.001 |       14 |      4400 |            0.32 |
 |   Register     |    <0.001 |       41 |     35200 |            0.12 |
 |   Others       |     0.000 |        6 |       --- |             --- |
 | Signals        |    <0.001 |       91 |       --- |             --- |
-| Static Power   |     0.090 |          |           |                 |
-| Total          |     0.090 |          |           |                 |
+| Static Power   |     0.100 |          |           |                 |
+| Total          |     0.101 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,8 +67,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.004 |       0.001 |      0.004 |
-| Vccaux    |       1.800 |     0.005 |       0.000 |      0.005 |
+| Vccint    |       1.000 |     0.005 |       0.001 |      0.004 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -133,7 +130,7 @@ Table of Contents
 +-------+--------+-----------------+
 | Clock | Domain | Constraint (ns) |
 +-------+--------+-----------------+
-| clk   | clk    |            10.0 |
+| clk   | clk    |             8.0 |
 +-------+--------+-----------------+
 
 
@@ -147,8 +144,8 @@ Table of Contents
 | Name                              | Power (W) |
 +-----------------------------------+-----------+
 | Advios                            |    <0.001 |
-|   grp_Advios_LedControl_fu_70     |    <0.001 |
-|   grp_Advios_modulate_clock_fu_90 |    <0.001 |
+|   grp_Advios_LedControl_fu_78     |    <0.001 |
+|   grp_Advios_modulate_clock_fu_98 |    <0.001 |
 +-----------------------------------+-----------+
 
 

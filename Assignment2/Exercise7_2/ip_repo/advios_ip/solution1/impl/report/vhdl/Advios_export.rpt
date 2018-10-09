@@ -1,10 +1,10 @@
 
 
-Implementation tool: Xilinx Vivado v.2018.2
+Implementation tool: Xilinx Vivado v.2017.2
 Project:             advios_ip
 Solution:            solution1
 Device target:       xc7z010clg400-1
-Report date:         Sun Oct 07 14:37:54 CEST 2018
+Report date:         Mon Oct 08 19:29:26 +0200 2018
 
 #=== Post-Implementation Resource usage ===
 SLICE:           24
@@ -14,7 +14,7 @@ DSP:              0
 BRAM:             0
 SRL:              0
 #=== Final timing ===
-CP required:    10.000
-CP achieved post-synthesis:    5.142
+CP required:    8.000
+CP achieved post-synthesis:    4.588
 CP achieved post-implementation:    NA
 No Sequential Path

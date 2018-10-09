@@ -17,7 +17,7 @@ SC_MODULE(Advios)
 
 	sc_signal<bool> clk_second;
 
-	sc_in_clk clk;
+	sc_in<bool> clk;
 	sc_in<bool> reset;
 	sc_in<sc_uint<NUM_BITS> > ctrl;
 	sc_in<sc_uint<NUM_BITS> > switches;

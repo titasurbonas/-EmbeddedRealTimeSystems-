@@ -1,0 +1,16 @@
+20:20:34 **** Incremental Build of configuration Debug for project test ****
+make all 
+'Building file: ../Source/test.cpp'
+'Invoking: Cross ARM C++ Compiler'
+arm-none-eabi-g++ -mcpu=cortex-m3 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -std=gnu++11 -fabi-version=0 -MMD -MP -MF"Source/test.d" -MT"Source/test.o" -c -o "Source/test.o" "../Source/test.cpp"
+'Finished building: ../Source/test.cpp'
+' '
+'Building target: test.elf'
+'Invoking: Cross ARM C++ Linker'
+arm-none-eabi-g++ -mcpu=cortex-m3 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T ../lscript.ld -Xlinker --gc-sections -Wl,-Map,"test.map" -o "test.elf"  ./Source/test.o   
+c:/xilinx/sdk/2017.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/bin/ld.exe: error: no memory region specified for loadable section `.note.gnu.build-id'
+collect2.exe: error: ld returned 1 exit status
+make: *** [test.elf] Error 1
+
+20:20:35 Build Finished (took 780ms)
+

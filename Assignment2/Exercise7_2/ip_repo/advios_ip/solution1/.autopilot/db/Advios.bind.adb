@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!DOCTYPE boost_serialization>
-<boost_serialization signature="serialization::archive" version="15">
+<boost_serialization signature="serialization::archive" version="14">
 <syndb class_id="0" tracking_level="0" version="0">
 	<userIPLatency>-1</userIPLatency>
 	<userIPName></userIPName>
@@ -82,7 +82,7 @@
 						</inlineStackInfo>
 						<originalName>Advios.ctrl.m_if.Val.V</originalName>
 						<rtlName></rtlName>
-						<coreName></coreName>
+						<coreName>AXI4LiteS</coreName>
 					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
@@ -158,17 +158,17 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>19</id>
+						<id>20</id>
 						<name>Advios_ssdm_threa</name>
 						<fileName>./Advios.h</fileName>
-						<fileDirectory>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<fileDirectory>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</fileDirectory>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>Advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</first>
+								<first>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -177,7 +177,7 @@
 											<first>./Advios.h</first>
 											<second>Advios</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -191,29 +191,26 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>47</item>
+					<item>48</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_7">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>20</id>
+						<id>21</id>
 						<name></name>
 						<fileName>./Advios.h</fileName>
-						<fileDirectory>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<fileDirectory>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</fileDirectory>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>Advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</first>
+								<first>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -222,7 +219,7 @@
 											<first>./Advios.h</first>
 											<second>Advios</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -236,123 +233,70 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>48</item>
 					<item>49</item>
 					<item>50</item>
+					<item>51</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_8">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>25</id>
+						<id>26</id>
 						<name>Advios_ssdm_threa_1</name>
 						<fileName>./Advios.h</fileName>
-						<fileDirectory>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</fileDirectory>
-						<lineNumber>18</lineNumber>
-						<contextFuncName>Advios</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>./Advios.h</first>
-											<second>Advios</second>
-										</first>
-										<second>18</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>60</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_9">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>26</id>
-						<name></name>
-						<fileName>./Advios.h</fileName>
-						<fileDirectory>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</fileDirectory>
-						<lineNumber>18</lineNumber>
-						<contextFuncName>Advios</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>./Advios.h</first>
-											<second>Advios</second>
-										</first>
-										<second>18</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>61</item>
-					<item>62</item>
-					<item>63</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
-			</item>
-			<item class_id_reference="9" object_id="_10">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>37</id>
-						<name></name>
-						<fileName>./Advios.h</fileName>
-						<fileDirectory>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</fileDirectory>
+						<fileDirectory>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</fileDirectory>
 						<lineNumber>17</lineNumber>
 						<contextFuncName>Advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</first>
+								<first>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>./Advios.h</first>
+											<second>Advios</second>
+										</first>
+										<second>17</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>61</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_9">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>27</id>
+						<name></name>
+						<fileName>./Advios.h</fileName>
+						<fileDirectory>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</fileDirectory>
+						<lineNumber>17</lineNumber>
+						<contextFuncName>Advios</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -373,30 +317,30 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>0</count>
+					<count>3</count>
 					<item_version>0</item_version>
+					<item>62</item>
+					<item>63</item>
+					<item>64</item>
 				</oprand_edges>
-				<opcode>ret</opcode>
+				<opcode>br</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
 			</item>
-			<item class_id_reference="9" object_id="_11">
+			<item class_id_reference="9" object_id="_10">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>39</id>
+						<id>38</id>
 						<name></name>
 						<fileName>./Advios.h</fileName>
-						<fileDirectory>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<fileDirectory>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</fileDirectory>
+						<lineNumber>16</lineNumber>
 						<contextFuncName>Advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</first>
+								<first>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -405,7 +349,48 @@
 											<first>./Advios.h</first>
 											<second>Advios</second>
 										</first>
-										<second>18</second>
+										<second>16</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>0</count>
+					<item_version>0</item_version>
+				</oprand_edges>
+				<opcode>ret</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_11">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>40</id>
+						<name></name>
+						<fileName>./Advios.h</fileName>
+						<fileDirectory>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</fileDirectory>
+						<lineNumber>17</lineNumber>
+						<contextFuncName>Advios</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>./Advios.h</first>
+											<second>Advios</second>
+										</first>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -419,27 +404,24 @@
 				<oprand_edges>
 					<count>9</count>
 					<item_version>0</item_version>
-					<item>65</item>
 					<item>66</item>
 					<item>67</item>
 					<item>68</item>
 					<item>69</item>
 					<item>70</item>
 					<item>71</item>
-					<item>74</item>
+					<item>72</item>
 					<item>75</item>
+					<item>76</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>1.30</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_12">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>40</id>
+						<id>41</id>
 						<name></name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -458,29 +440,26 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>72</item>
+					<item>73</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_13">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>42</id>
+						<id>43</id>
 						<name></name>
 						<fileName>./Advios.h</fileName>
-						<fileDirectory>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<fileDirectory>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</fileDirectory>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>Advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/olafur/Documents/Embedded_systems/Assignment_1/-EmbeddedRealTimeSystems-/Assignment2/Exercise7_2/ip_repo</first>
+								<first>C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\Assignment2\Exercise7_2\ip_repo</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -489,7 +468,7 @@
 											<first>./Advios.h</first>
 											<second>Advios</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -503,26 +482,23 @@
 				<oprand_edges>
 					<count>8</count>
 					<item_version>0</item_version>
-					<item>52</item>
 					<item>53</item>
 					<item>54</item>
 					<item>55</item>
 					<item>56</item>
 					<item>57</item>
 					<item>58</item>
-					<item>73</item>
+					<item>59</item>
+					<item>74</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.97</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_14">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>43</id>
+						<id>44</id>
 						<name></name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -541,19 +517,16 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>59</item>
+					<item>60</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
 			</item>
 			<item class_id_reference="9" object_id="_15">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>45</id>
+						<id>46</id>
 						<name></name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -575,9 +548,6 @@
 				</oprand_edges>
 				<opcode>unreachable</opcode>
 				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_delay>0.00</m_delay>
 			</item>
 		</nodes>
 		<consts class_id="15" tracking_level="0" version="0">
@@ -587,7 +557,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>51</id>
+						<id>52</id>
 						<name>Advios_modulate_clock</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -610,7 +580,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>64</id>
+						<id>65</id>
 						<name>Advios_LedControl</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -636,7 +606,7 @@
 			<item class_id="18" tracking_level="1" version="0" object_id="_18">
 				<Obj>
 					<type>3</type>
-					<id>21</id>
+					<id>22</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -653,14 +623,14 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>19</item>
 					<item>20</item>
+					<item>21</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_19">
 				<Obj>
 					<type>3</type>
-					<id>27</id>
+					<id>28</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -677,14 +647,14 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>25</item>
 					<item>26</item>
+					<item>27</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_20">
 				<Obj>
 					<type>3</type>
-					<id>38</id>
+					<id>39</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -701,13 +671,13 @@
 				<node_objs>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>37</item>
+					<item>38</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_21">
 				<Obj>
 					<type>3</type>
-					<id>41</id>
+					<id>42</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -724,14 +694,14 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>39</item>
 					<item>40</item>
+					<item>41</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_22">
 				<Obj>
 					<type>3</type>
-					<id>44</id>
+					<id>45</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -748,14 +718,14 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>42</item>
 					<item>43</item>
+					<item>44</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_23">
 				<Obj>
 					<type>3</type>
-					<id>46</id>
+					<id>47</id>
 					<name>UnifiedUnreachableBlock</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -772,7 +742,7 @@
 				<node_objs>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>45</item>
+					<item>46</item>
 				</node_objs>
 			</item>
 		</blocks>
@@ -780,235 +750,202 @@
 			<count>33</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_24">
-				<id>47</id>
-				<edge_type>1</edge_type>
-				<source_obj>7</source_obj>
-				<sink_obj>19</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_25">
 				<id>48</id>
 				<edge_type>1</edge_type>
-				<source_obj>19</source_obj>
+				<source_obj>7</source_obj>
 				<sink_obj>20</sink_obj>
-				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_25">
+				<id>49</id>
+				<edge_type>1</edge_type>
+				<source_obj>20</source_obj>
+				<sink_obj>21</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_26">
-				<id>49</id>
-				<edge_type>2</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>20</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_27">
 				<id>50</id>
 				<edge_type>2</edge_type>
-				<source_obj>44</source_obj>
-				<sink_obj>20</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>28</source_obj>
+				<sink_obj>21</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_27">
+				<id>51</id>
+				<edge_type>2</edge_type>
+				<source_obj>45</source_obj>
+				<sink_obj>21</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_28">
-				<id>52</id>
-				<edge_type>1</edge_type>
-				<source_obj>51</source_obj>
-				<sink_obj>42</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_29">
 				<id>53</id>
 				<edge_type>1</edge_type>
-				<source_obj>1</source_obj>
-				<sink_obj>42</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>52</source_obj>
+				<sink_obj>43</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_30">
+			<item class_id_reference="20" object_id="_29">
 				<id>54</id>
 				<edge_type>1</edge_type>
-				<source_obj>2</source_obj>
-				<sink_obj>42</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>1</source_obj>
+				<sink_obj>43</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_31">
+			<item class_id_reference="20" object_id="_30">
 				<id>55</id>
 				<edge_type>1</edge_type>
-				<source_obj>3</source_obj>
-				<sink_obj>42</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>2</source_obj>
+				<sink_obj>43</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_32">
+			<item class_id_reference="20" object_id="_31">
 				<id>56</id>
 				<edge_type>1</edge_type>
-				<source_obj>4</source_obj>
-				<sink_obj>42</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>3</source_obj>
+				<sink_obj>43</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_33">
+			<item class_id_reference="20" object_id="_32">
 				<id>57</id>
 				<edge_type>1</edge_type>
-				<source_obj>5</source_obj>
-				<sink_obj>42</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>4</source_obj>
+				<sink_obj>43</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_34">
+			<item class_id_reference="20" object_id="_33">
 				<id>58</id>
 				<edge_type>1</edge_type>
+				<source_obj>5</source_obj>
+				<sink_obj>43</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_34">
+				<id>59</id>
+				<edge_type>1</edge_type>
 				<source_obj>6</source_obj>
-				<sink_obj>42</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<sink_obj>43</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_35">
-				<id>59</id>
+				<id>60</id>
 				<edge_type>2</edge_type>
-				<source_obj>46</source_obj>
-				<sink_obj>43</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>47</source_obj>
+				<sink_obj>44</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_36">
-				<id>60</id>
-				<edge_type>1</edge_type>
-				<source_obj>9</source_obj>
-				<sink_obj>25</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_37">
 				<id>61</id>
 				<edge_type>1</edge_type>
-				<source_obj>25</source_obj>
+				<source_obj>9</source_obj>
 				<sink_obj>26</sink_obj>
-				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_37">
+				<id>62</id>
+				<edge_type>1</edge_type>
+				<source_obj>26</source_obj>
+				<sink_obj>27</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_38">
-				<id>62</id>
-				<edge_type>2</edge_type>
-				<source_obj>38</source_obj>
-				<sink_obj>26</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_39">
 				<id>63</id>
 				<edge_type>2</edge_type>
-				<source_obj>41</source_obj>
-				<sink_obj>26</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>39</source_obj>
+				<sink_obj>27</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_39">
+				<id>64</id>
+				<edge_type>2</edge_type>
+				<source_obj>42</source_obj>
+				<sink_obj>27</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_40">
-				<id>65</id>
-				<edge_type>1</edge_type>
-				<source_obj>64</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_41">
 				<id>66</id>
 				<edge_type>1</edge_type>
-				<source_obj>1</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>65</source_obj>
+				<sink_obj>40</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_42">
+			<item class_id_reference="20" object_id="_41">
 				<id>67</id>
 				<edge_type>1</edge_type>
-				<source_obj>2</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>1</source_obj>
+				<sink_obj>40</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_43">
+			<item class_id_reference="20" object_id="_42">
 				<id>68</id>
 				<edge_type>1</edge_type>
-				<source_obj>3</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>2</source_obj>
+				<sink_obj>40</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_44">
+			<item class_id_reference="20" object_id="_43">
 				<id>69</id>
 				<edge_type>1</edge_type>
-				<source_obj>4</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>3</source_obj>
+				<sink_obj>40</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_45">
+			<item class_id_reference="20" object_id="_44">
 				<id>70</id>
 				<edge_type>1</edge_type>
-				<source_obj>5</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>4</source_obj>
+				<sink_obj>40</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_46">
+			<item class_id_reference="20" object_id="_45">
 				<id>71</id>
 				<edge_type>1</edge_type>
+				<source_obj>5</source_obj>
+				<sink_obj>40</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_46">
+				<id>72</id>
+				<edge_type>1</edge_type>
 				<source_obj>6</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<sink_obj>40</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_47">
-				<id>72</id>
+				<id>73</id>
 				<edge_type>2</edge_type>
-				<source_obj>46</source_obj>
-				<sink_obj>40</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>47</source_obj>
+				<sink_obj>41</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_48">
-				<id>73</id>
-				<edge_type>1</edge_type>
-				<source_obj>8</source_obj>
-				<sink_obj>42</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_49">
 				<id>74</id>
 				<edge_type>1</edge_type>
-				<source_obj>10</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>8</source_obj>
+				<sink_obj>43</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_50">
+			<item class_id_reference="20" object_id="_49">
 				<id>75</id>
 				<edge_type>1</edge_type>
+				<source_obj>10</source_obj>
+				<sink_obj>40</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_50">
+				<id>76</id>
+				<edge_type>1</edge_type>
 				<source_obj>11</source_obj>
-				<sink_obj>39</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<sink_obj>40</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_51">
-				<id>189</id>
+				<id>205</id>
 				<edge_type>2</edge_type>
-				<source_obj>21</source_obj>
-				<sink_obj>44</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>22</source_obj>
+				<sink_obj>45</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_52">
-				<id>190</id>
+				<id>206</id>
 				<edge_type>2</edge_type>
-				<source_obj>21</source_obj>
-				<sink_obj>27</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>22</source_obj>
+				<sink_obj>28</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_53">
-				<id>191</id>
+				<id>207</id>
 				<edge_type>2</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>41</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>28</source_obj>
+				<sink_obj>42</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_54">
-				<id>192</id>
+				<id>208</id>
 				<edge_type>2</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>38</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>28</source_obj>
+				<sink_obj>39</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_55">
-				<id>193</id>
+				<id>209</id>
 				<edge_type>2</edge_type>
-				<source_obj>41</source_obj>
-				<sink_obj>46</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>42</source_obj>
+				<sink_obj>47</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_56">
-				<id>194</id>
+				<id>210</id>
 				<edge_type>2</edge_type>
-				<source_obj>44</source_obj>
-				<sink_obj>46</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<source_obj>45</source_obj>
+				<sink_obj>47</sink_obj>
 			</item>
 		</edges>
 	</cdfg>
@@ -1026,19 +963,19 @@
 			<basic_blocks>
 				<count>6</count>
 				<item_version>0</item_version>
-				<item>21</item>
-				<item>27</item>
-				<item>38</item>
-				<item>41</item>
-				<item>44</item>
-				<item>46</item>
+				<item>22</item>
+				<item>28</item>
+				<item>39</item>
+				<item>42</item>
+				<item>45</item>
+				<item>47</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>0</mMinLatency>
-			<mMaxLatency>4</mMaxLatency>
+			<mMinLatency>4</mMinLatency>
+			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -1050,7 +987,7 @@
 			<item class_id="26" tracking_level="1" version="0" object_id="_59">
 				<id>1</id>
 				<operations class_id="27" tracking_level="0" version="0">
-					<count>26</count>
+					<count>27</count>
 					<item_version>0</item_version>
 					<item class_id="28" tracking_level="1" version="0" object_id="_60">
 						<id>12</id>
@@ -1098,7 +1035,7 @@
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_69">
-						<id>22</id>
+						<id>21</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
@@ -1123,7 +1060,7 @@
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_74">
-						<id>28</id>
+						<id>27</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
@@ -1173,44 +1110,49 @@
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_84">
-						<id>39</id>
+						<id>38</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_85">
+						<id>40</id>
 						<stage>2</stage>
 						<latency>2</latency>
 					</item>
-					<item class_id_reference="28" object_id="_85">
-						<id>42</id>
+					<item class_id_reference="28" object_id="_86">
+						<id>43</id>
 						<stage>2</stage>
 						<latency>2</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_86">
+			<item class_id_reference="26" object_id="_87">
 				<id>2</id>
 				<operations>
 					<count>5</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_87">
-						<id>39</id>
-						<stage>1</stage>
-						<latency>2</latency>
-					</item>
 					<item class_id_reference="28" object_id="_88">
 						<id>40</id>
 						<stage>1</stage>
-						<latency>1</latency>
+						<latency>2</latency>
 					</item>
 					<item class_id_reference="28" object_id="_89">
-						<id>42</id>
+						<id>41</id>
 						<stage>1</stage>
-						<latency>2</latency>
+						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_90">
 						<id>43</id>
 						<stage>1</stage>
-						<latency>1</latency>
+						<latency>2</latency>
 					</item>
 					<item class_id_reference="28" object_id="_91">
-						<id>45</id>
+						<id>44</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_92">
+						<id>46</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
@@ -1220,7 +1162,7 @@
 		<transitions class_id="29" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="30" tracking_level="1" version="0" object_id="_92">
+			<item class_id="30" tracking_level="1" version="0" object_id="_93">
 				<inState>1</inState>
 				<outState>2</outState>
 				<condition class_id="31" tracking_level="0" version="0">
@@ -1233,7 +1175,7 @@
 							<item_version>0</item_version>
 							<item class_id="34" tracking_level="0" version="0">
 								<first class_id="35" tracking_level="0" version="0">
-									<first>19</first>
+									<first>20</first>
 									<second>0</second>
 								</first>
 								<second>0</second>
@@ -1244,7 +1186,7 @@
 							<item_version>0</item_version>
 							<item>
 								<first>
-									<first>25</first>
+									<first>26</first>
 									<second>0</second>
 								</first>
 								<second>0</second>
@@ -1260,21 +1202,14 @@
 		<count>10</count>
 		<item_version>0</item_version>
 		<item class_id="38" tracking_level="0" version="0">
-			<first>19</first>
+			<first>20</first>
 			<second class_id="39" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>20</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>25</first>
+			<first>21</first>
 			<second>
 				<first>0</first>
 				<second>0</second>
@@ -1283,59 +1218,6 @@
 		<item>
 			<first>26</first>
 			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>37</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>39</first>
-			<second>
-				<first>0</first>
-				<second>1</second>
-			</second>
-		</item>
-		<item>
-			<first>40</first>
-			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>42</first>
-			<second>
-				<first>0</first>
-				<second>1</second>
-			</second>
-		</item>
-		<item>
-			<first>43</first>
-			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>45</first>
-			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-	</node_label_latency>
-	<bblk_ent_exit class_id="40" tracking_level="0" version="0">
-		<count>6</count>
-		<item_version>0</item_version>
-		<item class_id="41" tracking_level="0" version="0">
-			<first>21</first>
-			<second class_id="42" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>
 			</second>
@@ -1355,7 +1237,21 @@
 			</second>
 		</item>
 		<item>
+			<first>40</first>
+			<second>
+				<first>0</first>
+				<second>1</second>
+			</second>
+		</item>
+		<item>
 			<first>41</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>43</first>
 			<second>
 				<first>0</first>
 				<second>1</second>
@@ -1364,12 +1260,58 @@
 		<item>
 			<first>44</first>
 			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>46</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+	</node_label_latency>
+	<bblk_ent_exit class_id="40" tracking_level="0" version="0">
+		<count>6</count>
+		<item_version>0</item_version>
+		<item class_id="41" tracking_level="0" version="0">
+			<first>22</first>
+			<second class_id="42" tracking_level="0" version="0">
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>28</first>
+			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>39</first>
+			<second>
+				<first>0</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>42</first>
+			<second>
 				<first>0</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
-			<first>46</first>
+			<first>45</first>
+			<second>
+				<first>0</first>
+				<second>1</second>
+			</second>
+		</item>
+		<item>
+			<first>47</first>
 			<second>
 				<first>1</first>
 				<second>1</second>
@@ -1384,37 +1326,37 @@
 		<count>4</count>
 		<item_version>0</item_version>
 		<item class_id="45" tracking_level="0" version="0">
-			<first>70</first>
+			<first>78</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>39</item>
-				<item>39</item>
+				<item>40</item>
+				<item>40</item>
 			</second>
 		</item>
 		<item>
-			<first>90</first>
+			<first>98</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>42</item>
-				<item>42</item>
+				<item>43</item>
+				<item>43</item>
 			</second>
 		</item>
 		<item>
-			<first>108</first>
+			<first>116</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>19</item>
+				<item>20</item>
 			</second>
 		</item>
 		<item>
-			<first>112</first>
+			<first>120</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>25</item>
+				<item>26</item>
 			</second>
 		</item>
 	</dp_fu_nodes>
@@ -1426,21 +1368,21 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item class_id="48" tracking_level="0" version="0">
-			<first>grp_Advios_LedControl_fu_70</first>
+			<first>grp_Advios_LedControl_fu_78</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>39</item>
-				<item>39</item>
+				<item>40</item>
+				<item>40</item>
 			</second>
 		</item>
 		<item>
-			<first>grp_Advios_modulate_clock_fu_90</first>
+			<first>grp_Advios_modulate_clock_fu_98</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>42</item>
-				<item>42</item>
+				<item>43</item>
+				<item>43</item>
 			</second>
 		</item>
 	</dp_fu_nodes_module>
@@ -1448,19 +1390,19 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item>
-			<first>Advios_ssdm_threa_1_load_fu_112</first>
+			<first>Advios_ssdm_threa_1_load_fu_120</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>25</item>
+				<item>26</item>
 			</second>
 		</item>
 		<item>
-			<first>Advios_ssdm_threa_load_fu_108</first>
+			<first>Advios_ssdm_threa_load_fu_116</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>19</item>
+				<item>20</item>
 			</second>
 		</item>
 	</dp_fu_nodes_io>
@@ -1476,11 +1418,11 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item>
-			<first>116</first>
+			<first>124</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>19</item>
+				<item>20</item>
 			</second>
 		</item>
 	</dp_reg_nodes>
@@ -1488,11 +1430,11 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item>
-			<first>Advios_ssdm_threa_reg_116</first>
+			<first>Advios_ssdm_threa_reg_124</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>19</item>
+				<item>20</item>
 			</second>
 		</item>
 	</dp_regname_nodes>
@@ -1517,8 +1459,8 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>42</item>
-						<item>39</item>
+						<item>43</item>
+						<item>40</item>
 					</second>
 				</item>
 			</second>
@@ -1533,8 +1475,8 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>42</item>
-						<item>39</item>
+						<item>43</item>
+						<item>40</item>
 					</second>
 				</item>
 			</second>
@@ -1549,8 +1491,8 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>42</item>
-						<item>39</item>
+						<item>43</item>
+						<item>40</item>
 					</second>
 				</item>
 			</second>
@@ -1565,8 +1507,8 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>42</item>
-						<item>39</item>
+						<item>43</item>
+						<item>40</item>
 					</second>
 				</item>
 			</second>
@@ -1581,16 +1523,20 @@
 					<second>
 						<count>2</count>
 						<item_version>0</item_version>
-						<item>42</item>
-						<item>39</item>
+						<item>43</item>
+						<item>40</item>
 					</second>
 				</item>
 			</second>
 		</item>
 	</dp_port_io_nodes>
 	<port2core class_id="52" tracking_level="0" version="0">
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item class_id="53" tracking_level="0" version="0">
+			<first>4</first>
+			<second>AXI4LiteS</second>
+		</item>
 	</port2core>
 	<node2core>
 		<count>0</count>

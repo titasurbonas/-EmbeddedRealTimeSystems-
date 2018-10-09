@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Advios'" level="0">
-<item name = "Date">Sun Oct  7 14:07:04 2018
+<item name = "Date">Mon Oct  8 19:23:23 2018
 </item>
-<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">advios_ip</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 4.830, 1.25</column>
+<column name="ap_clk">8.00, 5.92, 1.00</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">0, 4, 0, 4, none</column>
+<column name="">0, 4, 1, 5, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_Advios_LedControl_fu_70">Advios_LedControl, 3, 3, 3, 3, none</column>
-<column name="grp_Advios_modulate_clock_fu_90">Advios_modulate_clock, 3, 3, 3, 3, none</column>
+<column name="grp_Advios_LedControl_fu_78">Advios_LedControl, 3, 3, 3, 3, none</column>
+<column name="grp_Advios_modulate_clock_fu_98">Advios_modulate_clock, 3, 3, 3, 3, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

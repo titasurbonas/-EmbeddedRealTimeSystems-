@@ -1,0 +1,16 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Oct  8 19:28:12 2018
+| Host         : LAPTOP-07F69O5Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Advios_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Advios_0_0 (xilinx.com:hls:Advios:1.0) from (Rev. 1810071821) to (Rev. 1810081926)
+

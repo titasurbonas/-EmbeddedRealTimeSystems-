@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-103] Write value to a non-output port.&#xD;&#xA;Synthesis failed.&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exsercise7_3/ip_repo/Advisio/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/Assignment2/Exsercise7_3/ip_repo/Advisio/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;" projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:37.025+0200"/>
+        <logs message="ERROR: [RTGEN 206-102] Write value to a non-output port: 'Top/random_form1' to 'Top/random'." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:36.991+0200"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] Errors in preparing webtalk data (ignored): can't read &quot;portList&quot;: no such variable." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:36.910+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Errors in preparing webtalk data (ignored): can't read &quot;portList&quot;: no such variable." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:36.738+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Errors in preparing webtalk data (ignored): can't read &quot;portList&quot;: no such variable." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:36.502+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_V' is power-on initialization." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:36.346+0200" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Port 'outLeds' has no reset." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:36.171+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (Advisio/Advios.cpp:34:8) in function 'Advios::LedControl' is an infinite loop." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:36.166+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (Advisio/Advios.cpp:13:20) in function 'Advios::modulate_clock' is an infinite loop." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:35.899+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&amp;ctrl' is deprecated. Please use the interface directive to specify the AXI interface." projectName="Advisio" solutionName="solution1" date="2018-10-09T16:09:33.792+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
