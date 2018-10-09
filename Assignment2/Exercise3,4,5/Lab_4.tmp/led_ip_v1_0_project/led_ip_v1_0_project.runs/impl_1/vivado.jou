@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Sep 16 16:22:10 2018
+# Process ID: 91718
+# Current directory: /home/olafur/Documents/Embedded_systems/lectures/Lab_4/Lab_4.tmp/led_ip_v1_0_project/led_ip_v1_0_project.runs/impl_1
+# Command line: vivado -log led_ip_v1_0.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source led_ip_v1_0.tcl -notrace
+# Log file: /home/olafur/Documents/Embedded_systems/lectures/Lab_4/Lab_4.tmp/led_ip_v1_0_project/led_ip_v1_0_project.runs/impl_1/led_ip_v1_0.vdi
+# Journal file: /home/olafur/Documents/Embedded_systems/lectures/Lab_4/Lab_4.tmp/led_ip_v1_0_project/led_ip_v1_0_project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source led_ip_v1_0.tcl -notrace

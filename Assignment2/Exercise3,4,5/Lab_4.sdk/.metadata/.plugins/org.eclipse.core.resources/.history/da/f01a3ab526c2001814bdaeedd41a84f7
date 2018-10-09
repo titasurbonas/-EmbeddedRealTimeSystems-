@@ -1,0 +1,20 @@
+/*
+ * Matrix.h
+ *
+ *  Created on: Sep 27, 2018
+ *      Author: root
+ */
+
+#ifndef MATRIX_H_
+#define MATRIX_H_
+
+#define MSIZE 4
+
+typedef union {
+	unsigned char comp[MSIZE];
+	unsigned int vect;
+} vectorType;
+
+
+
+#endif /* MATRIX_H_ */

@@ -1,0 +1,42 @@
+/*
+ * Matrix.c
+ *
+ *  Created on: Sep 27, 2018
+ *      Author: Ólafur Dagur Skúlason
+ */
+
+#include "../inc/Matrix.h"
+
+
+matrix aInst, bInst, pInst;
+
+void setInputMatrices(matrix A, matrix B)
+{
+	Xil_MemCpy(&aInst, &A, sizeof(aInst));
+	Xil_MemCpy(&bInst, &B, sizeof(bInst));
+}
+
+void displayMatrix(matrix input)
+{
+	unsigned char i = 0;
+	for(; i < MSIZE*MSIZE; i++)
+	{
+		if (i % MSIZE == 0)
+		{
+			xil_printf("\n\r");
+		}
+		xil_printf("%i ", input[i/MSIZE][i%MSIZE]);
+
+	}
+}
+
+
+void multiMatrixSoft(matrix A, matrix B, matrix P)
+{
+
+}
+
+void multiMatrixHard(matrix A, matrix B, matrix P)
+{
+
+}

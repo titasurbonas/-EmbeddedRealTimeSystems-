@@ -1,0 +1,60 @@
+/*
+ * Matrix.c
+ *
+ *  Created on: Sep 27, 2018
+ *      Author: Ólafur Dagur Skúlason
+ */
+
+#include "../inc/Matrix.h"
+
+
+matrix aInst, bInst, pInst;
+
+void setInputMatrices(matrix A, matrix B)
+{
+	Xil_MemCpy(&aInst, &A, sizeof(aInst));
+	Xil_MemCpy(&bInst, &B, sizeof(bInst));
+}
+
+void displayMatrix(matrix input)
+{
+	unsigned char i = 0;
+	for(; i < MSIZE*MSIZE; i++)
+	{
+		if (i % MSIZE == 0)
+		{
+			xil_printf("\n\r");
+		}
+		xil_printf("%i ", (&input)[i/MSIZE]->comp[i%MSIZE]);
+
+	}
+}
+
+unsigned char RowMult(matrix A, matrix B, unsigned char row_a, unsigned char row_b)
+{
+	int i = 0;
+	unsigned char sum = 0;
+	for(;i < MSIZE; i++)
+	{
+		sum += (*A)[row_a]->comp[i] * (*B)[row_b]->comp[i];
+	}
+	return sum;
+}
+
+void multiMatrixSoft(matrix A, matrix B, matrix P)
+{
+	int iterator;
+	for (iterator = 0; iterator < MSIZE*MSIZE; iterator++)
+	{
+		P[iterator/MSIZE][iterator%MSIZE] = RowMult(A, B, iterator/MSIZE, iterator%MSIZE);
+	}
+}
+
+void multiMatrixHard(matrix A, matrix B, matrix P)
+{
+	int iterator;
+	for (iterator = 0; iterator < MSIZE*MSIZE; iterator++)
+	{
+		P[iterator/MSIZE][iterator%MSIZE] = RowMult(A, B, iterator/MSIZE, iterator%MSIZE);
+	}
+}
