@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EmbeddedSystemX" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAACAIAQACAIBAAAQBAgAAAGAAIAAAAQlAAAA=</HashCode>
+      <FileName>EmbeddedSystemX.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Failure" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAIAAAAAEAAAA=</HashCode>
+      <FileName>Failure.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Initializing" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>Initializing.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Operational">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Operational::Ready" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Operational.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Operational::Configuration" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Operational.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Operational::Suspended" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Operational.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Operational::RealTimeLoop">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <NestedTypes>
+          <Class Name="Operational::RealTimeLoop::Mode1" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Operational.h</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="Operational::RealTimeLoop::Mode2" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Operational.h</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="Operational::RealTimeLoop::Mode3" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Operational.h</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>Operational.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAAAIAAAACAIEAAAAABAAAABAAAAACAAIAAAAAkAAAA=</HashCode>
+      <FileName>Operational.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerOnSelfTest" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAIQAAAAAAAAAAAAAAAAAAAAAAAQEAAAA=</HashCode>
+      <FileName>PowerOnSelfTest.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="State" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAACAIAQACAABAAAAAAgAAACAAIAAABRkAAAA=</HashCode>
+      <FileName>State.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
