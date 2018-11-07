@@ -6,11 +6,13 @@
 class PowerOnSelfTest :
 	public State
 {
-public:
+private:
 	PowerOnSelfTest();
-	~PowerOnSelfTest();
+	static PowerOnSelfTest * self;
+public:
 	State * SelfTestFailed();
 	State * SelfTestOk();
 	virtual void StateName();
+	static State * GetState();
 };
 

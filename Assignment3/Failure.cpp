@@ -1,31 +1,31 @@
 #include "Failure.h"
 
+Failure * Failure::self = nullptr;
 
 Failure::Failure()
 {
 }
 
-
-Failure::~Failure()
-{
-}
-
-
 State * Failure::Restart()
 {
-	// TODO: Add your implementation code here.
-	return new PowerOnSelfTest();
+	return PowerOnSelfTest::GetState();
 }
 
 
 State * Failure::Exit()
 {
-	// TODO: Add your implementation code here.
-	std::_Exit(0);
+	std::cout << "Exiting from failure state" << std::endl;
 	return nullptr;
 }
 
 void Failure::StateName()
 {
 	std::cout << "Failure" << std::endl;
+}
+
+State * Failure::GetState()
+{
+	if (self == nullptr)
+		self = new Failure();
+	return self;
 }

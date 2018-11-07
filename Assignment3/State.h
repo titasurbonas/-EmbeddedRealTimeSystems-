@@ -4,9 +4,9 @@
 
 class State
 {
-public:
+protected:
 	State();
-	~State();
+public:
 	virtual State * SelfTestOk();
 	virtual State * SelfTestFailed();
 	virtual State * Initialized();

@@ -4,10 +4,12 @@
 class Initializing :
 	public State
 {
-public:
+private:
 	Initializing();
-	~Initializing();
+	static Initializing * self;
+public:
 	State * Initialized();
 	virtual void StateName();
+	static State * GetState();
 };
 

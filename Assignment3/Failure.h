@@ -6,11 +6,14 @@
 class Failure :
 	public State
 {
-public:
+
+private:
 	Failure();
-	~Failure();
+	static Failure * self;
+public:
 	State * Restart();
 	State * Exit();
 	virtual void StateName();
+	static State * GetState();
 };
 

@@ -1,30 +1,31 @@
 #include "PowerOnSelfTest.h"
 
+PowerOnSelfTest * PowerOnSelfTest::self = nullptr;
+
 
 PowerOnSelfTest::PowerOnSelfTest()
 {
 }
 
-
-PowerOnSelfTest::~PowerOnSelfTest()
-{
-}
-
-
 State * PowerOnSelfTest::SelfTestFailed()
 {
-	// TODO: Add your implementation code here.
-	return new Failure();
+	return Failure::GetState();
 }
 
 
 State * PowerOnSelfTest::SelfTestOk()
 {
-	// TODO: Add your implementation code here.
-	return new Initializing();
+	return Initializing::GetState();
 }
 
 void PowerOnSelfTest::StateName()
 {
 	std::cout << "PowerOnSelfTest" << std::endl;
+}
+
+State * PowerOnSelfTest::GetState()
+{
+	if (self == nullptr)
+		self = new PowerOnSelfTest();
+	return self;
 }

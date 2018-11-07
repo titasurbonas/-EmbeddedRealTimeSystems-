@@ -5,60 +5,55 @@ State::State()
 {
 }
 
-
-State::~State()
-{
-}
-
 State * State::SelfTestOk()
 {
-	return nullptr;
+	return this;
 }
 State * State::SelfTestFailed()
 {
-	return nullptr;
+	return this;
 }
 State * State::Initialized()
 {
-	return nullptr;
+	return this;
 }
 State * State::Restart()
 {
-	return nullptr;
+	return this;
 }
 State * State::Configure()
 {
-	return nullptr;
+	return this;
 }
 State * State::ConfigurationEnded()
 {
-	return nullptr;
+	return this;
 }
 State * State::Exit() {
-	return nullptr;
+	return this;
 }
 State * State::Stop() {
-	return nullptr;
+	return this;
 }
 State * State::Start() {
-	return nullptr;
+	return this;
 }
 State * State::Suspend() {
-	return nullptr;
+	return this;
 }
 
 State * State::Resume() {
-	return nullptr;
+	return this;
 }
 State * State::ConfigX() {
-	return nullptr;
+	return this;
 }
 State * State::chMode() {
-	return nullptr;
+	return this;
 }
 State * State::EventX() {
-	return nullptr;
+	return this;
 }
 State * State::EventY() {
-	return nullptr;
+	return this;
 }

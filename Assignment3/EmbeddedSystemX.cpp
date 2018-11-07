@@ -4,162 +4,82 @@
 EmbeddedSystemX::EmbeddedSystemX()
 {
 	VersionNo = 0;
-	current_state = new PowerOnSelfTest();
-}
-
-
-EmbeddedSystemX::~EmbeddedSystemX()
-{
+	current_state = (State*)PowerOnSelfTest::GetState();
 }
 
 void EmbeddedSystemX::SelfTestOk()
 {
-	State * s = current_state->SelfTestOk();
-	if (s != nullptr) {
-		delete current_state; 
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->SelfTestOk();
 }
 
 void EmbeddedSystemX::SelfTestFailed()
 {
-	State * s = current_state->SelfTestFailed();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->SelfTestFailed();
 }
 
 void EmbeddedSystemX::Initialized()
 {
-	State * s = current_state->Initialized();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->Initialized();
 }
 
 void EmbeddedSystemX::Restart()
 {
-	State * s = current_state->Restart();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->Restart();
 }
 
 void EmbeddedSystemX::Configure()
 {
-	State * s = current_state->Configure();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->Configure();
 }
 
 void EmbeddedSystemX::ConfigurationEnded()
 {
-	State * s = current_state->ConfigurationEnded();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->ConfigurationEnded();
 }
 
 void EmbeddedSystemX::Exit()
 {
-	State * s = current_state->Exit();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->Exit();
 }
 
 void EmbeddedSystemX::Stop()
 {
-	State * s = current_state->Stop();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->Stop();
 }
 
 void EmbeddedSystemX::Start()
 {
-	State * s = current_state->Start();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->Start();
 }
 
 void EmbeddedSystemX::Suspend()
 {
-	State * s = current_state->Suspend();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->Suspend();
 }
 
 void EmbeddedSystemX::Resume()
 {
-	State * s = current_state->Resume();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->Resume();
 }
 
 void EmbeddedSystemX::ConfigX()
 {
-	State * s = current_state->ConfigX();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->ConfigX();
 }
 
 void EmbeddedSystemX::chMode()
 {
-	State * s = current_state->chMode();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->chMode();
 }
 
 void EmbeddedSystemX::EventX()
 {
-	State * s = current_state->EventX();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->EventX();
 }
 
 void EmbeddedSystemX::EventY()
 {
-	State * s = current_state->EventY();
-	if (s != nullptr) {
-		delete current_state;
-		current_state = s;
-		current_state->StateName();
-	}
+	current_state = current_state->EventY();
 }
 
 void EmbeddedSystemX::StateName()

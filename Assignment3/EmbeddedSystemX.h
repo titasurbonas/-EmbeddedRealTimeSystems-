@@ -1,9 +1,5 @@
 #pragma once
 
-#include "State.h"
-#include "Failure.h"
-#include "Initializing.h"
-#include "Operational.h"
 #include "PowerOnSelfTest.h"
 
 
@@ -11,7 +7,6 @@ class EmbeddedSystemX
 {
 public:
 	EmbeddedSystemX();
-	~EmbeddedSystemX();
 private:
 	int VersionNo;
 	char *Name;
@@ -34,4 +29,3 @@ public:
 	void EventY();
 	void StateName();
 };
-
