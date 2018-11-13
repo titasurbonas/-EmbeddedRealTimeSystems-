@@ -1,0 +1,52 @@
+/*
+ * Empty C++ Application
+ */
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xgpiops.h"
+#include "EmbeddedSystemX.h"
+
+static XGpioPs psGpioInstancePtr;
+static int iPinNumber = 7; /*Led LD9 on ZedBoard and LD4 on Zybo is connected to MIO pin 7*/
+
+int main()
+{
+	XGpio sw, led, btn;
+
+	XGpioPs_Config*GpioConfigPtr;
+
+	int iPinNumberEMIO = 54;
+	u32 uPinDirectionEMIO = 0x0;
+	u32 uPinDirection = 0x1;
+
+	XGpio_Initialize(&sw, XPAR_SWITCHES_DEVICE_ID);
+    XGpio_Initialize(&btn, XPAR_BUTTONS_DEVICE_ID);
+    XGpio_Initialize(&led, XPAR_LEDS_DEVICE_ID);
+
+	//PS GPIO pin setting to Output
+	XGpioPs_SetDirectionPin(&psGpioInstancePtr, iPinNumber,uPinDirection);
+	XGpioPs_SetOutputEnablePin(&psGpioInstancePtr, iPinNumber,XPAR_LEDS_DEVICE_ID);
+	//EMIO PIN Setting to Input port
+	XGpioPs_SetDirectionPin(&psGpioInstancePtr,
+	  iPinNumberEMIO,uPinDirectionEMIO);
+	XGpioPs_SetOutputEnablePin(&psGpioInstancePtr, iPinNumberEMIO,XPAR_BUTTONS_DEVICE_ID);
+
+	XGpioPs_SetDirectionPin(&psGpioInstancePtr,
+	  iPinNumberEMIO,uPinDirectionEMIO);
+	XGpioPs_SetOutputEnablePin(&psGpioInstancePtr, iPinNumberEMIO,XPAR_SWITCHES_DEVICE_ID);
+
+	EmbeddedSystemX system = EmbeddedSystemX();
+
+	system.PowerOn();
+
+	int i ,buttons, switches ;
+
+	while(1){
+		switches = XGpio_DiscreteRead(&sw, 1);
+		buttons = XGpio_DiscreteRead(&btn, 1);
+
+		for ( i= 0; i < 9999999; ++i) {
+
+		}
+	}
+}
