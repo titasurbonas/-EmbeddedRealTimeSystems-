@@ -6,10 +6,13 @@
 class Operational :
 	public State
 {
-public:
+protected:
 	Operational();
-	State * Restart();
+public:
+	void Restart(EmbeddedSystemX * context);
 	static Operational * GetState();
+	virtual void StateEntry(EmbeddedSystemX * context);
+	virtual void StateExit(EmbeddedSystemX * context);
 };
 
 #include "Ready.h"

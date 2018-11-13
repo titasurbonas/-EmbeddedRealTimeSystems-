@@ -5,19 +5,19 @@ Mode2::Mode2()
 {
 }
 
-State * Mode2::chMode()
+void Mode2::chMode(EmbeddedSystemX * context)
 {
-	return Mode3::GetState();
+	context->ChangeState(Mode3::GetState());
 }
 
-State * Mode2::EventX()
+void Mode2::EventX(EmbeddedSystemX * context)
 {
-	return (State*)this;
+	// do function.
 }
 
-State * Mode2::EventY()
+void Mode2::EventY(EmbeddedSystemX * context)
 {
-	return (State*)this;
+	// do function.
 }
 
 void Mode2::StateName()
@@ -30,4 +30,12 @@ State * Mode2::GetState()
 	if (self == nullptr)
 		self = new Mode2();
 	return self;
+}
+
+void Mode2::StateEntry(EmbeddedSystemX * context)
+{
+}
+
+void Mode2::StateExit(EmbeddedSystemX * context)
+{
 }

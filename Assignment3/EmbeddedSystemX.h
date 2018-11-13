@@ -1,7 +1,8 @@
 #pragma once
 
-#include "PowerOnSelfTest.h"
 
+#include "State.h"
+class State;
 
 class EmbeddedSystemX
 {
@@ -12,6 +13,7 @@ private:
 	char *Name;
 	State * current_state;
 public:
+	void PowerOn();
 	void SelfTestOk();
 	void SelfTestFailed();
 	void Initialized();
@@ -28,4 +30,6 @@ public:
 	void EventX();
 	void EventY();
 	void StateName();
+
+	void ChangeState(State * new_state);
 };

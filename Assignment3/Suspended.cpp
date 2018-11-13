@@ -7,14 +7,14 @@ Suspended::Suspended()
 
 }
 
-State * Suspended::Resume()
+void Suspended::Resume(EmbeddedSystemX * context)
 {
-	return RealTimeLoop::GetState();
+	context->ChangeState(RealTimeLoop::GetState());
 }
 
-State * Suspended::Stop()
+void Suspended::Stop(EmbeddedSystemX * context)
 {
-	return Ready::GetState();
+	context->ChangeState(Ready::GetState());
 }
 
 void Suspended::StateName()
@@ -27,5 +27,13 @@ State * Suspended::GetState()
 	if (self == nullptr)
 		self = new Suspended();
 	return self;
+}
+
+void Suspended::StateEntry(EmbeddedSystemX * context)
+{
+}
+
+void Suspended::StateExit(EmbeddedSystemX * context)
+{
 }
 

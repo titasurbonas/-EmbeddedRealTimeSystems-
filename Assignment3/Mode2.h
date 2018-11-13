@@ -8,9 +8,11 @@ private:
 	Mode2();
 	static Mode2 * self;
 public:
-	State * chMode();
-	State * EventX();
-	State * EventY();
+	void chMode(EmbeddedSystemX * context);
+	void EventX(EmbeddedSystemX * context);
+	void EventY(EmbeddedSystemX * context);
 	virtual void StateName();
 	static State * GetState();
+	virtual void StateEntry(EmbeddedSystemX * context);
+	virtual void StateExit(EmbeddedSystemX * context);
 };

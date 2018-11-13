@@ -1,4 +1,5 @@
 #include "PowerOnSelfTest.h"
+#include <cstdlib>
 
 PowerOnSelfTest * PowerOnSelfTest::self = nullptr;
 
@@ -7,15 +8,14 @@ PowerOnSelfTest::PowerOnSelfTest()
 {
 }
 
-State * PowerOnSelfTest::SelfTestFailed()
+void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX * context)
 {
-	return Failure::GetState();
+	context->ChangeState(Failure::GetState());
 }
 
-
-State * PowerOnSelfTest::SelfTestOk()
+void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX * context)
 {
-	return Initializing::GetState();
+	context->ChangeState(Initializing::GetState());
 }
 
 void PowerOnSelfTest::StateName()
@@ -28,4 +28,17 @@ State * PowerOnSelfTest::GetState()
 	if (self == nullptr)
 		self = new PowerOnSelfTest();
 	return self;
+}
+
+void PowerOnSelfTest::StateEntry(EmbeddedSystemX * context)
+{
+	int rng = rand() % 10;
+	if (rng < 3)
+		context->SelfTestFailed();
+	else
+		context->SelfTestOk();
+}
+
+void PowerOnSelfTest::StateExit(EmbeddedSystemX * context)
+{
 }

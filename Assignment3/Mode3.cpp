@@ -6,14 +6,14 @@ Mode3::Mode3()
 {
 }
 
-State * Mode3::chMode()
+void Mode3::chMode(EmbeddedSystemX * context)
 {
-	return Mode1::GetState();
+	context->ChangeState(Mode1::GetState());
 }
 
-State * Mode3::EventX()
+void Mode3::EventX(EmbeddedSystemX * context)
 {
-	return (State*)this;
+	// do function.
 }
 
 void Mode3::StateName()
@@ -26,4 +26,12 @@ State * Mode3::GetState()
 	if (self == nullptr)
 		self = new Mode3();
 	return self;
+}
+
+void Mode3::StateEntry(EmbeddedSystemX * context)
+{
+}
+
+void Mode3::StateExit(EmbeddedSystemX * context)
+{
 }

@@ -3,6 +3,8 @@
 #include "State.h"
 #include "PowerOnSelfTest.h"
 
+#define MAX_FAILCOUNT 3
+
 class Failure :
 	public State
 {
@@ -10,10 +12,13 @@ class Failure :
 private:
 	Failure();
 	static Failure * self;
+	int fail_count = 0;
 public:
-	State * Restart();
-	State * Exit();
+	void Restart(EmbeddedSystemX * context);
+	void Exit(EmbeddedSystemX * context);
 	virtual void StateName();
 	static State * GetState();
+	virtual void StateEntry(EmbeddedSystemX * context);
+	virtual void StateExit(EmbeddedSystemX * context);
 };
 

@@ -6,17 +6,25 @@ RealTimeLoop::RealTimeLoop()
 
 }
 
-State * RealTimeLoop::Stop()
+void RealTimeLoop::Stop(EmbeddedSystemX * context)
 {
-	return Ready::GetState();
+	context->ChangeState(Ready::GetState());
 }
 
-State * RealTimeLoop::Suspend()
+void RealTimeLoop::Suspend(EmbeddedSystemX * context)
 {
-	return Suspended::GetState();
+	context->ChangeState(Suspended::GetState());
 }
 
 State * RealTimeLoop::GetState()
 {
 	return Mode1::GetState();
+}
+
+void RealTimeLoop::StateEntry(EmbeddedSystemX * context)
+{
+}
+
+void RealTimeLoop::StateExit(EmbeddedSystemX * context)
+{
 }

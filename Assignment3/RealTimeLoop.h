@@ -7,9 +7,11 @@ class RealTimeLoop : public Operational
 {
 public:
 	RealTimeLoop();
-	State * Stop();
-	State * Suspend();
+	void Stop(EmbeddedSystemX * context);
+	void Suspend(EmbeddedSystemX * context);
 	static State * GetState();
+	virtual void StateEntry(EmbeddedSystemX * context);
+	virtual void StateExit(EmbeddedSystemX * context);
 };
 
 #include "Mode1.h"

@@ -6,6 +6,16 @@ Ready::Ready()
 {
 }
 
+void Ready::Start(EmbeddedSystemX * context)
+{
+	context->ChangeState(RealTimeLoop::GetState());
+}
+
+void Ready::Configure(EmbeddedSystemX * context)
+{
+	context->ChangeState(Configuration::GetState());
+}
+
 void Ready::StateName()
 {
 	std::cout << "Operational::Ready" << std::endl;
@@ -18,12 +28,10 @@ Ready * Ready::GetState()
 	return self;
 }
 
-State * Ready::Start()
+void Ready::StateEntry(EmbeddedSystemX * context)
 {
-	return RealTimeLoop::GetState();
 }
 
-State * Ready::Configure()
+void Ready::StateExit(EmbeddedSystemX * context)
 {
-	return Configuration::GetState();
 }

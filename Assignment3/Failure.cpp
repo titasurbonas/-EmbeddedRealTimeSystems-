@@ -6,16 +6,14 @@ Failure::Failure()
 {
 }
 
-State * Failure::Restart()
+void Failure::Restart(EmbeddedSystemX * context)
 {
-	return PowerOnSelfTest::GetState();
+	context->ChangeState(PowerOnSelfTest::GetState());
 }
 
-
-State * Failure::Exit()
+void Failure::Exit(EmbeddedSystemX * context)
 {
 	std::cout << "Exiting from failure state" << std::endl;
-	return nullptr;
 }
 
 void Failure::StateName()
@@ -28,4 +26,16 @@ State * Failure::GetState()
 	if (self == nullptr)
 		self = new Failure();
 	return self;
+}
+
+void Failure::StateEntry(EmbeddedSystemX * context)
+{
+	if (fail_count++ < MAX_FAILCOUNT)
+		context->Restart();
+	else
+		context->Exit();
+}
+
+void Failure::StateExit(EmbeddedSystemX * context)
+{
 }

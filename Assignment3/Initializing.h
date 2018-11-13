@@ -8,8 +8,10 @@ private:
 	Initializing();
 	static Initializing * self;
 public:
-	State * Initialized();
+	void Initialized(EmbeddedSystemX * context);
 	virtual void StateName();
 	static State * GetState();
+	virtual void StateEntry(EmbeddedSystemX * context);
+	virtual void StateExit(EmbeddedSystemX * context);
 };
 

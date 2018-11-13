@@ -2,26 +2,31 @@
 #include <string>
 #include <iostream>
 
+class EmbeddedSystemX;
+
 class State
 {
 protected:
 	State();
 public:
-	virtual State * SelfTestOk();
-	virtual State * SelfTestFailed();
-	virtual State * Initialized();
-	virtual State * Restart();
-	virtual State * Configure();
-	virtual State * ConfigurationEnded();
-	virtual State * Exit();
-	virtual State * Stop();
-	virtual State * Start();
-	virtual State * Suspend();
-	virtual State * Resume();
-	virtual State * ConfigX();
-	virtual State * chMode();
-	virtual State * EventX();
-	virtual State * EventY();
+	virtual void SelfTestOk(EmbeddedSystemX * context);
+	virtual void SelfTestFailed(EmbeddedSystemX * context);
+	virtual void Initialized(EmbeddedSystemX * context);
+	virtual void Restart(EmbeddedSystemX * context);
+	virtual void Configure(EmbeddedSystemX * context);
+	virtual void ConfigurationEnded(EmbeddedSystemX * context);
+	virtual void Exit(EmbeddedSystemX * context);
+	virtual void Stop(EmbeddedSystemX * context);
+	virtual void Start(EmbeddedSystemX * context);
+	virtual void Suspend(EmbeddedSystemX * context);
+	virtual void Resume(EmbeddedSystemX * context);
+	virtual void ConfigX(EmbeddedSystemX * context);
+	virtual void chMode(EmbeddedSystemX * context);
+	virtual void EventX(EmbeddedSystemX * context);
+	virtual void EventY(EmbeddedSystemX * context);
+
 	virtual void StateName() = 0;
+	virtual void StateEntry(EmbeddedSystemX * context) = 0;
+	virtual void StateExit(EmbeddedSystemX * context) = 0;
 };
 

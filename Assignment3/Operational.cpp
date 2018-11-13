@@ -6,14 +6,22 @@ Operational::Operational()
 {
 }
 
-State * Operational::Restart()
+void Operational::Restart(EmbeddedSystemX * context)
 {
-	return (State*)PowerOnSelfTest::GetState();
+	context->ChangeState(PowerOnSelfTest::GetState());
 }
 
 Operational * Operational::GetState()
 {
 	return Ready::GetState();
+}
+
+void Operational::StateEntry(EmbeddedSystemX * context)
+{
+}
+
+void Operational::StateExit(EmbeddedSystemX * context)
+{
 }
 
 

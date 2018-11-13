@@ -7,9 +7,9 @@ Initializing::Initializing()
 {
 }
 
-State * Initializing::Initialized()
+void Initializing::Initialized(EmbeddedSystemX * context)
 {
-	return Operational::GetState();
+	context->ChangeState(Operational::GetState());
 }
 
 void Initializing::StateName()
@@ -22,4 +22,13 @@ State * Initializing::GetState()
 	if (self == nullptr)
 		self = new Initializing();
 	return self;
+}
+
+void Initializing::StateEntry(EmbeddedSystemX * context)
+{
+	context->Initialized();
+}
+
+void Initializing::StateExit(EmbeddedSystemX * context)
+{
 }

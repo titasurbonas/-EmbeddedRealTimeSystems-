@@ -5,55 +5,48 @@ State::State()
 {
 }
 
-State * State::SelfTestOk()
+void State::SelfTestOk(EmbeddedSystemX * context)
 {
-	return this;
 }
-State * State::SelfTestFailed()
+void State::SelfTestFailed(EmbeddedSystemX * context)
 {
-	return this;
 }
-State * State::Initialized()
+void State::Initialized(EmbeddedSystemX * context)
 {
-	return this;
 }
-State * State::Restart()
+void State::Restart(EmbeddedSystemX * context)
 {
-	return this;
 }
-State * State::Configure()
+void State::Configure(EmbeddedSystemX * context)
 {
-	return this;
 }
-State * State::ConfigurationEnded()
+void State::ConfigurationEnded(EmbeddedSystemX * context)
 {
-	return this;
 }
-State * State::Exit() {
-	return this;
+void State::Exit(EmbeddedSystemX * context)
+{
 }
-State * State::Stop() {
-	return this;
+void State::Stop(EmbeddedSystemX * context)
+{
 }
-State * State::Start() {
-	return this;
+void State::Start(EmbeddedSystemX * context)
+{
 }
-State * State::Suspend() {
-	return this;
+void State::Suspend(EmbeddedSystemX * context)
+{
 }
-
-State * State::Resume() {
-	return this;
+void State::Resume(EmbeddedSystemX * context)
+{
 }
-State * State::ConfigX() {
-	return this;
+void State::ConfigX(EmbeddedSystemX * context)
+{
 }
-State * State::chMode() {
-	return this;
+void State::chMode(EmbeddedSystemX * context)
+{
 }
-State * State::EventX() {
-	return this;
+void State::EventX(EmbeddedSystemX * context)
+{
 }
-State * State::EventY() {
-	return this;
+void State::EventY(EmbeddedSystemX * context)
+{
 }

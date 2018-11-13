@@ -8,8 +8,10 @@ private:
 	Ready();
 	static Ready * self;
 public:
-	State * Start();
-	State * Configure();
+	void Start(EmbeddedSystemX * context);
+	void Configure(EmbeddedSystemX * context);
 	virtual void StateName();
 	static Ready * GetState();
+	virtual void StateEntry(EmbeddedSystemX * context);
+	virtual void StateExit(EmbeddedSystemX * context);
 };

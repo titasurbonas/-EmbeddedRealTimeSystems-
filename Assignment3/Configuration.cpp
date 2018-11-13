@@ -7,9 +7,9 @@ Configuration::Configuration()
 {
 }
 
-State * Configuration::ConfigurationEnded()
+void Configuration::ConfigurationEnded(EmbeddedSystemX * context)
 {
-	return Ready::GetState();
+	context->ChangeState(Ready::GetState());
 }
 
 void Configuration::StateName()
@@ -22,4 +22,13 @@ State * Configuration::GetState()
 	if (self == nullptr)
 		self = new Configuration();
 	return self;
+}
+
+void Configuration::StateEntry(EmbeddedSystemX * context)
+{
+	context->ConfigurationEnded();
+}
+
+void Configuration::StateExit(EmbeddedSystemX * context)
+{
 }

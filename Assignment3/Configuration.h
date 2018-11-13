@@ -7,7 +7,9 @@ private:
 	Configuration();
 	static Configuration * self;
 public:
-	State * ConfigurationEnded();
+	void ConfigurationEnded(EmbeddedSystemX * context);
 	virtual void StateName();
 	static State * GetState();
+	virtual void StateEntry(EmbeddedSystemX * context);
+	virtual void StateExit(EmbeddedSystemX * context);
 };
