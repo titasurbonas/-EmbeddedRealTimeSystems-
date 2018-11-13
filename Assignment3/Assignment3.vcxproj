@@ -155,6 +155,12 @@
     <ClInclude Include="Mode2.h" />
     <ClInclude Include="Mode3.h" />
     <ClInclude Include="Operational.h" />
+    <ClInclude Include="os\Mailbox.h" />
+    <ClInclude Include="os\Monitor.h" />
+    <ClInclude Include="os\Mutex.h" />
+    <ClInclude Include="os\MutexGuard.h" />
+    <ClInclude Include="os\Semaphore.h" />
+    <ClInclude Include="os\Thread.h" />
     <ClInclude Include="PowerOnSelfTest.h" />
     <ClInclude Include="Ready.h" />
     <ClInclude Include="RealTimeLoop.h" />
@@ -171,6 +177,9 @@
     <ClCompile Include="Mode2.cpp" />
     <ClCompile Include="Mode3.cpp" />
     <ClCompile Include="Operational.cpp" />
+    <ClCompile Include="os\Mutex.cpp" />
+    <ClCompile Include="os\Semaphore.cpp" />
+    <ClCompile Include="os\Thread.cpp" />
     <ClCompile Include="PowerOnSelfTest.cpp" />
     <ClCompile Include="Ready.cpp" />
     <ClCompile Include="RealTimeLoop.cpp" />

@@ -1,4 +1,6 @@
 #pragma once
+#include "os/Thread.h"
+
 #include "State.h"
 #include "Operational.h"
 class Initializing :
@@ -7,6 +9,7 @@ class Initializing :
 private:
 	Initializing();
 	static Initializing * self;
+	AbstractOS::Thread thread;
 public:
 	void Initialized(EmbeddedSystemX * context);
 	virtual void StateName();

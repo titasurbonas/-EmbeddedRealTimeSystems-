@@ -1,5 +1,12 @@
 #include "Initializing.h"
 
+void initialized()
+{
+	
+	wait(1, SC_SEC);
+	context->Initialized();
+}
+
 Initializing * Initializing::self = nullptr;
 
 
@@ -26,7 +33,7 @@ State * Initializing::GetState()
 
 void Initializing::StateEntry(EmbeddedSystemX * context)
 {
-	context->Initialized();
+	thread = new AbstractOS::Thread();
 }
 
 void Initializing::StateExit(EmbeddedSystemX * context)
