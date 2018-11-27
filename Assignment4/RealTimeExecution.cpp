@@ -13,9 +13,14 @@ State * RealTimeExecution::GetState()
 	return self;
 }
 
+void RealTimeExecution::Simulate(EmbeddedSystemX * context)
+{
+	static_cast<RealTimeLoop*>(context)->ChangeStateExecution(Simulation::GetState());
+}
+
 void RealTimeExecution::StateName()
 {
-	std::cout << "RealTimeExecution" << std::endl;
+	std::cout << "Operational::RealTimeLoop::RealTimeExecution" << std::endl;
 }
 
 void RealTimeExecution::StateEntry(EmbeddedSystemX * context)

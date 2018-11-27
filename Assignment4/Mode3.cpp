@@ -6,14 +6,17 @@ Mode3::Mode3()
 {
 }
 
-void Mode3::chMode(EmbeddedSystemX * context)
+void Mode3::chMode(RealTimeLoop * context)
 {
-	context->ChangeState(Mode1::GetState());
+	context->ChangeStateMode(Mode1::GetState());
 }
 
-void Mode3::EventX(EmbeddedSystemX * context)
+void Mode3::eventX(RealTimeLoop * context)
 {
-	// do function.
+	std::cout << "Received command in mode 3" << std::endl;
+	CommandX * e = new CommandX();
+	context->ExecuteCommand(e);
+	delete e;
 }
 
 void Mode3::StateName()
@@ -21,17 +24,17 @@ void Mode3::StateName()
 	std::cout << "Operational::RealTimeLoop::Mode3" << std::endl;
 }
 
-State * Mode3::GetState()
+Mode * Mode3::GetState()
 {
 	if (self == nullptr)
 		self = new Mode3();
 	return self;
 }
 
-void Mode3::StateEntry(EmbeddedSystemX * context)
+void Mode3::StateEntry(RealTimeLoop * context)
 {
 }
 
-void Mode3::StateExit(EmbeddedSystemX * context)
+void Mode3::StateExit(RealTimeLoop * context)
 {
 }

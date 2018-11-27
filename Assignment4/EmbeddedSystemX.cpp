@@ -87,21 +87,22 @@ void EmbeddedSystemX::EventY()
 	current_state->EventY(this);
 }
 
+void EmbeddedSystemX::RunRealTime()
+{
+	current_state->RunRealTime(this);
+}
+
+void EmbeddedSystemX::Simulate()
+{
+	current_state->Simulate(this);
+}
+
 void EmbeddedSystemX::StateName()
 {
 	current_state->StateName();
 }
 
-void EmbeddedSystemX::RunRealTime()
-{
-	current_state->RunRealTime();
 
-}
-
-void EmbeddedSystemX::Simulate()
-{
-	current_state->Simulate();
-}
 
 void EmbeddedSystemX::ChangeState(State * new_state)
 {
@@ -110,8 +111,8 @@ void EmbeddedSystemX::ChangeState(State * new_state)
 		if (current_state != nullptr)
 			current_state->StateExit(this);
 		current_state = new_state;
-		current_state->StateName();
 		current_state->StateEntry(this);
+		current_state->StateName();
 	}
 	else
 	{

@@ -150,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="Configuration.h" />
     <ClInclude Include="EmbeddedSystemX.h" />
+    <ClInclude Include="Event.h" />
     <ClInclude Include="Execution.h" />
     <ClInclude Include="Failure.h" />
     <ClInclude Include="Initializing.h" />
@@ -185,6 +186,9 @@
     <ClCompile Include="Simulation.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Suspended.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

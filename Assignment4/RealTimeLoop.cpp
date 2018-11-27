@@ -1,7 +1,14 @@
 
 #include "RealTimeLoop.h"
 
+#include "Suspended.h"
+#include "Ready.h"
+#include "Mode1.h"
+#include "RealTimeExecution.h"
+#include "Event.h"
+
 RealTimeLoop * RealTimeLoop::self = nullptr;
+int RealTimeLoop::SimCount = 0;
 
 RealTimeLoop::RealTimeLoop()
 {
@@ -20,7 +27,7 @@ void RealTimeLoop::Suspend(EmbeddedSystemX * context)
 
 State * RealTimeLoop::GetState()
 {
-	if (self != nullptr)
+	if (self == nullptr)
 		self = new RealTimeLoop();
 	return self;
 }
@@ -39,32 +46,69 @@ void RealTimeLoop::StateEntry(EmbeddedSystemX * context)
 
 void RealTimeLoop::StateExit(EmbeddedSystemX * context)
 {
+	std::cout << "SimCount is: " << SimCount << std::endl;
 }
 
 void RealTimeLoop::chMode(EmbeddedSystemX * context)
 {
 	ApplicationModeSetting->chMode(this);
-	SimulationRealTimeState->chMode(this);
 }
 
 void RealTimeLoop::EventX(EmbeddedSystemX * context)
 {
-	ApplicationModeSetting->EventX(this);
-	SimulationRealTimeState->EventX(this);
+	ApplicationModeSetting->eventX(this);
 }
 
 void RealTimeLoop::EventY(EmbeddedSystemX * context)
 {
-	ApplicationModeSetting->EventY(this);
-	SimulationRealTimeState->EventY(this);
+	ApplicationModeSetting->eventY(this);
+}
+
+void RealTimeLoop::Simulate(EmbeddedSystemX * context)
+{
+	SimulationRealTimeState->Simulate(this);
+}
+
+void RealTimeLoop::RunRealTime(EmbeddedSystemX * context)
+{
+	SimulationRealTimeState->RunRealTime(this);
 }
 
 void RealTimeLoop::ChangeStateMode(Mode * new_state)
 {
-	ApplicationModeSetting = new_state;
+	if (new_state != nullptr)
+	{
+		if (ApplicationModeSetting != nullptr)
+			ApplicationModeSetting->StateExit(this);
+		ApplicationModeSetting = new_state;
+		ApplicationModeSetting->StateEntry(this);
+		ApplicationModeSetting->StateName();
+	}
+	else
+	{
+		std::cout << "Changing state to NULL. NOT VALID" << std::endl;
+		exit(-1);
+	}
 }
 
 void RealTimeLoop::ChangeStateExecution(Execution * new_state)
 {
-	SimulationRealTimeState = new_state;
+	if (new_state != nullptr)
+	{
+		if (SimulationRealTimeState != nullptr)
+			SimulationRealTimeState->StateExit(this);
+		SimulationRealTimeState = new_state;
+		SimulationRealTimeState->StateEntry(this);
+		SimulationRealTimeState->StateName();
+	}
+	else
+	{
+		std::cout << "Changing state to NULL. NOT VALID" << std::endl;
+		exit(-1);
+	}
+}
+
+void RealTimeLoop::ExecuteCommand(Event * e)
+{
+	e->Execute();
 }

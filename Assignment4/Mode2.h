@@ -9,11 +9,11 @@ private:
 	Mode2();
 	static Mode2 * self;
 public:
-	void chMode(EmbeddedSystemX * context);
-	void EventX(EmbeddedSystemX * context);
-	void EventY(EmbeddedSystemX * context);
+	void chMode(RealTimeLoop * context);
+	virtual void eventX(RealTimeLoop * context);
+	virtual void eventY(RealTimeLoop * context);
 	virtual void StateName();
-	static State * GetState();
-	virtual void StateEntry(EmbeddedSystemX * context);
-	virtual void StateExit(EmbeddedSystemX * context);
+	static Mode * GetState();
+	virtual void StateEntry(RealTimeLoop * context);
+	virtual void StateExit(RealTimeLoop * context);
 };
