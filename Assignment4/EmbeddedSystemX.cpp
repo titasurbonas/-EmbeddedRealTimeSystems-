@@ -92,6 +92,17 @@ void EmbeddedSystemX::StateName()
 	current_state->StateName();
 }
 
+void EmbeddedSystemX::RunRealTime()
+{
+	current_state->RunRealTime();
+
+}
+
+void EmbeddedSystemX::Simulate()
+{
+	current_state->Simulate();
+}
+
 void EmbeddedSystemX::ChangeState(State * new_state)
 {
 	if (new_state != nullptr)

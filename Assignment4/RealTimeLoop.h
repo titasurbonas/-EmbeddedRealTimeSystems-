@@ -4,12 +4,12 @@
 #include "Suspended.h"
 #include "Ready.h"
 #include "Mode.h"
+#include "Mode1.h"
 #include "Execution.h"
 #include "RealTimeExecution.h"
 class RealTimeLoop : public Operational, public EmbeddedSystemX
 {
 public:
-	RealTimeLoop();
 	void Stop(EmbeddedSystemX * context);
 	void Suspend(EmbeddedSystemX * context);
 	static State * GetState();
@@ -23,8 +23,9 @@ public:
 	virtual void ChangeStateExecution(Execution * new_state);
 	
 private:
+	RealTimeLoop();
 	Mode * ApplicationModeSetting;
 	Execution * SimulationRealTimeState;
+	static RealTimeLoop* self;
 };
 
-#include "Mode1.h"

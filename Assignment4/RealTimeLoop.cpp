@@ -1,10 +1,11 @@
 
 #include "RealTimeLoop.h"
 
+RealTimeLoop * RealTimeLoop::self = nullptr;
+
 RealTimeLoop::RealTimeLoop()
 {
-	ApplicationModeSetting = static_cast<Mode*>(Mode1::GetState());
-	SimulationRealTimeState = static_cast<Execution*>(RealTimeExecution::GetState());
+	
 }
 
 void RealTimeLoop::Stop(EmbeddedSystemX * context)
@@ -19,7 +20,9 @@ void RealTimeLoop::Suspend(EmbeddedSystemX * context)
 
 State * RealTimeLoop::GetState()
 {
-	return Mode1::GetState();
+	if (self != nullptr)
+		self = new RealTimeLoop();
+	return self;
 }
 
 void RealTimeLoop::StateName()
@@ -30,6 +33,8 @@ void RealTimeLoop::StateName()
 
 void RealTimeLoop::StateEntry(EmbeddedSystemX * context)
 {
+	ApplicationModeSetting = static_cast<Mode*>(Mode1::GetState());
+	SimulationRealTimeState = static_cast<Execution*>(RealTimeExecution::GetState());
 }
 
 void RealTimeLoop::StateExit(EmbeddedSystemX * context)

@@ -30,6 +30,8 @@ public:
 	void EventX();
 	void EventY();
 	void StateName();
+	void RunRealTime();
+	void Simulate();
 
 	virtual void ChangeState(State * new_state);
 };
