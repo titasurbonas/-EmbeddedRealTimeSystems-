@@ -111,8 +111,8 @@ void EmbeddedSystemX::ChangeState(State * new_state)
 		if (current_state != nullptr)
 			current_state->StateExit(this);
 		current_state = new_state;
-		current_state->StateEntry(this);
 		current_state->StateName();
+		current_state->StateEntry(this);
 	}
 	else
 	{

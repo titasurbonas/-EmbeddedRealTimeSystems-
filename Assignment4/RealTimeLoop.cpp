@@ -7,12 +7,41 @@
 #include "RealTimeExecution.h"
 #include "Event.h"
 
+#include <chrono>
+
 RealTimeLoop * RealTimeLoop::self = nullptr;
 int RealTimeLoop::SimCount = 0;
 
+cmdCommand * RealTimeLoop::GetNextCommand()
+{
+	if (commandQueue.empty())
+		return nullptr;
+	else
+	{
+		mtx.lock();
+		cmdCommand * r = commandQueue.front();
+		commandQueue.pop();
+		mtx.unlock();
+		return r;
+	}
+}
+
+void RealTimeLoop::AddCommand(cmdCommand * command)
+{
+	mtx.lock();
+	commandQueue.push(command);
+	mtx.unlock();
+}
+
+RealTimeLoop::~RealTimeLoop()
+{
+	//worker.join();
+}
+
 RealTimeLoop::RealTimeLoop()
 {
-	
+	ApplicationModeSetting = static_cast<Mode*>(Mode1::GetState());
+	SimulationRealTimeState = static_cast<Execution*>(RealTimeExecution::GetState());
 }
 
 void RealTimeLoop::Stop(EmbeddedSystemX * context)
@@ -40,38 +69,44 @@ void RealTimeLoop::StateName()
 
 void RealTimeLoop::StateEntry(EmbeddedSystemX * context)
 {
+	SimCount = 0;
+	exiting = false;
 	ApplicationModeSetting = static_cast<Mode*>(Mode1::GetState());
 	SimulationRealTimeState = static_cast<Execution*>(RealTimeExecution::GetState());
+	commandQueue = std::queue<cmdCommand*>();
+	worker = std::thread(Worker, this);
 }
 
 void RealTimeLoop::StateExit(EmbeddedSystemX * context)
 {
+	exiting = true;
+	worker.detach();
 	std::cout << "SimCount is: " << SimCount << std::endl;
 }
 
 void RealTimeLoop::chMode(EmbeddedSystemX * context)
 {
-	ApplicationModeSetting->chMode(this);
+	AddCommand(new cmdChMode());
 }
 
 void RealTimeLoop::EventX(EmbeddedSystemX * context)
 {
-	ApplicationModeSetting->eventX(this);
+	AddCommand(new cmdEventX());
 }
 
 void RealTimeLoop::EventY(EmbeddedSystemX * context)
 {
-	ApplicationModeSetting->eventY(this);
+	AddCommand(new cmdEventY());
 }
 
 void RealTimeLoop::Simulate(EmbeddedSystemX * context)
 {
-	SimulationRealTimeState->Simulate(this);
+	AddCommand(new cmdSimulate());
 }
 
 void RealTimeLoop::RunRealTime(EmbeddedSystemX * context)
 {
-	SimulationRealTimeState->RunRealTime(this);
+	AddCommand(new cmdRunRealTime());
 }
 
 void RealTimeLoop::ChangeStateMode(Mode * new_state)
@@ -111,4 +146,43 @@ void RealTimeLoop::ChangeStateExecution(Execution * new_state)
 void RealTimeLoop::ExecuteCommand(Event * e)
 {
 	e->Execute();
+}
+
+void RealTimeLoop::chMode()
+{
+	ApplicationModeSetting->chMode(this);
+}
+
+void RealTimeLoop::EventX()
+{
+	ApplicationModeSetting->eventX(this);
+}
+
+void RealTimeLoop::EventY()
+{
+	ApplicationModeSetting->eventY(this);
+}
+
+void RealTimeLoop::Simulate()
+{
+	SimCount++;
+	SimulationRealTimeState->Simulate(this);
+}
+
+void RealTimeLoop::RunRealTime()
+{
+	SimulationRealTimeState->RunRealTime(this);
+}
+
+void Worker(RealTimeLoop * context)
+{
+	while (!context->exiting) {
+		cmdCommand * c = context->GetNextCommand();
+		if (c != nullptr)
+		{
+			c->Execute(context);
+			delete c;
+		}
+		std::this_thread::sleep_for(std::chrono::milliseconds(50));
+	}
 }
