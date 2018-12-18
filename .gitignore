@@ -37,3 +37,11 @@
 /Assignment3/Debug
 /Assignment4/.vs/Assignment4/v15
 /Assignment4/x64/Debug
+/Assignment3/x64/Debug
+/Assignment_2/Exercise_3
+/project/SystemC/SystemCmodel/Debug
+/project/SystemC/SystemCmodel/SystemCmodel/Debug
+/project/SystemC/SystemCmodel/SystemCmodel/SystemCmodel.vcxproj
+*.filters
+*.user
+/project/SystemC/SystemCmodel/.vs/SystemCmodel/v15
