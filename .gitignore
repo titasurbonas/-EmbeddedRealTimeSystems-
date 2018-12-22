@@ -45,3 +45,4 @@
 *.user
 /project/SystemC/SystemCmodel/.vs/SystemCmodel/v15
 /project/SystemC/SystemCmodel/x64/Debug
+/project/SystemC/SystemCmodel/SystemCmodel/x64/Debug

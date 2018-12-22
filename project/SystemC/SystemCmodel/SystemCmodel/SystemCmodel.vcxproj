@@ -166,23 +166,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AudioCommand.cpp" />
     <ClCompile Include="AudioInput.cpp" />
     <ClCompile Include="AudioOutput.cpp" />
     <ClCompile Include="AudioSample.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="DiscoFier.cpp" />
     <ClCompile Include="Filter.cpp" />
     <ClCompile Include="FilterNone.cpp" />
+    <ClCompile Include="LedCommand.cpp" />
     <ClCompile Include="Leds.cpp" />
+    <ClCompile Include="OutPutQueue.cpp" />
     <ClCompile Include="PreProcessing.cpp" />
     <ClCompile Include="SystemCmodel.cpp" />
     <ClCompile Include="VolumeControl.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AudioCommand.h" />
     <ClInclude Include="AudioInput.h" />
     <ClInclude Include="AudioOutput.h" />
     <ClInclude Include="AudioSample.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="DiscoFier.h" />
     <ClInclude Include="Filter.h" />
     <ClInclude Include="FilterNone.h" />
+    <ClInclude Include="LedCommand.h" />
     <ClInclude Include="Leds.h" />
+    <ClInclude Include="OutPutQueue.h" />
     <ClInclude Include="PreProcessing.h" />
     <ClInclude Include="VolumeControl.h" />
   </ItemGroup>

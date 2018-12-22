@@ -1,13 +1,14 @@
 #pragma once
 #include <systemc.h>
 #include "AudioSample.h"
+#include "OutPutQueue.h"
+#include "AudioCommand.h"
 
 SC_MODULE(AudioOutput) {
 	SC_CTOR(AudioOutput) {
-		SC_METHOD(OutputSample);
-		sensitive << input;
+		SC_THREAD(OutputSample);
 	};
 
-	sc_in<AudioSample> input;
+	sc_out<AudioSample> output;
 	void OutputSample(void);
 };

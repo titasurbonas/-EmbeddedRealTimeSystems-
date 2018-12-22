@@ -3,5 +3,7 @@
 
 void Leds::UpdateLeds(void)
 {
-	std::cout << "Led value :" + SDA.read()  << std::endl;
+
+		std::cout << SDA.read() << std::endl;
+
 }

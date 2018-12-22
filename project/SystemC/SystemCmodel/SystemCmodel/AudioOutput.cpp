@@ -1,8 +1,13 @@
 #include "AudioOutput.h"
 #include <ostream>
 
-
 void AudioOutput::OutputSample(void)
 {
-	std::cout<<input.read() <<std::endl;;
+	OutPutQueue* que = OutPutQueue::GetOutPutQueue();
+	while (true) {
+		AudioCommand* c = que->DeQueueAudio();
+		if (c != nullptr) output.write(c->play());
+	}
+	
 }
+

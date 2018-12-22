@@ -13,6 +13,7 @@ int sc_main(int, char* [])
 	AudioInput audio_input("AudioInput");
 	VolumeIO volume_interface("VolumeIO");
 	PreProcessing audio_preprocessor("PreProcessing");
+
 	
 	audio_preprocessor.input(audio_input_preprocessor);
 	audio_input.audio_in(audio_input_preprocessor);
