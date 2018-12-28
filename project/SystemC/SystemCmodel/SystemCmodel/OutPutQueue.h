@@ -8,7 +8,7 @@ class OutPutQueue
 {
 private:
 	static OutPutQueue* self;
-	std::queue<Command*> queue;
+	std::queue<Command*> *queue;
 	OutPutQueue();
 public:
 	static OutPutQueue* GetOutPutQueue();

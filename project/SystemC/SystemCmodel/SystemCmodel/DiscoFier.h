@@ -11,6 +11,6 @@ SC_MODULE(DiscoFier) {
 		std::cout << "CTOR Discofier done" << std::endl;
 	}
 	sc_out<AudioSample> SDA;
-	sc_out<bool> CLK;
+	sc_in<bool> CLK;
 	void UpdateLeds();
 };

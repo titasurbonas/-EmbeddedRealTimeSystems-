@@ -5,7 +5,7 @@ void TestBench::UpdateTime(void)
 	sc_int<4> delay = 0;
 	while (1)
 	{
-		std::cout << "Starting testbench" << std::endl;
+		//std::cout << "Starting testbench" << std::endl;
 		switch (delay++)
 		{
 		case 0:
@@ -23,6 +23,7 @@ void TestBench::UpdateTime(void)
 		case 25:
 			volume_down.write(false);
 		}
-		std::cout << "Time update " << delay << std::endl;
+		//std::cout << "Time update " << delay << std::endl;
+		wait();
 	}
 }

@@ -43,8 +43,8 @@ SC_MODULE(Top)
 
 		audio_output.output(audio_output_channel);
 		audio_output.clock(clock);
-
-		discofier.CLK(discofier_clock);
+	//TODO include sincornization  
+		discofier.CLK(clock);
 		discofier.SDA(discofier_channel);
 
 		leds.SCL(discofier_clock);
