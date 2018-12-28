@@ -12,15 +12,21 @@ OutPutQueue * OutPutQueue::GetOutPutQueue()
 	return self;
 }
 
-void OutPutQueue::EnQueue(Command* cmd)
+void OutPutQueue::EnqueueAudioCommand(AudioSample sample)
 {
-	Queue.push(cmd);
+	queue.push(new AudioCommand(sample));
 }
+
+void OutPutQueue::EnqueueLedCommand(AudioSample sample)
+{
+	queue.push(new LedCommand(sample));
+}
+
 LedCommand* OutPutQueue::DeQueueLed()
 {
-	Command* c = Queue.front();
+	Command* c = queue.front();
 	if (typeid(c) == typeid(LedCommand*)) {
-		Queue.pop();
+		queue.pop();
 		return static_cast<LedCommand*>(c);
 	}
 	else return nullptr;
@@ -28,9 +34,9 @@ LedCommand* OutPutQueue::DeQueueLed()
 
 AudioCommand * OutPutQueue::DeQueueAudio()
 {
-	Command* c = Queue.front();
+	Command* c = queue.front();
 	if (typeid(c) == typeid(AudioCommand*)) {
-		Queue.pop();
+		queue.pop();
 		return static_cast<AudioCommand*>(c);
 	}
 	else return nullptr;

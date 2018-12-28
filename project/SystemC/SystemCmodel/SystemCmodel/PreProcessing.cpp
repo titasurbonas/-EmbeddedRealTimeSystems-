@@ -1,11 +1,13 @@
 
 #include "PreProcessing.h"
 
-void PreProcessing::HandleSample(void)
+void Preprocessing::HandleSample(void)
 {
-
+	AudioSample s = input.read();
+	OutPutQueue::GetOutPutQueue()->EnqueueAudioCommand(filter->Apply(s));
+	OutPutQueue::GetOutPutQueue()->EnqueueLedCommand(filter->Apply(s));
 }
 
-void PreProcessing::SetFilter(void)
+void Preprocessing::SetFilter(void)
 {
 }

@@ -7,6 +7,7 @@ void DiscoFier::UpdateLeds()
 		LedCommand* c = que->DeQueueLed();
 		if (c != nullptr)
 			SDA.write(c->play());
+		wait();
 	}
 
 }

@@ -23,7 +23,7 @@
     <ProjectGuid>{16BC8D4B-F122-4EAC-990F-3F7CEBDEE2F9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SystemCmodel</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -72,9 +72,15 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\systemc-2.3.2\msvc10\SystemC\Debug;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\systemc-2.3.2\src;$(SourcePath)</SourcePath>
+    <IncludePath>C:\systemc-2.3.2\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\systemc-2.3.2\msvc10\SystemC\Debug;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\systemc-2.3.2\src;$(SourcePath)</SourcePath>
+    <IncludePath>C:\systemc-2.3.2\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -84,16 +90,16 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\systemc-2.3.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <AdditionalOptions>/vmg /Y- /experimental:external /external:anglebrackets /external:W2 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions> /vmg /Y- /experimental:external /external:anglebrackets /external:W2 %(AdditionalOptions)</AdditionalOptions>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -106,14 +112,14 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\systemc-2.3.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/vmg %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions> /vmg %(AdditionalOptions)</AdditionalOptions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
     </ClCompile>
     <Link>
@@ -179,6 +185,8 @@
     <ClCompile Include="OutPutQueue.cpp" />
     <ClCompile Include="PreProcessing.cpp" />
     <ClCompile Include="SystemCmodel.cpp" />
+    <ClCompile Include="TestBench.cpp" />
+    <ClCompile Include="Top.cpp" />
     <ClCompile Include="VolumeControl.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +202,8 @@
     <ClInclude Include="Leds.h" />
     <ClInclude Include="OutPutQueue.h" />
     <ClInclude Include="PreProcessing.h" />
+    <ClInclude Include="TestBench.h" />
+    <ClInclude Include="Top.h" />
     <ClInclude Include="VolumeControl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

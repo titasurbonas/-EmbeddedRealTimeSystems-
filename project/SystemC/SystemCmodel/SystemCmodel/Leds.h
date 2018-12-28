@@ -7,7 +7,8 @@
 SC_MODULE(Leds) {
 	SC_CTOR(Leds) {
 		SC_THREAD(UpdateLeds);
-		sensitive << SDA;
+		sensitive << SCL.pos();
+		std::cout << "CTOR: LEDS done" << std::endl;
 	};
 
 	sc_in<AudioSample> SDA;

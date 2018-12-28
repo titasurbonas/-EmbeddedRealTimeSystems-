@@ -23,6 +23,7 @@ SC_MODULE(VolumeIO)
 		sensitive << volume_up;
 		SC_METHOD(VolumeDown);
 		sensitive << volume_down;
+		std::cout << "CTOR: VolumeIO done" << std::endl;
 	}
 	sc_in<bool> volume_up, volume_down;
 

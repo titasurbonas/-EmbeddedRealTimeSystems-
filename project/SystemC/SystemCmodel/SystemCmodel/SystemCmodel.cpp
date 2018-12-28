@@ -2,22 +2,14 @@
 //
 #include <systemc.h>
 #include <iostream>
-
-#include "AudioInput.h"
-#include "VolumeControl.h"
-#include "PreProcessing.h"
+#include "Top.h"
 
 int sc_main(int, char* [])
 {
-	sc_signal<AudioSample> audio_input_preprocessor;
-	AudioInput audio_input("AudioInput");
-	VolumeIO volume_interface("VolumeIO");
-	PreProcessing audio_preprocessor("PreProcessing");
+	Top t("Top");
 
-	
-	audio_preprocessor.input(audio_input_preprocessor);
-	audio_input.audio_in(audio_input_preprocessor);
+	sc_start(1000, SC_MS);
 
-	sc_start(1000, SC_NS);
+
 	return 0;
 }
