@@ -6,7 +6,7 @@
 #include "OutPutQueue.h"
 
 SC_MODULE(Preprocessing) {
-	SC_CTOR(Preprocessing) : filter(nullptr) {
+	SC_CTOR(Preprocessing) : filter(NULL) {
 		filter = Filter::CreateFilter(FilterType::None);
 		SC_METHOD(HandleSample);
 		sensitive << input;

@@ -4,7 +4,7 @@
 
 #define VOLUME_STEP 2
 
-VolumeControl * VolumeControl::self = nullptr;
+VolumeControl * VolumeControl::self = NULL;
 
 void VolumeIO::VolumeUp(void)
 {
@@ -23,7 +23,7 @@ VolumeControl::VolumeControl()
 
 VolumeControl * VolumeControl::GetVolumeControl()
 {
-	if (self == nullptr)
+	if (self == NULL)
 		self = new VolumeControl();
 	return self;
 }

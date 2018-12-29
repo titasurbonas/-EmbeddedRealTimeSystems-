@@ -8,7 +8,7 @@ int sc_main(int, char* [])
 {
 	Top t("Top");
 
-	sc_start(1000, SC_MS);
+	sc_start(1, SC_MS);
 
 
 	return 0;
