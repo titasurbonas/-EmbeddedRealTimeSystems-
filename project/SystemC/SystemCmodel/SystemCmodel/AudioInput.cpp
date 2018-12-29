@@ -5,13 +5,13 @@
 void AudioInput::ReceiveSample(void)
 {
 	AudioSample sample = 255;
-	#ifdef WIN32
+	#ifdef _DEBUG
 		int i = 0;
 	#endif 
 
 	while (1) 
 	{
-		#ifdef WIN32
+		#ifdef _DEBUG
 		std::cout << "Ready to receive audio sample" << std::endl;
 		wait();
 		sample = ++i;

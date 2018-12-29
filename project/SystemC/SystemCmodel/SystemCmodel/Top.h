@@ -13,17 +13,17 @@ SC_MODULE(Top)
 { 
 	SC_CTOR(Top) : 
 		clock("clock", 10, SC_NS), 
+#ifdef _DEBUG
+		testbench("TestBench"),
+#endif
 		audio_input("AudioInput"), 
 		audio_output("AudioOutput"), 
 		volume_interface("VolumeIO"), 
 		audio_preprocessor("Preprocessing"), 
 		discofier("Discofier"), 
-#ifdef WIN32
-		testbench("TestBench"),
-#endif
 		leds("LEDS")
 	{
-#ifdef WIN32
+#ifdef _DEBUG
 		testbench.clock(clock);
 		testbench.filter_selector(filter_selector);
 		testbench.volume_up(volume_up);
@@ -50,7 +50,7 @@ SC_MODULE(Top)
 		leds.SCL(discofier_clock);
 		leds.SDA(discofier_channel);
 
-#ifdef WIN32
+#ifdef _DEBUG
 		tf = sc_create_vcd_trace_file("WaveForm");
 		tf->set_time_unit(1, SC_NS);
 		sc_trace(tf, clock, "clock");
@@ -74,7 +74,7 @@ SC_MODULE(Top)
 	sc_signal<sc_int<1>> filter_selector;
 	sc_clock clock;
 
-#ifdef WIN32
+#ifdef _DEBUG
 	TestBench testbench;
 	sc_trace_file * tf;
 #endif
