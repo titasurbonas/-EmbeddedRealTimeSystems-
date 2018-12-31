@@ -50,7 +50,11 @@ main: $(OBJS)
 %.o: %.c
 	$(LIBTOOL) --mode=compile gcc -Wall -c $<
 
+cleantemps:
+	rm -f *.o *.lo
+	rm -rf .libs $<
+
 clean:
-	rm -f main *.o *.lo
-	rm -rf .libs
+	make cleantemps
+	rm -f main
 
