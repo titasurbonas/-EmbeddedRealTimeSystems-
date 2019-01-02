@@ -23,7 +23,7 @@ FLAGS_A           = -g -Wall -pedantic -Wno-long-long -Werror \
 					-I $(SYSTEMC_INC_DIR)
 LDFLAGS         = -L$(SYSTEMC_LIB_DIR) -lsystemc -lm
 
-SRCS = AudioCommand.cpp \
+SRCS =  AudioCommand.cpp \
 		AudioInput.cpp \
 		AudioInterface.cpp \
 		AudioOutput.cpp \
@@ -40,6 +40,7 @@ SRCS = AudioCommand.cpp \
 		TestBench.cpp \
 		VolumeControl.cpp \
 		Top.cpp \
+        #hal/AudioDriver.cpp \
 
 OBJS=$(SRCS:.cpp=.o)
 

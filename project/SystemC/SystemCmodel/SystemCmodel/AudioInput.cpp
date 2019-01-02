@@ -19,6 +19,9 @@ void AudioInput::ReceiveSample(void)
 		l_sample = --l;
 		#else
 		// TODO: Read from driver.
+
+        if (!pAudio->isNewSampleReady()) return;
+		pAudio->inSamples(l_sample, r_sample);
 		#endif 
 
 		audio_in_right.write(r_sample);

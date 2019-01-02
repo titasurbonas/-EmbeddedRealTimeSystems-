@@ -2,6 +2,10 @@
 #include <systemc.h>
 #include "AudioSample.h"
 
+#ifndef _DEBUG
+#include "hal/AudioDriver.h"
+#endif
+
 SC_MODULE(AudioInput) {
 	SC_CTOR(AudioInput) {
 		SC_THREAD(ReceiveSample);
