@@ -2,10 +2,11 @@
 #include "AudioSample.h"
 class Command {
 public:
-	Command(AudioSample);
+	Command(AudioSample, AudioSample);
 	virtual ~Command();
 	virtual AudioSample play() = 0;
 protected:
-	AudioSample audio;
+	AudioSample right_audio;
+    AudioSample left_audio;
 };
 

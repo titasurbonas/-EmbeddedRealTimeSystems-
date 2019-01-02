@@ -9,7 +9,8 @@ SC_MODULE(AudioInput) {
 		std::cout << "CTOR: AudioInput done" << std::endl;
 	};
 
-	sc_out<AudioSample> audio_in;
+	sc_out<AudioSample> audio_in_right;
+    sc_out<AudioSample> audio_in_left;
 	sc_in<bool> clock;
 
 	void ReceiveSample(void);

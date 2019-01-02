@@ -14,14 +14,14 @@ OutPutQueue * OutPutQueue::GetOutPutQueue()
 	return self;
 }
 
-void OutPutQueue::EnqueueAudioCommand(AudioSample sample)
+void OutPutQueue::EnqueueAudioCommand(AudioSample right_sample, AudioSample left_sample)
 {
-	Audioqueue->push(new AudioCommand(sample));
+	Audioqueue->push(new AudioCommand(right_sample, left_sample));
 }
 
-void OutPutQueue::EnqueueLedCommand(AudioSample sample)
+void OutPutQueue::EnqueueLedCommand(AudioSample right_sample, AudioSample left_sample)
 {
-	Ledqueue->push(new LedCommand(sample));
+	Ledqueue->push(new LedCommand(right_sample, left_sample));
 }
 //ToDo fix problem with blocking for audio 
 LedCommand* OutPutQueue::DeQueueLed()

@@ -13,8 +13,8 @@ private:
 	OutPutQueue();
 public:
 	static OutPutQueue* GetOutPutQueue();
-	void EnqueueAudioCommand(AudioSample sample);
-	void EnqueueLedCommand(AudioSample sample);
+	void EnqueueAudioCommand(AudioSample right_sample, AudioSample left_sample);
+	void EnqueueLedCommand(AudioSample right_sample, AudioSample left_sample);
 	LedCommand* DeQueueLed();
 	AudioCommand* DeQueueAudio();
 	~OutPutQueue();

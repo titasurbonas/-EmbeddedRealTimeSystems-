@@ -33,10 +33,12 @@ SC_MODULE(Top)
 #else
 		// TODO: Include actual hardware implementations here.
 #endif
-		audio_preprocessor.input(audio_input_preprocessor);
+		audio_preprocessor.r_input(right_input_preprocessor);
+        audio_preprocessor.l_input(left_input_preprocessor);
 		audio_preprocessor.filter_selector(filter_selector);
 
-		audio_input.audio_in(audio_input_preprocessor);
+		audio_input.audio_in_right(right_input_preprocessor);
+        audio_input.audio_in_left(left_input_preprocessor);
 		audio_input.clock(clock);
 
 		volume_interface.volume_down(volume_down);
@@ -55,7 +57,8 @@ SC_MODULE(Top)
 		tf = sc_create_vcd_trace_file("WaveForm");
 		tf->set_time_unit(1, SC_NS);
 		sc_trace(tf, clock, "clock");
-		sc_trace(tf, audio_input_preprocessor, "audio_input");
+		sc_trace(tf, right_input_preprocessor, "right_input");
+        sc_trace(tf, left_input_preprocessor, "left_input");
 		sc_trace(tf, audio_output_channel, "audio_output");
 		sc_trace(tf, discofier_channel, "disco_channel");
 		sc_trace(tf, volume_up, "volume_up");
@@ -70,7 +73,7 @@ SC_MODULE(Top)
 		sc_close_vcd_trace_file(tf);
 	}
 
-	sc_signal<AudioSample> audio_input_preprocessor, audio_output_channel, discofier_channel;
+	sc_signal<AudioSample> right_input_preprocessor, left_input_preprocessor, audio_output_channel, discofier_channel;
 	sc_signal<bool> volume_up, volume_down;
 	sc_signal<sc_int<1>> filter_selector;
 	sc_clock clock, discofier_clock;
