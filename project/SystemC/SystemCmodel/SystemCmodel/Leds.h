@@ -7,11 +7,30 @@
 SC_MODULE(Leds) {
 	SC_CTOR(Leds) {
 		SC_THREAD(UpdateLeds);
-		sensitive << SCL.pos();
+		sensitive << SCL;
+        SC_METHOD(ReceiveInput);
+        sensitive << SDA;
 		std::cout << "CTOR: LEDS done" << std::endl;
 	};
 
 	sc_in<AudioSample> SDA;
 	sc_in<bool> SCL;
 	void UpdateLeds(void);
+    void ReceiveInput(void);
+
+private:
+    char led1 = 0x0;
+    char led2 = 0x0;
+    char led3 = 0x0;
+    char led4 = 0x0;
+
+    char time_scaler = 0x0;
+    char output = 0x00;
+    char led1_on = 0;
+    char led2_on = 0;
+    char led3_on = 0;
+    char led4_on = 0;
+
+    char ConvertToLeds();
+    void ConvertToInternal(AudioSample v);
 };

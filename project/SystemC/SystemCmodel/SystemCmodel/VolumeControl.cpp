@@ -8,17 +8,16 @@ VolumeControl * VolumeControl::self = NULL;
 
 void VolumeIO::VolumeUp(void)
 {
-	VolumeControl::GetVolumeControl()->StepVolume(VOLUME_STEP);
+	VolumeControl::GetVolumeControl()->StepVolume(-VOLUME_STEP);
 }
 
 void VolumeIO::VolumeDown(void)
 {
-	VolumeControl::GetVolumeControl()->StepVolume(-VOLUME_STEP);
+	VolumeControl::GetVolumeControl()->StepVolume(VOLUME_STEP);
 }
 
-VolumeControl::VolumeControl()
+VolumeControl::VolumeControl() : volume(0)
 {
-
 }
 
 VolumeControl * VolumeControl::GetVolumeControl()
@@ -30,7 +29,7 @@ VolumeControl * VolumeControl::GetVolumeControl()
 
 AudioSample VolumeControl::Apply(AudioSample sample)
 {
-	return sample; // TODO: Do apply.
+	return (sample * volume) / 100;
 }
 
 void VolumeControl::StepVolume(char step)

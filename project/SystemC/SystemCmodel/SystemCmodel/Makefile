@@ -15,9 +15,12 @@ GXX             = g++
 GCC             = gcc
 LD              = g++
 
-FLAGS           = -g -Wall -pedantic -Wno-long-long \
+FLAGS         = -g -Wall -pedantic -Wno-long-long -Werror \
+					-DSC_INCLUDE_DYNAMIC_PROCESSES -fpermissive -D_DEBUG \
+					-I $(SYSTEMC_INC_DIR)
+FLAGS_A           = -g -Wall -pedantic -Wno-long-long -Werror \
 					-DSC_INCLUDE_DYNAMIC_PROCESSES -fpermissive \
-					-I $(SYSTEMC_INC_DIR) -D_DEBUG
+					-I $(SYSTEMC_INC_DIR)
 LDFLAGS         = -L$(SYSTEMC_LIB_DIR) -lsystemc -lm
 
 SRCS = AudioCommand.cpp \
@@ -42,9 +45,9 @@ OBJS=$(SRCS:.cpp=.o)
 
 # main
 main: $(OBJS)
-	$(LIBTOOL) --mode=link --tag=CXX g++ -o $@ $(OBJS) $(LDFLAGS)
+	$(LIBTOOL) --mode=link --tag=CXX g++ -o $@ $(OBJS) $(LDFLAGS) $<
 
-.cpp.o:
+.cpp.o: 
 	$(LIBTOOL) --mode=compile g++ -c $(FLAGS) $<
 
 %.o: %.c
@@ -52,7 +55,7 @@ main: $(OBJS)
 
 cleantemps:
 	rm -f *.o *.lo
-	rm -rf .libs $<
+	rm -rf .libs 
 
 clean:
 	make cleantemps

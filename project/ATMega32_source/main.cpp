@@ -259,7 +259,7 @@ void ConvertToInternal(int8_t v)
 
 int8_t ConvertToLeds()
 {
-	return led4_on << 7 | led3_on << 6 | led2_on << 5 | led1_on << 4 | led1_on << 3 | led2_on << 2 | led2_on << 1 | led1_on;
+	return led4_on << 7 | led3_on << 6 | led2_on << 5 | led1_on << 4 | led1_on << 3 | led2_on << 2 | led3_on << 1 | led4_on;
 }
 
 int main(void)

@@ -4,7 +4,8 @@
 void Preprocessing::HandleSample(void)
 {
 	AudioSample s = input.read();
-	OutPutQueue::GetOutPutQueue()->EnqueueAudioCommand(s);
+    AudioSample volume_controlled = VolumeControl::GetVolumeControl()->Apply(s);
+	OutPutQueue::GetOutPutQueue()->EnqueueAudioCommand(volume_controlled);
 	OutPutQueue::GetOutPutQueue()->EnqueueLedCommand(filter->Apply(s));
 }
 
