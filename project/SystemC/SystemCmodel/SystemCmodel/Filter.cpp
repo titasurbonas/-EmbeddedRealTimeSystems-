@@ -1,4 +1,3 @@
-
 #include "Filter.h"
 #include "FilterNone.h"
 

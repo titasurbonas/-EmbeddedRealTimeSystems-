@@ -11,8 +11,9 @@
 
 SC_MODULE(Top)
 { 
-	SC_CTOR(Top) : 
-		clock("clock", 10, SC_NS), 
+	SC_CTOR(Top) :
+		clock("clock", 10, SC_NS),
+		discofier_clock("discofier_clock", 2600, SC_NS),
 #ifdef _DEBUG
 		testbench("TestBench"),
 #endif
@@ -44,7 +45,7 @@ SC_MODULE(Top)
 		audio_output.output(audio_output_channel);
 		audio_output.clock(clock);
 	//TODO include sincornization  
-		discofier.CLK(clock);
+		discofier.CLK(discofier_clock);
 		discofier.SDA(discofier_channel);
 
 		leds.SCL(discofier_clock);
@@ -70,9 +71,9 @@ SC_MODULE(Top)
 	}
 
 	sc_signal<AudioSample> audio_input_preprocessor, audio_output_channel, discofier_channel;
-	sc_signal<bool> volume_up, volume_down, discofier_clock;
+	sc_signal<bool> volume_up, volume_down;
 	sc_signal<sc_int<1>> filter_selector;
-	sc_clock clock;
+	sc_clock clock, discofier_clock;
 
 #ifdef _DEBUG
 	TestBench testbench;

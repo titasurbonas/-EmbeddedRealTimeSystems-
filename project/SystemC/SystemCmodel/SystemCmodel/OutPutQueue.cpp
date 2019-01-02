@@ -3,7 +3,8 @@
 OutPutQueue *OutPutQueue::self = NULL;
 OutPutQueue::OutPutQueue()
 {
-	queue = new std::queue<Command*>();
+	Audioqueue = new std::queue<Command*>();
+	Ledqueue = new std::queue<Command*>;
 }
 
 OutPutQueue * OutPutQueue::GetOutPutQueue()
@@ -15,21 +16,21 @@ OutPutQueue * OutPutQueue::GetOutPutQueue()
 
 void OutPutQueue::EnqueueAudioCommand(AudioSample sample)
 {
-	queue->push(new AudioCommand(sample));
+	Audioqueue->push(new AudioCommand(sample));
 }
 
 void OutPutQueue::EnqueueLedCommand(AudioSample sample)
 {
-	queue->push(new LedCommand(sample));
+	Ledqueue->push(new LedCommand(sample));
 }
 //ToDo fix problem with blocking for audio 
 LedCommand* OutPutQueue::DeQueueLed()
 {
-	if (!queue->empty()) {
+	if (!Ledqueue->empty()) {
 
-		Command* c = queue->front();
+		Command* c = Ledqueue->front();
 		if (typeid(*c).name() == typeid(LedCommand).name()) {
-			queue->pop();
+			Ledqueue->pop();
 
 			return static_cast<LedCommand*>(c);
 		}
@@ -39,10 +40,10 @@ LedCommand* OutPutQueue::DeQueueLed()
 
 AudioCommand * OutPutQueue::DeQueueAudio()
 {
-	if (!queue->empty()) {
-		Command* a = queue->front();
+	if (!Audioqueue->empty()) {
+		Command* a = Audioqueue->front();
 		if (typeid(*a).name() == typeid(AudioCommand).name()) {
-			queue->pop();
+			Audioqueue->pop();
 			return static_cast<AudioCommand*>(a);
 		}
 	}
@@ -51,5 +52,6 @@ AudioCommand * OutPutQueue::DeQueueAudio()
 
 OutPutQueue::~OutPutQueue()
 {
-	delete queue;
+	delete Audioqueue;
+	delete Ledqueue;
 }

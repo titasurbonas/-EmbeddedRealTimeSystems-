@@ -11,7 +11,7 @@ void AudioOutput::OutputSample(void)
 		
 		if (c != NULL) {
 			output.write(c->play());
-			std::cout << c->play() << endl;
+			//std::cout << c->play() << endl;
 		}
 		wait();
 	}

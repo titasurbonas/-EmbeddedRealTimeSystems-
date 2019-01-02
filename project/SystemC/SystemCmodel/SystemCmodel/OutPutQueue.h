@@ -8,7 +8,8 @@ class OutPutQueue
 {
 private:
 	static OutPutQueue* self;
-	std::queue<Command*> *queue;
+	std::queue<Command*> *Audioqueue;
+	std::queue<Command*> *Ledqueue;
 	OutPutQueue();
 public:
 	static OutPutQueue* GetOutPutQueue();
@@ -18,4 +19,3 @@ public:
 	AudioCommand* DeQueueAudio();
 	~OutPutQueue();
 };
-
