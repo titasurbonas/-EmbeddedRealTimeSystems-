@@ -2,7 +2,10 @@
 #include "AudioSample.h"
 
 typedef enum filterType {
-	None = 0
+	None     =0,
+	LowPass  =1,
+	HighPass =2,
+	BandPass =3,
 } FilterType;
 
 class Filter

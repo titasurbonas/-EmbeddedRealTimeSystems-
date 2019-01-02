@@ -179,6 +179,8 @@
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="DiscoFier.cpp" />
     <ClCompile Include="Filter.cpp" />
+    <ClCompile Include="FilterHighPass.cpp" />
+    <ClCompile Include="FilterLowPass.cpp" />
     <ClCompile Include="FilterNone.cpp" />
     <ClCompile Include="LedCommand.cpp" />
     <ClCompile Include="Leds.cpp" />
@@ -197,6 +199,8 @@
     <ClInclude Include="Command.h" />
     <ClInclude Include="DiscoFier.h" />
     <ClInclude Include="Filter.h" />
+    <ClInclude Include="FilterHighPass.h" />
+    <ClInclude Include="FilterLowPass.h" />
     <ClInclude Include="FilterNone.h" />
     <ClInclude Include="LedCommand.h" />
     <ClInclude Include="Leds.h" />

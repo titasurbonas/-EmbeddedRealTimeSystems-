@@ -1,12 +1,6 @@
 
 #include "PreProcessing.h"
 
-void ForwardSample(AudioSample sample, Filter * filter)
-{
-
-}
-
-
 void Preprocessing::HandleSample(void)
 {
 	AudioSample r = r_input.read();
