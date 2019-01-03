@@ -1,16 +1,16 @@
 #pragma once
-
+/*
+#include <src/Leds.h>
 #include "AudioSample.h"
-#include "LedCommand.h"
-#include "OutPutQueue.h"
-#include "Leds.h"
 
 class Discofier
 {
 public:
 	Discofier(Leds * driver);
+	void SetLeds(AudioSample left, AudioSample right);
 private:
 	Leds * driver;
 
 	void UpdateLeds();
 };
+*/

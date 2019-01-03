@@ -18,7 +18,7 @@
 					<folderInfo id="xilinx.gnu.armv7.exe.debug.404079339." name="/" resourcePath="">
 						<toolChain id="xilinx.gnu.armv7.exe.debug.toolchain.593815457" name="Xilinx ARM v7 GNU Toolchain" superClass="xilinx.gnu.armv7.exe.debug.toolchain">
 							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.arm.a53.x32" id="xilinx.armv7.target.gnu.base.debug.731216240" isAbstract="false" name="Debug Platform" superClass="xilinx.armv7.target.gnu.base.debug"/>
-							<builder buildPath="${workspace_loc:/Solution4}/Debug" enableAutoBuild="true" id="xilinx.gnu.armv7.toolchain.builder.debug.1776006332" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" stopOnErr="false" superClass="xilinx.gnu.armv7.toolchain.builder.debug"/>
+							<builder buildPath="${workspace_loc:/Solution4}/Debug" enableAutoBuild="true" id="xilinx.gnu.armv7.toolchain.builder.debug.1776006332" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" stopOnErr="true" superClass="xilinx.gnu.armv7.toolchain.builder.debug"/>
 							<tool id="xilinx.gnu.armv7.c.toolchain.assembler.debug.1432342740" name="ARM v7 gcc assembler" superClass="xilinx.gnu.armv7.c.toolchain.assembler.debug">
 								<inputType id="xilinx.gnu.assembler.input.1083966963" superClass="xilinx.gnu.assembler.input"/>
 							</tool>
@@ -37,7 +37,7 @@
 									<listOptionValue builtIn="false" value="../../ProjectSolution_bsp/ps7_cortexa9_0/include"/>
 								</option>
 								<option id="xilinx.gnu.compiler.misc.other.1936764550" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
-								<option id="xilinx.gnu.compiler.dircategory.includes.1218128260" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.1218128260" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hardwaremodel/project/project.sdk/Solution4"/>
 								</option>
 								<inputType id="xilinx.gnu.armv7.cxx.compiler.input.1245100724" name="C++ source files" superClass="xilinx.gnu.armv7.cxx.compiler.input"/>

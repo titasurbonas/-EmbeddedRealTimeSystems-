@@ -27,26 +27,30 @@ void VolumeIO::run()
 {
 	while(1)
 	{
-		// IF VolumeUP:
-		if(false)
+		if(false) // TODO: Read button state from device
 			VolumeUp();
-		if(false)
+		if(false) // TODO: Read button state from device
 			VolumeDown();
 		yield();
 	}
 }
 
-VolumeControl::VolumeControl() : volume(0)
+VolumeControl::VolumeControl() : volume(0), mtx()
 {
 }
 
 AudioSample VolumeControl::Apply(AudioSample sample)
 {
-	return (sample * volume) / 100;
+	mtx.Acquire();
+	AudioSample s = (sample * volume) / 100;
+	mtx.Release();
+	return s;
 }
 
 void VolumeControl::StepVolume(char step)
 {
+	mtx.Acquire();
 	volume += std::min(std::max(step, (char)100), (char)0);
+	mtx.Release();
 }
 

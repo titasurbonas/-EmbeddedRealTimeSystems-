@@ -1,7 +1,6 @@
 #pragma once
+
 #include "AudioSample.h"
-#include "OutPutQueue.h"
-#include "AudioCommand.h"
 #include "hal/AudioDriver.h"
 
 class AudioOutput

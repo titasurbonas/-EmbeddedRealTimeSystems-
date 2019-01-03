@@ -1,8 +1,6 @@
 #pragma once
 
 #include "AudioSample.h"
-#include "OutPutQueue.h"
-#include "LedCommand.h"
 
 class Leds
 {

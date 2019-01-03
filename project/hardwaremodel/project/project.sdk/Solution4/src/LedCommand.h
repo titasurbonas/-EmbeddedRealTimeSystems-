@@ -1,11 +1,16 @@
 #pragma once
+
+#include "Leds.h"
 #include "Command.h"
-class LedCommand : public Command {
+
+class LedCommand : public Command
+{
 public:
-	//virtual void play() { actuator->Play(right_sample, left_sample); }
-	//LedCommand(Discofier * actor, AudioSample right_sample, AudioSample left_sample);
+	LedCommand(Leds * actor, AudioSample right_sample, AudioSample left_sample);
+	~LedCommand();
+	virtual void play();
 
 private:
-	//Discofier * actuator;
+	Leds * actuator;
 };
 

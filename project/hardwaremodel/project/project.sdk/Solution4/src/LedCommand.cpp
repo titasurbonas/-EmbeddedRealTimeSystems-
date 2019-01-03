@@ -1,6 +1,14 @@
 #include "LedCommand.h"
 
-/*
-LedCommand::LedCommand(Discofier * actor, AudioSample right_sample, AudioSample left_sample) : actuator(actor), Command(right_sample, left_sample)
+
+LedCommand::LedCommand(Leds * actor, AudioSample right_sample, AudioSample left_sample) : Command(right_sample, left_sample), actuator(actor)
 {
-}*/
+}
+
+LedCommand::~LedCommand()
+{}
+
+void LedCommand::play()
+{
+	actuator->ReceiveInput((right_audio + left_audio)/2);
+}

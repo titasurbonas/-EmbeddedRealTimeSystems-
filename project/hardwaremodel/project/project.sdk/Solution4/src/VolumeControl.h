@@ -2,6 +2,7 @@
 
 #include "AudioSample.h"
 #include "os/Thread.h"
+#include "os/Mutex.h"
 
 class VolumeControl
 {
@@ -11,6 +12,7 @@ public:
 	void StepVolume(char step);
 private:
 	char volume;
+	AbstractOS::Mutex mtx;
 };
 
 

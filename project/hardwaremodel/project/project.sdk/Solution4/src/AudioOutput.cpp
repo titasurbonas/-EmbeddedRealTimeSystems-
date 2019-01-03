@@ -1,4 +1,6 @@
+#include <src/OutputQueue.h>
 #include "AudioOutput.h"
+
 
 AudioOutput::AudioOutput(AudioDriver * driver) : pAudio(driver)
 {
@@ -7,7 +9,6 @@ AudioOutput::AudioOutput(AudioDriver * driver) : pAudio(driver)
 
 void AudioOutput::OutputSample(void)
 {
-	OutPutQueue* que = OutPutQueue::GetOutPutQueue();
 	while (true)
 	{
 		//AudioCommand* c = que->DeQueueAudio();
