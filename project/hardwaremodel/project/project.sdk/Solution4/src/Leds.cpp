@@ -1,8 +1,11 @@
 #include "Leds.h"
 
-Leds::Leds()
+Leds::Leds(ThreadPriority priority, string name) : AbstractOS::Thread(priority, name)
 {}
-
+Leds::run()
+{
+	UpdateLeds();
+}
 void Leds::UpdateLeds(void)
 {
 	while (true)
@@ -35,7 +38,7 @@ void Leds::UpdateLeds(void)
             led3_on |= led3 == 3;
             led4_on |= led4 == 3;
         }
-
+        Sleep(500);
         // TODO: Convert to good wait.
 		//wait();
 	}

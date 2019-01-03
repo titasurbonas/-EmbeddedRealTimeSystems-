@@ -1,5 +1,5 @@
 #include "DiscoFier.h"
-/*
+
 Discofier::Discofier(Leds * leds_driver) : driver(leds_driver)
 {}
 
@@ -24,4 +24,4 @@ void Discofier::SetLeds(AudioSample left, AudioSample right)
 {
 	driver->ReceiveInput((left + right)/2);
 }
-*/
+

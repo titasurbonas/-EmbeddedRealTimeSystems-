@@ -1,9 +1,13 @@
 #include <src/OutputQueue.h>
 
-OutputQueue::OutputQueue(AudioOutput * audio, Leds * leds) : audio_out(audio), led_out(leds)
+OutputQueue::OutputQueue( ThreadPriority priority, string name, AudioOutput * audio, Leds * leds) : 
+AbstractOS::Thread(priority, name) audio_out(audio), led_out(leds)
 {
 	Audioqueue = std::queue<Command*>();
 	Ledqueue = std::queue<Command*>();
+	delay = 20;
+	count =  0;
+	run();
 }
 
 void OutputQueue::EnqueueAudioCommand(AudioSample right_sample, AudioSample left_sample)
@@ -42,7 +46,21 @@ AudioCommand * OutputQueue::DeQueueAudio()
 	}
 	 return NULL;
 }
-
+void OutputQueue::run()
+{
+	while(1)
+	{
+		if(!Ledqueue.empty() && delay == count)
+		{
+			led_out->play(DeQueueLed();
+			count = 0;
+		}
+		if(!Audioqueue.empty())
+			audio_out->play(DeQueueAudio());
+	count++;
+	Sleep(500);
+	}	
+}
 OutputQueue::~OutputQueue()
 {
 }

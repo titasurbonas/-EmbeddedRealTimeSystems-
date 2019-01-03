@@ -1,5 +1,5 @@
 #pragma once
-/*
+
 #include <src/Leds.h>
 #include "AudioSample.h"
 
@@ -10,7 +10,6 @@ public:
 	void SetLeds(AudioSample left, AudioSample right);
 private:
 	Leds * driver;
-
 	void UpdateLeds();
 };
-*/
+

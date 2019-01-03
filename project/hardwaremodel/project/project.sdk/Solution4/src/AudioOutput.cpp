@@ -26,6 +26,6 @@ void AudioOutput::OutputSample(void)
 
 void AudioOutput::Play(AudioSample left, AudioSample right)
 {
-	// TODO : Send to driver
+	pAudio->outSamples(left, right);
 
 }

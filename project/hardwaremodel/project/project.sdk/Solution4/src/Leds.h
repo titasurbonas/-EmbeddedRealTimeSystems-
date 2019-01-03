@@ -2,13 +2,14 @@
 
 #include "AudioSample.h"
 
-class Leds
+class Leds : public AbstractOS::Thread
 {
 public:
-	Leds();
+	Leds(ThreadPriority priority, string name);
 	void ReceiveInput(AudioSample sample);
 	void UpdateLeds();
 private:
+    virtual void run()
     char led1 = 0x0;
     char led2 = 0x0;
     char led3 = 0x0;
