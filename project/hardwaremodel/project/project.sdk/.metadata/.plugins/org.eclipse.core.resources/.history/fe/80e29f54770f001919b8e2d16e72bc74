@@ -1,0 +1,33 @@
+
+#include "AudioInput.h"
+
+
+void AudioInput::ReceiveSample(void)
+{
+	AudioSample r_sample = 255, l_sample=255;
+	#ifdef _DEBUG
+		int r = 0;
+		int l = 0;
+	#endif 
+
+	while (1) 
+	{
+		#ifdef _DEBUG
+		std::cout << "Ready to receive audio sample" << std::endl;
+		wait();
+		r_sample = ++r;
+		l_sample = --l;
+		#else
+		// TODO: Read from driver.
+
+        if (!pAudio->isNewSampleReady()) return;
+		pAudio->inSamples(l_sample, r_sample);
+		#endif 
+
+		output->HandleSample(l_sample, r_sample);
+	}
+}
+
+void ReceiveSample(void)
+{
+}

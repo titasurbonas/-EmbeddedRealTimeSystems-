@@ -1,0 +1,13 @@
+#pragma once
+#include "AudioSample.h"
+#include "OutPutQueue.h"
+#include "AudioCommand.h"
+
+class AudioOutput
+{
+public:
+	AudioOutput(AudioDriver * driver);
+private:
+
+	void OutputSample();
+};

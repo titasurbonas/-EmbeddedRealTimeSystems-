@@ -1,0 +1,26 @@
+#pragma once
+
+#include "AudioSample.h"
+
+class VolumeControl
+{
+public:
+	static VolumeControl * GetVolumeControl();
+	AudioSample Apply(AudioSample);
+	void StepVolume(char step);
+private:
+	VolumeControl();
+	static VolumeControl * self;
+	char volume;
+};
+
+
+class VolumeIO
+{
+public:
+	VolumeIO();
+private:
+
+	void VolumeUp();
+	void VolumeDown();
+};

@@ -1,0 +1,14 @@
+#pragma once
+
+
+typedef long AudioSample;
+
+/*struct AudioSample
+{
+	int value;
+};
+
+bool operator==(const AudioSample& lhs, const AudioSample& rhs)
+{
+	return lhs.value == rhs.value;
+}*/

@@ -1,0 +1,26 @@
+#pragma once
+
+#include "AudioSample.h"
+#include "LedCommand.h"
+#include "OutPutQueue.h"
+
+class Discofier
+{
+public:
+	Discofier(Leds * driver);
+private:
+	Leds * driver;
+
+	void UpdateLeds();
+};
+
+SC_MODULE(DiscoFier) {
+	SC_CTOR(DiscoFier) {
+		SC_THREAD(UpdateLeds);
+		sensitive << CLK.pos();
+		std::cout << "CTOR Discofier done" << std::endl;
+	}
+	sc_out<AudioSample> SDA;
+	sc_in<bool> CLK;
+	void UpdateLeds();
+};
