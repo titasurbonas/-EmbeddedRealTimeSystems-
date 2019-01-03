@@ -1,6 +1,7 @@
 #pragma once
 
 #include "AudioSample.h"
+#include "os/Thread.h"
 
 class VolumeControl
 {
@@ -9,17 +10,17 @@ public:
 	AudioSample Apply(AudioSample);
 	void StepVolume(char step);
 private:
-	static VolumeControl * self;
 	char volume;
 };
 
 
-class VolumeIO
+class VolumeIO : AbstractOS::Thread
 {
 public:
-	VolumeIO(VolumeControl * control);
+	VolumeIO(ThreadPriority priority, string name, VolumeControl * control);
 private:
 	VolumeControl * control;
 	void VolumeUp();
 	void VolumeDown();
+	virtual void run();
 };

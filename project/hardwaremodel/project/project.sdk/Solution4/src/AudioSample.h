@@ -1,4 +1,4 @@
 #pragma once
 
 
-typedef long AudioSample;
+typedef unsigned long AudioSample;

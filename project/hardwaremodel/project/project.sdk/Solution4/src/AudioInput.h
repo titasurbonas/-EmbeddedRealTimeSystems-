@@ -3,17 +3,20 @@
 #include "PreProcessing.h"
 #ifndef _DEBUG
 #include "hal/AudioDriver.h"
+#include "os/Thread.h"
 #endif
 
-class AudioInput
+class AudioInput : public AbstractOS::Thread
 {
 public:
-	AudioInput(AudioDriver * driver, Preprocessing * output);
+	AudioInput(ThreadPriority priority, string name, AudioDriver * driver, Preprocessing * output);
 	~AudioInput();
 
 private:
 	Preprocessing * destination;
 	AudioDriver * pAudio;
+
+	virtual void run();
 
 	void ReceiveSample();
 };

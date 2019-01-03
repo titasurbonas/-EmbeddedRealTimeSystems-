@@ -14,13 +14,13 @@ class Top
 public:
 	Top();
 private:
-	VolumeControl volume_control;
 	AudioDriver audio_driver;
+	VolumeControl volume_control;
+	Preprocessing audio_preprocessor;
 	AudioInput audio_input;
 	AudioOutput audio_output;
-	VolumeIO volume_interface;
-	Preprocessing audio_preprocessor;
-	Discofier discofier;
 	Leds leds;
+	Discofier discofier;
+	VolumeIO volume_interface;
 };
 

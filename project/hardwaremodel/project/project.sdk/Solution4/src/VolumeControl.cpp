@@ -6,9 +6,9 @@
 
 #define VOLUME_STEP 2
 
-VolumeControl * VolumeControl::self = NULL;
-
-VolumeIO::VolumeIO(VolumeControl * volume_control) : control(volume_control)
+VolumeIO::VolumeIO(ThreadPriority priority, string name, VolumeControl * volume_control) :
+	AbstractOS::Thread(priority, name),
+	control(volume_control)
 {}
 
 void VolumeIO::VolumeUp(void)
@@ -21,6 +21,19 @@ void VolumeIO::VolumeDown(void)
 {
 	// TODO: Add blocking listening
 	control->StepVolume(VOLUME_STEP);
+}
+
+void VolumeIO::run()
+{
+	while(1)
+	{
+		// IF VolumeUP:
+		if(false)
+			VolumeUp();
+		if(false)
+			VolumeDown();
+		yield();
+	}
 }
 
 VolumeControl::VolumeControl() : volume(0)
