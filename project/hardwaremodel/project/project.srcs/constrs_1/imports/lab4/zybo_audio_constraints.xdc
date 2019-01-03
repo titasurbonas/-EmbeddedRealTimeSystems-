@@ -61,6 +61,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports IIC_1_sda_io]
 
 # GPIO2[0] for bypass a sample or send it through the filter
 set_property PACKAGE_PIN M14 [get_ports {sws_4bits_tri_i[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {sws4bits_tri_i[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sws_4bits_tri_i[0]}]
 
 

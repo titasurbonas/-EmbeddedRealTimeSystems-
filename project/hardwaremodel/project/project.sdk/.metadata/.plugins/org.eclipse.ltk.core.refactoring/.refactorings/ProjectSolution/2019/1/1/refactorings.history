@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Makefile&apos; to &apos;ProjectSolution&apos;" description="Move &apos;Makefile&apos; to &apos;ProjectSolution&apos;" destination="/ProjectSolution" element1="src/Makefile" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1546513395667" updateReferences="true"/>
+</session>

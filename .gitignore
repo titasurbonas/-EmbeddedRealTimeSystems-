@@ -43,8 +43,11 @@
 /project/SystemC/SystemCmodel/SystemCmodel/Debug
 *.filters
 *.user
+*.jou
+*.log
 /project/SystemC/SystemCmodel/.vs/SystemCmodel/v15
 /project/SystemC/SystemCmodel/x64/Debug
 /project/SystemC/SystemCmodel/SystemCmodel/x64/Debug
 /.vs/-EmbeddedRealTimeSystems-/v15/Browse.VC.opendb
 /project/SystemC/SystemCmodel/SystemCmodel/WaveForm.vcd
+project/hardwaremodel/project/project.runs/.jobs
