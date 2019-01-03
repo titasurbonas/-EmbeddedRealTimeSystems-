@@ -1,0 +1,29 @@
+#pragma once
+
+#include "AudioSample.h"
+#include "OutPutQueue.h"
+#include "LedCommand.h"
+
+class Leds
+{
+public:
+	Leds();
+	void ReceiveInput(AudioSample sample);
+	void UpdateLeds();
+private:
+    char led1 = 0x0;
+    char led2 = 0x0;
+    char led3 = 0x0;
+    char led4 = 0x0;
+
+    char time_scaler = 0x0;
+    char output = 0x00;
+    char led1_on = 0;
+    char led2_on = 0;
+    char led3_on = 0;
+    char led4_on = 0;
+
+    char ConvertToLeds();
+    void ConvertToInternal(AudioSample v);
+};
+
