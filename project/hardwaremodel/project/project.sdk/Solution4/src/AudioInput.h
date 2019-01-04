@@ -16,6 +16,7 @@ private:
 	Preprocessing * destination;
 	AudioDriver * pAudio;
 
+public:
 	virtual void run();
 
 	void ReceiveSample();

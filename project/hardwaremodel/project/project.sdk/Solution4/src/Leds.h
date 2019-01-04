@@ -1,5 +1,6 @@
 #pragma once
 
+#include "os/Thread.h"
 #include "AudioSample.h"
 
 class Leds : public AbstractOS::Thread
@@ -9,7 +10,7 @@ public:
 	void ReceiveInput(AudioSample sample);
 	void UpdateLeds();
 private:
-    virtual void run()
+    virtual void run();
     char led1 = 0x0;
     char led2 = 0x0;
     char led3 = 0x0;

@@ -11,6 +11,7 @@ AudioInput::AudioInput
 
 void AudioInput::run()
 {
+	printf("AudioInput running\r\n");
 	ReceiveSample();
 }
 
@@ -20,24 +21,15 @@ AudioInput::~AudioInput()
 void AudioInput::ReceiveSample(void)
 {
 	AudioSample r_sample, l_sample;
-	#ifdef _DEBUG
-		int r = 0;
-		int l = 0;
-	#endif 
 
 	while (1)
 	{
-		#ifdef _DEBUG
-		std::cout << "Ready to receive audio sample" << std::endl;
-		wait();
-		r_sample = ++r;
-		l_sample = --l;
-		#else
-        if (!pAudio->isNewSampleReady()) return;
+		printf("AudioInput running\r\n");
+        while (!pAudio->isNewSampleReady());// yield();
 		pAudio->inSamples(l_sample, r_sample);
-		#endif 
+		pAudio->outSamples(l_sample, r_sample);
 
-		destination->HandleSample(l_sample, r_sample);
-		yield();
+		//destination->HandleSample(l_sample, r_sample);
+		//yield();
 	}
 }

@@ -4,11 +4,13 @@
 #include "AudioSample.h"
 #include "VolumeControl.h"
 #include "Filter.h"
+#include "os/Thread.h"
+#include <xgpiops.h>
 
-class Preprocessing
+class Preprocessing : AbstractOS::Thread
 {
 public:
-	Preprocessing(VolumeControl * volume_control, OutputQueue * outputQueue);
+	Preprocessing(ThreadPriority priority, string name, VolumeControl * volume_control, OutputQueue * outputQueue);
 
 	void HandleSample(AudioSample l_sample, AudioSample r_sample);
 
@@ -18,6 +20,10 @@ private:
 	Filter * filter;
 	VolumeControl * volume;
 	OutputQueue * output_queue;
+	void run();
+
+	XGpioPs switches;
+	XGpioPs_Config gpio_config;
 };
 
 

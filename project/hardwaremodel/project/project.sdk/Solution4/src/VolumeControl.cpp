@@ -41,16 +41,16 @@ VolumeControl::VolumeControl() : volume(0), mtx()
 
 AudioSample VolumeControl::Apply(AudioSample sample)
 {
-	mtx.Acquire();
+	//mtx.Acquire();
 	AudioSample s = (sample * volume) / 100;
-	mtx.Release();
+	//mtx.Release();
 	return s;
 }
 
 void VolumeControl::StepVolume(char step)
 {
-	mtx.Acquire();
+	//mtx.Acquire();
 	volume += std::min(std::max(step, (char)100), (char)0);
-	mtx.Release();
+	//mtx.Release();
 }
 
