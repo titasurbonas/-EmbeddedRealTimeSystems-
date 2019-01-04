@@ -3,7 +3,7 @@
 	<name>Solution4</name>
 	<comment></comment>
 	<projects>
-		<project>freertos10_xilinx_bsp_0</project>
+		<project>freertos10_xilinx_bsp_1</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

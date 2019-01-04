@@ -17,36 +17,40 @@ set_property PACKAGE_PIN M17 [get_ports PBDATA]
 set_property IOSTANDARD LVCMOS33 [get_ports PBDATA]
 
 #GPIO[0] output
-set_property PACKAGE_PIN T20 [get_ports {LEDS_tri_o[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LEDS_tri_o[0]}]
+set_property PACKAGE_PIN P18 [get_ports {GPIO_tri_io[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {GPIO_tri_io[0]}]
+
+#GPIO[0] output
+set_property PACKAGE_PIN T20 [get_ports {gpio_rtl_tri_o[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_o[0]}]
 
 #GPIO[1] output
-set_property PACKAGE_PIN U20 [get_ports {LEDS_tri_o[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LEDS_tri_o[1]}]
+set_property PACKAGE_PIN U20 [get_ports {gpio_rtl_tri_o[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_o[1]}]
 
 #GPIO[2] output
-set_property PACKAGE_PIN V20 [get_ports {LEDS_tri_o[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LEDS_tri_o[2]}]
+set_property PACKAGE_PIN V20 [get_ports {gpio_rtl_tri_o[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_o[2]}]
 
 #GPIO[3] output
-set_property PACKAGE_PIN W20 [get_ports {LEDS_tri_o[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LEDS_tri_o[3]}]
+set_property PACKAGE_PIN W20 [get_ports {gpio_rtl_tri_o[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_o[3]}]
 
 #GPIO[4] output
-set_property PACKAGE_PIN Y18 [get_ports {LEDS_tri_o[4]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LEDS_tri_o[4]}]
+set_property PACKAGE_PIN Y18 [get_ports {gpio_rtl_tri_o[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_o[4]}]
 
 #GPIO[5] output
-set_property PACKAGE_PIN Y19 [get_ports {LEDS_tri_o[5]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LEDS_tri_o[5]}]
+set_property PACKAGE_PIN Y19 [get_ports {gpio_rtl_tri_o[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_o[5]}]
 
 #GPIO[6] output
-set_property PACKAGE_PIN W18 [get_ports {LEDS_tri_o[6]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LEDS_tri_o[6]}]
+set_property PACKAGE_PIN W18 [get_ports {gpio_rtl_tri_o[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_o[6]}]
 
 #GPIO[7] output
-set_property PACKAGE_PIN W19 [get_ports {LEDS_tri_o[7]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LEDS_tri_o[7]}]
+set_property PACKAGE_PIN W19 [get_ports {gpio_rtl_tri_o[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_o[7]}]
 
 #MCLK
 set_property PACKAGE_PIN T19 [get_ports FCLK_CLK1]

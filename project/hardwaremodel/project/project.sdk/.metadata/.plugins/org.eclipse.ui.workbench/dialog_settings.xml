@@ -13,7 +13,7 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="com.xilinx.sdk.appwiz.AppWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="com.xilinx.sdk.sw.ui.NewBspWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="com.xilinx.sdk.ui.category.newWizards"/>
 		</list>
@@ -26,8 +26,9 @@
 	</section>
 	<section name="FileSystemImportWizard">
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
-		<item value="true" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/Assignment2/Exercise3,4,5/Lab_4.sdk/lab4"/>
 			<item value="/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/SystemC/SystemCmodel/SystemCmodel"/>
 			<item value="/home/olafur/SystemC/systemc-2.3.2/src"/>
 		</list>

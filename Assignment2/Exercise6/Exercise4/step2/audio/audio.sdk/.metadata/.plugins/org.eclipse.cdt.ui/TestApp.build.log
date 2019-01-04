@@ -1,8 +1,30 @@
-16:19:11 **** Auto Build of configuration Debug for project TestApp ****
+18:08:37 **** Incremental Build of configuration Debug for project TestApp ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-make: Nothing to be done for 'main-build'.
+Building file: ../src/zybo_testapp.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zybo_testapp.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../TestApp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zybo_testapp.d" -MT"src/zybo_testapp.o" -o "src/zybo_testapp.o" "../src/zybo_testapp.c"
+../src/zybo_testapp.c: In function 'filter_or_bypass_input':
+../src/zybo_testapp.c:193:7: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+       while(!ResultAvailHlsFir_right);
+       ^~~~~
+../src/zybo_testapp.c:194:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+    u32DataR = XFir_Get_y(&HlsFir_right);
+    ^~~~~~~~
+Finished building: ../src/zybo_testapp.c
+ 
+Building target: TestApp.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../TestApp_bsp/ps7_cortexa9_0/lib -o "TestApp.elf"  ./src/zybo_testapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: TestApp.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size TestApp.elf  |tee "TestApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36468	   2760	  22696	  61924	   f1e4	TestApp.elf
+Finished building: TestApp.elf.size
+ 
 
-16:19:11 Build Finished (took 557ms)
+18:08:38 Build Finished (took 477ms)
 

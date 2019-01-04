@@ -1,0 +1,69 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CC_SRCS += \
+../main.cc 
+
+CPP_SRCS +=
+
+CC_DEPS += \
+./main.d 
+
+OBJS += \
+./AudioCommand.o \
+./AudioInput.o \
+./AudioInterface.o \
+./AudioOutput.o \
+./AudioSample.o \
+./Command.o \
+./Filter.o \
+./FilterHighPass.o \
+./FilterLowPass.o \
+./FilterNone.o \
+./LedCommand.o \
+./Leds.o \
+./OutputQueue.o \
+./PreProcessing.o \
+./TestBench.o \
+./Top.o \
+./VolumeControl.o \
+./main.o 
+
+CPP_DEPS += \
+./AudioCommand.d \
+./AudioInput.d \
+./AudioInterface.d \
+./AudioOutput.d \
+./AudioSample.d \
+./Command.d \
+./Filter.d \
+./FilterHighPass.d \
+./FilterLowPass.d \
+./FilterNone.d \
+./LedCommand.d \
+./Leds.d \
+./OutputQueue.d \
+./PreProcessing.d \
+./TestBench.d \
+./Top.d \
+./VolumeControl.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+%.o: ../%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM v7 g++ compiler'
+	arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos10_xilinx_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+%.o: ../%.cc
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM v7 g++ compiler'
+	arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos10_xilinx_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+
