@@ -6,7 +6,7 @@
 #include "AudioOutput.h"
 #include "VolumeControl.h"
 //#include "PreProcessing.h"
-#include "AudioDriver.h"
+#include "hal/AudioDriver.h"
 
 using namespace AbstractOS;
 
@@ -16,8 +16,8 @@ int main()
 
 
 	AudioDriver audio_driver = AudioDriver();
-	VolumeControl volume_control = VolumeControl();
-	AudioOutput audio_output = AudioOutput(&audio_driver);
+//	VolumeControl volume_control = VolumeControl();
+//	AudioOutput audio_output = AudioOutput(&audio_driver);
 	//Leds leds = Leds(Thread::PRIORITY_LOW, "LED driver");
 	//OutputQueue output_queue = OutputQueue(Thread::PRIORITY_LOW, "output queue", &audio_output, &leds);
 	//Preprocessing audio_preprocessor = Preprocessing(&volume_control, &output_queue);

@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sat Jan  5 00:51:54 2019">
+<application name="pa" timeStamp="Sat Jan  5 12:12:13 2019">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="7a8b93bf1e954c1c81e019715fce0e5d" type="ProjectID"/>
 <property name="ProjectIteration" value="18" type="ProjectIteration"/>
@@ -24,7 +24,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditDelete" value="10" type="JavaHandler"/>
 <property name="EditProperties" value="7" type="JavaHandler"/>
 <property name="NewExportHardware" value="3" type="JavaHandler"/>
-<property name="NewLaunchHardware" value="5" type="JavaHandler"/>
+<property name="NewLaunchHardware" value="9" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="3" type="JavaHandler"/>
 <property name="OpenProject" value="3" type="JavaHandler"/>
 <property name="OpenRSBHierarchyBlock" value="1" type="JavaHandler"/>
@@ -49,7 +49,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ApplyRSBMultiAutomationDialog_CHECKBOX_TREE" value="4" type="GuiHandlerData"/>
 <property name="BaseDialog_APPLY" value="1" type="GuiHandlerData"/>
 <property name="BaseDialog_CANCEL" value="24" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="53" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="57" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="2" type="GuiHandlerData"/>
 <property name="ClkConfigTreeTablePanel_CLK_CONFIG_TREE_TABLE" value="34" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_MESSAGES" value="2" type="GuiHandlerData"/>
@@ -73,13 +73,13 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="MIOConfigTreeTablePanel_MIO_CONFIG_TREE_TABLE" value="36" type="GuiHandlerData"/>
 <property name="MIOTablePagePanel_MIO_TABLE" value="17" type="GuiHandlerData"/>
 <property name="MIOTablePagePanel_MIO_TABLE_PARAMETER" value="4" type="GuiHandlerData"/>
-<property name="MainMenuMgr_CHECKPOINT" value="11" type="GuiHandlerData"/>
-<property name="MainMenuMgr_EXPORT" value="14" type="GuiHandlerData"/>
-<property name="MainMenuMgr_FILE" value="22" type="GuiHandlerData"/>
-<property name="MainMenuMgr_IP" value="13" type="GuiHandlerData"/>
+<property name="MainMenuMgr_CHECKPOINT" value="15" type="GuiHandlerData"/>
+<property name="MainMenuMgr_EXPORT" value="18" type="GuiHandlerData"/>
+<property name="MainMenuMgr_FILE" value="30" type="GuiHandlerData"/>
+<property name="MainMenuMgr_IP" value="17" type="GuiHandlerData"/>
 <property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="1" type="GuiHandlerData"/>
-<property name="MainMenuMgr_PROJECT" value="13" type="GuiHandlerData"/>
-<property name="MainMenuMgr_TEXT_EDITOR" value="12" type="GuiHandlerData"/>
+<property name="MainMenuMgr_PROJECT" value="17" type="GuiHandlerData"/>
+<property name="MainMenuMgr_TEXT_EDITOR" value="16" type="GuiHandlerData"/>
 <property name="MainMenuMgr_WINDOW" value="2" type="GuiHandlerData"/>
 <property name="MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN" value="1" type="GuiHandlerData"/>
 <property name="MsgTreePanel_DISCARD_USER_CREATED_MESSAGES" value="3" type="GuiHandlerData"/>
@@ -95,7 +95,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_CUSTOMIZE_RSB_BLOC" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_EXPORT_HARDWARE" value="3" type="GuiHandlerData"/>
 <property name="PACommandNames_IP_SETTINGS" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_LAUNCH_HARDWARE" value="5" type="GuiHandlerData"/>
+<property name="PACommandNames_LAUNCH_HARDWARE" value="9" type="GuiHandlerData"/>
 <property name="PACommandNames_MESSAGE_WINDOW" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_OPEN_HIERARCHY_BLOCK" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_OPEN_PROJECT" value="2" type="GuiHandlerData"/>
@@ -128,6 +128,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SystemTreeView_SYSTEM_TREE" value="19" type="GuiHandlerData"/>
 <property name="TclObjectTreeTable_TREETABLE" value="28" type="GuiHandlerData"/>
 <property name="TclObjectView_RESET_PROPERTIES" value="2" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="51" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="42" type="TclMode"/>
 </item>
 </section>
 </application>

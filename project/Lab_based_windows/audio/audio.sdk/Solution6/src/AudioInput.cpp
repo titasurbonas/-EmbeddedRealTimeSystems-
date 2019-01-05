@@ -21,10 +21,11 @@ AudioInput::~AudioInput()
 void AudioInput::ReceiveSample(void)
 {
 	AudioSample r_sample, l_sample;
-
+	pAudio->busyWaitForSamples();
 	while (1)
 	{
-		while (!pAudio->isNewSampleReady()) yield();
+		while (!pAudio->isNewSampleReady())
+			yield();
 		pAudio->inSamples(l_sample, r_sample);
 		pAudio->outSamples(l_sample, r_sample);
 

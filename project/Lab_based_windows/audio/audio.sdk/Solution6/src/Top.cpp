@@ -1,5 +1,5 @@
 #include "Top.h"
-#include "Thread.h"
+#include "os/Thread.h"
 
 Top::Top() :
 	audio_driver(),
