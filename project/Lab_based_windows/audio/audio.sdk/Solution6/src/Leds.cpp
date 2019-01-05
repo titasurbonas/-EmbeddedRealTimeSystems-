@@ -40,7 +40,7 @@ void Leds::UpdateLeds(void)
             led3_on |= led3 == 3;
             led4_on |= led4 == 3;
         }
-        yield();
+        vTaskDelay( pdMS_TO_TICKS( 12 ) );
 	}
 }
 

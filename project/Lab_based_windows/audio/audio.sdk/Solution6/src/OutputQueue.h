@@ -1,7 +1,7 @@
 #pragma once
 
-//#include "FreeRTOS.h"
-//#include "queue.h"
+#include "FreeRTOS.h"
+#include "queue.h"
 #include "Leds.h"
 #include "AudioOutput.h"
 #include "LedCommand.h"
@@ -12,8 +12,8 @@
 class OutputQueue :public AbstractOS::Thread
 {
 private:
-	//QueueHandle_t audio_queue_handle;
-	//QueueHandle_t led_queue_handle;
+	QueueHandle_t audio_queue_handle;
+	QueueHandle_t led_queue_handle;
 
 	AudioOutput * audio_out;
 	Leds * led_out;

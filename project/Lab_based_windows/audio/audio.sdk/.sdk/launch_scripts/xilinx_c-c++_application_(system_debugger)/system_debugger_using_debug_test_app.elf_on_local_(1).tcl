@@ -7,5 +7,9 @@ targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo
 stop
 ps7_init
 ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A5D1A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A5D1A"} -index 0
+dow C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/project/Lab_based_windows/audio/audio.sdk/test_app/Debug/test_app.elf
 configparams force-mem-access 0
 bpadd -addr &main

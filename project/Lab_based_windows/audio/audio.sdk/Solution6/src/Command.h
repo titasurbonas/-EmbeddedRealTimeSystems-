@@ -6,6 +6,7 @@ class Command {
 public:
 	Command(AudioSample, AudioSample);
 	Command(const Command &other);
+	Command();
 	virtual ~Command();
 	virtual void play() = 0;
 

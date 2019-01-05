@@ -5,36 +5,39 @@
 #include <bits/stl_algobase.h>
 
 #define VOLUME_STEP 2
+#define VOLUME_UP 2
+#define VOLUME_DOWN -2
 
 VolumeIO::VolumeIO(ThreadPriority priority, string name, VolumeControl * volume_control) :
 	AbstractOS::Thread(priority, name),
 	control(volume_control)
 {
-	XGpio_CfgInitialize(&switches, &gpio_config, XPAR_AXI_GPIO_0_BASEADDR);
+	XGpio_Initialize(&switches, XPAR_AXI_GPIO_0_DEVICE_ID);
+	XGpio_Initialize(&buttons, XPAR_AXI_GPIO_1_DEVICE_ID);
 }
 
 void VolumeIO::VolumeUp(void)
 {
 	// TODO: Add blocking listening
-	control->StepVolume(-VOLUME_STEP);
+	control->StepVolume(VOLUME_UP);
 }
 
 void VolumeIO::VolumeDown(void)
 {
 	// TODO: Add blocking listening
-	control->StepVolume(VOLUME_STEP);
+	control->StepVolume(VOLUME_DOWN);
 }
 
 void VolumeIO::run()
 {
 	while(1)
 	{
-		if(false) // TODO: Read button state from device
+		if(XGpio_DiscreteRead(&buttons, 1) == 0x2)
 			VolumeUp();
-		if(false) // TODO: Read button state from device
-			VolumeDown();
+		if(XGpio_DiscreteRead(&buttons, 1) == 0x1)
+				VolumeDown();
 		SetFilter();
-		yield();
+		vTaskDelay( pdMS_TO_TICKS( 50 ) );
 	}
 }
 
@@ -59,11 +62,15 @@ void VolumeIO::SetFilter(void)
 			type = FilterType::None;
 			break;
 		}
+		old_state = state;
 		control->SetFilter(Filter::CreateFilter(type));
 	}
 }
 
-VolumeControl::VolumeControl() : volume(0), mtx()
+VolumeControl::VolumeControl() :
+		volume(100),
+		mtx(),
+		filter(Filter::CreateFilter(FilterType::None))
 {
 }
 
@@ -80,14 +87,15 @@ AudioSample VolumeControl::ApplyVolume(AudioSample sample)
 	return s;
 }
 
-void VolumeControl::StepVolume(char step)
+void VolumeControl::StepVolume(signed int step)
 {
 	//mtx.Acquire();
-	volume += std::min(std::max(step, (char)100), (char)0);
+	volume = std::max(std::min(volume + step, (signed int)100), (signed int)0);
 	//mtx.Release();
 }
 
 void VolumeControl::SetFilter(Filter * new_filter)
 {
+	delete filter;
 	filter = new_filter;
 }

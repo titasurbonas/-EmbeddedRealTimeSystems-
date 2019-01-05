@@ -1,10 +1,10 @@
 #pragma once
 #include "AudioSample.h"
 #include "PreProcessing.h"
-
+#ifndef _DEBUG
 #include "hal/AudioDriver.h"
 #include "os/Thread.h"
-
+#endif
 
 class AudioInput : public AbstractOS::Thread
 {

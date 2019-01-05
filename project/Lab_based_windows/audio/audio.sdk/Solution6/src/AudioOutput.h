@@ -2,6 +2,7 @@
 
 #include "AudioSample.h"
 #include "hal/AudioDriver.h"
+
 class AudioOutput
 {
 public:
@@ -9,5 +10,4 @@ public:
 	void Play(AudioSample left, AudioSample right);
 private:
 	AudioDriver * pAudio;
-	void OutputSample();
 };

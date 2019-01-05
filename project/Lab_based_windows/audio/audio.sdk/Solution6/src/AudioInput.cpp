@@ -11,7 +11,6 @@ AudioInput::AudioInput
 
 void AudioInput::run()
 {
-	//xil_printf("AudioInput running\r\n");
 	ReceiveSample();
 }
 
@@ -21,15 +20,13 @@ AudioInput::~AudioInput()
 void AudioInput::ReceiveSample(void)
 {
 	AudioSample r_sample, l_sample;
-	pAudio->busyWaitForSamples();
+
 	while (1)
 	{
-		while (!pAudio->isNewSampleReady())
-			yield();
+		while (!pAudio->isNewSampleReady()) yield();
 		pAudio->inSamples(l_sample, r_sample);
-		pAudio->outSamples(l_sample, r_sample);
 
-		//destination->HandleSample(l_sample, r_sample);
-		yield();
+		destination->HandleSample(l_sample, r_sample);
+		Sleep(8);
 	}
 }

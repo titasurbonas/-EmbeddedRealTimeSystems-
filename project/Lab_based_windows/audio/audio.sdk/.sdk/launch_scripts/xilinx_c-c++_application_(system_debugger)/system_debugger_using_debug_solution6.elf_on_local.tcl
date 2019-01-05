@@ -12,5 +12,4 @@ rst -processor
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A5D1A"} -index 0
 dow C:/Users/titas/source/repos/-EmbeddedRealTimeSystems-/project/Lab_based_windows/audio/audio.sdk/Solution6/Debug/Solution6.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A5D1A"} -index 0
-con
+bpadd -addr &main
