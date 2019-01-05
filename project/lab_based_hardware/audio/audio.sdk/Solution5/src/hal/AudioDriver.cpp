@@ -97,8 +97,8 @@ int AudioDriver::Init(void)
 	LineinLineoutConfig();
 
 	xil_printf("ADAU1761 configured\n\r");
-	//Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, 0b1);
-	//Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + 0x4, 0b0);
+	Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, 0b1);
+	Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + 0x4, 0b0);
 
 	return Status;
 }

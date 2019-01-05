@@ -34,14 +34,14 @@ void VolumeIO::run()
 		if(false) // TODO: Read button state from device
 			VolumeDown();
 		SetFilter();
-		yield();
+		vTaskDelay( pdMS_TO_TICKS( 50 ) );
 	}
 }
 
 void VolumeIO::SetFilter(void)
 {
 	static char old_state = 0;
-	unsigned char state = static_cast<unsigned char>(XGpio_DiscreteRead(&switches, 2));
+	unsigned char state = 0; //static_cast<unsigned char>(XGpio_DiscreteRead(&switches, 2));
 
 	if(state != old_state)
 	{
@@ -63,7 +63,10 @@ void VolumeIO::SetFilter(void)
 	}
 }
 
-VolumeControl::VolumeControl() : volume(0), mtx()
+VolumeControl::VolumeControl() :
+		volume(100),
+		mtx(),
+		filter(Filter::CreateFilter(FilterType::None))
 {
 }
 

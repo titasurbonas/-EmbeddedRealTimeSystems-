@@ -8,6 +8,8 @@
 #ifndef SRC_HAL_AUDIODRIVER_H_
 #define SRC_HAL_AUDIODRIVER_H_
 
+#include "../os/Mutex.h"
+#include "../os/MutexGuard.h"
 #include "Timer.h"
 #include "xiicps.h"
 
@@ -29,6 +31,7 @@ private:
 	void LineinLineoutConfig();
 	XIicPs mIic;
 	Timer timer;
+	AbstractOS::Mutex mutex;
 };
 
 
