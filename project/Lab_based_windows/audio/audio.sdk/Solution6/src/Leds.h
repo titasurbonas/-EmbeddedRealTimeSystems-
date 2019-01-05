@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Thread.h"
+#include "os/Thread.h"
 #include "AudioSample.h"
 
 class Leds : public AbstractOS::Thread

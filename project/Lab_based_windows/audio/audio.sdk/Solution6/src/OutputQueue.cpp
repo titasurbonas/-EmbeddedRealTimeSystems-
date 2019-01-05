@@ -12,19 +12,19 @@ OutputQueue::OutputQueue( ThreadPriority priority, string name, AudioOutput * au
 
 void OutputQueue::EnqueueAudioCommand(AudioSample right_sample, AudioSample left_sample)
 {
-	AbstractOS::MutexGuard guard(&audio_mutex);
+	//AbstractOS::MutexGuard guard(&audio_mutex);
 	//xQueueGenericSend(audio_queue_handle, (void*)(new AudioCommand(audio_out, right_sample, left_sample)), ( TickType_t ) 0, queueSEND_TO_BACK);
 }
 
 void OutputQueue::EnqueueLedCommand(AudioSample right_sample, AudioSample left_sample)
 {
-	AbstractOS::MutexGuard guard(&led_mutex);
+	//AbstractOS::MutexGuard guard(&led_mutex);
 	//xQueueGenericSend(led_queue_handle, (void*)(new LedCommand(led_out, right_sample, left_sample)), ( TickType_t ) 0, queueSEND_TO_BACK);
 }
 
 void OutputQueue::DeQueueLed()
 {
-	AbstractOS::MutexGuard guard(&led_mutex);
+	//AbstractOS::MutexGuard guard(&led_mutex);
 	LedCommand * c = NULL;
 	//if (xQueueReceive(led_queue_handle, (void *)c, 0))
 	//	c->play();
@@ -32,7 +32,7 @@ void OutputQueue::DeQueueLed()
 
 void OutputQueue::DeQueueAudio()
 {
-	AbstractOS::MutexGuard guard(&audio_mutex);
+	//AbstractOS::MutexGuard guard(&audio_mutex);
 	AudioCommand * c = NULL;
 	//if (xQueueReceive(audio_queue_handle, (void *)c, 0))
 	//	c->play();

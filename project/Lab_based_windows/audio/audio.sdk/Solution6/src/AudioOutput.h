@@ -1,7 +1,7 @@
 #pragma once
 
 #include "AudioSample.h"
-#include "AudioDriver.h"
+#include "hal/AudioDriver.h"
 class AudioOutput
 {
 public:
