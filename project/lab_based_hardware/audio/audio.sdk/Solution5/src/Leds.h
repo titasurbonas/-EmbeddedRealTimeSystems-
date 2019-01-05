@@ -2,6 +2,9 @@
 
 #include "os/Thread.h"
 #include "AudioSample.h"
+#include "xparameters.h"
+#include "xil_io.h"
+//#include "xgpio.h"
 
 class Leds : public AbstractOS::Thread
 {
@@ -11,19 +14,20 @@ public:
 	void UpdateLeds();
 private:
     virtual void run();
-    char led1 = 0x0;
-    char led2 = 0x0;
-    char led3 = 0x0;
-    char led4 = 0x0;
+    volatile char led1 = 0x0;
+    volatile char led2 = 0x0;
+    volatile char led3 = 0x0;
+    volatile char led4 = 0x0;
 
-    char time_scaler = 0x0;
-    char output = 0x00;
-    char led1_on = 0;
-    char led2_on = 0;
-    char led3_on = 0;
-    char led4_on = 0;
+    volatile char time_scaler = 0x0;
+    volatile char output = 0x00;
+    volatile char led1_on = 0;
+    volatile char led2_on = 0;
+    volatile char led3_on = 0;
+    volatile char led4_on = 0;
 
     char ConvertToLeds();
     void ConvertToInternal(AudioSample v);
+    //XGpio pin_handle;
 };
 

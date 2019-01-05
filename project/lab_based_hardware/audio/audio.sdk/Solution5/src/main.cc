@@ -18,11 +18,11 @@ int main()
 
 	VolumeControl volume_control = VolumeControl();
 	AudioOutput audio_output = AudioOutput(&audio_driver);
-	Leds leds = Leds(Thread::PRIORITY_LOW, "LED driver");
+	Leds leds = Leds(Thread::PRIORITY_NORMAL, "LED driver");
 	OutputQueue output_queue = OutputQueue(Thread::PRIORITY_NORMAL, "output queue", &audio_output, &leds);
 	Preprocessing audio_preprocessor = Preprocessing(&volume_control, &output_queue);
 	AudioInput audio_input = AudioInput(Thread::PRIORITY_NORMAL, "audio input", &audio_driver, &audio_preprocessor);
-	VolumeIO volume_interface = VolumeIO(Thread::PRIORITY_LOW, "volume control", &volume_control);
+	VolumeIO volume_interface = VolumeIO(Thread::PRIORITY_NORMAL, "volume control", &volume_control);
 
 	vTaskStartScheduler();
 

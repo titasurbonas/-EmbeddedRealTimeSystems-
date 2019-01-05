@@ -26,7 +26,7 @@ void Preprocessing::HandleSample(AudioSample l_sample, AudioSample r_sample)
 
     if(count++ == 20) // TODO: Replace with aggregation.
     {
-    	output_queue->EnqueueLedCommand(r_v, l_v);
+    	output_queue->EnqueueLedCommand(volume->ApplyFilter(r_v), volume->ApplyFilter(l_v));
     	count = 0;
     }
 }

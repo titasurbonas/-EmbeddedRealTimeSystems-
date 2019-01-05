@@ -24,6 +24,7 @@ public:
 	void busyWaitForSamples(void);
 	void inSamples(unsigned long &sLeft, unsigned long &sRight);
 	void outSamples(unsigned long sLeft, unsigned long sRight);
+	void SetVolume(short volume);
 
 private:
 	int IicConfig(int DeviceIdPS);

@@ -13,10 +13,10 @@ public:
 	VolumeControl();
 	AudioSample ApplyVolume(AudioSample);
 	AudioSample ApplyFilter(AudioSample);
-	void StepVolume(char step);
+	void StepVolume(signed int step);
 	void SetFilter(Filter * filter);
 private:
-	char volume;
+	int volume;
 	AbstractOS::Mutex mtx;
 	Filter * filter;
 };
@@ -34,5 +34,5 @@ private:
 	void SetFilter(void);
 
 	XGpio switches;
-	XGpio_Config gpio_config;
+	XGpio buttons;
 };

@@ -75,7 +75,6 @@ void AudioDriver::outSamples(unsigned long sLeft, unsigned long sRight)
 {
 	Xil_Out32(I2S_DATA_TX_L_REG, sLeft);
 	Xil_Out32(I2S_DATA_TX_R_REG, sRight);
-	inSamples(sLeft, sRight);
 }
 
 int AudioDriver::Init(void)
@@ -125,6 +124,13 @@ int AudioDriver::IicConfig(int DeviceIdPS)
 	XIicPs_SetSClk(&mIic, IIC_SCLK_RATE);
 
 	return XST_SUCCESS;
+}
+
+void AudioDriver::SetVolume(short volume)
+{
+	short v = (volume * 0x4F / 100) + 0x2F;
+	AudioWriteToReg(R2_LEFT_DAC_VOLUME, v);
+	AudioWriteToReg(R3_RIGHT_DAC_VOLUME, v);
 }
 
 /******************************************************************************

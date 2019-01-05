@@ -7,7 +7,7 @@ OutputQueue::OutputQueue( ThreadPriority priority, string name, AudioOutput * au
 	led_mutex()
 {
 	audio_queue_handle = xQueueCreate( 5, sizeof(AudioCommand));
-	led_queue_handle = xQueueCreate(5, sizeof(Command*));
+	led_queue_handle = xQueueCreate(5, sizeof(LedCommand));
 }
 
 void OutputQueue::EnqueueAudioCommand(AudioSample right_sample, AudioSample left_sample)
@@ -49,7 +49,7 @@ void OutputQueue::run()
 		DeQueueLed();
 		DeQueueAudio();
 
-		Sleep(5);
+		Sleep(9);
 	}	
 }
 

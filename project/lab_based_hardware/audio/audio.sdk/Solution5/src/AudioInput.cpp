@@ -27,6 +27,6 @@ void AudioInput::ReceiveSample(void)
 		pAudio->inSamples(l_sample, r_sample);
 
 		destination->HandleSample(l_sample, r_sample);
-		Sleep(5);
+		Sleep(9);
 	}
 }
