@@ -70,13 +70,19 @@ void VolumeIO::SetFilter(void)
 VolumeControl::VolumeControl() :
 		volume(100),
 		mtx(),
-		filter(Filter::CreateFilter(FilterType::None))
+		filter(Filter::CreateFilter(FilterType::None)),
+		hls_filter((HLSFilter*)Filter::CreateFilter(FilterType::HLS))
 {
 }
 
 AudioSample VolumeControl::ApplyFilter(AudioSample sample)
 {
 	return filter->Apply(sample);
+}
+
+void VolumeControl::ApplyFirFilter(AudioSample &left, AudioSample &right)
+{
+	hls_filter->ApplyDual(right, left);
 }
 
 AudioSample VolumeControl::ApplyVolume(AudioSample sample)

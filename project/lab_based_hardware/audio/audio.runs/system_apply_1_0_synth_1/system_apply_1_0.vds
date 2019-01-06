@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jan  6 01:36:02 2019
+# Process ID: 126735
+# Current directory: /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/system_apply_1_0_synth_1
+# Command line: vivado -log system_apply_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_apply_1_0.tcl
+# Log file: /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/system_apply_1_0_synth_1/system_apply_1_0.vds
+# Journal file: /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/system_apply_1_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source system_apply_1_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_apply_1_0, cache-ID = e383104760c4c39c.
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  6 01:36:12 2019...

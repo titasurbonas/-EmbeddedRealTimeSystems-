@@ -1,5 +1,7 @@
 
 #include "AudioInput.h"
+#include "xparameters.h"
+
 
 AudioInput::AudioInput
 	(ThreadPriority priority,
@@ -17,6 +19,7 @@ void AudioInput::run()
 AudioInput::~AudioInput()
 {}
 
+
 void AudioInput::ReceiveSample(void)
 {
 	AudioSample r_sample, l_sample;
@@ -27,6 +30,10 @@ void AudioInput::ReceiveSample(void)
 		pAudio->inSamples(l_sample, r_sample);
 
 		destination->HandleSample(l_sample, r_sample);
-		Sleep(9);
+
+		Sleep(3);
 	}
 }
+
+
+

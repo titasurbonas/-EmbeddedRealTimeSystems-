@@ -78,6 +78,7 @@ set rc [catch {
   set_property ip_repo_paths {
   /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/ip_repo
   /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/Assignment2/Exercise6/Exercise4/fir.prj/solution1/impl/ip
+  /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/ip
 } [current_project]
   set_property ip_output_repo /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

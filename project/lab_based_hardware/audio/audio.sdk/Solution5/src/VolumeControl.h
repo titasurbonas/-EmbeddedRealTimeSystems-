@@ -1,5 +1,6 @@
 #pragma once
 
+#include "HLSFilter.h"
 #include "Filter.h"
 #include "AudioSample.h"
 #include "os/Thread.h"
@@ -13,12 +14,14 @@ public:
 	VolumeControl();
 	AudioSample ApplyVolume(AudioSample);
 	AudioSample ApplyFilter(AudioSample);
+	void ApplyFirFilter(AudioSample &left, AudioSample &right);
 	void StepVolume(signed int step);
 	void SetFilter(Filter * filter);
 private:
 	int volume;
 	AbstractOS::Mutex mtx;
 	Filter * filter;
+	HLSFilter * hls_filter;
 };
 
 

@@ -19,7 +19,7 @@ private:
     volatile char led3 = 0x0;
     volatile char led4 = 0x0;
 
-    volatile char time_scaler = 0x0;
+    volatile short time_scaler = 0x0;
     volatile char output = 0x00;
     volatile char led1_on = 0;
     volatile char led2_on = 0;
