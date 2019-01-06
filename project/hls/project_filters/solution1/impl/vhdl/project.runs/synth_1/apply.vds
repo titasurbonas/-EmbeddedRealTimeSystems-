@@ -1,0 +1,530 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jan  6 01:25:35 2019
+# Process ID: 125048
+# Current directory: /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log apply.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source apply.tcl
+# Log file: /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/project.runs/synth_1/apply.vds
+# Journal file: /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source apply.tcl -notrace
+Command: synth_design -top apply -part xc7z010clg400-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 125054 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1264.844 ; gain = 81.863 ; free physical = 3355 ; free virtual = 10500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'apply' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:40]
+	Parameter C_S_AXI_FIR_IO_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_FIR_IO_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:82]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:85]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:98]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:102]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:107]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:112]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:116]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:122]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 40 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'apply_hist' declared at '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_hist.vhd:76' bound to instance 'hist_U' of component 'apply_hist' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:208]
+INFO: [Synth 8-638] synthesizing module 'apply_hist' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_hist.vhd:91]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 40 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'apply_hist_ram' declared at '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_hist.vhd:13' bound to instance 'apply_hist_ram_U' of component 'apply_hist_ram' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_hist.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'apply_hist_ram' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_hist.vhd:31]
+	Parameter MEM_TYPE bound to: distributed - type: string 
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 40 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'apply_hist_ram' (1#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_hist.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'apply_hist' (2#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_hist.vhd:91]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'apply_fir_io_s_axi' declared at '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_fir_io_s_axi.vhd:12' bound to instance 'apply_fir_io_s_axi_U' of component 'apply_fir_io_s_axi' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:222]
+INFO: [Synth 8-638] synthesizing module 'apply_fir_io_s_axi' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_fir_io_s_axi.vhd:81]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'apply_fir_io_s_axi' (3#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_fir_io_s_axi.vhd:81]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 18 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'apply_mul_mul_18nbkb' declared at '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_mul_mul_18nbkb.vhd:32' bound to instance 'apply_mul_mul_18nbkb_U1' of component 'apply_mul_mul_18nbkb' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:256]
+INFO: [Synth 8-638] synthesizing module 'apply_mul_mul_18nbkb' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_mul_mul_18nbkb.vhd:45]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 18 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'apply_mul_mul_18nbkb_DSP48_0' declared at '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_mul_mul_18nbkb.vhd:6' bound to instance 'apply_mul_mul_18nbkb_DSP48_0_U' of component 'apply_mul_mul_18nbkb_DSP48_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_mul_mul_18nbkb.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'apply_mul_mul_18nbkb_DSP48_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_mul_mul_18nbkb.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'apply_mul_mul_18nbkb_DSP48_0' (4#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_mul_mul_18nbkb.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'apply_mul_mul_18nbkb' (5#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply_mul_mul_18nbkb.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'apply' (6#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:40]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[31]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[30]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[29]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[28]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[27]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[26]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[25]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[24]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[23]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[22]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[21]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[20]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[19]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[18]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[17]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WDATA[16]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WSTRB[3]
+WARNING: [Synth 8-3331] design apply_fir_io_s_axi has unconnected port WSTRB[2]
+WARNING: [Synth 8-3331] design apply_hist has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1309.469 ; gain = 126.488 ; free physical = 3367 ; free virtual = 10512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1309.469 ; gain = 126.488 ; free physical = 3366 ; free virtual = 10512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1309.469 ; gain = 126.488 ; free physical = 3366 ; free virtual = 10512
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.xdc]
+Finished Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1635.094 ; gain = 0.000 ; free physical = 3106 ; free virtual = 10251
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1635.094 ; gain = 452.113 ; free physical = 3188 ; free virtual = 10333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1635.094 ; gain = 452.113 ; free physical = 3188 ; free virtual = 10333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1635.094 ; gain = 452.113 ; free physical = 3189 ; free virtual = 10335
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'apply_fir_io_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'apply_fir_io_s_axi'
+INFO: [Synth 8-5544] ROM "BVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AWREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RVALID_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ARREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:512]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_9_fu_249_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_154_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'apply_fir_io_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              110
+*
+                  rdidle |                              010 |                              100
+                  rddata |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'apply_fir_io_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1635.094 ; gain = 452.113 ; free physical = 3182 ; free virtual = 10328
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               34 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module apply 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               34 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module apply_hist_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module apply_fir_io_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element hist_load_reg_296_reg was removed.  [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/apply.vhd:265]
+DSP Report: Generating DSP mul_reg_307_reg, operation Mode is: (A:0x18f9d)*B''.
+DSP Report: register mul_reg_307_reg is absorbed into DSP mul_reg_307_reg.
+DSP Report: register hist_U/apply_hist_ram_U/q0_reg is absorbed into DSP mul_reg_307_reg.
+DSP Report: register hist_load_reg_296_reg is absorbed into DSP mul_reg_307_reg.
+DSP Report: operator apply_mul_mul_18nbkb_U1/apply_mul_mul_18nbkb_DSP48_0_U/p_cvt is absorbed into DSP mul_reg_307_reg.
+DSP Report: Generating DSP tmp_8_reg_312_reg, operation Mode is: (A:0x18f9d)*B''.
+DSP Report: register tmp_8_reg_312_reg is absorbed into DSP tmp_8_reg_312_reg.
+DSP Report: register hist_U/apply_hist_ram_U/q0_reg is absorbed into DSP tmp_8_reg_312_reg.
+DSP Report: register hist_load_reg_296_reg is absorbed into DSP tmp_8_reg_312_reg.
+DSP Report: operator apply_mul_mul_18nbkb_U1/apply_mul_mul_18nbkb_DSP48_0_U/p_cvt is absorbed into DSP tmp_8_reg_312_reg.
+WARNING: [Synth 8-3917] design apply has port s_axi_fir_io_RRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design apply has port s_axi_fir_io_RRESP[0] driven by constant 0
+WARNING: [Synth 8-3917] design apply has port s_axi_fir_io_BRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design apply has port s_axi_fir_io_BRESP[0] driven by constant 0
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[31]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[30]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[29]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[28]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[27]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[26]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[25]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[24]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[23]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[22]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[21]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[20]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[19]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[18]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[17]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WDATA[16]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WSTRB[3]
+WARNING: [Synth 8-3331] design apply has unconnected port s_axi_fir_io_WSTRB[2]
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[16]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[17]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[17]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[18]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[18]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[19]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[19]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[20]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[20]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[21]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[21]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[22]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[22]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[23]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[23]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[24]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[24]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[25]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[25]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[26]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[26]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[27]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[27]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[28]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[28]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[29]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[29]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[30]'
+INFO: [Synth 8-3886] merging instance 'apply_fir_io_s_axi_U/rdata_data_reg[30]' (FDE) to 'apply_fir_io_s_axi_U/rdata_data_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\apply_fir_io_s_axi_U/rdata_data_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (apply_fir_io_s_axi_U/rdata_data_reg[31]) is unused and will be removed from module apply.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1635.094 ; gain = 452.113 ; free physical = 3168 ; free virtual = 10316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+---------------------------------+----------------+----------------------+--------------------------------+
+|Module Name | RTL Object                      | Inference      | Size (Depth x Width) | Primitives                     | 
++------------+---------------------------------+----------------+----------------------+--------------------------------+
+|apply       | hist_U/apply_hist_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1S x 16  RAM32X1S x 16   | 
++------------+---------------------------------+----------------+----------------------+--------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|apply       | (A:0x18f9d)*B'' | 18     | 16     | -      | -      | 34     | 0    | 2    | -    | -    | -     | 1    | 0    | 
+|apply       | (A:0x18f9d)*B'' | 18     | 16     | -      | -      | 34     | 0    | 2    | -    | -    | -     | 1    | 0    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 1635.094 ; gain = 452.113 ; free physical = 3004 ; free virtual = 10151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 1645.109 ; gain = 462.129 ; free physical = 3002 ; free virtual = 10150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+---------------------------------+----------------+----------------------+--------------------------------+
+|Module Name | RTL Object                      | Inference      | Size (Depth x Width) | Primitives                     | 
++------------+---------------------------------+----------------+----------------------+--------------------------------+
+|apply       | hist_U/apply_hist_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1S x 16  RAM32X1S x 16   | 
++------------+---------------------------------+----------------+----------------------+--------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 1657.141 ; gain = 474.160 ; free physical = 2997 ; free virtual = 10145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1657.141 ; gain = 474.160 ; free physical = 2997 ; free virtual = 10145
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1657.141 ; gain = 474.160 ; free physical = 2997 ; free virtual = 10145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1657.141 ; gain = 474.160 ; free physical = 2997 ; free virtual = 10145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1657.141 ; gain = 474.160 ; free physical = 2997 ; free virtual = 10145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1657.141 ; gain = 474.160 ; free physical = 2997 ; free virtual = 10145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1657.141 ; gain = 474.160 ; free physical = 2997 ; free virtual = 10145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    13|
+|2     |DSP48E1_1 |     2|
+|3     |LUT1      |    35|
+|4     |LUT2      |     9|
+|5     |LUT3      |    60|
+|6     |LUT4      |    37|
+|7     |LUT5      |    18|
+|8     |LUT6      |    32|
+|9     |RAM16X1S  |    16|
+|10    |RAM32X1S  |    16|
+|11    |FDRE      |   145|
+|12    |FDSE      |     6|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------------------+-------------------+------+
+|      |Instance               |Module             |Cells |
++------+-----------------------+-------------------+------+
+|1     |top                    |                   |   389|
+|2     |  apply_fir_io_s_axi_U |apply_fir_io_s_axi |   143|
+|3     |  hist_U               |apply_hist         |   101|
+|4     |    apply_hist_ram_U   |apply_hist_ram     |   101|
++------+-----------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1657.141 ; gain = 474.160 ; free physical = 2997 ; free virtual = 10145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1657.141 ; gain = 148.535 ; free physical = 3065 ; free virtual = 10213
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 1657.148 ; gain = 474.160 ; free physical = 3070 ; free virtual = 10217
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 16 instances
+  RAM32X1S => RAM32X1S (RAMS32): 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:47 . Memory (MB): peak = 1657.148 ; gain = 474.305 ; free physical = 3065 ; free virtual = 10212
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/vhdl/project.runs/synth_1/apply.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file apply_utilization_synth.rpt -pb apply_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1681.152 ; gain = 0.000 ; free physical = 3066 ; free virtual = 10214
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  6 01:26:30 2019...

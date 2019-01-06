@@ -48,7 +48,7 @@ void OutputQueue::run()
 	{
 		DeQueueLed();
 		DeQueueAudio();
-		Sleep(8);
+		Sleep(3);
 	}	
 }
 

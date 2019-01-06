@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Jan  4 18:43:35 2019
-# Process ID: 42259
+# Start of session at: Sun Jan  6 01:36:28 2019
+# Process ID: 126819
 # Current directory: /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1
 # Command line: vivado -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
 # Log file: /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/system_wrapper.vds
@@ -13,15 +13,16 @@ source system_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/ip_repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/Assignment2/Exercise6/Exercise4/fir.prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
 Command: synth_design -top system_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 42264 
+INFO: Helper process launched with PID 126823 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1307.289 ; gain = 82.863 ; free physical = 5202 ; free virtual = 11417
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1309.293 ; gain = 82.863 ; free physical = 3440 ; free virtual = 10576
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
@@ -30,40 +31,51 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2018.2/scri
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
-INFO: [Synth 8-6157] synthesizing module 'system' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:846]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (2#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_1_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_1_0' (3#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (4#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_axi_periph_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:1328]
+INFO: [Synth 8-6157] synthesizing module 'system' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:978]
+INFO: [Synth 8-6157] synthesizing module 'system_apply_0_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_apply_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_apply_0_0' (2#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_apply_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_apply_1_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_apply_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_apply_1_0' (3#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_apply_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (4#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_1_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_1_0' (5#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (6#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_axi_periph_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:1572]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1H7AUOX' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1H7AUOX' (5#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1H7AUOX' (7#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_4Y7TYO' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:144]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_4Y7TYO' (6#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_4Y7TYO' (8#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:144]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_FKL2TE' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:276]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_FKL2TE' (7#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_FKL2TE' (9#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:276]
 INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_15QZ4LV' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:408]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_15QZ4LV' (8#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:408]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11SE3QO' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:540]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (9#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11SE3QO' (10#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:540]
-INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (11#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_xbar_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'xbar' of module 'system_xbar_0' requires 40 connections, but only 38 given [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:2108]
-INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_axi_periph_0' (12#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:1328]
-WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'system_ps7_0_axi_periph_0' requires 118 connections, but only 109 given [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:1183]
-INFO: [Synth 8-6157] synthesizing module 'system_rst_ps7_0_100M_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps7_0_100M_0' (13#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:1293]
-INFO: [Synth 8-6157] synthesizing module 'system_zybo_audio_ctrl_0_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_zybo_audio_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_zybo_audio_ctrl_0_0' (14#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-42259-ubuntu/realtime/system_zybo_audio_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system' (15#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:846]
-INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (16#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_15QZ4LV' (10#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:408]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_TUCI1Y' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:540]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_TUCI1Y' (11#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:540]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11SE3QO' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:672]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (12#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11SE3QO' (13#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:672]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (14#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_xbar_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'system_xbar_0' requires 40 connections, but only 38 given [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:2484]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_axi_periph_0' (15#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:1572]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_ps7_0_100M_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps7_0_100M_0' (16#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:1533]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_0_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (17#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_zybo_audio_ctrl_0_0' [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_zybo_audio_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_zybo_audio_ctrl_0_0' (18#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/.Xil/Vivado-126819-ubuntu/realtime/system_zybo_audio_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system' (19#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/synth/system.v:978]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (20#1) [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_11SE3QO has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_11SE3QO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port S_ACLK
@@ -81,7 +93,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port M_A
 WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1352.914 ; gain = 128.488 ; free physical = 5213 ; free virtual = 11429
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1353.918 ; gain = 127.488 ; free physical = 3390 ; free virtual = 10527
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -94,10 +106,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1352.914 ; gain = 128.488 ; free physical = 5214 ; free virtual = 11430
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1353.918 ; gain = 127.488 ; free physical = 3384 ; free virtual = 10521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1352.914 ; gain = 128.488 ; free physical = 5214 ; free virtual = 11430
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1353.918 ; gain = 127.488 ; free physical = 3384 ; free virtual = 10521
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -118,6 +130,12 @@ Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSyste
 Finished Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0/system_xbar_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0/system_axi_gpio_1_0_in_context.xdc] for cell 'system_i/axi_gpio_1'
 Finished Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0/system_axi_gpio_1_0_in_context.xdc] for cell 'system_i/axi_gpio_1'
+Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_apply_0_0/system_apply_0_0/system_apply_0_0_in_context.xdc] for cell 'system_i/apply_0'
+Finished Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_apply_0_0/system_apply_0_0/system_apply_0_0_in_context.xdc] for cell 'system_i/apply_0'
+Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_apply_1_0/system_apply_1_0/system_apply_0_0_in_context.xdc] for cell 'system_i/apply_1'
+Finished Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_apply_1_0/system_apply_1_0/system_apply_0_0_in_context.xdc] for cell 'system_i/apply_1'
+Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0/system_xlconcat_0_0_in_context.xdc] for cell 'system_i/xlconcat_0'
+Finished Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0/system_xlconcat_0_0_in_context.xdc] for cell 'system_i/xlconcat_0'
 Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/constrs_1/imports/lab4/zybo_audio_constraints.xdc]
@@ -132,16 +150,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1619.477 ; gain = 0.000 ; free physical = 4963 ; free virtual = 11178
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1623.488 ; gain = 0.000 ; free physical = 3182 ; free virtual = 10319
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 1619.477 ; gain = 395.051 ; free physical = 5041 ; free virtual = 11257
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1623.488 ; gain = 397.059 ; free physical = 3266 ; free virtual = 10403
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 1619.477 ; gain = 395.051 ; free physical = 5041 ; free virtual = 11257
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1623.488 ; gain = 397.059 ; free physical = 3266 ; free virtual = 10403
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -414,12 +432,15 @@ Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph. (constrain
 Applied set_property DONT_TOUCH = true for system_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/apply_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/apply_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1619.477 ; gain = 395.051 ; free physical = 5043 ; free virtual = 11258
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1623.488 ; gain = 397.059 ; free physical = 3267 ; free virtual = 10404
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1619.477 ; gain = 395.051 ; free physical = 5043 ; free virtual = 11259
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1623.488 ; gain = 397.059 ; free physical = 3266 ; free virtual = 10403
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -462,8 +483,10 @@ WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M0
 WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
 WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M03_ACLK
 WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M04_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1619.477 ; gain = 395.051 ; free physical = 5032 ; free virtual = 11250
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1623.488 ; gain = 397.059 ; free physical = 3255 ; free virtual = 10394
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -478,13 +501,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/processing_syste
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/processing_system7_0/FCLK_CLK1' to pin 'system_i/processing_system7_0/bbstub_FCLK_CLK1/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1636.477 ; gain = 412.051 ; free physical = 4905 ; free virtual = 11122
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1636.488 ; gain = 410.059 ; free physical = 3115 ; free virtual = 10254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1636.477 ; gain = 412.051 ; free physical = 4905 ; free virtual = 11122
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1637.488 ; gain = 411.059 ; free physical = 3115 ; free virtual = 10254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -496,7 +519,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1637.477 ; gain = 413.051 ; free physical = 4904 ; free virtual = 11122
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:45 . Memory (MB): peak = 1638.488 ; gain = 412.059 ; free physical = 3113 ; free virtual = 10253
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -520,7 +543,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1637.477 ; gain = 413.051 ; free physical = 4904 ; free virtual = 11122
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.488 ; gain = 412.059 ; free physical = 3113 ; free virtual = 10253
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -533,7 +556,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1637.477 ; gain = 413.051 ; free physical = 4904 ; free virtual = 11122
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.488 ; gain = 412.059 ; free physical = 3113 ; free virtual = 10253
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -545,25 +568,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1637.477 ; gain = 413.051 ; free physical = 4904 ; free virtual = 11122
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.488 ; gain = 412.059 ; free physical = 3113 ; free virtual = 10253
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1637.477 ; gain = 413.051 ; free physical = 4904 ; free virtual = 11122
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.488 ; gain = 412.059 ; free physical = 3113 ; free virtual = 10253
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1637.477 ; gain = 413.051 ; free physical = 4904 ; free virtual = 11122
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.488 ; gain = 412.059 ; free physical = 3113 ; free virtual = 10253
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1637.477 ; gain = 413.051 ; free physical = 4904 ; free virtual = 11122
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.488 ; gain = 412.059 ; free physical = 3113 ; free virtual = 10253
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -575,44 +598,50 @@ Report BlackBoxes:
 +------+------------------------------+----------+
 |1     |system_xbar_0                 |         1|
 |2     |system_auto_pc_0              |         1|
-|3     |system_axi_gpio_0_0           |         1|
-|4     |system_axi_gpio_1_0           |         1|
-|5     |system_processing_system7_0_0 |         1|
-|6     |system_rst_ps7_0_100M_0       |         1|
-|7     |system_zybo_audio_ctrl_0_0    |         1|
+|3     |system_apply_0_0              |         1|
+|4     |system_apply_1_0              |         1|
+|5     |system_axi_gpio_0_0           |         1|
+|6     |system_axi_gpio_1_0           |         1|
+|7     |system_processing_system7_0_0 |         1|
+|8     |system_rst_ps7_0_100M_0       |         1|
+|9     |system_xlconcat_0_0           |         1|
+|10    |system_zybo_audio_ctrl_0_0    |         1|
 +------+------------------------------+----------+
 
 Report Cell Usage: 
 +------+------------------------------+------+
 |      |Cell                          |Count |
 +------+------------------------------+------+
-|1     |system_auto_pc_0              |     1|
-|2     |system_axi_gpio_0_0           |     1|
-|3     |system_axi_gpio_1_0           |     1|
-|4     |system_processing_system7_0_0 |     1|
-|5     |system_rst_ps7_0_100M_0       |     1|
-|6     |system_xbar_0                 |     1|
-|7     |system_zybo_audio_ctrl_0_0    |     1|
-|8     |IBUF                          |     9|
-|9     |IOBUF                         |     2|
-|10    |OBUF                          |    14|
+|1     |system_apply_0_0              |     1|
+|2     |system_apply_1_0              |     1|
+|3     |system_auto_pc_0              |     1|
+|4     |system_axi_gpio_0_0           |     1|
+|5     |system_axi_gpio_1_0           |     1|
+|6     |system_processing_system7_0_0 |     1|
+|7     |system_rst_ps7_0_100M_0       |     1|
+|8     |system_xbar_0                 |     1|
+|9     |system_xlconcat_0_0           |     1|
+|10    |system_zybo_audio_ctrl_0_0    |     1|
+|11    |IBUF                          |     9|
+|12    |IOBUF                         |     2|
+|13    |OBUF                          |    14|
 +------+------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+--------------------------+------+
 |      |Instance             |Module                    |Cells |
 +------+---------------------+--------------------------+------+
-|1     |top                  |                          |  1021|
-|2     |  system_i           |system                    |   996|
-|3     |    ps7_0_axi_periph |system_ps7_0_axi_periph_0 |   662|
+|1     |top                  |                          |  1218|
+|2     |  system_i           |system                    |  1193|
+|3     |    ps7_0_axi_periph |system_ps7_0_axi_periph_0 |   773|
 |4     |      s00_couplers   |s00_couplers_imp_11SE3QO  |   177|
 +------+---------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1637.477 ; gain = 413.051 ; free physical = 4904 ; free virtual = 11122
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.488 ; gain = 412.059 ; free physical = 3113 ; free virtual = 10253
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1637.477 ; gain = 146.488 ; free physical = 4962 ; free virtual = 11180
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1637.484 ; gain = 413.051 ; free physical = 4964 ; free virtual = 11182
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1638.488 ; gain = 142.488 ; free physical = 3171 ; free virtual = 10311
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.496 ; gain = 412.059 ; free physical = 3182 ; free virtual = 10322
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -623,11 +652,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-53 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+62 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:43 . Memory (MB): peak = 1651.477 ; gain = 438.641 ; free physical = 4946 ; free virtual = 11164
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:47 . Memory (MB): peak = 1653.488 ; gain = 438.648 ; free physical = 3155 ; free virtual = 10294
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1651.477 ; gain = 0.000 ; free physical = 4945 ; free virtual = 11163
-INFO: [Common 17-206] Exiting Vivado at Fri Jan  4 18:44:28 2019...
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1653.488 ; gain = 0.000 ; free physical = 3155 ; free virtual = 10294
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  6 01:37:27 2019...

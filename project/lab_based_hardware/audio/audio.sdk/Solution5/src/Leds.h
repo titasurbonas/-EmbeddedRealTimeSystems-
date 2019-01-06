@@ -16,12 +16,12 @@ private:
     char led3 = 0x0;
     char led4 = 0x0;
 
-    char time_scaler = 0x0;
-    char output = 0x00;
-    char led1_on = 0;
-    char led2_on = 0;
-    char led3_on = 0;
-    char led4_on = 0;
+    volatile short time_scaler = 0x0;
+    volatile char output = 0x00;
+    volatile char led1_on = 0;
+    volatile char led2_on = 0;
+    volatile char led3_on = 0;
+    volatile char led4_on = 0;
 
     char ConvertToLeds();
     void ConvertToInternal(AudioSample v);

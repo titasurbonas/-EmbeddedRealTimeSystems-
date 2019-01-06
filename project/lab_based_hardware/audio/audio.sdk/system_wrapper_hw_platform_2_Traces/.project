@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>system_wrapper_hw_platform_2_Traces</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.linuxtools.tmf.project.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Traces/Run_Jan-05_21-08/PS_Trace_Jan-05_21-08/PS_Trace_Jan-05_21-08_</name>
+			<type>1</type>
+			<location>/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.sdk/system_wrapper_hw_platform_2_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Jan-05_21-14/PS_Trace_Jan-05_21-14/PS_Trace_Jan-05_21-14_</name>
+			<type>1</type>
+			<location>/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.sdk/system_wrapper_hw_platform_2_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Jan-05_21-20/PS_Trace_Jan-05_21-20/PS_Trace_Jan-05_21-20_</name>
+			<type>1</type>
+			<location>/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.sdk/system_wrapper_hw_platform_2_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Jan-05_21-23/PS_Trace_Jan-05_21-23/PS_Trace_Jan-05_21-23_</name>
+			<type>1</type>
+			<location>/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.sdk/system_wrapper_hw_platform_2_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Jan-05_21-25/PS_Trace_Jan-05_21-25/PS_Trace_Jan-05_21-25_</name>
+			<type>1</type>
+			<location>/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.sdk/system_wrapper_hw_platform_2_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Jan-05_21-45/PS_Trace_Jan-05_21-45/PS_Trace_Jan-05_21-45_</name>
+			<type>1</type>
+			<location>/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.sdk/system_wrapper_hw_platform_2_Traces/Traces/.bookmarks</location>
+		</link>
+	</linkedResources>
+</projectDescription>

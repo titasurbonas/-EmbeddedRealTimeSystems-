@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="main.h" path="/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/main.h"/>
+    <originFiles name="main.cpp" path="/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/main.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

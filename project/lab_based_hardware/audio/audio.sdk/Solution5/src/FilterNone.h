@@ -7,6 +7,5 @@ public:
 	FilterNone();
 	virtual ~FilterNone();
 	AudioSample Apply(AudioSample sample);
-
 };
 

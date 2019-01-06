@@ -19,14 +19,15 @@ void Leds::UpdateLeds(void)
         led3_on = 0;
         led4_on = 0;
         
-        if(time_scaler % 8 == 0)
+
+        if(time_scaler % 256 == 0)
         {
-            led1_on = led1 == 1;
-            led2_on = led2 == 1;
-            led3_on = led3 == 1;
-            led4_on = led4 == 1;
+            led1_on |= led1 == 1;
+            led2_on |= led2 == 1;
+            led3_on |= led3 == 1;
+            led4_on |= led4 == 1;
         }
-        if(time_scaler % 4 == 0)
+        if(time_scaler % 64 == 0)
         {
             led1_on |= led1 == 2;
             led2_on |= led2 == 2;
@@ -49,9 +50,17 @@ void Leds::ReceiveInput(AudioSample sample)
     ConvertToInternal(sample);
 }
 
+
+char Leds::ConvertToLeds()
+{
+	char r = !led1_on << 7 | !led2_on << 6 | !led3_on << 5 | !led4_on << 4 | !led4_on << 3 | !led3_on << 2 | !led2_on << 1 | !led1_on;
+	return r;
+}
+
 void Leds::ConvertToInternal(AudioSample v)
 {
-	switch(v/134217728) // v / 2^27
+	v = (v*32)/16777216;
+	switch(v) // v / 2^26
 	{
 		case 0:
 		led1 = 0;
@@ -247,9 +256,3 @@ void Leds::ConvertToInternal(AudioSample v)
 		break;
 	}
 }
-
-char Leds::ConvertToLeds()
-{
-	return led4_on << 7 | led3_on << 6 | led2_on << 5 | led1_on << 4 | led1_on << 3 | led2_on << 2 | led3_on << 1 | led4_on;
-}
-

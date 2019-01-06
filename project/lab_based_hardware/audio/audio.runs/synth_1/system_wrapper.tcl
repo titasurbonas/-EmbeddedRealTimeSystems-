@@ -36,6 +36,7 @@ set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
 set_property ip_repo_paths {
   /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/ip_repo
   /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/Assignment2/Exercise6/Exercise4/fir.prj/solution1/impl/ip
+  /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/hls/project_filters/solution1/impl/ip
 } [current_project]
 set_property ip_output_repo /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -52,6 +53,8 @@ set_property used_in_implementation false [get_files -all /home/olafur/Documents
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_apply_0_0/constraints/apply_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_apply_1_0/constraints/apply_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olafur/Documents/Embedded_systems/-EmbeddedRealTimeSystems-/project/lab_based_hardware/audio/audio.srcs/sources_1/bd/system/system_ooc.xdc]
 
