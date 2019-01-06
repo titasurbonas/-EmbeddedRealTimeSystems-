@@ -1,0 +1,17 @@
+/*
+ * VolumeCommand.h
+ *
+ *  Created on: Jan 5, 2019
+ *      Author: titas
+ */
+
+#ifndef VOLUMECOMMAND_H_
+#define VOLUMECOMMAND_H_
+
+class VolumeCommand {
+public:
+	VolumeCommand();
+	virtual ~VolumeCommand();
+};
+
+#endif /* VOLUMECOMMAND_H_ */

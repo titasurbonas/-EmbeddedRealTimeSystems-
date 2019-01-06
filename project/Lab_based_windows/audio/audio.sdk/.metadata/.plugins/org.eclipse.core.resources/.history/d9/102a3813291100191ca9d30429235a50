@@ -1,0 +1,23 @@
+/*
+ * VolumeCommand.h
+ *
+ *  Created on: Jan 5, 2019
+ *      Author: titas
+ */
+#pragma once
+#include "Command.h"
+#include "hal/AudioDriver.h"
+
+class VolumeCommand : public Command {
+public:
+	VolumeCommand(): Command() , actuator(NULL){};
+	VolumeCommand(AudioDriver* actor, int volume):
+			Command(),
+			actuator(actor){};
+	//VolumeCommand();
+	virtual ~VolumeCommand();
+private:
+	AudioDriver * actuator;
+};
+
+

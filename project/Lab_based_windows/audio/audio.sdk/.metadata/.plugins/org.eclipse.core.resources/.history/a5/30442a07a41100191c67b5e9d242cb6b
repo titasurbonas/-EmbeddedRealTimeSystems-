@@ -1,0 +1,44 @@
+#pragma once
+
+#include "Filter.h"
+#include "AudioSample.h"
+#include "OutputQueue.h"
+#include "os/Thread.h"
+#include "os/Mutex.h"
+#include <xgpio.h>
+#include "hal/AudioDriver.h"
+
+
+
+class VolumeControl
+{
+public:
+	VolumeControl(OutputQueue * queue);
+	AudioSample ApplyVolume(AudioSample);
+	AudioSample ApplyFilter(AudioSample);
+	void StepVolume(signed int step);
+	void SetFilter(Filter * filter);
+	void play(int volume);
+private:
+	int volume;
+	AbstractOS::Mutex mtx;
+	Filter * filter;
+	OutputQueue * output_queue;
+	AudioDriver * drivers;
+};
+
+
+class VolumeIO : AbstractOS::Thread
+{
+public:
+	VolumeIO(ThreadPriority priority, string name, VolumeControl * control);
+private:
+	VolumeControl * control;
+	void VolumeUp();
+	void VolumeDown();
+	virtual void run();
+	void SetFilter(void);
+
+	XGpio switches;
+	XGpio buttons;
+};

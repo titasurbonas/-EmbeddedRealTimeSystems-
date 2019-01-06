@@ -5,27 +5,30 @@
 #include "os/Thread.h"
 #include "os/Mutex.h"
 #include <xgpio.h>
+#include "hal/AudioDriver.h"
 
 
 class VolumeControl
 {
 public:
-	VolumeControl();
+	VolumeControl(AudioDriver * drivers);
 	AudioSample ApplyVolume(AudioSample);
 	AudioSample ApplyFilter(AudioSample);
 	void StepVolume(signed int step);
 	void SetFilter(Filter * filter);
+	void Play(int volume);
 private:
 	int volume;
 	AbstractOS::Mutex mtx;
 	Filter * filter;
+	AudioDriver * driver;
 };
 
 
 class VolumeIO : AbstractOS::Thread
 {
 public:
-	VolumeIO(ThreadPriority priority, string name, VolumeControl * control);
+	VolumeIO(ThreadPriority priority, string name, VolumeControl * control );
 private:
 	VolumeControl * control;
 	void VolumeUp();

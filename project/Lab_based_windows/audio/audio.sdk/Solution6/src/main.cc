@@ -16,10 +16,10 @@ int main()
 	AudioDriver audio_driver = AudioDriver();
 	if (audio_driver.Init() != XST_SUCCESS) return -1;
 
-	VolumeControl volume_control = VolumeControl();
 	AudioOutput audio_output = AudioOutput(&audio_driver);
 	Leds leds = Leds(Thread::PRIORITY_LOW, "LED driver");
 	OutputQueue output_queue = OutputQueue(Thread::PRIORITY_NORMAL, "output queue", &audio_output, &leds);
+	VolumeControl volume_control = VolumeControl(&audio_driver);
 	Preprocessing audio_preprocessor = Preprocessing(&volume_control, &output_queue);
 	AudioInput audio_input = AudioInput(Thread::PRIORITY_NORMAL, "audio input", &audio_driver, &audio_preprocessor);
 	VolumeIO volume_interface = VolumeIO(Thread::PRIORITY_NORMAL, "volume control", &volume_control);

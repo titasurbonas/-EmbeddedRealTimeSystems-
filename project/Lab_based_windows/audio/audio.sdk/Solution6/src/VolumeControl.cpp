@@ -35,7 +35,7 @@ void VolumeIO::run()
 		if(XGpio_DiscreteRead(&buttons, 1) == 0x2)
 			VolumeUp();
 		if(XGpio_DiscreteRead(&buttons, 1) == 0x1)
-				VolumeDown();
+			VolumeDown();
 		SetFilter();
 		vTaskDelay( pdMS_TO_TICKS( 50 ) );
 	}
@@ -67,10 +67,11 @@ void VolumeIO::SetFilter(void)
 	}
 }
 
-VolumeControl::VolumeControl() :
+VolumeControl::VolumeControl(AudioDriver * drivers) :
 		volume(100),
 		mtx(),
-		filter(Filter::CreateFilter(FilterType::None))
+		filter(Filter::CreateFilter(FilterType::None)),
+		driver(drivers)
 {
 }
 
@@ -91,6 +92,7 @@ void VolumeControl::StepVolume(signed int step)
 {
 	//mtx.Acquire();
 	volume = std::max(std::min(volume + step, (signed int)100), (signed int)0);
+	Play((short) volume);
 	//mtx.Release();
 }
 
@@ -98,4 +100,8 @@ void VolumeControl::SetFilter(Filter * new_filter)
 {
 	delete filter;
 	filter = new_filter;
+}
+void VolumeControl::Play(int volume)
+{
+	driver->SetVolume(volume);
 }

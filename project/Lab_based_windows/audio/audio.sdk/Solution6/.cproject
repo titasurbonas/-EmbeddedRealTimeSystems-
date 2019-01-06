@@ -18,7 +18,7 @@
 					<folderInfo id="xilinx.gnu.armv7.exe.debug.1021511414." name="/" resourcePath="">
 						<toolChain id="xilinx.gnu.armv7.exe.debug.toolchain.527412584" name="Xilinx ARM v7 GNU Toolchain" superClass="xilinx.gnu.armv7.exe.debug.toolchain">
 							<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.arm.a53.x32" id="xilinx.armv7.target.gnu.base.debug.464735005" isAbstract="false" name="Debug Platform" superClass="xilinx.armv7.target.gnu.base.debug"/>
-							<builder autoBuildTarget="all" buildPath="${workspace_loc:/Solution6}/Debug" cleanBuildTarget="clean" enableAutoBuild="true" enableCleanBuild="true" enabledIncrementalBuild="false" id="xilinx.gnu.armv7.toolchain.builder.debug.1767976543" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" parallelBuildOn="false" superClass="xilinx.gnu.armv7.toolchain.builder.debug"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/Solution6}/Debug" cleanBuildTarget="clean" enableAutoBuild="true" enableCleanBuild="true" enabledIncrementalBuild="false" id="xilinx.gnu.armv7.toolchain.builder.debug.1767976543" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" parallelBuildOn="false" stopOnErr="false" superClass="xilinx.gnu.armv7.toolchain.builder.debug"/>
 							<tool id="xilinx.gnu.armv7.c.toolchain.assembler.debug.1655208321" name="ARM v7 gcc assembler" superClass="xilinx.gnu.armv7.c.toolchain.assembler.debug">
 								<inputType id="xilinx.gnu.assembler.input.1621357268" superClass="xilinx.gnu.assembler.input"/>
 							</tool>
@@ -37,7 +37,7 @@
 									<listOptionValue builtIn="false" value="../../freertos10_xilinx_bsp_1/ps7_cortexa9_0/include"/>
 								</option>
 								<option id="xilinx.gnu.compiler.misc.other.483829131" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
-								<option id="xilinx.gnu.compiler.dircategory.includes.1167579830" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath"/>
+								<option id="xilinx.gnu.compiler.dircategory.includes.1167579830" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes"/>
 								<inputType id="xilinx.gnu.armv7.cxx.compiler.input.423637817" name="C++ source files" superClass="xilinx.gnu.armv7.cxx.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.armv7.toolchain.archiver.6823079" name="ARM v7 archiver" superClass="xilinx.gnu.armv7.toolchain.archiver"/>

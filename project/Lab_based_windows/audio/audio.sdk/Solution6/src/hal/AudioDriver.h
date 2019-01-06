@@ -8,6 +8,8 @@
 #ifndef SRC_HAL_AUDIODRIVER_H_
 #define SRC_HAL_AUDIODRIVER_H_
 
+#include "../os/Mutex.h"
+#include "../os/MutexGuard.h"
 #include "Timer.h"
 #include "xiicps.h"
 
@@ -22,6 +24,7 @@ public:
 	void busyWaitForSamples(void);
 	void inSamples(unsigned long &sLeft, unsigned long &sRight);
 	void outSamples(unsigned long sLeft, unsigned long sRight);
+	void SetVolume(short volume);
 
 private:
 	int IicConfig(int DeviceIdPS);
@@ -29,6 +32,8 @@ private:
 	void LineinLineoutConfig();
 	XIicPs mIic;
 	Timer timer;
+	AbstractOS::Mutex mutex;
+	short volume = 0x79;
 };
 
 

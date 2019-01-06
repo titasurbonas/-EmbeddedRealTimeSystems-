@@ -75,7 +75,6 @@ void AudioDriver::outSamples(unsigned long sLeft, unsigned long sRight)
 {
 	Xil_Out32(I2S_DATA_TX_L_REG, sLeft);
 	Xil_Out32(I2S_DATA_TX_R_REG, sRight);
-	inSamples(sLeft, sRight);
 }
 
 int AudioDriver::Init(void)
@@ -94,10 +93,12 @@ int AudioDriver::Init(void)
 		return XST_FAILURE;
 	}
 	//Configure the Line in and Line out ports.
+
 	LineinLineoutConfig();
 
+
 	xil_printf("ADAU1761 configured\n\r");
-    Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, 0b1);
+	Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, 0b1);
 	Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + 0x4, 0b0);
 
 	return Status;
@@ -125,6 +126,14 @@ int AudioDriver::IicConfig(int DeviceIdPS)
 	XIicPs_SetSClk(&mIic, IIC_SCLK_RATE);
 
 	return XST_SUCCESS;
+}
+
+void AudioDriver::SetVolume(short v)
+{
+	volume = (v * 0x4F / 100) + 0x2F;
+	AudioWriteToReg(R2_LEFT_DAC_VOLUME,volume);
+	AudioWriteToReg(R3_RIGHT_DAC_VOLUME,volume);
+
 }
 
 /******************************************************************************
@@ -161,8 +170,8 @@ void AudioDriver::LineinLineoutConfig()
 	AudioWriteToReg(R0_LEFT_ADC_INPUT,0x017);
 	// right ADC Input: 0_00010111=>0,mute disable, Line volume 0 dB
 	AudioWriteToReg(R1_RIGHT_ADC_INPUT,0x017);
-	AudioWriteToReg(R2_LEFT_DAC_VOLUME,0x079);
-	AudioWriteToReg(R3_RIGHT_DAC_VOLUME,0x079);
+	AudioWriteToReg(R2_LEFT_DAC_VOLUME,volume);
+	AudioWriteToReg(R3_RIGHT_DAC_VOLUME,volume);
 	// analog audio path: 0_00010010=>0,-6 dB side attenuation, sidetone off, DAC selected, bypass disabled, line input, mic mute disabled, 0 dB mic
 	AudioWriteToReg(R4_ANALOG_AUDIO_PATH, 0x012);
 	// digital audio path: 0_00000000=>0_000, clear offset, no mute, no de-emphasize, adc high-pass filter enabled

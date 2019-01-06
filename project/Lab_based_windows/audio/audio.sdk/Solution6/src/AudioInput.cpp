@@ -1,5 +1,6 @@
 
 #include "AudioInput.h"
+#include"xgpio.h"
 
 AudioInput::AudioInput
 	(ThreadPriority priority,
@@ -12,6 +13,7 @@ AudioInput::AudioInput
 void AudioInput::run()
 {
 	ReceiveSample();
+
 }
 
 AudioInput::~AudioInput()

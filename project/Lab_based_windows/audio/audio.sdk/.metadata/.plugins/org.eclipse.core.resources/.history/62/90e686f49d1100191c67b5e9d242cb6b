@@ -1,0 +1,35 @@
+
+#include "AudioInput.h"
+
+AudioInput::AudioInput
+	(ThreadPriority priority,
+	string name,
+	AudioDriver * driver,
+	Preprocessing * output) : AbstractOS::Thread(priority, name), destination(output), pAudio(driver)
+{
+}
+
+void AudioInput::run()
+{
+	ReceiveSample();
+	if(XGpio_DiscreteRead(&buttons, 1) == 0x2)
+		drivers->SetVolume((short) volume);
+    if(XGpio_DiscreteRead(&buttons, 1) == 0x1)
+}
+
+AudioInput::~AudioInput()
+{}
+
+void AudioInput::ReceiveSample(void)
+{
+	AudioSample r_sample, l_sample;
+
+	while (1)
+	{
+		while (!pAudio->isNewSampleReady()) yield();
+		pAudio->inSamples(l_sample, r_sample);
+
+		destination->HandleSample(l_sample, r_sample);
+		Sleep(8);
+	}
+}

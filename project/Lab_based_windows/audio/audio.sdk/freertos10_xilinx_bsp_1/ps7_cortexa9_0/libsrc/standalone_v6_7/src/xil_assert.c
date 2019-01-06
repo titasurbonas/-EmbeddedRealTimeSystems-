@@ -72,7 +72,7 @@ u32 Xil_AssertStatus;
  * such that it does not wait infinitely. Use the debugger to disable the
  * waiting during testing of asserts.
  */
-s32 Xil_AssertWait = 1;
+s32 Xil_AssertWait = 0;
 
 /* The callback function to be invoked when an assert is taken */
 static Xil_AssertCallback Xil_AssertCallbackRoutine = NULL;
@@ -105,8 +105,7 @@ void Xil_Assert(const char8 *File, s32 Line)
 	/* if specified, wait indefinitely such that the assert will show up
 	 * in testing
 	 */
-	while (Xil_AssertWait != 0) {
-	}
+	while (Xil_AssertWait != 0) {}
 }
 
 /*****************************************************************************/

@@ -1,0 +1,92 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+LD_SRCS += \
+../src/lscript.ld 
+
+CC_SRCS += \
+../src/main.cc 
+
+CPP_SRCS += \
+../src/AudioCommand.cpp \
+../src/AudioInput.cpp \
+../src/AudioInterface.cpp \
+../src/AudioOutput.cpp \
+../src/AudioSample.cpp \
+../src/Command.cpp \
+../src/Filter.cpp \
+../src/FilterHighPass.cpp \
+../src/FilterLowPass.cpp \
+../src/FilterNone.cpp \
+../src/LedCommand.cpp \
+../src/Leds.cpp \
+../src/OutputQueue.cpp \
+../src/PreProcessing.cpp \
+../src/TestBench.cpp \
+../src/Top.cpp \
+../src/VolumeCommand.cpp \
+../src/VolumeControl.cpp 
+
+CC_DEPS += \
+./src/main.d 
+
+OBJS += \
+./src/AudioCommand.o \
+./src/AudioInput.o \
+./src/AudioInterface.o \
+./src/AudioOutput.o \
+./src/AudioSample.o \
+./src/Command.o \
+./src/Filter.o \
+./src/FilterHighPass.o \
+./src/FilterLowPass.o \
+./src/FilterNone.o \
+./src/LedCommand.o \
+./src/Leds.o \
+./src/OutputQueue.o \
+./src/PreProcessing.o \
+./src/TestBench.o \
+./src/Top.o \
+./src/VolumeCommand.o \
+./src/VolumeControl.o \
+./src/main.o 
+
+CPP_DEPS += \
+./src/AudioCommand.d \
+./src/AudioInput.d \
+./src/AudioInterface.d \
+./src/AudioOutput.d \
+./src/AudioSample.d \
+./src/Command.d \
+./src/Filter.d \
+./src/FilterHighPass.d \
+./src/FilterLowPass.d \
+./src/FilterNone.d \
+./src/LedCommand.d \
+./src/Leds.d \
+./src/OutputQueue.d \
+./src/PreProcessing.d \
+./src/TestBench.d \
+./src/Top.d \
+./src/VolumeCommand.d \
+./src/VolumeControl.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/%.o: ../src/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM v7 g++ compiler'
+	arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos10_xilinx_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+src/%.o: ../src/%.cc
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM v7 g++ compiler'
+	arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos10_xilinx_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

@@ -1,0 +1,16 @@
+/*
+ * VolumeCommand.h
+ *
+ *  Created on: Jan 5, 2019
+ *      Author: titas
+ */
+#pragma once
+#include "Command.h"
+
+class VolumeCommand : public Command {
+public:
+	VolumeCommand();
+	virtual ~VolumeCommand();
+};
+
+#endif /* VOLUMECOMMAND_H_ */

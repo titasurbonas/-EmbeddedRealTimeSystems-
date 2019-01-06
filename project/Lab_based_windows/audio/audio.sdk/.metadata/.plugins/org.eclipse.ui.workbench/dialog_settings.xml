@@ -5,8 +5,8 @@
 		<item value="85" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogHeight"/>
-		<item value="-1" key="dialogWidth"/>
+		<item value="250" key="dialogHeight"/>
+		<item value="350" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -26,6 +26,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\project\lab_based_hardware\audio\audio.sdk\Solution5\src\hal"/>
 			<item value="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\project\lab_based_hardware\audio\audio.sdk\Solution5\src"/>
 			<item value="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\project\lab_based_hardware\audio\audio.sdk\Solution5"/>
 			<item value="C:\Users\titas\source\repos\-EmbeddedRealTimeSystems-\project\Lab_based_windows"/>
