@@ -33,6 +33,7 @@ private:
 	XIicPs mIic;
 	Timer timer;
 	AbstractOS::Mutex mutex;
+	short volume = 0x79;
 };
 
 

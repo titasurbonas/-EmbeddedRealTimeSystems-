@@ -1,9 +1,7 @@
 #include "Leds.h"
 
 Leds::Leds(ThreadPriority priority, string name) : AbstractOS::Thread(priority, name)
-{
-	//XGpio_Initialize(&pin_handle, XPAR_GPIO_1_BASEADDR);
-}
+{}
 
 void Leds::run()
 {
@@ -12,41 +10,37 @@ void Leds::run()
 
 void Leds::UpdateLeds(void)
 {
-	while (1)
+	while (true)
 	{
         time_scaler++;
         
-        led1_on = 1;
-        led2_on = 1;
-        led3_on = 1;
-        led4_on = 1;
+        led1_on = 0;
+        led2_on = 0;
+        led3_on = 0;
+        led4_on = 0;
         
-        if(time_scaler % 32 == 0)
-        {
-            led1_on = led1 != 1;
-            led2_on = led2 != 1;
-            led3_on = led3 != 1;
-            led4_on = led4 != 1;
-        }
-        if(time_scaler % 16 == 0)
-        {
-            led1_on &= led1 != 2;
-            led2_on &= led2 != 2;
-            led3_on &= led3 != 2;
-            led4_on &= led4 != 2;
-        }
         if(time_scaler % 8 == 0)
         {
-            led1_on &= led1 != 3;
-            led2_on &= led2 != 3;
-            led3_on &= led3 != 3;
-            led4_on &= led4 != 3;
+            led1_on = led1 == 1;
+            led2_on = led2 == 1;
+            led3_on = led3 == 1;
+            led4_on = led4 == 1;
         }
-
-        Xil_Out8(XPAR_GPIO_1_BASEADDR+8, ConvertToLeds());
-        //XGpio_DiscreteWrite(&pin_handle, 2, (u32)ConvertToLeds());
-
-        Sleep(9);
+        if(time_scaler % 4 == 0)
+        {
+            led1_on |= led1 == 2;
+            led2_on |= led2 == 2;
+            led3_on |= led3 == 2;
+            led4_on |= led4 == 2;
+        }
+        if(time_scaler % 2 == 0)
+        {
+            led1_on |= led1 == 3;
+            led2_on |= led2 == 3;
+            led3_on |= led3 == 3;
+            led4_on |= led4 == 3;
+        }
+        vTaskDelay( pdMS_TO_TICKS( 12 ) );
 	}
 }
 
@@ -55,15 +49,9 @@ void Leds::ReceiveInput(AudioSample sample)
     ConvertToInternal(sample);
 }
 
-char Leds::ConvertToLeds()
-{
-	char r = led1_on << 7 | led2_on << 6 | led3_on << 5 | led4_on << 4 | led4_on << 3 | led3_on << 2 | led2_on << 1 | led1_on;
-	return r;
-}
-
 void Leds::ConvertToInternal(AudioSample v)
 {
-	switch((v*32)/16777216) // v / 2^26
+	switch(v/134217728) // v / 2^27
 	{
 		case 0:
 		led1 = 0;
@@ -258,5 +246,10 @@ void Leds::ConvertToInternal(AudioSample v)
 		led4 = 3;
 		break;
 	}
+}
+
+char Leds::ConvertToLeds()
+{
+	return led4_on << 7 | led3_on << 6 | led2_on << 5 | led1_on << 4 | led1_on << 3 | led2_on << 2 | led3_on << 1 | led4_on;
 }
 
